@@ -2493,8 +2493,8 @@ pre::-webkit-scrollbar-thumb {
 
   /* NATIVE LIGHTNING KEYFRAME ENGINE:
       The 3D core preserves its majestic, slow horizontal spin from Module 07, 
-      while distinguished face stencils strobe violently at a 0.12s pacing loop, running a perfect hora! */
-  animation: reactor-lightning-flicker 0.12s infinite alternate ease-in-out !important;
+      while distinguished face stencils strobe violently at a 3.5s pacing loop, running a perfect hora! */
+  animation: lightning-glow-fusion 3.5s infinite alternate ease-in-out !important;
 }
 
 /* --- 7. MACRO RESPONSIVE LAYOUT BARRIERS FOR DESKTOP HULLS --- */
@@ -2749,7 +2749,7 @@ pre::-webkit-scrollbar-thumb {
     SUMMARY: This specialized structural district isolates the advanced three-
     dimensional orbital frameworks. It drives the infinite spatial rotation 
     on the inclined X/Y axes (spin-geodesic-core) and coordinates both the 
-    alternating high-frequency voltage short-circuits (reactor-lightning-flicker) 
+    alternating high-frequency voltage short-circuits (lightning-glow-fusion) 
     and the multi-layered pink-mint incandescent glass flares (lightning-glow-fusion) 
     to power the volumetric 20-faced polyhedral plasma assembly.
    ========================================================================== */
@@ -2764,48 +2764,24 @@ pre::-webkit-scrollbar-thumb {
   }
 }
 
-/* --- 12. HIGH-VOLTAGE CRITICAL ELECTRIC ARC FLICKER --- */
-@keyframes reactor-lightning-flicker {
-  0%,
-  100% {
-    filter: brightness(1.2) drop-shadow(0 0 8px var(--solar-mint)); /* Baseline voltage stabilization trace over green phosphor */
-    opacity: 0.85; /* Holds uncompressed operational visibility limits safe under screen readouts */
-  }
-  33% {
-    filter: brightness(3.5) drop-shadow(0 0 40px var(--nebula-pink)); /* Intense high-frequency plasma surge overloading core borders */
-    opacity: 1; /* Instantaneous full voltage deployment across polyhedral target fields */
-  }
-  66% {
-    filter: brightness(0.4) blur(0.5px); /* Partial electric arc extinction producing vintage cathode screen stuttering */
-    opacity: 0.5; /* Dampens visibility parameters heavily to simulate real hardware discharge */
-  }
-}
-
-/* --- 13. GEOFUSION CORE IGNITION LOOP (Pulsating Plasma Luminance) --- */
+/* --- 12. GEOFUSION CORE IGNITION LOOP (Pulsating Plasma Luminance Engine) --- */
   @keyframes lightning-glow-fusion {
     0% {
-      /* SUPREME HARDWARE REPAIR: Completely eradicate destructive drop-shadows and massive external box-shadows!
-          We deploy scaled opacity values (0.4) combined with a micro-fine inset boundary shadow layers.
-          The local GPU processes this phase instantly, consuming ZERO processing overhead arrays! */
-      opacity: 0.4 !important;
-      background: rgba(167, 243, 208, 0.05) !important; /* Fine Solar Mint green phosphor texture tracking at 5% opacity */
-      border-color: rgba(167, 243, 208, 0.3) !important; /* Subtle resting frame wires bounds */
-      box-shadow: inset 0 0 8px rgba(167, 243, 208, 0.2) !important; /* Low-volume inset cushion layer entirely safe for the CPU */
+      opacity: 0.3 !important;
+      background: rgba(167, 243, 208, 0.05) !important;
+      border-color: rgba(167, 243, 208, 0.2) !important; 
+      box-shadow: inset 0 0 5px rgba(167, 243, 208, 0.2) !important; /* Micro-fine interior shadow safe for GPU layers */
     }
     100% {
-      /* Peak of the kinetic transition phase: fluidly shifting parameters onto the system alert Nebula Pink spectrum */
-      opacity: 0.95 !important;                          /* Elevates layout structural luminance fields to maximum operational limits */
-      background: rgba(255, 0, 127, 0.15) !important;     /* Lucid pink-magenta glass plate texture at 15% opacity */
-      border-color: var(--nebula-pink) !important;        /* Outer laser boundary framework ignites into solid uncompressed pink alert waves */
-      
-      /* Replaces legacy destructive drop-shadow elements with a safe combined inset layer and a tight 10px halo corona,
-         generating the intended cyberpunk glow effect without choking or overheating local computing chassis structures! */
+      opacity: 0.85 !important;
+      background: rgba(255, 0, 127, 0.1) !important; /* Translucent Nebula Pink glass plate at 10% opacity threshold */
+      border-color: var(--nebula-pink) !important;
+      /* Replacing destructive external drop-shadows with a combined tight inset and safe 8px glow radius */
       box-shadow: 
-        inset 0 0 15px rgba(255, 0, 127, 0.3),
-        0 0 10px rgba(255, 0, 127, 0.3) !important; 
+        inset 0 0 10px rgba(255, 0, 127, 0.2),
+        0 0 8px rgba(255, 0, 127, 0.2) !important; 
     }
   }
-
 
 /* ==========================================================================
     MODULE 00.2: MEDIA QUERIES & SPATIAL ISOLATION ENGINES (COSMIC LAYOUTS)

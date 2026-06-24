@@ -2223,27 +2223,21 @@ pre::-webkit-scrollbar-thumb {
   transform: rotateY(324deg) rotateX(180deg) rotateX(52.62deg) translateZ(210px);
 }
 
-/* --- 4. KINETIC REACTION OVERLOAD MATRIX (Proximity Energy Fusion Maps) --- */
+/* --- 4. KINETIC REACTION OVERLOAD MATRIX (GPU Shielded Proximity Hover) --- */
 .armillary-reactor-core:hover .quantum-plasma-sphere {
-  animation-duration: 6s !important; /* Accelerates rotation cycle down to 6 seconds simulating energy surge loops */
+  animation-duration: 20s !important; /* Sustains steady rotation tracking loops, wiping dual computational overloads */
 }
 
-  /* --- 4. KINETIC REACTION OVERLOAD MATRIX (Proximity Energy Fusion Maps) --- */
-  .armillary-reactor-core:hover .quantum-plasma-sphere {
-    animation-duration: 6s !important;  /* Accelerates rotation cycle down to 6 seconds simulating energy induction loops */
-  }
+.armillary-reactor-core:hover .face {
+  border-color: var(
+    --nebula-pink
+  ) !important; /* Swift chromatic shift execution over laser wires without micro-stuttering */
+  border-style: solid !important;
 
-  .armillary-reactor-core:hover .face {
-    border-color: var(--nebula-pink) !important; /* HARDWARE REPAIR: Switches laser wires color without touching layout metrics (wipes out layout Reflow floods)! */
-    border-style: solid !important;
-    
-    /* KINETIC SHIELD: Plasmatic pulse is dampened from chaotic 0.12s down to a stable 1.8s loop to bar GPU VRAM overflows.
-       The interaction mutates into a sleek, fluid holographic sweep entirely free from layout stuttering! */
-    animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important;
-    
-    will-change: transform, opacity;    /* Instructs the local client hardware to isolate these 3D faces onto a dedicated GPU compositing layer */
-  }
-
+  /* Under proximity loops, the kinetic pulse safely accelerates onto a steady 1.8s layout rhythm */
+  animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important;
+  opacity: 0.95 !important;
+}
 
 /* --- 5. EQUATORIAL HUD LAYER ARRAYS (The Centered Elliptical Astrolabe Bands) --- */
 .armillary-band-container {
@@ -2495,8 +2489,8 @@ pre::-webkit-scrollbar-thumb {
 
   /* NATIVE LIGHTNING KEYFRAME ENGINE:
       The 3D core preserves its majestic, slow horizontal spin from Module 07, 
-      while distinguished face stencils strobe violently at a 0.12s pacing loop, running a perfect hora! */
-  animation: reactor-lightning-flicker 0.12s infinite alternate ease-in-out !important;
+      while distinguished face stencils strobe violently at a 3.5s pacing loop, running a perfect hora! */
+  animation: lightning-glow-fusion 3.5s infinite alternate ease-in-out !important;
 }
 
 /* --- 7. MACRO RESPONSIVE LAYOUT BARRIERS FOR DESKTOP HULLS --- */
@@ -2751,7 +2745,7 @@ pre::-webkit-scrollbar-thumb {
     SUMMARY: This specialized structural district isolates the advanced three-
     dimensional orbital frameworks. It drives the infinite spatial rotation 
     on the inclined X/Y axes (spin-geodesic-core) and coordinates both the 
-    alternating high-frequency voltage short-circuits (reactor-lightning-flicker) 
+    alternating high-frequency voltage short-circuits (lightning-glow-fusion) 
     and the multi-layered pink-mint incandescent glass flares (lightning-glow-fusion) 
     to power the volumetric 20-faced polyhedral plasma assembly.
    ========================================================================== */
@@ -2766,56 +2760,26 @@ pre::-webkit-scrollbar-thumb {
   }
 }
 
-/* --- 12. HIGH-VOLTAGE CRITICAL ELECTRIC ARC FLICKER --- */
-@keyframes reactor-lightning-flicker {
-  0%,
-  100% {
-    filter: brightness(1.2) drop-shadow(0 0 8px var(--solar-mint)); /* Baseline voltage stabilization trace over green phosphor */
-    opacity: 0.85; /* Holds uncompressed operational visibility limits safe under screen readouts */
+/* --- 12. GEOFUSION CORE IGNITION LOOP (Pulsating Plasma Luminance Engine) --- */
+  @keyframes lightning-glow-fusion {
+    0% {
+      opacity: 0.3 !important;
+      background: rgba(167, 243, 208, 0.05) !important;
+      border-color: rgba(167, 243, 208, 0.2) !important; 
+      box-shadow: inset 0 0 5px rgba(167, 243, 208, 0.2) !important; /* Micro-fine interior shadow safe for GPU layers */
+    }
+    100% {
+      opacity: 0.85 !important;
+      background: rgba(255, 0, 127, 0.1) !important; /* Translucent Nebula Pink glass plate at 10% opacity threshold */
+      border-color: var(--nebula-pink) !important;
+      /* Replacing destructive external drop-shadows with a combined tight inset and safe 8px glow radius */
+      box-shadow: 
+        inset 0 0 10px rgba(255, 0, 127, 0.2),
+        0 0 8px rgba(255, 0, 127, 0.2) !important; 
+    }
   }
-  33% {
-    filter: brightness(3.5) drop-shadow(0 0 40px var(--nebula-pink)); /* Intense high-frequency plasma surge overloading core borders */
-    opacity: 1; /* Instantaneous full voltage deployment across polyhedral target fields */
-  }
-  66% {
-    filter: brightness(0.4) blur(0.5px); /* Partial electric arc extinction producing vintage cathode screen stuttering */
-    opacity: 0.5; /* Dampens visibility parameters heavily to simulate real hardware discharge */
-  }
-}
 
-/* --- 13. GLOSSY PINK-MINT ELECTRIC SURGE PROTOCOL --- */
-@keyframes lightning-glow-fusion {
-  0% {
-    background: rgba(
-      167,
-      243,
-      208,
-      0.15
-    ); /* Glossy initial mint backdrop injected natively within glass sheets */
-    border-color: var(--solar-mint);
-    filter: brightness(1.5) drop-shadow(0 0 10px var(--solar-mint)); /* Baseline phosphor glow trace bounds */
-  }
-  50% {
-    background: rgba(
-      255,
-      0,
-      127,
-      0.18
-    ); /* Intensive intermediate magenta surge flooding individual polyhedral facets */
-    border-color: var(--nebula-pink);
-    filter: brightness(3.2) drop-shadow(0 0 35px var(--nebula-pink)); /* High-voltage unshaded glossy eruption */
-  }
-  100% {
-    background: rgba(
-      255,
-      255,
-      255,
-      0.22
-    ); /* Incandescent white fusion shield reflection emulating genuine hardware depth */
-    border-color: var(--solar-mint);
-    filter: brightness(2) drop-shadow(0 0 15px var(--solar-mint)); /* Returns tuning variables to standard green radar sweep */
-  }
-}
+
 
 /* ==========================================================================
     MODULE 00.2: MEDIA QUERIES & SPATIAL ISOLATION ENGINES (COSMIC LAYOUTS)

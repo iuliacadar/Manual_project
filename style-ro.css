@@ -2458,8 +2458,8 @@ pre::-webkit-scrollbar-thumb {
 
   /* EFECTUL FULGERĂTOR DE SUPRAÎNCĂRCARE DIN FABRICĂ:
       Sfera își continuă acum rotația sa 3D maiestuoasă și rară din Modulul 07, 
-      iar triunghiurile distincte tremură electric la o viteză de 0.12 secunde, formând o horă perfectă! */
-  animation: reactor-lightning-flicker 0.12s infinite alternate ease-in-out !important;
+      iar triunghiurile distincte tremură electric la o viteză de 3.5 secunde, formând o horă perfectă! */
+  animation: lightning-glow-fusion 3.5s infinite alternate ease-in-out !important;
 }
 
 /* REȚEAUA MACRO SPLIT PAGINA RECURSIVA (Securizare Desktop anti-overflow) --- */
@@ -2711,7 +2711,7 @@ pre::-webkit-scrollbar-thumb {
     REZUMAT: Acest district structural specializat izolează cadrele avansate de 
     mișcare tridimensională orbitală. El conduce rotația spațială infinită pe axele 
     înclinate X/Y (spin-geodesic-core) și coordonează atât stroboscopul alternant 
-    de avarie la înaltă frecvență (reactor-lightning-flicker), cât și fuziunea 
+    de avarie la înaltă frecvență (lightning-glow-fusion), cât și fuziunea 
     multistratificată roz-mentă cu reflexii de sticlă incandescentă (lightning-glow-fusion) 
     pentru a alimenta ansamblul Icosaedrului volumetric cu 20 de fețe.
    ========================================================================== */
@@ -2726,47 +2726,25 @@ pre::-webkit-scrollbar-thumb {
   }
 }
 
-/* --- 12. EFECTUL FULGERĂTOR DE SUPRAÎNCĂRCARE ELECTRICĂ --- */
-@keyframes reactor-lightning-flicker {
-  0%,
+/* --- 12. GEOFUSION CORE IGNITION LOOP (Strălucire Plasmatică Pulsatorie) --- */
+@keyframes lightning-glow-fusion {
+  0% {
+    opacity: 0.3 !important;
+    background: rgba(167, 243, 208, 0.05) !important;
+    border-color: rgba(167, 243, 208, 0.2) !important; 
+    box-shadow: inset 0 0 5px rgba(167, 243, 208, 0.2) !important; /* Umbră interioară micro-fină sigură pentru GPU */
+  }
   100% {
-    filter: brightness(1.2) drop-shadow(0 0 8px var(--solar-mint)); /* Tensiune inițială stabilizată pe verde fosforic */
-    opacity: 0.85; /* Luminozitate optimă de veghe ce protejează grila vizuală */
-  }
-  33% {
-    filter: brightness(3.5) drop-shadow(0 0 40px var(--nebula-pink)); /* Puls intens de tensiune pe roz-neon ce supraîncărcă fețele */
-    opacity: 1; /* Descărcare completă instantanee în rețeaua secundară a Icosaedrului */
-  }
-  66% {
-    filter: brightness(0.4) blur(0.5px); /* Stingere parțială cinematică specifică arcurilor electrice analogice */
-    opacity: 0.5; /* Scade intensitatea la jumătate pentru a imita degradarea fizică a lămpii */
+    opacity: 0.85 !important;
+    background: rgba(255, 0, 127, 0.1) !important; /* Fundal sticlos roz-magenta Nebula Pink la 10% opacitate */
+    border-color: var(--nebula-pink) !important;
+    /* Înlocuim drop-shadow-ul distructiv cu o umbră interioară combinată cu o aureolă strânsă de 8px */
+    box-shadow: 
+      inset 0 0 10px rgba(255, 0, 127, 0.2),
+      0 0 8px rgba(255, 0, 127, 0.2) !important; 
   }
 }
 
-/* --- 13. GEOFUSION CORE IGNITION LOOP (Strălucire Plasmatică Pulsatorie) --- */
-  @keyframes lightning-glow-fusion {
-    0% {
-      /* REPARAȚIE HARDWARE SUPREMĂ: Eliminăm complet drop-shadow și box-shadow-urile exterioare mari!
-          Folosim o opacitate redusă la 0.4 și o umbră interioară micro-fină (inset). 
-          Placa video (GPU) procesează această stare instantaneu, cu consum ZERO de resurse! */
-      opacity: 0.4 !important;
-      background: rgba(167, 243, 208, 0.05) !important; /* Textură fină de verde-fosforic Solar Mint la 5% opacitate */
-      border-color: rgba(167, 243, 208, 0.3) !important; /* Chenar discret în repaus */
-      box-shadow: inset 0 0 8px rgba(167, 243, 208, 0.2) !important; /* Umbră interioară ușoară, complet sigură pentru procesor */
-    }
-    100% {
-      /* Punctul culminant al pulsației: trecem fluid pe culoarea de alertă roz-magenta Nebula Pink */
-      opacity: 0.95 !important;                          /* Ridicăm intensitatea luminoasă a feței la maximum */
-      background: rgba(255, 0, 127, 0.15) !important;     /* Fundal sticlos roz-magenta aprins la 15% opacitate */
-      border-color: var(--nebula-pink) !important;        /* Chenarul laser se aprinde complet pe roz-magenta */
-      
-      /* Inlocuim drop-shadow-ul distructiv cu o umbră interioară fină combinată cu o aureolă strânsă de 10px, 
-         generând efectul cyberpunk dorit fără a bloca sau supraîncălzi laptopul! */
-      box-shadow: 
-        inset 0 0 15px rgba(255, 0, 127, 0.3),
-        0 0 10px rgba(255, 0, 127, 0.3) !important; 
-    }
-  }
 
 /* ==========================================================================
     MODULE 00.2: MEDIA QUERIES & SPATIAL ISOLATION ENGINES (COSMIC LAYOUTS)
