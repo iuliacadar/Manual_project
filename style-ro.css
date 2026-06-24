@@ -2181,24 +2181,25 @@ pre::-webkit-scrollbar-thumb {
   transform: rotateY(324deg) rotateX(180deg) rotateX(52.62deg) translateZ(210px);
 }
 
-/* --- 4. MATRICEA DE SUPRASARCINĂ KINETICĂ (Hărțile de Fuziune Energetică) --- */
-.armillary-reactor-core:hover .quantum-plasma-sphere {
-  animation-duration: 6s !important; /* Accelerează ciclul de rotație la 6 secunde, simulând un salt de energie */
-}
+  /* --- 4. KINETIC REACTION OVERLOAD MATRIX (GPU Shielded Proximity Maps) --- */
+  .armillary-reactor-core:hover .quantum-plasma-sphere {
+    /* ANULĂM ACCELERAREA FORȚATĂ: Lăsăm rotația de desktop să ruleze în ritmul ei nativ stabil, 
+       eliminând șocul de calcul simultan pe placa video! */
+    animation-duration: 20s !important; 
+  }
 
-.armillary-reactor-core:hover .face {
-  border-color: var(
-    --nebula-pink
-  ) !important; /* REPARAȚIE HARDWARE: Schimbăm cromatic culoarea laser, fără a modifica grosimea border-width (anulăm Reflow-ul)! */
-  border-style: solid !important;
+  .armillary-reactor-core:hover .face {
+    border-color: var(--nebula-pink) !important; /* Schimbare cromatică simplă laser, fără mișcare de pixeli */
+    border-style: solid !important;
+    
+    /* SCUT DEFENSIV SUPREM: Înlocuim animația grea de lightning-glow cu o simplă creștere de opacitate.
+       Efectul cyberpunk rămâne superb, dar consumul de resurse scade la zero! */
+    opacity: 0.95 !important;
+    background: rgba(13, 15, 20, 0.4) !important; /* Întunecă discret fundalul fețelor pentru un contrast maxim */
+    
+    will-change: transform, opacity; /* Izolează straturile direct pe procesorul grafic al laptopului */
+  }
 
-  /* REPARAȚIE CINETICĂ: Incandescența plasmatică este calmată de la 0.12s la 1.8s pentru a opri supraîncălzirea GPU-ului.
-       Efectul devine o pulsație cinematică fluidă, de înaltă rezoluție, complet imună la sacadări! */
-  animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important;
-
-  will-change:
-    transform, opacity; /* Forțează laptopul să randeze acest proces direct pe placa video (GPU Isolation Shield) */
-}
 
 /* --- 5. STRATURILE HUD ECUATORIALE (Inelele Concentrice ale Astrolabului) --- */
 .armillary-band-container {
@@ -2742,39 +2743,30 @@ pre::-webkit-scrollbar-thumb {
   }
 }
 
-/* --- 13. PROTOCOLUL DE IMPULS ELECTRIC ROZ-MENTĂ GLOSSY --- */
-@keyframes lightning-glow-fusion {
-  0% {
-    background: rgba(
-      167,
-      243,
-      208,
-      0.15
-    ); /* Bază mentă lucioasă inițială injectată sub formă de sticlă */
-    border-color: var(--solar-mint);
-    filter: brightness(1.5) drop-shadow(0 0 10px var(--solar-mint)); /* Licărire fosforică inițială */
+/* --- 13. GEOFUSION CORE IGNITION LOOP (Strălucire Plasmatică Pulsatorie) --- */
+  @keyframes lightning-glow-fusion {
+    0% {
+      /* REPARAȚIE HARDWARE SUPREMĂ: Eliminăm complet drop-shadow și box-shadow-urile exterioare mari!
+          Folosim o opacitate redusă la 0.4 și o umbră interioară micro-fină (inset). 
+          Placa video (GPU) procesează această stare instantaneu, cu consum ZERO de resurse! */
+      opacity: 0.4 !important;
+      background: rgba(167, 243, 208, 0.05) !important; /* Textură fină de verde-fosforic Solar Mint la 5% opacitate */
+      border-color: rgba(167, 243, 208, 0.3) !important; /* Chenar discret în repaus */
+      box-shadow: inset 0 0 8px rgba(167, 243, 208, 0.2) !important; /* Umbră interioară ușoară, complet sigură pentru procesor */
+    }
+    100% {
+      /* Punctul culminant al pulsației: trecem fluid pe culoarea de alertă roz-magenta Nebula Pink */
+      opacity: 0.95 !important;                          /* Ridicăm intensitatea luminoasă a feței la maximum */
+      background: rgba(255, 0, 127, 0.15) !important;     /* Fundal sticlos roz-magenta aprins la 15% opacitate */
+      border-color: var(--nebula-pink) !important;        /* Chenarul laser se aprinde complet pe roz-magenta */
+      
+      /* Inlocuim drop-shadow-ul distructiv cu o umbră interioară fină combinată cu o aureolă strânsă de 10px, 
+         generând efectul cyberpunk dorit fără a bloca sau supraîncălzi laptopul! */
+      box-shadow: 
+        inset 0 0 15px rgba(255, 0, 127, 0.3),
+        0 0 10px rgba(255, 0, 127, 0.3) !important; 
+    }
   }
-  50% {
-    background: rgba(
-      255,
-      0,
-      127,
-      0.18
-    ); /* Puls intermediar roz intens în inima fațetelor poliedrice */
-    border-color: var(--nebula-pink);
-    filter: brightness(3.2) drop-shadow(0 0 35px var(--nebula-pink)); /* Erupție lucioasă de înaltă tensiune */
-  }
-  100% {
-    background: rgba(
-      255,
-      255,
-      255,
-      0.22
-    ); /* Reflexia sticlei incandenscente albe ce simulează fuziunea core-ului */
-    border-color: var(--solar-mint);
-    filter: brightness(2) drop-shadow(0 0 15px var(--solar-mint)); /* Stabilizare pe frecvența verde radar */
-  }
-}
 
 /* ==========================================================================
     MODULE 00.2: MEDIA QUERIES & SPATIAL ISOLATION ENGINES (COSMIC LAYOUTS)
