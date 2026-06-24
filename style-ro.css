@@ -2187,10 +2187,17 @@ pre::-webkit-scrollbar-thumb {
 }
 
 .armillary-reactor-core:hover .face {
-  border-width: 1.5px !important; /* Îngroașă liniile laser ale fețelor la interacțiunea cu operatorul */
+  border-color: var(
+    --nebula-pink
+  ) !important; /* REPARAȚIE HARDWARE: Schimbăm cromatic culoarea laser, fără a modifica grosimea border-width (anulăm Reflow-ul)! */
   border-style: solid !important;
-  /* SCURTCIRCUIT FLICKER: Declanșează arcuri de fulgere fosforice la o frecvență ridicată, alternantă */
-  animation: lightning-glow-fusion 0.12s infinite alternate ease-in-out !important;
+
+  /* REPARAȚIE CINETICĂ: Incandescența plasmatică este calmată de la 0.12s la 1.8s pentru a opri supraîncălzirea GPU-ului.
+       Efectul devine o pulsație cinematică fluidă, de înaltă rezoluție, complet imună la sacadări! */
+  animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important;
+
+  will-change:
+    transform, opacity; /* Forțează laptopul să randeze acest proces direct pe placa video (GPU Isolation Shield) */
 }
 
 /* --- 5. STRATURILE HUD ECUATORIALE (Inelele Concentrice ale Astrolabului) --- */

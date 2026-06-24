@@ -2225,14 +2225,21 @@ pre::-webkit-scrollbar-thumb {
 
 /* --- 4. KINETIC REACTION OVERLOAD MATRIX (Proximity Energy Fusion Maps) --- */
 .armillary-reactor-core:hover .quantum-plasma-sphere {
-  animation-duration: 6s !important; /* Accelerates rotation cycle down to 6 seconds simulating energy surge loops */
+  animation-duration: 6s !important; /* Accelerates rotation cycle down to 6 seconds simulating energy induction loops */
 }
 
 .armillary-reactor-core:hover .face {
-  border-width: 1.5px !important; /* Hardens edge laser vector width lines upon operator hover interaction */
+  border-color: var(
+    --nebula-pink
+  ) !important; /* HARDWARE REPAIR: Switches laser wires color without touching layout metrics (wipes out layout Reflow floods)! */
   border-style: solid !important;
-  /* KINETIC SHUNT FLICKER: Fires lightning voltage arcs across faces at a high-frequency interval */
-  animation: lightning-glow-fusion 0.12s infinite alternate ease-in-out !important;
+
+  /* KINETIC SHIELD: Plasmatic pulse is dampened from chaotic 0.12s down to a stable 1.8s loop to bar GPU VRAM overflows.
+       The interaction mutates into a sleek, fluid holographic sweep entirely free from layout stuttering! */
+  animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important;
+
+  will-change:
+    transform, opacity; /* Instructs the local client hardware to isolate these 3D faces onto a dedicated GPU compositing layer */
 }
 
 /* --- 5. EQUATORIAL HUD LAYER ARRAYS (The Centered Elliptical Astrolabe Bands) --- */
