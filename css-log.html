@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Odyssey | CSS Expedition Log</title>
+    <meta
+      name="description"
+      content="CSS styling logs - Cascading Style Sheets exploration."
+    />
+    <meta name="theme-color" content="#0a0b1e" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg?v=3" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://googleapis.com" />
+    <link rel="preconnect" href="https://gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+    />
+  </head>
+  <body class="module-view">
+    <!-- HUD NAVIGARE SUPERIOR (Cockpit) -->
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">Digital Odyssey / CSS Module Log</a>
+      </div>
+      <ul class="nav-links">
+        <!-- <li><a href="html-log.html">HTML Log</a></li>
+        <li><a href="css-log.html" class="active">CSS Log</a></li>
+        <li><a href="sql-log.html">SQL Log</a></li> -->
+        <li>
+          <a href="index.html" class="return-btn">Return to Command Deck</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="main-container log-layout">
+      <!-- SIDEBAR CONTROLS DESKTOP & BANDE HUD ORIZONTAL MOBIL (Fuziune Fixed) -->
+      <aside class="log-sidebar">
+        <nav class="sidebar-nav">
+          <!-- Portalul de reset tăiat mecanic cu unghiuri duble roz în Desktop -->
+          <a href="#top-deck" class="map-title-link">
+            <h4>CSS Expedition Map</h4>
+          </a>
+
+          <!-- Lista ta curată pe linie orizontală în Mobile, verticală în Desktop -->
+          <ul>
+            <!-- Punctele de sector (Săptămâni) transformate în micro-plăcuțe octogonale mov -->
+
+            <li>
+              <a href="#css-day00" class="sidebar-link">
+                Day 00 &#9672; Intro</a
+              >
+            </li>
+
+            <!-- Week 1:    -->
+            <li class="week-label">
+              <a href="#css-sector-01" class="sidebar-link">S01</a>
+            </li>
+            <li>
+              <a href="#css-day01" class="sidebar-link">Day 01 &#9672;</a>
+            </li>
+            <li>
+              <a href="#css-day02" class="sidebar-link">Day 02 &#9672;</a>
+            </li>
+            <li>
+              <a href="#css-day03" class="sidebar-link">Day 03 &#9672;</a>
+            </li>
+            <li>
+              <a href="#css-day04" class="sidebar-link">Day 04 &#9672;</a>
+            </li>
+            <li>
+              <a href="#css-day05" class="sidebar-link">Day 05 &#9672;</a>
+            </li>
+            <li>
+              <a href="#css-day06" class="sidebar-link">Day 06 &#9672;</a>
+            </li>
+            <li>
+              <a href="#css-day07" class="sidebar-link">Day 06 &#9672;</a>
+            </li>
+
+            <!-- Week 2: -->
+            <li class="week-label">
+              <a href="#css-sector-02" class="sidebar-link">S02</a>
+            </li>
+            <li>
+              <a href="#css-day08" class="sidebar-link">Day 08 &#9672;</a>
+            </li>
+            <li>
+              <a href="#css-day09" class="sidebar-link">Day 09 &#9672;</a>
+            </li>
+            <li>
+              <a href="#css-day10" class="sidebar-link">Day 10 &#9672;</a>
+            </li>
+            <li>
+              <a href="#css-day11" class="sidebar-link">Day 11 &#9672;</a>
+            </li>
+            <li>
+              <a href="#css-day12" class="sidebar-link">Day 12 &#9672;</a>
+            </li>
+            <li>
+              <a href="#css-day13" class="sidebar-link">Day 13 &#9672;</a>
+            </li>
+            <li>
+              <a href="#css-day14" class="sidebar-link">Day 14 &#9672;</a>
+            </li>
+
+            <!-- Week 3: -->
+            <li class="week-label">
+              <a href="#css-sector-03" class="sidebar-link">S03</a>
+            </li>
+            <li>
+              <a href="#css-day15" class="sidebar-link">Day 15 &#9672;</a>
+            </li>
+            <li>
+              <a href="#css-day16" class="sidebar-link">Day 16 &#9672;</a>
+            </li>
+            <li>
+              <a href="#css-day17" class="sidebar-link">Day 17 &#9672;</a>
+            </li>
+            <li>
+              <a href="#css-day18" class="sidebar-link">Day 18 &#9672;</a>
+            </li>
+            <li>
+              <a href="#css-day19" class="sidebar-link">Day 19 &#9672;</a>
+            </li>
+            <li>
+              <a href="#css-day20" class="sidebar-link">Day 20 &#9672;</a>
+            </li>
+            <li>
+              <a href="#css-day21" class="sidebar-link">Day 21 &#9672;</a>
+            </li>
+
+            <!-- Week 4: -->
+            <li class="week-label">
+              <a href="#css-sector-04" class="sidebar-link">S04</a>
+            </li>
+            <li>
+              <a href="#css-day22" class="sidebar-link">Day 22 &#9672;</a>
+            </li>
+            <li>
+              <a href="#css-day23" class="sidebar-link">Day 23 &#9672;</a>
+            </li>
+            <li>
+              <a href="#css-day24" class="sidebar-link">Day 24 &#9672;</a>
+            </li>
+            <li>
+              <a href="#css-day25" class="sidebar-link">Day 25 &#9672;</a>
+            </li>
+            <li>
+              <a href="#css-day26" class="sidebar-link">Day 26 &#9672;</a>
+            </li>
+            <li>
+              <a href="#css-day27" class="sidebar-link">Day 27 &#9672;</a>
+            </li>
+            <li>
+              <a href="#css-day28" class="sidebar-link">Day 28 &#9672;</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- LOG CONTENT ZONE (Zona din dreapta asigurară cu scroll independent) -->
+      <section class="log-content">
+        <!-- Antetul principal al categoriei de CSS -->
+        <header id="top-deck" class="category-header">
+          <h2>The Gravitational Fields of Aesthetic</h2>
+          <p>
+            Gazing into the visual energy, layout matrix, and stylistic vectors
+            of the void.
+          </p>
+        </header>
+
+        <!-- AIRLOCK -->
+        <div id="css-sector-00" class="sector-announcement">
+          <span>ENTER AIRLOCK</span>
+          <h2>Initiation</h2>
+        </div>
+
+        <!-- ENTRY 00: THE INTRO -->
+        <article id="css-day00" class="log-entry">
+          <h3>
+            <span>Day 00</span>
+            <span class="meta-title"> The Mercurial Sea :: Initiation</span>
+          </h3>
+          <div class="log-text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut omnis
+              similique eius laborum, alias labore minima id, assumenda
+              inventore facere odit corrupti, vitae quisquam itaque ex tempora
+              mollitia quaerat doloribus.
+            </p>
+          </div>
+
+          <div class="mission-status">
+            <p>Status: Lorem</p>
+          </div>
+          <div class="note-terminal">
+            <textarea
+              name="css-note-day00"
+              id="css-note-day00"
+              placeholder="[ ENTER CAPTAIN'S LOG EXTENSION... ]"
+            ></textarea>
+            <button onclick="saveNote('css-note-day00')">
+              Save Signal Extension
+            </button>
+          </div>
+        </article>
+
+        <!-- SECTORUL 01: INTRODUCEREA ÎN DOMENIUL ESTETIC -->
+        <div id="css-sector-01" class="sector-announcement">
+          <span>Entering Sector 01 </span>
+          <h2>Galactic Foundations</h2>
+          <!-- <p> Visual Architecture & Selectors: Initializing cosmic gravity fields and color system sync.</p> -->
+        </div>
+
+        <!-- JURNALUL DE BORD: DAY 01 -->
+        <article id="css-day01" class="log-entry">
+          <h3>
+            <span>Day 01</span>
+            <span class="meta-title"
+              >Stylistic Gravity :: The Cascading Matrix & Selectors
+            </span>
+          </h3>
+
+          <div class="log-text">
+            <!-- OPȚIONAL: clasa .log-text pentru stilizarea div-ului cu textul articolului -->
+            <p>
+              Today the visual transmission started. Cascading Style Sheets
+              operate like a gravitational grid layered directly on top of the
+              physical HTML skeleton. Understanding specificity weights and how
+              rules cascade from root elements down to individual child nodes is
+              crucial to prevent layout collisions during the voyage.
+            </p>
+          </div>
+
+          <div class="mission-status">
+            <p>
+              STATUS: INITIALIZING_CSS_CORE | RECEPTOR: ACTIVE | LINK: CONFIRMED
+            </p>
+          </div>
+
+          <div class="note-terminal">
+            <!-- Atributul name în textarea:il pun acum pentru bune practici (name="day09-notes"), dar pentru funcționalitatea noastră actuală, ID-ul este cel care face toată treaba. -->
+            <textarea
+              name="css-note-day01"
+              id="css-note-day01"
+              placeholder="[ ENTER CAPTAIN'S LOG EXTENSION... ]"
+            ></textarea>
+            <button onclick="saveNote('css-note-day01')">
+              Save Signal Extension
+            </button>
+          </div>
+        </article>
+
+        <!-- JURNALUL DE BORD: DAY 02 -->
+        <article id="css-day02" class="log-entry">
+          <h3>
+            <span>Day 02</span>
+            <span class="meta-title"
+              >Geometric Boundaries :: Box Model Matrix</span
+            >
+          </h3>
+
+          <div class="log-text">
+            <!-- Optional: class="log-text"  -->
+            <p>
+              Every element in the FrontEndScape is encapsulated within a
+              mechanical box. Manipulating paddings, rigid borders, and external
+              margins determines the physical volume an element occupies on the
+              terminal screen, preventing strivirea capsulelor on smaller
+              responsive viewports.
+            </p>
+          </div>
+          
+          <div class="mission-status">
+            <p>STATUS: SCANNING_BOUNDARIES // EXTRACTION: COMPLETE</p>
+          </div>
+          <div class="note-terminal">
+            <!-- Atributul name în textarea:il pun acum pentru bune practici (name="day09-notes"), dar pentru funcționalitatea noastră actuală, ID-ul este cel care face toată treaba. -->
+            <textarea
+              name="css-note-day02"
+              id="css-note-day02"
+              placeholder="[ ENTER CAPTAIN'S LOG EXTENSION... ]"
+            ></textarea>
+            <button onclick="saveNote('css-note-day02')">
+              Save Signal Extension
+            </button>
+          </div>
+        </article>
+
+        <!-- TODO: Day03 - Day07   -->
+
+        <!-- SECTORUL 02: STRUCTURI COMPLEXE DE FLUX -->
+        <div id="css-sector-02" class="sector-announcement">
+          <span>Entering Sector 02</span>
+          <h2>Advanced Grids & Flexbox</h2>
+          <!-- <p>Engaging structural layout engines for dual-axis symmetry.</p> -->
+        </div>
+
+        <!-- JURNALUL DE BORD: DAY 08 -->
+        <article id="css-day08" class="log-entry">
+          <h3>
+            <span>Day 08</span>
+            <span class="meta-title"
+              >Quantum Alignment :: Flexbox Core Mechanics</span
+            >
+          </h3>
+
+          <div class="log-text">
+            <!-- OPȚIONAL: class="log-text" -->
+            <p>
+              Deploying the Flexbox Engine allows the interface to manipulate
+              items along a single axis dynamically. Forcing child elements to
+              stand in rows, centering their physical forms axially, or
+              stretching them into rigid columns resolves the responsive layout
+              gaps observed during deep-space operations.
+            </p>
+          </div>
+
+          <div class="mission-status">
+            <p>STATUS: ALIGNING_FLEX_AXIS // STABILITY: MAXIMUM</p>
+          </div>
+          <div class="note-terminal">
+            <!-- Atributul name în textarea:il pun acum pentru bune practici (name="day09-notes"), dar pentru funcționalitatea noastră actuală, ID-ul este cel care face toată treaba. -->
+            <textarea
+              name="css-note-day08"
+              id="css-note-day08"
+              placeholder="[ ENTER CAPTAIN'S LOG EXTENSION... ]"
+            ></textarea>
+            <button onclick="saveNote('css-note-day08')">
+              Save Signal Extension
+            </button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!-- FOOTER TERMINAL UNIFICAT (Centrat pe mijloc, curat, fără ambră) -->
+    <footer class="footer">
+      <div class="external-comms">
+        <a
+          href="bibliography.html#html-resources"
+          target="_blank"
+          class="archive-link"
+        >
+          <span class="pulse-dot"></span> Access External Archives (CSS
+          Bibliography)
+        </a>
+      </div>
+      <p>
+        SYS_ORBIT: CSS_EXPEDITION // STATUS:
+        <span class="telemetry-active">ONLINE</span>
+      </p>
+      <p>COORDINATES: 46.7712° N, 23.6236° E // SYSTEM_TIME: 2026.05.25</p>
+      <p class="copyright">
+        &copy; 2026 | Digital Odyssey by
+        <span class="vessel-sig">Iulia-Alexandra Cadar</span>
+      </p>
+    </footer>
+
+    <!-- Conectăm script.js la final pentru a asigura activarea senzorilor pe butoane -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,3497 @@
+/* 
+================================================================================
+@manifest: Digital Odyssey - Volumul I: Frontend (Jurnalul de Bord CSS)
+================================================================================
+Salutare, echipaj! Acest proiect este o pagină recursivă de navigație stelară. 
+În această Odisee Digitală, am ales în mod deliberat să navigăm folosind CSS Nativ 
+(Vanilla) în detrimentul hărților prefabricate de tip Sass/SCSS, din următoarele 
+motive de orientare cosmică:
+
+1. FĂRĂ FILTRE INTERMEDIARE (Orizontul Curat)
+    Preprocesoarele precum Sass/SCSS sunt ca niște lentile de simulare: codul lor 
+    trebuie tradus înainte ca nava (browserul) să îl poată citi. Rămânând la CSS 
+    nativ, codul pe care îl studiați în acest jurnal este EXACT materia primă pe 
+    care nava o execută în timp real. Privim direct prin hubloul realității, fără 
+    magie ascunsă sau transformări în fundal.
+
+2. LOGICĂ RECURSIVĂ DIRECTĂ (Senzorii de Scanare JS)
+    Sistemele noastre de scanare JavaScript citesc acest fișier ca pe o hartă stelară 
+    text, extrăgând aceste adnotări pentru a le proiecta direct pe puntea de comandă 
+    (interfață). Dacă am fi folosit Sass, structura unică a acestor note de călătorie 
+    s-ar fi pierdut în timpul hiperspațiului (compilării), rupând legătura directă 
+    dintre traseu și explicație.
+
+3. EVOLUȚIA NATURALĂ A COSMOSULUI WEB
+    Astăzi, CSS-ul modern a asimilat super-puterile vechilor instrumente. Avem 
+    variabile native (--variabila) pentru a stoca energia culorilor și imbricare 
+    (nesting) nativă pentru a grupa structurile complexe. Învățând acest fișier, 
+    stăpâniți legile fizice actuale ale universului web, nu doar un vehicul temporar 
+    ce ar putea deveni o epovă spațială în viitor.
+================================================================================ 
+*/
+
+/* ==========================================================================
+    MODULELE 01 - 11: STRUCTURA GENERALĂ DE INTERFAȚĂ ȘI COMPONENTELE CORE
+      
+    REZUMAT: Acest macro-bloc extins stabilește bazele structurale, reseturile 
+    globale de siguranță, tipografia industrială, terminalele de navigare și 
+    sistemele modulare ale jurnalelor de bord. El orchestrează grilele fluide 
+    și învelișurile componentelor de bază, operând integral în spațiul bidimensional 
+    standard pentru a asigura tipare vizuale responsive optime.
+   ========================================================================== */
+
+/* ==========================================================================
+    MODULE 01: VARIABLES & MATRIX QUANTUM CORE (NUCLEUL NAVEI)
+    Arhitectură recursivă. Centralizarea indicatorilor cromatici de sistem.
+
+    REZUMAT: Acest modul acționează ca nodul tactic principal al navei. El 
+    stabilește token-urile cromatice absolute și constrângerile structurale ale 
+    cockpitului, ancorând întreaga interfață într-un mediu profund, de înalt 
+    contrast cosmic. Fiecare lungime de undă radiantă și fir structural este 
+    legat aici pentru a asigura continuitatea sistemului prin void.
+
+   ========================================================================== */
+
+:root {
+  /* --- CULORI DE FUNDAL (Deep Space Surface) --- */
+  --space-dark: #0d0f14; /* Negru-albastru cinematic profund (inspirat din oceanul Solaris) */
+  --void-black: #0a0b14; /* Spațiul adânc cosmic: fundal protector anti-oboseală */
+  --font-main:
+    "Space Grotesk", sans-serif; /* Matricea tipografică rigidă a terminalelor */
+  --panel-bg: rgba(
+    20,
+    23,
+    30,
+    0.85
+  ); /* Fundalul translucid de sticlă fumurie pentru panourile de loguri */
+  --glass-bg: rgba(
+    10,
+    11,
+    30,
+    0.8
+  ); /* Strat izolator suplimentar folosit pentru efecte de adâncime */
+
+  /* --- ACCENTE NEON DE SISTEM (Telemetry Indicators) --- */
+  --solar-mint: #a7f3d0; /* Verde-mentă fosforic: indică date stabile, scanări active și HUD */
+  --nebula-purple: #3c2c8c; /* Violet cosmic adânc: utilizat pentru divizoare și fundalul etichetelor */
+  --nebula-pink: #ff007f; /* Roz-magenta intens: marchează elementele active, navigația și energia */
+  --amber-glow: #ffb300; /* Chihlimbar retro: rezervat alertelor și modulelor viitoare în așteptare */
+  --starlight-blue: #00d2ff; /* Albastru electric stelar: necesar pentru efectele de hover din navigație */
+
+  /* --- TEXT ȘI UI INTERFAȚĂ (Industrial Typography) --- */
+  --stardust: #e2e8f0; /* Alb industrial: folosit exclusiv pentru textul de bază */
+  --module-border: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Linie micro-fină albă pentru asamblarea modulelor tehnice */
+}
+
+/* ==========================================================================
+    MODULE 02: GLOBAL RESET & GRAVITY FIELDS (RESET GLOBAL ȘI CÂMPURI GRAVITAȚIONALE)
+    REZUMAT TEHNIC: Resetează comportamentul nativ al browserului, unifică modelul 
+    de calcul al cutiei (box model) și generează gradientul ambiental adânc Solaris.
+      Acest modul dictează legile fizice fundamentale ce guvernează nava 
+    noastră digitală. El elimină neconcordanțele native dintre browsere, unifică 
+    calculul matematic al cutiilor pentru a preveni colapsul spațial și proiectează 
+    gradientul sferic cinematic al oceanului Solaris. De asemenea, stabilește 
+   ========================================================================== */
+
+/* RESETUL UNIVERSAL DE CONFIGURARE (Se aplică pe absolut toate elementele) */
+*,
+*::before,
+*::after {
+  margin: 0; /* Elimină marginile reziduale introduse automat de browsere */
+  padding: 0; /* Curăță spațiile interioare standard pentru control total */
+  box-sizing: border-box; /* MODUL DIDACTIC: Include bordura și padding-ul în lățimea totală, blocând spargerea layout-ului */
+}
+
+/* MATRICEA RADARULUI SUPREM (Rădăcina HTML a aplicației) */
+html {
+  scroll-behavior: smooth; /* Activează teleportarea lină, cinematică, atunci când sari la ID-uri prin ancore */
+
+  /* REPARAȚIA SALVATOARE GLOBALĂ: 
+        Interzice absolut întregului site să mai creeze vreodată scroll orizontal, 
+        indiferent de elementele care depășesc ecranul (lăbărțări de text, console mobile etc.). */
+  overflow-x: hidden !important;
+
+  width: 100% !important; /* Forțează layout-ul rădăcină să ocupe întreaga lățime a ferestrei browserului */
+  max-width: 100% !important; /* Scut rigid: blochează extinderea structurală dincolo de marginile display-ului */
+}
+
+/* CORPUL CENTRAL AL NAVEI (Puntea de control Body) */
+body {
+  /* GRADIENTUL CINEMATIC DE FUNDAL: 
+        Unificăm codul prin legarea directă de variabila ta nativă '--space-dark'.
+        Generează o lumină subtilă în centru care se stinge spre un negru-albastru adânc în margini. */
+  background: radial-gradient(
+      circle at center,
+      #1a1d26 0%,
+      var(--space-dark) 100%
+    )
+    fixed;
+  background-color: var(
+    --space-dark
+  ); /* Plasă de siguranță cromatică în caz că browserul nu încarcă gradientul */
+
+  color: var(
+    --stardust
+  ); /* Injectează culoarea prăfuită stardust pe toate textele generale */
+
+  font-family: var(
+    --font-main
+  ); /* Sursă Centrală: Toate elementele de pe navă moștenesc automat acest font. Font rigid, geometric, specific erei spațiale (Space Age) */
+  line-height: 1.8; /* Aerisește textul, lăsând un raport generos între rânduri pentru o citire ușoară */
+  margin: 0; /* Elimină marginile implicite ale browserului pentru a lipi interfața direct de ecran */
+
+  /* SCUT DUBLU DE SIGURANȚĂ LA NIVEL DE CORP:
+        Interzice forțat absolut oricărui script sau element supradimensionat 
+        să destabilizeze ecranul pe orizontală sau să spargă marginile pe mobil. */
+  overflow-x: hidden !important;
+  width: 100% !important; /* Îngheață lățimea punții principale la dimensiunea fizică a viewport-ului */
+  max-width: 100% !important; /* Scut anti-lăbărțare: blochează umflarea structurală a corpului */
+}
+
+/* SELECTOR: body::before (Sectorul de Flicker CRT Global) */
+body::before {
+  content: " "; /* Inițializează matricea virtuală; directivă obligatorie pentru crearea obiectului */
+  display: block; /* Convertește elementul spectral într-un înveliș structural de tip bloc solid */
+  position: fixed; /* Îngheață masca raportat la ecran; rămâne imună la glisarea (scroll-ul) paginii */
+  top: 0; /* Ancorează grila la marginea superioară absolută a ferestrei active */
+  left: 0; /* Ancorează grila la marginea stângă absolută a ferestrei active */
+  bottom: 0; /* Trage membrana până la marginea de jos, garantând acoperirea completă */
+  right: 0; /* Trage membrana până la marginea din dreapta, prevenind golurile de aer */
+  z-index: 9999; /* Strat de prioritate supremă: se așază peste toate datele pentru a filtra lumina */
+  pointer-events: none; /* PRO-UX: Permite click-urilor mouse-ului să treacă prin el fără blocaje tactile */
+
+  /* Simulare bidimensională de raster fosforic, imitând un terminal hardware autentic din anii '70 */
+  background:
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%),
+    /* Stratul 1: Generează liniile de scanare orizontale ce se repetă pe axa Y */
+    linear-gradient(
+        90deg,
+        rgba(255, 0, 127, 0.03),
+        rgba(167, 243, 208, 0.02),
+        rgba(123, 47, 247, 0.03)
+      ); /* Stratul 2: Schimbă axa la 90 de grade pentru a construi sub-pixelii verticali */
+
+  /* Dimensiunile micro-rasterului original de monitor vechi */
+  background-size:
+    100% 4px,
+    /* Forțează liniile orizontale să aibă lățime maximă și să se repete la fiecare 4px */
+    3px 100%; /* Construiește coloane fosforice de 3px lățime ce se repetă la infinit pe orizontală */
+
+  /* DECLANȘAREA ENGINE-ULUI: Rulează animația definită în Modulul 00.1, generând tremurul fosforic permanent */
+  animation: crt-flicker 0.15s infinite;
+}
+
+/* 4. STRUCTURA MACRO A SECȚIUNILOR (Comportamentul implicit de Capitol) */
+section {
+  /* VID COSMIC SUPERIOR: 
+        Creează o zonă protectoare de 120px deasupra fiecărui volum. 
+        Acest spațiu liber este vital deoarece împiedică navbar-ul fix de sus 
+        să se suprapună peste titlul de început al capitolului atunci când navighezi. */
+  padding-top: 120px;
+
+  /* ECHILIBRU VIZUAL INFERIOR: 
+        Lasă o pernă de aer simetrică de 80px în partea de jos a fiecărui modul de conținut, 
+        asigurând o tranziție aerisită și un contrast optim înainte de următorul bloc. */
+  padding-bottom: 80px;
+}
+
+/* CORECTURĂ ANCORE FIXE (Mecanismul de aterizare la scroll)
+   Se aplică tuturor secțiunilor care dețin un ID (țintele ancorelor din navbar) */
+/* --- SECȚIUNILE CU ANCORE DE ID (Țintele de teleportare) --- */
+section[id] {
+  min-height: 80vh; /* Forțează macro-secțiunea să ocupe cel puțin 80% din înălțimea totală a ecranului */
+
+  /* ALINIERE AXIALĂ FLEXBOX: 
+        Activează Flexbox pentru a manipula structura interioară a volumului.
+        Stivuiește componentele interne în mod rigid pe verticală și centrează 
+        geometric tot conținutul pe axa verticală a ecranului. */
+  display: flex; /* Activează Flexbox pentru a manipula structura interioară a volumului */
+  flex-direction: column; /* Așază componentele interne în mod rigid pe verticală */
+  justify-content: center; /* Centrează geometric tot conținutul pe axa verticală a ecranului */
+  scroll-margin-top: 0px; /* Resetează marja nativă; alinierea perfectă este controlată din layout-ul de loguri */
+}
+
+/* CORPUL ARHIVEI DE DATE (Specific pentru bibliography.html) */
+/* --- SCUT ABSOLUT ANTI-OVERFLOW PAGINA BIBLIOGRAFIE --- */
+.archive-body {
+  /* SCUT LATERAL DE SIGURANȚĂ ABSORBANT:
+        Interzice să se mai folosească 100vw (lățimea virtuală cu scrollbar inclus).
+        Îngheață lățimea fix în dimensiunea ecranului fizic al ferestrei. */
+  width: 100% !important;
+  max-width: 100% !important; /* Scut rigid anti-lăbărțare: blochează umflarea structurală a corpului arhivei */
+
+  /* REPARAȚIA CRUCIALĂ ANTI-SCROLL PARAZIT:
+       Taie mecanic orice pixel rătăcit în exterior și oprește definitiv mișcarea stânga-dreapta. */
+  overflow-x: hidden !important;
+
+  position: relative; /* Deschide contextul de poziționare absolută pentru măștile radar din sub-module */
+}
+
+/* ==========================================================================
+    MODULE 03: TYPOGRAPHY & GALACTIC HIERARCHY (IERARHIA VIZUALĂ ȘI TIPOGRAFIA)
+    
+    REZUMAT: Acest modul stabilește infrastructura tipografică structurală a 
+    jurnalelor de bord. El normalizează prioritățile vizuale ale titlurilor, 
+    impune serializarea strictă în majuscule militare și aplică o spațiere 
+    tehnică între caractere pe toți indicatorii macro primari, simulând o 
+    interfață de radar analogic vechi încastrată în void.
+   ========================================================================== */
+
+/* Macro Indicatori: Titluri structurale master ce reprezintă volume și antete */
+h2 {
+  font-size: 2.2rem; /* Volum tipografic calibrat pentru impact cognitiv vizual imediat */
+  color: var(
+    --nebula-pink
+  ); /* ROZ NEON ENERGETIC: Standardizează identitatea vizuală a volumelor pe navă */
+  text-transform: uppercase; /* Forțează aspectul de protocol militar în toate jurnalele de bord */
+  letter-spacing: 4px; /* Extinde spațierea pentru a proiecta o matrice de monitor tehnic retro */
+
+  /* AURĂ FOSFORICĂ MAGENTA: Generează un strat fin de emisie neon ce protejează nucleul textului */
+  text-shadow:
+    0 0 10px rgba(255, 0, 127, 0.3),
+    0 0 15px rgba(255, 0, 127, 0.1);
+
+  /* HARTĂ DE TRANZIȚIE TERMICĂ: Stochează comportamentul fluid pentru stările de hover dinamic */
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+/* Suprapunere de Energie Kinetică: Nucleul titlului se aprinde intens la trecerea cursorului */
+h2:hover {
+  /* SUPRASARCINĂ CRITICĂ: Intensifică radiația magenta atunci când cursorul echipajului țintește elementul */
+  text-shadow:
+    0 0 10px rgba(255, 0, 127, 0.7),
+    0 0 25px rgba(255, 0, 127, 0.3);
+}
+
+/* --- TITLURILE INTERMEDIARE (Sub-capitole sau module text) --- */
+h3 {
+  /* SEMNAL CROMATIC INTENS: Roz-magenta intens pentru a atrage atenția echipajului asupra subiectului */
+  color: var(--nebula-pink);
+
+  /* BLOCARE POZIȚIE: Resetează marginile superioare implicite pentru a preveni decalajele în interiorul modulelor */
+  margin-top: 0;
+}
+
+/* Micro-Semnale: Definește șablonul genetic de bază pentru titlurile de rang 4 */
+h4 {
+  font-size: 1.1rem; /* Volum standard curat înainte ca suprascrierile de componente să se atașeze */
+  letter-spacing: 1px; /* Spațiere implicită ce asigură definiția structurală a literelor */
+  margin: 0; /* Resetare absolută a marginilor browserului pentru a asigura siguranța bazei */
+}
+
+/* Etichete de Sub-Modul: Stabilește un șablon curat pentru titlurile de rang 5 */
+h5 {
+  font-size: 1.1rem; /* Dimensiune standard optimizată pentru etichete interne și metrici */
+  text-transform: none; /* Lasă scrierea naturală (litere mari și mici) pentru a păstra citirea acronimelor */
+}
+
+/* Motorul Narativ: Asigură o stare neutră și predictibilă pentru nodurile de text din sistem */
+p {
+  margin: 0; /* RESETARE DEFENSIVĂ: Ancorează blocurile de text fix la locul lor, protejând layout-urile HUD */
+  color: var(
+    --stardust
+  ); /* MOȘTENIRE CROMATICĂ: Garantează lizibilitatea de bază folosind albul anti-oboseală stardust */
+}
+
+/* Elemente de Cod Inline: Evidențiază sintaxa tehnică inserată direct în paragrafe */
+p code {
+  /* TENTĂ AMBIENTALĂ: Injectează un fundal fin de 10% verde-mentă în spatele tagului */
+  background: rgba(167, 243, 208, 0.1);
+
+  /* MICRO-COMPRESIE: Umplutură compactă originală ce protejează marginile literelor */
+  padding: 2px 6px;
+  border-radius: 3px;
+
+  /* SEMNAL DE ALERTĂ: Aprinde tagul inline spectaculos în nuanța roz-magenta intens */
+  color: var(--nebula-pink);
+}
+
+/* Divizori Energetici: Separare laser de mare precizie între blocurile de cronici */
+hr {
+  /* DISTRUGEREA LINIILOR PARAZITE: Șterge complet linia gri implicită din browser */
+  border: none;
+  height: 1px; /* Grosime micro-fină industrială pentru o linie laser elegantă */
+
+  /* GRADIENT RADIAL LASER: Pornește din opacitate 0, se aprinde pe roz-magenta la centru și dispare la margini */
+  background: radial-gradient(
+    circle,
+    rgba(255, 0, 127, 0.4) 0%,
+    rgba(255, 0, 127, 0) 70%
+  );
+
+  /* VID COSMIC DE IZOLARE: Lasă o distanță generoasă de 60px deasupra și sub linie pentru echilibru */
+  margin: 60px 0;
+}
+
+/* ==========================================================================
+    MODULE 04: CORE CONTAINERS & HEADERS (ENCAPSULAREA CONȚINUTULUI)
+    
+    REZUMAT: Acest modul stabilește armăturile structurale și matricele de 
+    încapsulare ale navei. El impune restricții de layout la înaltă rezoluție 
+    pentru a opri deformarea textului pe monitoarele desktop ultra-wide, 
+    construiește perne simetrice de aer vizual și lansează motorul automat 
+    de pulsație recursivă peste antetele supreme ale fiecărui sector.
+   ========================================================================== */
+
+/* ==========================================================================
+    MODULE 04: CORE CONTAINERS & HEADERS (ENCAPSULAREA CONȚINUTULUI)
+      
+    REZUMAT: Acest modul construiește armătura de încapsulare macro și granițele 
+    geometrice ale navei. El impune un plafon structural rigid care oprește 
+    deformarea layout-ului pe monitoarele desktop ultra-wide, standardizează 
+    pernele de aer laterale și activează motorul asincron de pulsație neon pe 
+    antetele de categorie pentru a ghida orientarea cognitivă a echipajului la 
+    intrarea pe o nouă punte de date.
+   ========================================================================== */
+
+/* BLOCURILE DE CADRAJ MARE (Alinierea simetrică a navei) */
+.category-header,
+.footer,
+.main-container > h2 {
+  /* SCUT INTERN GRAVITAȚIONAL: Împinge conținutul spre interior pentru a nu atinge marginile ecranului hardware */
+  padding-left: 40px;
+  padding-right: 40px; /* Protecție simetrică pe partea dreaptă a carcasei navei */
+
+  /* RESTRÂNGERE DE ÎNALTĂ REZOLUȚIE: Scut anti-întindere ce oprește deformarea pe monitoare foarte mari */
+  max-width: 1200px;
+}
+
+/* ANTETUL DE SECȚIUNE (Category Intro Header) */
+.category-header {
+  padding-top: 40px; /* Spațiu inițial compact calibrat pentru formatul de desktop */
+  padding-bottom: 20px; /* Pernă de aer fină așezată sub descrierea categoriei text */
+  text-align: center; /* REVIZUIRE CROMATICĂ ȘI SIMETRICĂ: Centrare absolută pentru elementele h2 și p */
+}
+
+/* ANIMAȚIA DISCRETĂ PE TITLUL DIN ANTET */
+.category-header h2 {
+  margin-top: 0; /* Șterge distanța verticală implicită injectată de browser */
+
+  /* REGLAJ DE COMPRESIE: Ajustare estetică fină a spațierii literelor pentru blocul titlului de antet */
+  letter-spacing: 2px;
+
+  /* EXECUTANȚĂ CRUCIALĂ RECURSIVĂ: Rulează motorul de pulsație de 3 ori alternând vectorul de mișcare,
+     blocându-se definitiv în starea sa luminoasă maximă ("forwards") */
+  animation: neon-pulse-pink 2.5s ease-in-out 3 alternate forwards;
+}
+
+/* ==========================================================================
+    MODULE 05: INTERFACE NAVIGATION & TERMINAL CONTROLS (NAVIGAȚIA HUD)
+    
+    REZUMAT: Acest modul proiectează puntea principală de interacțiune și navigație 
+    a flotei. El consolidează panoul de control fix superior (Cockpit-ul HUD) și 
+    consolele de orientare asimetrice (Harta din Sidebar). Modulul utilizează 
+    tranziții cinematice bazate pe fizica accelerației reale (cubic-bezier), 
+    măști de sticlă acrilică cu filtrare optică (backdrop-filter) și rețele 
+    electrice de fire laser pentru a oferi echipajului un răspuns tactil imediat.
+   ========================================================================== */
+
+/* ==========================================================================
+    SUB-MODULE 05.1: FIXED TOP CONTROL BOARD (PUNTEA PRINCIPALĂ HUD)
+      
+    REZUMAT: Acest sub-modul izolează regulile de layout pentru puntea superioară fixă 
+    de navigare (.navbar). El stabilește coordonatele de fixare pe tavanul ferestrei, 
+    configurează ecranarea cu sticlă fumurie blurată și se cuplează la senzorii de 
+    accelerare hardware (tranziții cubic-bezier) pentru a rula bucle de mascare automată.
+   ========================================================================== */
+.navbar {
+  position: fixed; /* Blochează bara în tavanul ecranului; rămâne vizibilă la scroll */
+  top: 0; /* Aliniere perfectă la marginea superioară a ferestrei active */
+  left: 0; /* Aliniere la marginea stângă absolută a ferestrei hardware */
+  width: 100%; /* Forțează navbar-ul să se întindă pe toată lățimea utilă a ecranului */
+  height: 60px; /* Înălțime fixă, compactă, specifică unei console de bord SF */
+  background: rgba(
+    13,
+    15,
+    20,
+    0.85
+  ); /* Fundal translucid închis (sticlă fumurie Solaris) */
+  backdrop-filter: blur(
+    10px
+  ); /* Efect cinematic: blurează elementele din pagină care trec pe sub bară */
+  border-bottom: 1px solid var(--module-border); /* Linie micro-fină la bază pentru delimitare structurală */
+
+  display: flex; /* Activează Flexbox pentru alinierea elementelor pe axa orizontală */
+  justify-content: space-between; /* Împinge Logo-ul în stânga extremă și Meniul în dreapta extremă */
+  align-items: center; /* Centrează geometric toate elementele pe axa verticală (înălțimea de 60px) */
+  padding: 0 40px; /* Pernă de aer laterală pentru ca elementele să nu atingă colțurile ecranului */
+  z-index: 1000; /* Se asigură că navbar-ul plutește deasupra tuturor elementelor din pagină */
+  box-sizing: border-box; /* Include padding-ul în lățimea totală, prevenind deformarea bazei */
+
+  /* CUBIC-BEZIER CINEMATIC: Asigură o retragere/apariție extrem de fluidă, controlată de JavaScript */
+  transition:
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* CLASA AUTOMATĂ DE ASCUNDERE (Injectată din script.js când utilizatorul dă scroll în jos) */
+.navbar--hidden {
+  transform: translateY(
+    -100%
+  ); /* Împinge fizic navbar-ul în sus, în afara ariei vizibile a ecranului */
+}
+
+/* ==========================================================================
+    SUB-MODULE 05.2: VISUAL IDENTITY OF THE VESSEL (NAVIGAREA LOGO-ULUI CENTRAL)
+      
+    REZUMAT: Acest sub-modul securizează marcajele de branding necomprimate ale navei 
+    amiral (.logo). El forțează constrângeri de greutate vectorială mare pentru font, 
+    impune protocoale rigide de litere mari și rulează motoare ciclice duble de pulsare 
+    a tensiunii pentru a ancora recunoașterea vizuală în cockpit.
+   ========================================================================== */
+/* Containerul principal de brand ce forțează un aspect de protocol militar rigid pe carcasă */
+.logo {
+  font-weight: bold; /* Aspect îngroșat stabil moștenit din motorul original din codul vechi */
+  color: var(
+    --nebula-pink
+  ); /* Culoarea originală roz de alertă mapată direct din variabilele de root */
+  letter-spacing: 2px; /* Spațiere tehnică de exact 2px între caractere implementată pe carcasă */
+  text-transform: uppercase; /* Forțează litere mari ca un protocol militar rigid pe toată puntea */
+  font-size: 0.8rem; /* Dimensiune compactă fixă, optimizată pentru layout-ul terminalelor din cabină */
+
+  /* RECONSTRUCȚIE FLICKER VIZUAL: Timpul exact de 3s din codul tău vechi pentru ciclurile sistemului */
+  animation: pulse 3s infinite;
+}
+
+/* Legătura internă de brand ce asigură teleportarea fără conflicte de stilizare */
+.logo a {
+  font-family: var(
+    --font-main
+  ); /* OVERRIDE CRITIC: Forțează browserul să aplice matricea tipografică rigidă a terminalelor de bord */
+  font-weight: 700; /* Forțează textul să fie îngroșat (bold) pentru un impact vizual maxim */
+  font-size: 1.1rem; /* Dimensiune fină, neîncărcată, originală din cabina de pilotaj */
+  color: inherit !important; /* Moștenește culoarea roz de mai sus, anulând suprascrierile parazite */
+  text-decoration: none; /* Elimină sublinierea implicită nativă a link-urilor HTML din browsere */
+  letter-spacing: 2px; /* Spațiere tehnică fină între caractere ce stabilizează textul corporate */
+
+  /* PHOSPHOR VOLTAGE INCOHERENCE: Declanșează pulsarea fosforică ce extinde umbra de la 5px la 15px */
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* Intensificare cinematică la hover: Logo-ul pulsează cromatic spre roz stelar */
+.logo a:hover {
+  color: var(
+    --nebula-pink
+  ); /* Fixează emisia pe frecvența activă maximă a laserului magenta */
+  text-shadow: 0 0 12px rgba(255, 0, 127, 0.6); /* Generează o aureolă puternică de neon în jurul literelor */
+}
+
+/* ==========================================================================
+    SUB-MODULE 05.3: THE RECEPTOR TERMINALS & EXTENSIBLE LASER WIRES (MENIUL HUD)
+      
+    REZUMAT: Acest sub-modul structurează listele orizontale de legături telemetrice 
+    de pe panoul cockpit-ului (.nav-links). El gestionează stările latente stardust, 
+    rulează fire laser orizontale ascunse de 1px (::after) și controlează aprinderile 
+    simetrice de înalt contrast la validarea cursorului pe rețea.
+   ========================================================================== */
+/* --- SISTEM DE LINII DE LINK-URI NAVIGATIE (The Nav Links Grid) --- */
+.nav-links {
+  display: flex; /* Aliniază orizontal elementele de meniu în linie ordonată */
+  gap: 30px; /* Calibrare stabilă la 30px pentru spațiul dintre link-uri */
+  list-style: none; /* Șterge marcajele/gloanțele implicite ale listelor din browser */
+  margin: 0; /* Resetează marjele verticale și orizontale ale browserului */
+  padding: 0; /* Resetează spațiile interioare la valoarea zero structural */
+}
+
+/* --- PORTALURILE INDIVIDUALE DE NAVIGAȚIE (The HUD Terminals) --- */
+.nav-links a {
+  font-family: var(
+    --font-main
+  ); /* Forțează browserul să aplice cu strictețe matricea tipografică rigidă a terminalelor */
+  font-size: 0.85rem; /* Dimensiune tehnică, minimalistă, specifică pentru anteturi */
+  text-transform: uppercase; /* Forțează litere mari ca un protocol militar de comunicații */
+  letter-spacing: 1.5px; /* Spațiere fixă între caractere pentru aspect tehnic */
+  color: var(--stardust); /* Setează lizibilitatea de bază pe nuanța stardust */
+  text-decoration: none; /* Elimină sublinierile implicite ale link-urilor */
+  padding: 5px 0; /* Creează o zonă interactivă verticală fără a mări navbar-ul */
+  position: relative; /* Deschide un context de poziționare pentru liniile laser de dedesubt */
+
+  /* TRANZIȚIE CROMATICĂ: Schimbă culoarea textului în mod fluid la hover */
+  transition: color 0.3s ease;
+}
+
+/* --- EFECT HOVER PE LINK-URI: Textul se aprinde spectaculos --- */
+.nav-links a:hover {
+  color: var(--nebula-pink); /* Textul devine instantaneu roz de alertă */
+  text-shadow: 0 0 8px rgba(255, 0, 127, 0.4); /* Adaugă o aură luminoasă difuză în jurul literelor */
+}
+
+/* --- LINIA ASCUNSĂ DE SUB LINK (The Energy Laser Lines) --- */
+.nav-links a::after {
+  content: " "; /* Inițializează o mască virtuală goală în spatele textului */
+  position: absolute; /* Scoatere din flux pentru a putea pluti direct sub litere */
+  bottom: 0; /* Lipită de marginea inferioară a link-ului */
+  left: 0; /* Aliniere din colțul stâng */
+  width: 0; /* Lățimea inițială este 0 (linia este complet invizibilă) */
+  height: 1px; /* Grosime micro-fină pentru o linie laser elegantă */
+  background: var(
+    --nebula-pink
+  ); /* Vopsește linia laser în nuanța roz-magenta intens */
+
+  /* EXTINDERE CINEMATICĂ: Desfășoară linia de la stânga la dreapta */
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* DESCHIDERE VECTOR LASER: Firul roz explodează pe toată lățimea textului */
+.nav-links a:hover::after {
+  width: 100%; /* Extinde linia laser pe toată lățimea textului la trecerea mouse-ului */
+}
+
+/* --- STAREA ACTIVĂ SPECIFICĂ (Locația curentă a navei în sistem) --- */
+.nav-links a.active {
+  color: var(
+    --solar-mint
+  ); /* Dacă pagina este activă, se aprinde stabil pe verde-mentă */
+  text-shadow: 0 0 8px rgba(167, 243, 208, 0.4); /* Adaugă o aură luminoasă difuză în jurul literelor active */
+}
+
+/* Scurtcircuitarea liniei active: O aprinde stabil în verde-mentă fosforic */
+.nav-links a.active::after {
+  width: 100%; /* Linia de sub element rămâne complet extinsă */
+  background: var(--solar-mint); /* Linia laser devine stabilă pe verde-mentă */
+}
+
+/* --- PORTALUL SPECIAL: RETURN TO COMMAND DECK (VERSIUNE DISCRETĂ) --- */
+.nav-links a.return-btn,
+.nav-links a[href="index.html"] {
+  font-size: 0.75rem !important; /* Scădem dimensiunea textului pentru o amprentă vizuală minimă */
+  color: rgba(
+    167,
+    243,
+    208,
+    0.4
+  ) !important; /* Verde-mentă stins în starea latentă de repaus */
+  border: 1px dashed rgba(167, 243, 208, 0.2) !important; /* Cadru punctat fin ce se topește în fundal */
+  padding: 4px 10px !important; /* Înveliș rigid și compact de umplutură militară strânsă */
+  border-radius: 3px !important; /* Netezirea colțurilor pentru a preveni pixelarea marginilor */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  animation: none !important; /* OPREȘTE FORȚAT: Distruge orice motor de pulsație pentru a asigura repausul absolut */
+}
+
+/* ANULARE LASER SUB ELEMENT: Îi interzice firului roz activ să se mai deschidă sub acest bloc */
+.nav-links a.return-btn::after,
+.nav-links a[href="index.html"]::after {
+  display: none !important; /* Dispare definitiv linia roz la nivel global pe acest buton */
+}
+
+/* EFECT LA HOVER TACTIC: Se aprinde curat sub formă de cadru solid doar la validarea intenției */
+.nav-links a.return-btn:hover,
+.nav-links a[href="index.html"]:hover {
+  color: var(
+    --solar-mint
+  ) !important; /* Ridică frecvența la 100% în radiație pură verde-mentă fosforic */
+  background: rgba(
+    167,
+    243,
+    208,
+    0.05
+  ) !important; /* O reflexie fină de 5% verde în interiorul capsulei */
+  border-color: var(
+    --solar-mint
+  ) !important; /* Transformă perimetrul punctat într-o linie solidă laser verde */
+  text-shadow: 0 0 5px var(--solar-mint);
+  padding-left: 10px !important; /* BLOCARE STRUCTURALĂ: Anulează deplasarea laterală pe care o au restul link-urilor */
+}
+
+/* ==========================================================================
+    SUB-MODULE 05.4: THE COMMAND CONSOLE CORE (HARTA DE NAVIGARE SIDEBAR)
+      
+    REZUMAT: Acest sub-modul izolează șabloanele de dispunere pentru panoul asimetric 
+    aliniat la stânga (.log-sidebar). El gestionează mecanica glisării verticale, 
+    activează deplasări orizontale de scanare a textului la hover și ancorează bare laser 
+    solide roz-magenta pentru indicarea poziției active a navei.
+   ========================================================================== */
+/* --- 1. STRUCTURA DE BAZĂ A CASSEI DIN STÂNGA (The Aside Shield) --- */
+.log-sidebar {
+  background: rgba(
+    13,
+    15,
+    20,
+    0.5
+  ); /* Fundal translucid închis (sticlă fumurie Solaris) */
+  backdrop-filter: blur(
+    15px
+  ); /* Efect cinematic: blurează fluxul de text ce alunecă în spatele panoului */
+  border-right: 1px solid var(--module-border); /* Linie micro-fină laser pe dreapta pentru asamblarea tehnică */
+  border-radius: 4px; /* Rotunjire minimalistă la colțuri pentru îndulcirea grilei */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Umbră densă exterioară ce izolează panoul de adâncimea vidului */
+
+  /* CUBIC-BEZIER CINEMATIC: Asigură o glisare extrem de fluidă a panoului pe verticală */
+  transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- 2. TITLURILE INTERIOARE DIN CONSOLĂ (Ex: HTML Expedition Map) --- */
+.sidebar-nav h4 {
+  margin-bottom: 20px; /* Împinge lista de butoane în jos, lăsând exact cei 20px de aer din codul vechi */
+  font-size: 0.8rem; /* Dimensiune redusă, specifică detaliilor tehnice de pe radarele de bord */
+  text-transform: uppercase; /* Forțează litere mari ca un protocol militar rigid pe consolă */
+  letter-spacing: 2px; /* Spațiere tehnică industrială între caractere pentru lizibilitate */
+}
+
+/* --- 3. REȚEAUA STRUCTURALĂ A LISTEI DE BUTOANE --- */
+.sidebar-nav ul {
+  list-style: none; /* Elimină complet punctele/gloanțele native ale listelor din browser */
+  padding: 0; /* Șterge umplutura internă implicită pentru o aliniere perfectă */
+  margin: 0; /* Resetează marginile parazite pentru a asigură controlul granițelor */
+}
+
+.sidebar-nav li {
+  margin-bottom: 12px; /* Lasă un spațiu fix de 12px între butoane ca să nu stea lipite */
+}
+
+/* --- 4. PORTALURILE DE HARTĂ ÎN STARE DE REPAUS (The Dormant Links) --- */
+.sidebar-nav a {
+  color: var(
+    --stardust
+  ); /* Culoarea de bază pe nuanța de alb industrial stardust */
+  text-decoration: none; /* Șterge sublinerea nativă implicită a link-urilor */
+  font-size: 0.85rem; /* Proporție fină, optimizată pentru liste lungi de text tehnic */
+  padding: 10px; /* Creează o zonă tactilă extinsă în jurul textului pentru click (UX) */
+  display: block; /* Transformă link-ul într-un bloc complet ce ocupă toată lățimea coloanei */
+  border-left: 2px solid transparent; /* Margine stângă invizibilă pregătită pentru efectul de scanare */
+  opacity: 0.7; /* Aspect desaturat în starea de așteptare (sistem inactiv) */
+
+  /* HARTĂ DE TRANZIȚIE FLUIDĂ: Controlează accelerarea tuturor proprietăților la hover */
+  transition: all 0.3s ease;
+}
+
+/* --- 5. EFECTUL DE SCANARE LA HOVER (Validarea prin Proximitate) --- */
+.sidebar-nav a:hover {
+  color: var(
+    --solar-mint
+  ); /* Textul trece instantaneu pe frecvența verde-mentă fosforic */
+  opacity: 1; /* Tensiunea urcă la intensitate maximă pentru vizibilitate completă */
+  padding-left: 15px; /* EFECT DE DEPLASARE: Textul alunecă spre dreapta, imitând o scanare radar */
+  background: rgba(
+    167,
+    243,
+    208,
+    0.05
+  ); /* Injectează o reflexie fină de 5% în fundalul capsulei */
+}
+
+/* --- 6. INDICATORUL DE PUNTE ACTIVĂ (The Core Active Indicator) --- */
+.sidebar-nav a.active {
+  color: var(
+    --nebula-pink
+  ); /* Blochează textul stabil pe lungimea de undă roz-neon de alertă */
+  font-weight: bold; /* Îngroașă literele pentru a marca poziția curentă a navei în matrice */
+  padding-left: 15px; /* Fixează poziția deplasată a textului asortată cu scanarea activă */
+  border-left: 2px solid var(--nebula-pink); /* Solidifică marginea invizibilă într-o barieră laser roz solid */
+  opacity: 1; /* Menține puterea maximă de iluminare fără estompare pe puntea curentă */
+  background: rgba(
+    255,
+    0,
+    127,
+    0.05
+  ); /* O reflexie fină de 5% roz în interiorul butonului activ */
+  text-shadow: 0 0 10px var(--nebula-pink); /* Activează o aureolă luminoasă roz de neon la confirmarea conexiunii */
+}
+
+/* --- 7. ANCORA SUPREMĂ A HĂRȚII STRUCTURALE --- */
+.map-title-link {
+  text-decoration: none; /* Elimină sublinierea implicită a link-ului HTML */
+  display: block; /* Îl transformă dintr-un link simplu într-un bloc complet pentru a ocupa toată lățimea utilă */
+  width: 100%; /* Se întinde pe toată lățimea disponibilă în nav-ul stâng */
+}
+
+/* --- 8. TITLUL RADAR DIN INTERIORUL ANCOREI (Map Title Link Component) --- */
+.map-title-link h4 {
+  color: var(
+    --solar-mint
+  ); /* Textul se aprinde pe verde-mentă fosforic de sistem */
+  margin: 0 0 15px 0; /* Resetează marginile parazite și lasă 15px spațiu gol doar în subsol */
+  font-size: 0.9rem; /* Dimensiune tehnică, perfect proporțională pentru ecranele mari */
+  text-transform: uppercase; /* Protocol militar: forțează utilizarea literelor mari */
+  letter-spacing: 2px; /* Spațiere tehnică industrială între caractere */
+  border-bottom: 1px dashed rgba(167, 243, 208, 0.3); /* Linie fină punctată verde la baza textului */
+  padding-bottom: 8px; /* Spațiu de siguranță între litere și linia punctată de dedesubt */
+  text-shadow: 0 0 8px rgba(167, 243, 208, 0.4); /* Aură luminoasă discretă în jurul literelor */
+  transition: all 0.3s ease; /* Tranziție rapidă pentru efectul de hover */
+}
+
+/* --- 9. EFECT HOVER PE TITLUL HĂRȚII: Intensificare luminoasă cinematică --- */
+.map-title-link:hover h4 {
+  color: var(
+    --nebula-pink
+  ); /* Comută textul pe roz-magenta intens la apropierea mouse-ului */
+  border-bottom-color: var(
+    --nebula-pink
+  ); /* Schimbă culoarea liniei punctate în roz de alertă */
+  text-shadow: 0 0 12px var(--nebula-pink); /* Erupție puternică de aureolă neon roz completă */
+}
+
+/* ==========================================================================
+    MODULE 06: HERO MATRIX & KINETIC PORTAL SYSTEMS (ECRANUL PRINCIPAL)
+      
+    REZUMAT: Acest modul configurează puntea tehnologică de întâmpinare (Sistemul Hero 
+    Face) de pe nava mamă. El izolează canvasul principal pe întreaga înălțime a ecranului 
+    hardware, generează o textură locală de linii de scanare CRT specifice terminalelor din 
+    anii '80 și încapsulează Portalul de Acces Rapid (.cta-button). Modulul utilizează o 
+    armătură Flexbox rigidă pe verticală pentru a asigura un impact vizual monumental.
+   ========================================================================== */
+
+/* --- 1. MATRICEA HERO GENERALĂ (The Space Command Deck) --- */
+.hero {
+  position: relative; /* Deschide context de poziționare pentru straturile laser și CRT din fundal */
+  min-height: 100vh; /* Ocupă fix 100% din înălțimea totală a ecranului utilizatorului hardware */
+
+  /* REPARAȚIE SUPREMĂ CARCASĂ: Permitem extinderea nativă la tot ecranul, menținând marjele automate */
+  width: 100vw !important;
+  max-width: 100vw !important; /* Suprascrie forțat vechiul plafon global restrictiv de 1200px */
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 0 40px !important; /* Pernă simetrică perfectă asortată cu restul structurilor navei */
+
+  /* REPARAȚIA CONFIGURAȚIEI FLEXBOX: Stivuiește Cubul, H1 și paragraful rigid pe verticală */
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important; /* Centrează geometric tot pachetul tehnic pe axa verticală */
+  align-items: center !important; /* Centrează elementele pe axa orizontală a monitorului */
+  text-align: center; /* Forțează alinierea centrală pentru toate blocurile interioare de text */
+  box-sizing: border-box; /* Include padding-ul în calculul total, blocând overflow-ul sau rupturile */
+  overflow: hidden; /* Taie mecanic orice element decorativ exterior ce ar încerca să spargă marginile */
+}
+
+/* --- 2. PORTALUL DE ACCES RAPID (The Cyberpunk CTA Button) --- */
+.cta-button {
+  background: rgba(
+    13,
+    15,
+    20,
+    0.5
+  ); /* Fundal semi-transparent întunecat integrat în sticla generală a navei */
+  border: 1px solid var(--solar-mint); /* Chenar rigid de sistem de culoare verde-mentă fosforic */
+  color: var(
+    --solar-mint
+  ); /* Text aprins pe verde-mentă pentru semnalizare prioritară pe radar */
+  font-family: var(
+    --font-main
+  ); /* Păstrează amprenta geometrică rigidă a erei spațiale Space Grotesk */
+  font-size: 0.9rem; /* Dimensiune minimalistă tehnică, specifică butoanelor tactile HUD */
+  font-weight: 700; /* Îngroașă textul pentru a indica o acțiune principală de sistem (Call to Action) */
+  text-transform: uppercase; /* Forțează litere mari ca un ordin sau protocol militar de siguranță */
+  letter-spacing: 3px; /* Spațiere largă între caractere pentru un aspect aerisit și premium */
+  padding: 15px 35px; /* Umplutură internă generoasă pentru a crea o zonă interactivă confortabilă */
+  text-decoration: none; /* Elimină sublinierea nativă implicită a link-urilor HTML */
+  border-radius: 4px; /* Rotunjire fină la colțuri asortată cu modulele logurilor de zi */
+  cursor: pointer; /* Schimbă cursorul într-o mână activă pentru a indica interactivitatea */
+  position: relative; /* Deschide context de poziționare pentru efectele interioare de reflexie */
+
+  /* CUBIC-BEZIER INDUSTRIAL: Asigură o expansiune electrică extrem de fluidă la atingere */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 10px rgba(167, 243, 208, 0.1); /* Aura luminoasă inițială discretă din jurul butonului */
+}
+
+/* EFECT LA HOVER PESTE PORTAL: Butonul se încarcă electric și se aprinde în radiație fosforică */
+.cta-button:hover {
+  color: var(
+    --space-dark
+  ); /* Textul devine negru profund pentru un contrast maxim cu fundalul aprins */
+  background: var(
+    --solar-mint
+  ); /* Fundalul capsulei se aprinde complet pe verde-mentă fosforic */
+  border-color: var(
+    --solar-mint
+  ); /* Menține marginea exterioară unificată în grilă */
+
+  /* ERUPȚIE DE ENERGIE: Creează o aureolă dublă puternică de neon verde în jurul butonului */
+  box-shadow:
+    0 0 20px rgba(167, 243, 208, 0.6),
+    0 0 40px rgba(167, 243, 208, 0.2);
+  text-shadow: none; /* Elimină umbrele textului pentru a păstra literele clare pe fundalul luminat */
+}
+
+/* --- 3. EFECTUL CINEMATIC CRT LOCAL (Old Monitor Texture Simulator) --- */
+.hero::before {
+  content: ""; /* Generează un strat decorativ virtual în structura paginii */
+  position: absolute; /* Scoatere din flux pentru a se întinde ca o mască peste tot fundalul */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Gradient liniar repetitiv care simulează fizic straturile de pixeli și linii ale unui monitor CRT */
+  background:
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 0.06),
+      rgba(0, 255, 0, 0.02),
+      rgba(0, 0, 255, 0.06)
+    );
+  background-size:
+    100% 4px,
+    /* Repetă liniile orizontale la fiecare 4 pixeli pe verticală */ 6px 100%; /* Construiește coloane de raster de 6 pixeli lățime pe orizontală */
+  z-index: 1; /* Se plasează în spatele textului, dar deasupra fundalului brut al navei */
+  pointer-events: none; /* PRO-UX: Permite click-urilor să treacă prin acest strat decorativ fără blocaje */
+}
+
+/* ==========================================================================
+    MODULE 07: GRID ASSEMBLY & KINETIC MODULES (PANELUL DE CAPITOLE)
+      
+    REZUMAT: Acest modul configurează rețeaua modulară de pe Puntea de Comandă 
+    (index.html). El implementează un sistem de grilă bidimensională auto-adaptivă 
+    (Grid Layout) care aliniază volumele mari ale expediției. Modulele individuale 
+    (cardurile de categorie) utilizează efecte cinematice de levitație verticală 
+    (translateY) și o reîncărcare cromatică pe spectrul albastru-electric stelar 
+    (starlight-blue) la hover, oferind o delimitare structurală curată.
+   ========================================================================== */
+
+/* --- 1. CONTAINERUL AXIAL AL PAGINII (The Main Orbit Shield) --- */
+.main-container {
+  max-width: 1200px; /* Scut anti-întindere: previne lărgirea excesivă pe monitoare desktop mari */
+  margin: 0 auto; /* Centrează automat întreaga structură tehnică pe mijlocul axei ecranului */
+  padding: 40px; /* Pernă de aer interioară generoasă pentru protecția granițelor modulelor */
+  box-sizing: border-box; /* Forțează padding-ul în calculul lățimii, blocând overflow-ul structural */
+}
+
+/* --- 2. REȚEAUA ENERGETICĂ A CARDURILOR (The Category Quantum Grid) --- */
+.category-grid {
+  display: grid; /* Activează subsistemul bidimensional modern Grid Layout */
+
+  /* FORMULA AUTO-RESPONSIVE: Creează automat coloane cu o lățime minimă de 300px. 
+     Dacă spațiul ecranului scade, cardurile se reașază singure pe verticală, eliminând query-urile media. */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px; /* Lasă o distanță fizică fixă de 30px între module (orizontal și vertical) */
+  margin-top: 40px; /* Spațiu protector de siguranță sub titlul principal al paginii */
+}
+
+/* --- 3. MODULUL INDIVIDUAL DE CAPITOL (The Cyberpunk Category Card) --- */
+.category-card {
+  background: var(
+    --panel-bg
+  ); /* Fundalul translucid de sticlă fumurie stabilizată (Stil de bord Solaris) */
+  backdrop-filter: blur(
+    15px
+  ); /* Filtrare cinematică: estompează conținutul din spate pentru adâncime de terminal */
+  border: 1px solid var(--module-border); /* Chenar micro-fin inițial din fir de oțel alb opac discret */
+  border-radius: 4px; /* Rotunjire minimalistă la colțuri, asortată cu întreaga interfață */
+  padding: 30px; /* Spațiu interior generos pentru a nu sufoca fluxul textului din module */
+  display: flex; /* Activează sistemul Flexbox pe interiorul cardului pentru alinierea capsulei */
+  flex-direction: column; /* Așază componentele din card (titlu, text, buton) în mod rigid pe verticală */
+
+  /* HARTĂ CINEMATICĂ CUBIC-BEZIER: Controlează ridicarea și iluminarea cardului într-o tranziție fluidă */
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative; /* Context de poziționare local pentru eventuale etichete interne de interfață */
+}
+
+/* EFECT LA HOVER PESTE CARD: Modulul se ridică fizic și se încarcă electric cu energie albastru-stelar */
+.category-card:hover {
+  transform: translateY(
+    -8px
+  ); /* RIDICAREA KINETICĂ: Împinge fizic cardul în sus cu 8px, creând iluzia de zbor */
+  border-color: var(
+    --starlight-blue
+  ); /* Chenarul micro-fin devine instantaneu albastru electric stelar */
+
+  /* SCUT DE IMPULS NEON: Generează o umbră exterioară luminoasă dublă de culoare albastru electric */
+  box-shadow:
+    0 10px 25px rgba(0, 210, 255, 0.15),
+    0 0 15px rgba(0, 210, 255, 0.1);
+}
+
+/* --- 4. CONFIGURAȚIA TELEMETRIEI INTERNE A CARDULUI (Alinierea datelor din interior) --- */
+.category-card h3 {
+  font-size: 1.3rem; /* Dimensiune optimizată pentru titlul de volum macro (HTML, CSS, SQL) */
+  margin-top: 0; /* Resetează marja nativă a browserului pentru a alinia coordonata superioară */
+  margin-bottom: 15px; /* Împinge paragraful descriptiv în jos pentru o urmărire vizuală echilibrată */
+  color: var(
+    --solar-mint
+  ); /* Aprinde titlul de volum pe verde-mentă de scanare stabilă de sistem */
+  letter-spacing: 1px; /* Spațiere tehnică fină industrială între caractere corporate */
+}
+
+.category-card p {
+  font-size: 0.95rem; /* Dimensiune redusă, fină, ideală pentru descrierea narativă din jurnale */
+  color: var(
+    --stardust
+  ); /* Text alb industrial stardust ce maximizează definiția literelor de bază */
+  line-height: 1.6; /* Raport optim între rânduri pentru o citire fluidă a cronicilor de studiu */
+  margin-bottom: 25px; /* Lasă un spațiu clar de siguranță deasupra butonului de acces de mai jos */
+
+  /* REGULA FLUIDĂ CRUCIALĂ: Forțează paragraful să consume tot spațiul vertical liber din card. 
+     Aceasta garantează că toate butoanele de acces se vor alinia pe o axă orizontală perfect simetrică. */
+  flex-grow: 1;
+}
+
+/* --- 5. BUTONUL INTERN DE PORTAL ACCES (Link-ul Secundar din Subsol) --- */
+.category-card .btn {
+  align-self: flex-start; /* Împiedică butonul să se întindă pe tot cardul, limitându-l la dimensiunea textului */
+  background: transparent; /* Elimină fundalul solid, lăsând sticla translucidă a cardului vizibilă sub text */
+  border: 1px solid var(--starlight-blue); /* Chenar rigid inițial ce marchează granița de control secundară */
+  color: var(
+    --starlight-blue
+  ); /* Text aprins pe albastru stelar ce indică o rută de acces activă */
+  font-size: 0.8rem; /* Dimensiune tehnică minimalistă conform specificațiilor HUD */
+  text-transform: uppercase; /* Litere mari obligatorii pentru un aspect rigid de protocol militar */
+  letter-spacing: 2px; /* Spațiere largă industrială între caractere pentru aspect premium */
+  padding: 10px 20px; /* Umplutură internă compactă ce asamblează un dreptunghi tactil precis */
+  border-radius: 3px; /* Rotunjire fină la colțuri asortată cu blueprint-urile interfeței */
+  text-decoration: none; /* Elimină sublinierea nativă implicită a link-urilor HTML */
+  transition: all 0.3s ease; /* Tranziție rapidă de răspuns pentru gestionarea momentului interactiv */
+}
+
+/* INVERSARE CROMATICĂ LA HOVER PESTE PORTAL: Capsula se aprinde complet în nuanța stelar-albastră */
+.category-card .btn:hover {
+  background: var(
+    --starlight-blue
+  ); /* Fundalul se aprinde complet în radiație albastru-electric stelar */
+  color: var(
+    --space-dark
+  ); /* Forțează textul în negru profund, maximizând lizibilitatea pe placa aprinsă */
+  box-shadow: 0 0 12px rgba(0, 210, 255, 0.4); /* Adaugă o mică aură laser la confirmarea prin atingere */
+}
+
+/* ==========================================================================
+    MODULE 08: AIRLOCK SECTORS & CONTENT VAULTS (JOURNAL PROFILE SHIELD)
+    
+    REZUMAT: Acest modul stabilește cadrul de layout și capsulele structurale 
+    dedicate cronicilor de zbor. El configurează porțile etanșe cu chenar dublu 
+    violet ce separă capitolele, ancorează bara dinamică de stare a misiunii cu 
+    efecte de neon, standardizează tipografia narativă (inclusiv drop-cap-ul cinematic) 
+    și impune carcase de izolare rigide, anti-overflow, pe casetele logurilor zilnice.
+      
+    REZUMAT: Acest modul construiește porțile macro vizuale care separă capitolele 
+    jurnalelor de navigație și consolidează panourile locale de stare în timp real. 
+    El configurează porțile de securitate cu chenar dublu violet și ancorează 
+    consola verde-mentă .mission-status ce rulează animații asincrone de scriere.
+   ========================================================================== */
+
+/* --- 1. CONFIGURAȚIA MACRO A PAGINII DE LOG (The Quantum Bridge Layout) --- */
+.log-layout {
+  max-width: 100vw; /* Împiedică layout-ul mare să depășească lățimea fizică a ecranului hardware */
+  margin: 0 auto; /* Centrează automat structura pe mijlocul ecranului și pe axa monitorului */
+  box-sizing: border-box; /* Include padding-ul în dimensiuni pentru a bloca deformările generale de layout */
+}
+
+/* --- 2. PORȚILE DE TIP AIRLOCK (The Sector Announcements) --- */
+/* Casete mari ce anunță intrarea într-un nou sector de studiu (ex: Sector 01: The Hull) */
+.sector-announcement {
+  margin: 100px 0; /* Lasă o distanță uriașă pe verticală, izolând capitolele ca niște camere etanșe */
+  padding: 40px; /* Spațiu interior generos pentru ca textul militar de alertă să aibă aer în panou */
+  border: 1px double var(--nebula-purple); /* Chenar dublu în nuanța violet cosmic (nebula-purple) pentru finisaj industrial */
+  background: rgba(
+    60,
+    44,
+    140,
+    0.05
+  ); /* Fundal fin, o reflexie de 5% din energia violet a nebuloasei centrale */
+  position: relative; /* Permite elementelor decorative interne să plutească raportat la acest cadru */
+  text-align: center; /* Centrare absolută a textelor din interior pentru un echilibru cinematic stabil */
+
+  /* BARIERA MECANICĂ DE SCROLL: Când sari la sector, se oprește la 150px distanță ca să nu fie acoperit de HUD-ul fix */
+  scroll-margin-top: 150px !important;
+
+  /* EXECUȚIA ANIMAȚIEI VIOLET: Rulează de 3 ori la încărcare (pulsare fină) și îngheață în starea finală luminoasă */
+  animation: border-pulse-purple 2.5s ease-in-out 3 alternate forwards;
+}
+
+/* TEXTUL INTRODUCTIV PRINCIPAL DIN PORȚILE AIRLOCK */
+.sector-announcement h3 {
+  font-size: 1.4rem; /* Dimensiune impunătoare unificată pentru titlul principal al noului sector */
+  color: var(
+    --solar-mint
+  ); /* Textul se aprinde stabil pe verde-mentă fosforic de scanare activă radar */
+  margin-top: 0; /* Șterge marginile superioare implicite injectate parazit de browsere */
+  margin-bottom: 10px; /* Împinge subtitlul narativ în jos pentru o ierarhie tehnică curată */
+  letter-spacing: 3px; /* Spațiere largă între caractere, specifică alertelor de pe monitoarele navelor */
+  text-transform: uppercase; /* Litere mari obligat-militare pentru un aspect de protocol oficial de bord */
+}
+
+/* ETICHETA DECOARATIVĂ EXPLICATIVĂ COBORTĂ DEASUPRA TITLULUI */
+.sector-announcement span {
+  font-family: monospace; /* Font rigid fixat mecanic de cod, specific terminalelor analogice */
+  color: var(
+    --amber-glow
+  ); /* Chihlimbar retro: rezervat alertelor de sistem și indicatorilor industriali */
+  font-size: 0.8rem; /* Dimensiune minimalistă compactă pentru datele secundare de pe ecran */
+  letter-spacing: 5px; /* Spațiere foarte largă între caractere pentru a simula un overlay cinematic SF */
+  text-transform: uppercase; /* Protocol tehnic obligatoriu de litere mari în interiorul indicatorului */
+  display: block; /* Îl transformă în bloc structural ca să stea singur pe rând, deasupra titlului h3 */
+  margin-bottom: 10px; /* Distanță fină de siguranță sub text înainte de nucleul titlului */
+}
+
+/* RESETAREA CONFIGURAȚIEI TITLURILOR GENERALE DIN INTERIOR */
+.sector-announcement h2 {
+  margin: 0; /* Resetează complet marginile nativ-parazite ale browserului în casetă */
+  border: none; /* Șterge bordura roz standard a h2-ului general pentru a lăsa poarta izolată */
+}
+
+/* LINIA DE TEXT DESCRIERE SAU METADATE DIN AIRLOCK */
+.sector-announcement p {
+  font-size: 0.95rem; /* Dimensiune tehnică fină optimizată pentru scanarea rapidă a datelor */
+  color: var(
+    --stardust
+  ); /* Alb industrial stardust stabil și curat, conceput împotriva oboselii ochilor */
+  margin: 0; /* Resetează marjele inferioare pentru a proteja limitele geometrice ale casetei */
+  letter-spacing: 1px; /* Spațiere fină elegantă între caractere ce stabilizează frazele descriptive */
+}
+
+/* --- 3. PANOUL DE CONTROL AL MODULULUI (The Mission Status Bar) --- */
+/* Caseta verde-mentă transclucidă care conține textul de stare tehnică a misiunii active */
+.mission-status {
+  background: rgba(
+    167,
+    243,
+    208,
+    0.05
+  ) !important; /* Umbră ultra-fină translucidă de 5% din energia verde-mentă */
+  border-left: 3px solid var(--solar-mint); /* Linie verticală rigidă în stânga care acționează ca o barieră fixă de radar */
+  padding: 12px 20px; /* Umplutură internă compactă militară pentru a încadra stabil textul tehnic */
+  margin-bottom: 35px; /* Împinge textul jurnalului mai jos pentru a preveni suprapunerile vizuale */
+  border-radius: 0 4px 4px 0; /* Rotunjește doar colțurile din dreapta, păstrând stânga ancorată fix în axa laser */
+}
+
+/* --- 4. MOTORUL DE TELEMETRIE CU TYPEWRITER ASINCRON (Textul Viu de Terminal) --- */
+.mission-status p {
+  margin: 0; /* Resetează marginile parazite pentru a asigura alinierea perfectă în consolă */
+  font-family: monospace; /* Font rigid mecanic fix de cod, specific mașinilor de scris analogice */
+  font-size: 0.85rem; /* Dimensiune tehnică fină de interfață de diagnostic computerizat */
+  text-transform: uppercase; /* Protocol militar obligatoriu: forțează utilizarea literelor mari */
+  color: var(
+    --solar-mint
+  ) !important; /* Unificare totală a textului pe frecvența verde-mentă fosforică */
+  text-shadow: 0 0 6px rgba(167, 243, 208, 0.5) !important; /* Generează o aură intensă de neon verde în spatele literelor */
+  letter-spacing: 2px !important; /* Spațiere tehnică stabilă largă ce oferă ritm vizual liniilor de script */
+
+  /* LĂCĂTUIREA REGLAJULUI DE INDENTARE CURSOR */
+  width: max-content; /* Obligă caseta să aibă EXACT lungimea textului scris, lipind cursorul de litere */
+  max-width: 0; /* Stare inițială latentă: textul pornește complet ascuns de la lățime zero */
+  white-space: nowrap; /* SCUT DE DISPUNERE: Interzice textului să se spargă sau să stivuiască pe verticală la scriere */
+  overflow: hidden; /* Ascunde literele viitoare până când pașii animației extind dimensiunea orizontală */
+  border-right: 2px solid var(--solar-mint); /* Linia fizică a cursorului mecanic vertical care pâlpâie la capătul textului */
+
+  /* DECLANȘAREA ANIMAȚIILOR RECURSIVE CU AUTO-STINGERE SINCRONIZATĂ */
+  /* Derulează oblonul max-width prin typing-modular, activează clipirea cursorului la infinit,
+     și rulează 'hide-cursor' la secunda 3.5 pentru a stinge instantaneu linia verticală fosforică. */
+  animation:
+    typing-modular 3.5s steps(40, end) forwards,
+    blink 0.75s step-end infinite,
+    hide-cursor 0s linear 3.5s forwards;
+}
+
+/* ==========================================================================
+    MODULE 09: QUANTUM TERMINAL VAULTS & ENERGY GRID LINES (SISTEME DE SALVARE)
+      
+    REZUMAT: Acest modul construiește interfața interactivă de înregistrare a datelor 
+    (Consola Terminalului de Notițe). El definește o placă izolată de ecran cu fosfor 
+    întunecat, rulează o rază laser orizontală continuă de scanare verticală (::before) 
+    peste limitele monitorului, injectează etichete automate de telemetrie (::after) 
+    și gestionează învelișurile structurale pentru casetele textarea și butoanele de salvare.
+   ========================================================================== */
+
+/* --- 1. CASETA GENERALĂ A TERMINALULUI (The Core Hacking Monitor) --- */
+.note-terminal {
+  margin: 40px 0; /* Lasă un spațiu generos pe verticală de 40px deasupra și dedesubtul terminalului */
+  position: relative; /* Deschide context de poziționare pentru textul de status (SYS_STATUS) din fundal */
+  background: #05070a; /* Negru profund oarbă, specific monitoarelor fosforice vechi de pe nave */
+  border: 1px solid rgba(167, 243, 208, 0.2); /* Chenar micro-fin inițial din culoarea verde-mentă la 20% opacitate */
+  border-radius: 4px; /* Rotunjire fină la colțuri, perfect aliniată cu restul interfeței generale */
+  padding: 20px; /* Pernă de aer interioară pentru ca textul tastat să nu lovească marginile ecranului */
+
+  /* EFECTUL DE ECRAN BOMBAT: Creează o iluminare internă discretă de 5% și o umbră exterioară densă */
+  box-shadow:
+    inset 0 0 15px rgba(167, 243, 208, 0.05),
+    0 10px 30px rgba(0, 0, 0, 0.6);
+  transition: border-color 0.3s ease; /* Pregătește o tranziție lină a chenarului la interacțiunea cu operatorul */
+}
+
+/* Încărcare energetică la hover: Cadrul se aprinde pe masca verde-mentă */
+.note-terminal:hover {
+  border-color: rgba(
+    167,
+    243,
+    208,
+    0.4
+  ); /* Intensifică opacitatea chenarului verde-mentă la o valoare de 40% */
+}
+
+/* --- 2. EFECTUL DE SCANARE LASER ORIZONTAL PESTE MONITOR --- */
+.note-terminal::before {
+  content: ""; /* Generează stratul virtual al razei laser în arborele structural al panoului */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px; /* Grosimea fizică a razei laser de măturare */
+
+  /* FAȘĂ GRADIENT RADIAL: Pornește din opacitate 0, se aprinde pe verde-mentă la centru și dispare la margini */
+  background: linear-gradient(
+    90deg,
+    rgba(167, 243, 208, 0) 0%,
+    rgba(167, 243, 208, 0.4) 50%,
+    rgba(167, 243, 208, 0) 100%
+  );
+  box-shadow: 0 0 10px var(--solar-mint); /* Strălucire puternică de neon fluorescent în jurul liniei orizontale */
+  opacity: 0.7;
+  pointer-events: none; /* PRO-UX: Elementul rămâne pur vizual, permițând click-urilor să treacă fără blocaje */
+  z-index: 5;
+
+  /* DECLANȘAREA DIRECTĂ A RADARULUI: Declanșează animația continuă de scanare verticală definită în Modulul 00.1 */
+  animation: laser-scan 4s linear infinite;
+}
+
+/* --- 3. INDICATOR PENTRU STATUSUL DE PE FUNDAL (The System Telemetry Label) --- */
+.note-terminal::after {
+  content: "SYS_STATUS: READY_TO_WRITE //"; /* Mesajul de diagnostic generat automat pe sticla monitorului */
+  position: absolute; /* Scoatere din flux pentru a fi lipit în colț independent de textul introdus în textarea */
+  bottom: 8px; /* Aliniere fixă la 8px față de podeaua inferioară a casetei */
+  right: 20px; /* Aliniere fixă la 20px față de marginea din dreapta (tribord) */
+  font-family: monospace; /* Font rigid mecanic de cod ce reproduce aspectele textelor de diagnostic */
+  font-size: 0.65rem; /* Dimensiune micro-fină liliputană, specifică detaliilor de pe radarele de bord */
+  color: rgba(
+    167,
+    243,
+    208,
+    0.25
+  ); /* Verde-mentă stins la 25% opacitate pentru a asigura contrastul de fundal stins */
+  letter-spacing: 1px; /* Spațiere fină între caractere ce stabilizează denumirile tehnice */
+  pointer-events: none; /* PRO-UX: Interzice cursorului mouse-ului să agațe sau să selecteze textul decorativ */
+}
+
+/* --- 4. CASETA INTERACTIVĂ DE INTRODUCERE DATE (The Textarea Screen) --- */
+.note-terminal textarea {
+  width: 100%; /* Se întinde pe toată lățimea utilă din interiorul monitorului hardware */
+  height: 120px; /* Înălțime fixă rigidă optimizată pentru notițele rapide în jurnalul de bord */
+  background: transparent; /* Elimină fundalul alb nativ al browserului, lăsând negrul profund `#05070a` vizibil */
+  border: none; /* Șterge complet granițele sau marginile structurale native ale casetei */
+  outline: none; /* Anulează inelul albastru inestetic pe care browserele îl aplică automat la click focus */
+  color: var(
+    --solar-mint
+  ); /* Caracterele tastate se vor aprinde direct pe frecvența verde-mentă fosforică */
+  font-family:
+    "Courier New", Courier, monospace; /* Font rigid fixat mecanic specific mașinilor de scris analogice */
+  font-size: 0.9rem; /* Dimensiune optimizată pentru păstrarea definiției codului de înalt contrast */
+  line-height: 1.6; /* Aerisire corectă și spațiu generos între rânduri în timpul introducerii datelor */
+  letter-spacing: 1px; /* Spațiere fină tehnică stabilă între literele cuvintelor */
+  resize: none; /* REGULĂ PRO-LAYOUT IMPRESCINDIBILĂ: Interzice tragerea de colț pentru protecția layout-ului */
+  box-sizing: border-box; /* Include padding-ul în dimensiuni pentru a bloca apariția erorilor de overflow */
+}
+
+/* --- 5. BUTON DE SALVARE PROTOCOL (The Save Signal Button) --- */
+.note-terminal button,
+.save-btn {
+  background: transparent; /* Fundal curat transparent ce lasă vizibilă sticla neagră a monitorului dedesubt */
+  border: 1px solid var(--nebula-pink); /* Chenar rigid inițial din fir laser roz-magenta intens (stare de alertă) */
+  color: var(
+    --nebula-pink
+  ); /* Literele luminează pe lungimea de undă roz de alertă pentru semnalizare rapidă */
+  font-family: monospace; /* Font rigid mecanic fix ce păstrează estetica generală de terminal industrial */
+  font-size: 0.75rem; /* Dimensiune tehnică redusă, specifică scurtăturilor din panourile HUD */
+  text-transform: uppercase; /* Protocol militar obligatoriu: forțează utilizarea literelor mari pe butoane */
+  padding: 8px 22px; /* Umplutură internă compactă ce asamblează un dreptunghi tactil precis și simetric */
+  letter-spacing: 2px; /* Spațiere largă tehnică între caractere pentru un aspect aerisit și premium */
+  cursor: pointer; /* Schimbă profilul cursorului într-o mână activă pentru a valida interactivitatea */
+  border-radius: 3px; /* Rotunjire minimalistă la colțuri asortată cu blueprint-urile interfeței */
+  margin-top: 10px; /* Distanță fină superioară de siguranță izolând butonul de caseta textarea de deasupra */
+  display: inline-block; /* Convertește elementul în inline-block pentru a respecta padding-ul dreptunghiular */
+
+  /* CUBIC-BEZIER INDUSTRIAL: Controlează inversarea cromatică și umbrele duble într-o tranziție cinematică */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* EFECT DE SUPRASARCINĂ LA HOVER PESTE BUTON: Capsula absoarbe energie și explodează în neon roz */
+.note-terminal button:hover,
+.save-btn:hover {
+  background: rgba(
+    255,
+    0,
+    127,
+    0.15
+  ); /* Nucleul capsulei absoarbe o reflexie de 15% din intensitatea laserului roz */
+
+  /* SCUT DE ENERGIE IMPLODATĂ: Generează o umbră fluorescentă dublă puternică (interioară și exterioară) roz */
+  box-shadow:
+    0 0 15px rgba(255, 0, 127, 0.4),
+    inset 0 0 5px rgba(255, 0, 127, 0.2);
+  text-shadow: 0 0 5px var(--nebula-pink); /* Adaugă o aureolă luminoasă fină de neon în jurul textului capitalizat */
+}
+
+/* --- 6. REȚEAUA DE LISTE DE ANEXE TEHNICE (The Appendix Sub-Lists) --- */
+.appendix-list {
+  padding-left: 20px; /* Creează o indentare curată pe orizontală în stânga pentru alinierea sub-punctelor */
+  margin: 15px 0; /* Distanță verticală de siguranță izolând lista de restul modulelor vecine */
+}
+
+.appendix-list li {
+  font-size: 0.95rem; /* Dimensiune fină secundară, optimizată pentru listele lungi de note tehnice */
+  color: var(
+    --stardust
+  ); /* Alb industrial stardust conceput împotriva oboselii ochilor în timpul citirii */
+  margin-bottom: 8px; /* Pernă de aer verticală discretă ce împiedică elementele listei să se lipească */
+  position: relative; /* Deschide context local de coordonate pentru eventuale micro-glife decorative */
+}
+
+/* ==========================================================================
+    MODULE 10: MODULAR TECHNICAL VAULTS (LOG ENTRIES, ANEXE ȘI TABELE)
+      
+    REZUMAT: Acest modul cumulează șabloanele structurale master pentru cronicile 
+    zilnice de zbor, ecranele de cod de diagnostic și tabelele de date relaționale. 
+    El unifică intrările de jurnal flexibile cu letrinele lor fluorescente, 
+    stabilizează matricele data-grid pentru independență la overflow orizontal, 
+    protejează fluxurile de cod preformatat CRT și configurează micro-mediile 
+    pentru anexele de sistem latente sau viitoare.
+   ========================================================================== */
+
+/* ==========================================================================
+    SUB-MODULE 10.1: THE JOURNAL FOUNDATIONS (NARAȚIUNEA ȘI LETTERING-UL)
+      
+    REZUMAT: Acest sub-modul stabilește motorul tipografic primar pentru cronicile 
+    jurnalelor de bord. El structurează fluxul paragrafelor standard pentru o 
+    citire de înalt contrast, configurează spațieri verticale anti-oboseală și 
+    activează sistemul modular de direct-child Jet-Age Glif-Monolit pe primele 
+    caractere pentru a inițializa protocoalele de vizualizare a încărcării sistemului.
+   ========================================================================== */
+/* --- 1. ZONA TEXTULUI NARATIV GENERAL (Alinierea Paragrafelor Simple) --- */
+.log-text {
+  text-align: justify; /* Aliniază textul compact stânga-dreapta ca în jurnalele tipărite */
+  color: var(
+    --stardust
+  ); /* Alb industrial stins stardust, conceput împotriva oboselii ochilor */
+  font-size: 1.05rem; /* Dimensiune ideală, extrem de lizibilă pentru sesiuni lungi de studiu */
+  line-height: 1.8; /* Relație aerisită între rânduri pentru a împiedica textul să se sufoce vizual */
+}
+
+/* --- 2. ȘTAMPILA GLIF-MONOLIT HARDWARE (Suprasunderea Jet-Age de Stil) --- */
+.log-text > p:first-of-type::first-letter {
+  font-family: var(
+    --font-main
+  ); /* Păstrează amprenta geometrică rigidă a erei spațiale Space Grotesk */
+  font-weight: 700; /* Îngroașă vectorul literei pentru o definiție maximă pe ecranul radar */
+  font-size: 1.3rem; /* Dimensiune comprimată tactică, specifică tastelor fizice de terminal */
+  color: var(
+    --solar-mint
+  ); /* Textul se aprinde intens pe verde-mentă fosforic de sistem */
+
+  /* STRUCTURA CADRULUI JET-AGE FRAMEWORK */
+  float: left; /* Împinge piesa în stânga, permițând textului să curgă simetric în jur */
+  /* display: inline-block;         Convertește litera într-un bloc structural fizic, eliminând starea inline */
+  border: 1px dashed var(--solar-mint); /* BORDER LASER PUNCTAT: Chenar fin verde-mentă ce încadrează fix nodul */
+  border-radius: 2px; /* Rotunjire minimalistă brută asortată cu interfețele militare */
+
+  /* CONFIGU  RAȚIA MICRO-RASTERULUI CRT DIN FUNDAL */
+  background:
+    linear-gradient(rgba(18, 16, 16, 0) 50%, #05070a 50%), #0d0f14; /* Stratificare: fundal negru blindat peste care se repetă dungi CRT de 2px */
+  background-size: 100% 2px; /* Repetă microscopic liniile orizontale catodice pe toată înălțimea piese */
+
+  /* ALINIERE GEOMETRICĂ AXIALĂ */
+  padding: 4px 10px; /* Umplutură dreptunghiulară simetrică strânsă în jurul literei */
+  margin-right: 12px; /* Distanță fizică de siguranță despărțind monolitul de cuvintele ce urmează */
+  margin-top: 5px; /* Reglaj fin de altitudine ce aliniază tavanul capsulei cu cel al rândului */
+  line-height: 1.2; /* Înălțime strânsă ce împiedică piesa să decaleze grila rândurilor de jos */
+
+  /* SHIELD TENSION DE EMISIE */
+  box-shadow: 0 0 10px rgba(167, 243, 208, 0.3); /* Aură luminoasă discretă din spectrul verde-mentă în jur */
+  text-shadow: 0 0 5px var(--solar-mint); /* Proiectează o aureolă fluorescentă verde direct pe forma literei */
+}
+
+/* ==========================================================================
+    SUB-MODULE 10.2: THE CHRONICLE VAULTS (CAPSULELE DE JURNAL & ETICHETE)
+      
+    REZUMAT: Acest sub-modul izolează șabloanele structurale pentru intrările 
+    zilnice de jurnal și casetele de definiții tehnice pentru etichetele de cod. 
+    El configurează învelișuri adaptive înzestrate cu adâncituri de umbră CRT 
+    interioară și ancorează ierarhiile fosforice ale micro-metadatelor de sintaxă.
+   ========================================================================== */
+/* --- 1. CASETA INDIVIDUALĂ A UNEI ZILE (The Log Entry Screen Vault) --- */
+.log-entry {
+  background: var(
+    --panel-bg
+  ); /* Fundalul original translucid de sticlă fumurie stabilizată Solaris */
+  padding: 2.5rem; /* Umplutură internă extinsă pentru a nu sufoca conținutul narativ */
+  margin: 30px 0; /* Distanță clară pe verticală între modulele zilnice din flux */
+  border: 1px solid var(--module-border); /* Chenar micro-fin alb pentru asamblarea tehnică a structurii */
+  border-left: 5px solid var(--solar-mint); /* BANDA VERTICALĂ FOSFORICĂ: Indicatorul radar stabil verde-mentă */
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5); /* EFECTUL CRT BOMBAT: Creează adâncime fizică de monitor vechi în interior */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Mișcare fluidă originală bazată pe accelerație la interacțiune */
+  position: relative; /* Deschide context de poziționare pentru micro-elemente interne */
+  overflow: hidden; /* Taie mecanic pixelii sau luminile care ar încerca să spargă marginile casetei */
+}
+
+/* Efect cinematic la hover peste modulul zilei: Încărcare fosforică și ridicare cinematică */
+.log-entry:hover {
+  background: rgba(
+    167,
+    243,
+    208,
+    0.05
+  ); /* Tenta fină de mentă se propagă pe tot fundalul sticlei fumurii */
+  border-color: rgba(
+    167,
+    243,
+    208,
+    0.2
+  ); /* Intensifică opacitatea și contrastul chenarului micro-fin perimetral */
+  box-shadow:
+    inset 0 0 40px rgba(167, 243, 208, 0.1),
+    0 0 20px rgba(167, 243, 208, 0.05); /* Strălucirea fosforică se mărește simetric în interior și în exterior */
+  transform: translateY(
+    -3px
+  ); /* RIDICARE STRUCTURALĂ: Împinge ușor cardul în sus pentru dinamică tridimensională */
+}
+
+/* Configurația specifică a paragrafelor din interiorul jurnalului de zi */
+.log-entry p {
+  font-size: 0.95rem; /* Dimensiune tehnică odihnitoare pentru citit în interiorul capsulei */
+  color: rgba(
+    209,
+    209,
+    209,
+    0.85
+  ); /* Un gri stardust original, calibrat pentru păstrarea ierarhiei vizuale */
+  margin-bottom: 1.5rem; /* Spațiu protector de aer sub paragrafe în interiorul carcasei metalice */
+  overflow-wrap: break-word; /* SCUT DE RESPONSIVITATE: Rupe automat cuvintele lungi la capătul casetei */
+  word-wrap: break-word; /* Suport suplimentar pentru browsere mai vechi, blocând lăbărțarea */
+  hyphens: auto; /* Adaugă automat cratimă la despărțirea cuvintelor la capăt de rând */
+  text-align: justify; /* Aliniere compactă stânga-dreapta ca în cărți pentru simetrie */
+  text-justify: inter-word; /* Reglează spațiile dintre cuvinte pentru a bloca golurile inestetice */
+}
+
+/* --- 2. ALINIERILE ȘI TITLURILE DIN INTERIORUL ZILEI (Sistemul de Antet Dual) --- */
+.log-entry h3 {
+  display: flex; /* Activează motorul Flexbox pe linia titlului de zi */
+  justify-content: space-between; /* EFECT DUAL SIMETRIC: Împinge DayXX în stânga și elementele Meta în dreapta */
+  align-items: center; /* Aliniază ambele blocuri de text la mijloc pe axa verticală a rândului */
+  border-bottom: 1px solid rgba(167, 243, 208, 0.1); /* Linie discretă micro-fină de demarcație la baza textului */
+  padding-bottom: 8px; /* Pernă fină de aer sub text înainte de firul de demarcație */
+  margin-top: 0; /* Resetează marginile nativ-parazite pentru a securiza alinierea */
+  width: 100%; /* Se întinde pe toată lățimea utilă a casetei jurnalului */
+  font-size: 1.1rem; /* Dimensiune tehnică echilibrată, specifică antetelor de zi */
+  color: var(
+    --nebula-pink
+  ); /* Ziua din stânga se aprinde spectaculos în nuanța roz-magenta intens */
+}
+
+/* --- 3. REPARAREA MODULELOR SEMANTICE (Specifică pentru html-day03 și structuri de tag-uri) --- */
+.semantic-module {
+  margin: 25px 0; /* Spațiu clar de demarcație pe verticală deasupra și sub modulul de tag */
+  padding-left: 15px; /* Distanța textului tehnic interior față de linia laser din stânga */
+  border-left: 2px solid var(--nebula-pink); /* LINIE LASER SOLIDĂ: Fir roz-magenta în dreptul definiției de tag */
+}
+
+/* Afișarea numelui de etichetă (ex: <div>, <header>, <aside>) */
+.tag-name {
+  color: var(
+    --solar-mint
+  ); /* Numele tagului se aprinde intens pe verde-mentă fosforic de sistem */
+  font-weight: bold; /* Îngroașă caracterele pentru autoritate vizuală supremă pe scaner */
+  font-size: 1.1rem; /* Dimensiune mărită pentru evidențiere directă și rapidă în log */
+  text-shadow: 0 0 8px var(--solar-mint); /* Generează o aureolă luminoasă difuză de neon în jurul literelor active */
+}
+
+/* Metadatele tehnice atașate tagului (atribute, document structural scopes) */
+.tag-meta {
+  color: var(
+    --nebula-pink
+  ); /* Prinde metadatele pe culoarea roz-neon de alertă militară */
+  font-size: 0.8rem; /* Dimensiune tehnică redusă, specifică datelor secundare de diagnostic */
+  text-transform: uppercase; /* Protocol obligatoriu: forțează litere mari în interiorul etichetei */
+  letter-spacing: 1px; /* Spațiere fină între caractere pentru aspect curat de monitor */
+  margin-left: 10px; /* Lasă un spațiu fizic gol de 10px în stânga, separându-se de tag-name */
+}
+
+/* Descrierea extinsă din subsolul definiri de tag */
+.tag-description {
+  margin-top: 8px !important; /* FORȚARE CRUCIALĂ: Împinge textul curat sub blocul tagului, dezasamblând rândul */
+}
+
+/* ==========================================================================
+    SUB-MODULE 10.3: THE MATRIX REPOSITORIES (MATRICILE DE DATE CELULARE)
+      
+    REZUMAT: Acest sub-modul configurează matricile tabulare bidimensionale 
+    utilizate pe punțile de arhivă și bibliografie (.data-grid). El elimină 
+    formatarea implicită a celulelor din browser, rulează o placă verde de 10s 
+    tensiune joasă în spatele antetelor, ancorează linii laser solide și încarcă 
+    umbre kinetice de proximitate peste rândurile scanate la intersecția cursorului.
+   ========================================================================== */
+/* --- 1. STRUCTURA GENERALĂ A TABELULUI (The Solaris Database Grid) --- */
+table,
+.data-grid {
+  display: table !important; /* Reparație de bază: Șterge display: block și reinstaură fluxul nativ de tabel */
+  width: 100% !important; /* Se extinde elastic pe toată lățimea utilă a monitorului hardware disponibil */
+  border-collapse: collapse; /* Lipește perfect liniile celulelor interioare, eliminând spațiile goale parazite */
+  margin: 20px 0; /* Distanță verticală de siguranță izolând tabelul de restul paragrafelor de text */
+  background: rgba(
+    13,
+    15,
+    20,
+    0.4
+  ); /* Fundal translucid original din sticlă fumurie pentru panoul de bord */
+  border: 1px solid rgba(167, 243, 208, 0.2); /* Chenar exterior din fir laser de mentă la 20% opacitate de sistem */
+  font-family: var(
+    --font-main
+  ); /* Reinstaurează amprenta geometrică rigidă a fontului master spațial */
+  font-size: 0.9rem; /* Dimensiune tehnică redusă, optimizată pentru citirea datelor dense din celule */
+  box-sizing: border-box; /* Include padding-ul în calculul lățimii pentru a bloca overflow-ul structural */
+}
+
+/* --- 2. ANTETELE DE COLOANĂ HARDWARE (Alinierea Capului de Tabel) --- */
+th {
+  background: rgba(
+    167,
+    243,
+    208,
+    0.1
+  ); /* Inserare fundal original format dintr-o tentă fină de 10% verde-mentă */
+  color: var(
+    --solar-mint
+  ); /* Text fosforic verde-mentă aprins dedicat semnalizării prioritare pe consolă */
+  text-transform: uppercase; /* Protocol militar obligatoriu: forțează utilizarea literelor mari în antet */
+  letter-spacing: 2px; /* Spațiere tehnică industrială stabilă între caracterele etichetelor */
+  padding: 12px; /* Umplutură internă compactă ce asamblează simetric celulele de antet */
+  border-bottom: 2px solid var(--solar-mint); /* Linie groasă originală de control și demarcație laser la baza capului */
+  text-align: left; /* Aliniere curată la stânga în interiorul coloanei pentru citire directă */
+}
+
+/* --- 3. ÎNVELIȘUL UNIFICAT AL CELULELOR DE DATE (Perna de Aer Celulară) --- */
+td {
+  padding: 12px; /* Păstrează cu sfințenie padding-ul simetric ideal de 12px din foaia veche */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Linii micro-fine catodice între rândurile de date din tabel */
+  color: rgba(
+    209,
+    209,
+    209,
+    0.9
+  ); /* Text alb stardust opacizat conceput special împotriva oboselii vizuale */
+
+  /* SCUT DE SIGURANȚĂ ANTI-OVERFLOW PENTRU ECRANE STRÂMTE:
+      Dacă o adresă URL din celulă este uriașă, nu va mai deforma tabelul, 
+      ci se va rupe curat în interiorul coordonatelor sale fără să iasă din ecran! */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal !important; /* Îi permitem textului să facă wrap pe rândul următor dacă fereastra devine strâmtă */
+}
+
+/* --- 4. RĂSPUNS KINETIC LA HOVER PESTE RÂND (Raza de Scanare Proximity) --- */
+tr:hover {
+  background: rgba(
+    167,
+    243,
+    208,
+    0.05
+  ) !important; /* Tenta fină de mentă la 5% opacitate la trecerea mouse-ului peste rând */
+  box-shadow: inset 0 0 10px rgba(167, 243, 208, 0.1) !important; /* Aură interioară discretă de neon verde la atingere */
+}
+
+/* --- 5. SELECȚIA DE ÎNALTĂ TENSIUNE A TEXTULUI DIN CELULE (Highlight Map) --- */
+td::selection {
+  background: var(
+    --nebula-pink
+  ); /* Textul selectat manual de echipaj se aprinde instantaneu pe roz-neon intens */
+  color: white; /* Forțează caracterele selectate în alb pur pentru contrast maxim pe placa aprinsă */
+}
+
+/* --- 6. PERSONALIZAREA INTEGRALĂ A BARELOR DE SCROLL (HUD Webkit Adjustments) --- */
+/* O bară de scroll micro-fină asortată cu tema ecranelor CRT verzi Solaris */
+.data-grid::-webkit-scrollbar,
+table::-webkit-scrollbar {
+  height: 3px !important; /* O linie extrem de subțire de 3px plasată în subsolul bazei tabelului tehnic */
+}
+
+.data-grid::-webkit-scrollbar-thumb,
+table::-webkit-scrollbar-thumb {
+  background: rgba(
+    167,
+    243,
+    208,
+    0.3
+  ) !important; /* Culoarea verde solar-mint la o opacitate fină de 30% */
+  border-radius: 2px; /* Rotunjire minimalistă brută asortată cu întreaga carcasă hardware */
+}
+
+.data-grid::-webkit-scrollbar-track,
+table::-webkit-scrollbar-track {
+  background: rgba(
+    13,
+    15,
+    20,
+    0.5
+  ) !important; /* Fundal închis de sticlă, pitit aproape invizibil în layout */
+}
+
+/* ==========================================================================
+    SUB-MODULE 10.4: THE CELLULAR CYBER-LINKS (REȚELELE INTERACTIVE DE ANCORE)
+      
+    REZUMAT: Acest sub-modul izolează sistemele micro-cinetice de navigație 
+    încastrate în interiorul celulelor de date (.data-grid td a). El configurează 
+    frecvențele active latente albastru-stelar, rulează un fir laser orizontal 
+    ascuns de 1px pe spectrul roz-magenta (::after) și gestionează bucla de 
+    expansiune geometrică explozivă la 100% declanșată la hover-ul operatorului.
+   ========================================================================== */
+/* --- 1. ACCENT CROMATIC: STILUL DE BAZĂ AL LINK-URILOR (Stare de Repaus) --- */
+.data-grid td a {
+  color: var(
+    --starlight-blue,
+    #00d2ff
+  ); /* Link-urile luminează inițial pe un albastru electric fin de sistem */
+  text-decoration: none; /* Elimină sublinierea nativă inestetică a browserelor terestre pe elemente */
+  font-family: monospace; /* Font rigid mecanic de cod ce păstrează caracterul tehnic al terminalului */
+  position: relative; /* Context de poziționare local obligatoriu pentru generarea micro-liniei laser */
+  display: inline-block; /* Convertește elementul în bloc în linie pentru a respecta padding-ul dreptunghiular */
+  transition: color 0.3s ease; /* Tranziție rapidă de răspuns pentru schimbarea culorii textului la atingere */
+}
+
+/* --- 2. GENERAREA FIRELOR LASER INVIZIBILE DE SUB TEXT (Sublinierea Latentă) --- */
+.data-grid td a::after {
+  content: ""; /* Inicilizează stratul fizic virtual; directivă obligatorie de creare a nodului */
+  position: absolute; /* Scoate firul din fluxul normal pentru a-l suspenda rigid sub caractere */
+  bottom: -2px; /* O fixează la exact 2px sub linia de bază a textului din interiorul celulei */
+  left: 0; /* Blochează punctul de pornire al extinderii în extrema stângă a cuvântului */
+  width: 0; /* Stare inițială închisă: linia este complet strânsă și invizibilă pe monitor */
+  height: 1px; /* Grosime micro-fină industrială de laser sub textul interactiv din rețea */
+  background: var(
+    --nebula-pink
+  ); /* Culoarea originală roz-magenta a nebuloasei ce alimentează circuitul firului */
+  box-shadow: 0 0 8px var(--nebula-pink); /* Umbră fluorescentă roz ce imită emisia de lumină a ecranelor catodice */
+
+  /* CUBIC-BEZIER INDUSTRIAL: Controlează extinderea fluidă orizontală stânga-dreapta fără salturi rigide */
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- 3. EFECT HOVER CHIRURGICAL: DECLANȘAREA RAZEI LASER LA ATINGERE (Stare Activă) --- */
+.data-grid td a:hover {
+  color: var(
+    --nebula-pink
+  ); /* Textul ancorei trece instantaneu pe lungimea de undă roz-magenta de alertă */
+}
+
+.data-grid td a:hover::after {
+  width: 100%; /* Firul laser explodează și se întinde pe toată lungimea cuvântului selectat */
+}
+
+/* ==========================================================================
+    SUB-MODULE 10.5: THE RADAR DATA STREAMS (MONITOARELE CRT VERZI)
+      
+    REZUMAT: Acest sub-modul configurează casetele de afișare a codului sursă 
+    pe spectrul verde fosforic intens (pre, code). El injectează automat etichete 
+    statice de monitorizare prin coordonate absolute (::before), blochează 
+    deformările pe ecrane splitate multi-dispozitiv și rulează o bară de scroll 
+    micro-fină pe nuanța albastru-stelar la baza incintei.
+   ========================================================================== */
+/* --- RADAR SCREENS: MONITOARELE CRT VERZI ORIGINALE --- */
+pre {
+  background: rgba(
+    0,
+    20,
+    0,
+    0.9
+  ); /* Verde extrem de închis, aproape negru, specific radarelor vechi */
+  border: 1px solid var(--solar-mint); /* Margine solidă originală din culoarea verde-mentă de scanare */
+  padding: 20px; /* Umplutură internă curată ce îndepărtează textul de granițe */
+  border-radius: 4px; /* Rotunjire minimalistă la colțuri asortată cu interfața generală */
+  overflow-x: auto; /* Permite scroll orizontal doar ca protecție suplimentară dacă e nevoie */
+  position: relative; /* Context obligatoriu pentru poziționarea etichetei DATA STREAM în colț */
+
+  /* EFECTUL ORIGINAL DE MONITOR BOMBAT: Umbra interioară fosforică verde în sticlă */
+  box-shadow: inset 0 0 15px rgba(167, 243, 208, 0.2);
+
+  /* FORMULA DE SIGURANȚ RETEHNOLOGIZATĂ PENTRU ECRANE SPLITATE */
+  white-space: pre-wrap; /* REPARAT RECURSIV: Rupe rândul automat dacă e prea lung în fereastra strâmtă */
+  word-wrap: break-word; /* Împiedică lățirea artificială a paginii și revărsările laterale */
+}
+
+/* Efectul original de text fosforescent din arhivă */
+code {
+  font-family:
+    "Courier New", Courier, monospace; /* Font rigid mecanic de cod ce simulează carcasele vechi */
+  color: var(
+    --solar-mint
+  ); /* Textul se aprinde integral pe verde-mentă fosforic de sistem */
+  text-shadow: 0 0 5px var(--solar-mint); /* Aura fosforescentă originală stabilă din stilul vechi din foi */
+  font-size: 0.9rem; /* Dimensiune radar compactă ideală pentru liniile de script */
+}
+
+/* INDICATORUL DISCRET ÎN COLȚUL MONITORULUI CRT (Pagina 12 din PDF) */
+pre::before {
+  content: "DATA STREAM ACTIVE"; /* Textul generat automat de sistem în interiorul ecranului vitrat */
+  position: absolute; /* Scoatere din flux pentru a pluti independent în colțul superior */
+  top: 5px; /* Distanțe fine originale de poziționare pe axa verticală */
+  right: 10px; /* Aliniere strânsă pe flancul drept (tribord) */
+  font-size: 0.6rem; /* Dimensiune micro-fină pentru a nu concura cu textul de cod */
+  color: var(
+    --solar-mint
+  ); /* Culoarea de sistem verde-mentă fosforică uniformă */
+  opacity: 0.5; /* Aspect stins de fundal, integrat discret sub ecranare */
+  letter-spacing: 1px; /* Spațiere tehnică stabilă între literele indicatorului */
+}
+
+/* PERSONALIZAREA BAREI DE SCROLL ORIZONTALE A CODULUI (Estetică SF originală) */
+pre::-webkit-scrollbar {
+  height: 4px; /* O bară orizontală extrem de subțire de 4px în subsolul casetei de cod */
+}
+
+pre::-webkit-scrollbar-thumb {
+  background: rgba(
+    0,
+    210,
+    255,
+    0.3
+  ); /* Colorează bara în nuanța ta originală de albastru stelar la 30% opacitate */
+  border-radius: 2px; /* Rotunjește colțurile barei mobile pentru un finisaj minimalist */
+}
+
+/* ==========================================================================
+    SUB-MODULE 10.6: THE AUXILIARY ANNEXES & FUTURE AMBER VAULTS
+      
+    REZUMAT: Acest sub-modul asamblează panourile de studiu auxiliare și capsulele 
+    de timp înghețate (.js-annex, .sub-log, .future-log). El mapează antetele absolut 
+    înălțate pe borduri violet, controlează excepțiile locale de dimensiuni pentru 
+    link-uri de arhivă și rulează o bandă chihlimbar (--amber-glow) însoțită de un 
+    filtru grayscale(0.8) de hibernare peste jurnalele în așteptare.
+   ========================================================================== */
+/* --- 1. CASETA ANEXELOR DE STUDIU (The JS Annex Environment) --- */
+.js-annex {
+  margin-top: 45px; /* Spațiu protector original pentru a lăsa eticheta superioară să respire */
+  padding: 25px 20px 20px 20px; /* Pernă de aer interioară simetrică ce stabilizează grupurile de sub-elemente */
+  background: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* Fundal întunecat opac de carcasă pentru izolarea completă a nodului */
+  border: 1px dashed var(--nebula-purple); /* Delimitare originală punctată în lungimea de undă violet cosmic */
+  border-radius: 4px; /* Rotunjire minimalistă la colțuri perfect asortată cu interfața generală */
+  position: relative; /* ESENȚIAL pentru ca h4 să se poată ancora absolut raportat la bordură */
+}
+
+/* TITLUL ANEXEI CA O ETICHETĂ MILITARĂ/INDUSTRIALĂ PROPRIE ÎNĂLȚATĂ PESTE BORDURĂ */
+.js-annex h4 {
+  position: absolute; /* Scoatere din flux pentru a pluti fix deasupra perimetrului de sârmă punctată */
+  top: -14px; /* O ridică pe verticală exact la jumătatea liniei de chenar exterior */
+  left: 15px; /* Aliniere tehnică precisă în flancul stâng raportat la carcasă */
+  margin: 0; /* Resetează marginile parazite ale browserului pentru a securiza poziția */
+  background: var(
+    --nebula-purple
+  ); /* Fundal solid violet adânc pentru a masca și șterge linia punctată din spate */
+  color: var(
+    --solar-mint
+  ); /* Text verde-mentă fosforic intens pentru o vizualizare optimă pe radar */
+  padding: 2px 12px; /* Umplutură dreptunghiulară originală ce asamblează aspectul de etichetă rigidă */
+  font-size: 0.75rem; /* Dimensiune redusă de radar specifică ferestrelor auxiliare HUD */
+  text-transform: uppercase; /* Protocol militar obligatoriu: forțează utilizarea literelor mari */
+  letter-spacing: 2px; /* Spațiere tehnică stabilă între caractere pentru un aspect premium */
+  border: 1px solid var(--solar-mint); /* Margine micro-fină oțelită asortată cromatic cu textul interior */
+  font-style: normal; /* Suprascrie forțat eventualele stiluri italic sosite din scurgeri globale */
+}
+
+/* --- 2. BUTOANELE PRINCIPALE DE PORTAL ACCES ȘI NAVIGAȚIE DE CAPITOL --- */
+.archive-link {
+  display: inline-block; /* Îl transformă în bloc în linie pentru a respecta padding-ul dreptunghiular stabilit */
+  margin-top: 15px; /* Spațiu protector de siguranță deasupra butonului izolat */
+  color: var(
+    --solar-mint
+  ); /* Text aprins pe culoarea stabilă de sistem verde-mentă fosforic */
+  text-decoration: none; /* Elimină sublinierea nativă inestetică injectată automat de browsere */
+  font-size: 0.8rem; /* Dimensiune tehnică minimalistă conform blueprint-urilor HUD ale consolei */
+  text-transform: uppercase; /* Litere mari obligatorii pentru un aspect rigid de protocol militar */
+  letter-spacing: 2px; /* Spațiere largă tehnică industrială între caractere pentru aspect premium */
+  padding: 10px 20px; /* Umplutură internă originală pentru asamblarea unei zone tactile precise */
+  border: 1px solid var(--solar-mint); /* Chenar rigid de sistem ce marchează granița de control secundară */
+  transition: all 0.3s ease; /* Tranziție rapidă de răspuns la interacțiunea operatorului */
+}
+
+/* EFECT HOVER PESTE PORTALUL GENERAL AL ARHIVEI DE SISTEM */
+.archive-link:hover {
+  background: var(
+    --solar-mint
+  ); /* Fundalul se aprinde complet în radiație verde-mentă fosforică pură */
+  color: var(
+    --space-dark
+  ); /* Forțează textul în negru profund, maximizând lizibilitatea pe placa aprinsă */
+  box-shadow: 0 0 20px var(--solar-mint); /* Erupție puternică de aureolă neon fluorescentă în jurul elementului */
+}
+
+/* EXCEPȚIE LOCALĂ DE CASCADĂ: CONFIGURAȚIA BUTONULUI DE ARHIVĂ CÂND SE AFLĂ ÎN INTERIORUL ANEXEI VIOLET */
+.js-annex .archive-link {
+  color: var(
+    --nebula-purple
+  ); /* Suprascrie valoarea inițială albă și mută textul pe spectrul violet al nebuloasei */
+  font-size: 0.7rem; /* Dimensiune micro tehnică adaptată special pentru potrivirea în casetă */
+  padding: 6px 12px; /* Umplutură mult mai compactă ce protejează limitele structurale interioare */
+  margin-top: 10px; /* Decalaj fin de aer deasupra elementului în interiorul modulului */
+  border-color: var(
+    --nebula-purple
+  ); /* Chenarul oțelit trece pe lungimea de undă violet solid a modulului */
+  opacity: 0.8; /* Aspect ușor desaturat în starea de repaus pentru păstrarea ierarhiei */
+  display: inline-block; /* Ancorează comportamentul de bloc, asigurând randarea corectă a marjelor */
+}
+
+/* EFECT HOVER SPECIAL PE PORTALUL INTERIOR RECONVERTIT DIN ANEXĂ */
+.js-annex .archive-link:hover {
+  background: var(
+    --nebula-purple
+  ); /* Fundalul absoarbe complet energia violet a nebuloasei centrale */
+  color: var(
+    --solar-mint
+  ); /* Textul se aprinde invers pe lungimea de undă verde-mentă de înaltă vizibilitate */
+  box-shadow: 0 0 10px var(--nebula-purple); /* Proiectează o mică aură laser micro-fină violet în jurul piesei */
+  border-color: var(
+    --solar-mint
+  ); /* Marginea exterioară comută pe verde-mentă de confirmare activă */
+  opacity: 1; /* Restaurarea luminozității totale și a vizibilității necomprimate pe ecran */
+}
+
+/* --- 3. LOGURI SECUNDARE INTERNE (Sub-modulele de diagnostic din articole) --- */
+.sub-log {
+  border-left: 2px solid var(--nebula-purple); /* Linie verticală originală solidă violet ca ghid structural de poziție */
+  padding-left: 15px; /* Distanța de siguranță a textului tehnic interior față de linia de ghidaj */
+  margin: 20px 0; /* Spațiu protector vertical izolând sub-logul de restul elementelor */
+}
+
+.sub-log h5 {
+  color: var(
+    --solar-mint
+  ); /* Titlul secundar se aprinde stabil pe verde-mentă fosforic de sistem */
+  border-bottom: 1px dashed var(--solar-mint); /* DIRECTIVĂ LOCALĂ DE SPECIE: Linia punctată de sub text se aplică DOAR aici */
+  display: inline-block; /* Restrânge geometric fundalul și linia strict pe lungimea caracterelor scrise */
+  margin-bottom: 10px; /* Distanță fină de siguranță sub titlu înainte de curgerea paragrafelor */
+}
+
+/* STILIZAREA TEXTULUI METAFORIC POZIȚIONAT SECUNDAR PE ORIZONTALĂ */
+.meta-title {
+  font-size: 0.85rem; /* Dimensiune tehnică redusă pentru a stabili o ierarhie vizuală clară */
+  color: var(
+    --solar-mint
+  ); /* Textul se aprinde direct pe frecvența verde-mentă fosforică a radarului */
+  opacity: 0.8; /* Aspect ușor desaturat în starea de repaus pentru a nu obosi ochii */
+  letter-spacing: 2px; /* Spațiere tehnică largă industrială între caractere pentru aspect premium */
+  font-weight: normal; /* Text subțire fluid ce evită îngroșarea parazită în matricea HUD */
+}
+
+/* --- 4. SEIFURILE TIMPULUI "FUTURE LOG" (Capsulele Chihlimbar în Așteptare) --- */
+.future-log {
+  border-left: 5px solid var(--amber-glow) !important; /* FORȚARE DICTATORIALĂ: Blochează indicatorul pe chihlimbar de avertizare */
+  opacity: 0.5; /* Vizibilitate redusă la jumătate ce simulează o capsulă de date blocată */
+  filter: grayscale(
+    0.8
+  ); /* Efect cinematic original: estompează culorile în gri (mod hibernare hardware) */
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Curbe cursive de accelerație pentru trezirea sistemelor */
+  cursor: help; /* Modifică cursorul mouse-ului într-un semn de întrebare pentru atmosferă narativă */
+}
+
+/* EFECT LA HOVER PESTE CAPSULA VIITOARE: TREZIREA COMPLETĂ DIN HIBERNARE A DATELOR */
+.future-log:hover {
+  opacity: 1; /* Restaurarea instantanee a luminozității totale a canalelor vizuale */
+  filter: grayscale(
+    0
+  ); /* Filtrul grayscale cade la zero absolut; culorile native revin online */
+  background: rgba(
+    255,
+    179,
+    0,
+    0.05
+  ); /* O tentă fină originală de 5% de chihlimbar se propagă pe sticla de fundal */
+  box-shadow:
+    inset 0 0 20px rgba(255, 179, Amber, 0.1),
+    0 0 15px rgba(255, 179, 0, 0.05); /* Strălucire fosforică dublă pe spectrul chihlimbar în interior și exterior */
+  transform: translateX(
+    5px
+  ); /* DEPLASAREA MECANICĂ LA DREAPTA: Cardul glisează ca un sertar magnetic la scanare */
+}
+
+/* Activarea animației native de pulsare pe titluri */
+.future-log:hover h5 {
+  animation: glow-flicker 1s infinite; /* Rulează motorul continuu de pulsare rapidă definit la începutul fișierului */
+  color: var(
+    --amber-glow
+  ); /* Comută textul stabil pe lungimea de undă chihlimbar de alertă activă */
+}
+
+/* Re-potrivirea cromatică a insignei de titlu în starea de hover general */
+.future-log:hover h4 {
+  background-color: var(
+    --amber-glow
+  ); /* Eticheta superioară comută din violet în chihlimbar solid în mod automat */
+  color: var(
+    --space-dark
+  ); /* Textul devine negru profund pentru o claritate extremă pe placa aprinsă */
+  box-shadow: 0 0 15px var(--amber-glow); /* Încarcă perimetrul badge-ului cu o puternică aură laser chihlimbar */
+}
+
+/* Comportamentul dinamic al liniilor interioare de ghidaj din capsulele viitoare */
+.future-log .sub-log {
+  border-left-color: rgba(
+    255,
+    179,
+    0,
+    0.2
+  ); /* Stare latentă: linia punctată se retrage într-o opacitate abia sesizabilă */
+  transition: border-color 0.5s ease; /* Pregătește o aprindere fluidă și fină a ghidajului structural */
+}
+
+.future-log:hover .sub-log {
+  border-left-color: var(
+    --amber-glow
+  ); /* Linia de ghidaj se încarcă instantaneu cu tensiune chihlimbar completă */
+}
+
+/* ==========================================================================
+    MODULE 11: FOOTER TERMINAL // MISSION COORDINATES (VERSIUNEA MINIMALISTĂ)
+      
+    NOTĂ ARHITECTURALĂ DIDACTICĂ: Acest modul este plasat strategic înaintea 
+    sistemelor 3D și poligonale avansate pentru a încheia fluxul de layout 
+    structural standard. Menținerea subsolului aici oferă studenților un moment 
+    de respirație vizuală înainte de plonjarea în matrici complexe de coordonate.
+   ========================================================================== */
+
+/* --- 1. STRUCTURA MACRO A SECTORULUI DE SUBSOL (The Footer Base Frame) --- */
+.footer {
+  margin-top: 120px; /* Împinge fizic subsolul departe de ultimul container de articol de sus */
+  background: rgba(
+    13,
+    15,
+    20,
+    0.4
+  ); /* Fundal original transparent din sticlă fumurie Solaris pentru panouri */
+  backdrop-filter: blur(
+    10px
+  ); /* Efect cinematic profund care estompează elementele ce trec pe sub bară */
+  border-top: 1px double rgba(157, 23, 248, 0.2); /* Linie laser dublă în nuanța originală violet-roz de demarcație */
+  box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.4); /* Umbră interiorară discretă ce oferă adâncime sticlei fumurii */
+  position: relative; /* Deschide context local de coordonate pentru elementele grafice interne */
+  opacity: 0.8; /* Aspect stins la 80% în starea de repaus pentru protecția ochilor utilizatorului */
+  transition: opacity 0.3s ease; /* Tranziție fluidă de răspuns a luminozității la interacțiunea cu cursorul */
+  padding: 40px 20px !important; /* Pernă interioară forțată de aer ce încadrează stabil pachetul tehnic */
+  box-sizing: border-box; /* Include padding-ul în calculul lățimii pentru a bloca overflow-ul structural */
+
+  /* CENTRAREA ȘI MARJAREA ABSOLUTĂ PE MONITOARELE DESKTOP */
+  margin-left: auto !important; /* Blochează marja stângă pentru a opri decalajele orizontale nealiniate */
+  margin-right: auto !important; /* Blochează marja dreaptă pentru a asigura centrarea pe mijlocul ecranului */
+  display: flex !important; /* Activează subsistemul Flexbox rigid pentru gestionarea rândurilor interne */
+  flex-direction: column !important; /* Așază rândurile de telemetrie în mod rigid pe verticală, unul sub altul */
+  align-items: center !important; /* Centrează perfect toate componentele pe mijlocul axei orizontale */
+  justify-content: center !important; /* Centrează geometric întregul pachet pe axa verticală a containerului */
+}
+
+/* EFECT LA HOVER PESTE SUBSOLUL DE COMANDĂ (Suprasarcina Luminoasă) */
+.footer:hover {
+  opacity: 1; /* Luminozitate totală nominală la intersecția cursorului cu monitorul */
+  border-top-color: var(
+    --nebula-pink
+  ); /* Laserul dublu superior se aprinde intens pe nuanța roz-magenta */
+}
+
+/* --- 2. ENCAPSULAREA LINKULUI DE BIBLIOGRAFIE (The External Comms Box) --- */
+.footer .external-comms {
+  display: flex !important; /* Activează rețeaua Flexbox locală pentru a menține forma curată */
+  justify-content: center !important; /* Menține capsula butonului blocată fix pe mijlocul axei verticale */
+  margin-bottom: 25px !important; /* Spațiu protector de siguranță sub buton înainte de rândurile de text */
+  width: auto !important; /* Împiedică lărgirea sau lăbărțarea laterală artificială a butonului pe ecran */
+}
+
+/* THE INTEGRATED COMMAND BEACON INDICATOR */
+.footer .pulse-dot {
+  display: inline-block; /* Convertește elementul fantomă într-un cerc fizic structural cu granițe precise */
+  width: 6px;
+  height: 6px; /* Proporție tehnică liliputană fină, specifică martorilor de diagnostic de pe carcase */
+  background-color: var(
+    --solar-mint
+  ); /* Se aprinde pe spectrul verde-mentă fosforic, semnalizând conexiunea stabilă cu arhivele */
+  border-radius: 50%; /* Forțează granițele pătrate ale cutiei native într-o orbită circulară perfectă */
+  margin-right: 8px; /* Pernă laterală de siguranță izolând ledul luminos de textul de acces din subsol */
+  animation: dot-pulse 1.8s infinite ease-in-out !important; /* Rulare fluidă, lentă și hipnotică anti-blur */
+}
+
+/* --- 3. STRUCTURA TEXTULUI DE TELEMETRIE ȘI DATE (The Metadata Rows) --- */
+.footer p,
+.footer .copyright {
+  font-family: monospace; /* Font rigid mecanic de cod ce reproduce aspectele textelor de terminal */
+  font-size: 0.75rem; /* Dimensiune tehnică redusă, specifică ecranelor și radarelor secundare */
+  color: var(
+    --stardust
+  ); /* Text alb industrial stardust original, conceput special anti-oboseală */
+  letter-spacing: 3px; /* Spațiere largă tehnică industrială între caractere pentru aspect militar */
+  text-transform: uppercase; /* Protocol obligatoriu de bord: forțează utilizarea literelor mari capitalizate */
+  margin: 8px 0 !important; /* Distanță fină verticală între rânduri pentru a bloca suprapunerile de text */
+  text-align: center !important; /* Centrează absolut textul în interiorul fiecărei linii de tracking */
+  width: auto !important; /* Oprește extinderea artificială a lățimii textului în interiorul grilei */
+}
+
+/* --- 4. ACCENTE LUMINOASE ÎNCASTRATE PENTRU CONTRAST (Luminescent Sparks) --- */
+/* Indicatorul verde-mentă de status online al sistemelor active */
+.footer span.telemetry-active {
+  color: var(
+    --solar-mint
+  ) !important; /* Textul se aprinde stabil pe frecvența verde-mentă fosforică a navei */
+  text-shadow: 0 0 5px var(--solar-mint) !important; /* Generează o aureolă luminoasă difuză de neon în jurul literelor */
+  font-weight: bold; /* Îngroașă caracterele pentru o definiție maximă pe ecranul întunecat */
+}
+
+/* Semnătura de constructor în nuanța roz-magenta a reactorului principal */
+.footer span.vessel-sig {
+  color: var(
+    --nebula-pink
+  ) !important; /* Mută textul direct pe lungimea de undă roz-magenta intens de alertă */
+  text-shadow: 0 0 5px var(--nebula-pink) !important; /* Proiectează un halou protector roz stelar în jurul semnăturii */
+  font-weight: bold; /* Forțează caracterele îngroșate pentru contrast industrial ridicat */
+}
+
+/* ==========================================================================
+   MODULELE 12 - 14: LABORATORUL AVANSAT // SISTEME ȘI STRUCTURI COMPLEXE
+    
+    REZUMAT: Acest bloc specializat izolează operațiunile de interfață non-
+    convenționale de înaltă complexitate. El guvernează poligoanele octogonale 
+    tăiate procentual (Modulul 12), matricea plasmatică a Icosaedrului 3D volumetric 
+    cu 20 de fețe (Modulul 13) și inspectorul de cod recursiv split-screen asimetric 
+    (Modulul 14), blocând matricile spațiale ale axei Z și protocoalele anti-overflow.
+   ========================================================================== */
+
+/* ==========================================================================
+    MODULE 12: GEOMETRIC SYSTEM // PORTALE POLIGONALE SECTOR (OCTAGONAL STYLE)
+      
+    REZUMAT: Acest modul construiește nodurile de navigare octogonale compacte, 
+    profilate laser în interiorul meniului din sidebar (.sidebar-nav). El rulează 
+    un motor inline-flex, comprimă textul la o proporție tehnică de 0.6rem și 
+    activează o matrice procentuală în 8 puncte (clip-path) pentru a simula tastele 
+    tactile ale unui bord de zbor.
+   ========================================================================== */
+
+/* --- 1. TASTELE HARDWARE DE NAVIGARE ÎN SIDEBAR (Butoane Poligonale Octogonale) --- */
+.sidebar-nav .week-label a,
+.sidebar-nav .sector-link {
+  display: inline-flex !important; /* Aliniază textul perfect pe centrul geometric interior al portalului */
+  align-items: center;
+  justify-content: center;
+
+  font-family: monospace; /* Font rigid mecanic de cod ce păstrează aspectul tehnic al consolei */
+  font-size: 0.6rem !important; /* Proporție tehnică liliputană fină, calibrată pentru economisirea spațiului HUD */
+  color: var(
+    --nebula-purple
+  ) !important; /* Culoarea ta originală stabilă violet stelar ce definește elementele */
+  background: rgba(
+    60,
+    44,
+    140,
+    0.15
+  ) !important; /* Fundal translucid original format dintr-o tentă de 15% mov stins */
+  border: 1px solid rgba(60, 44, 140, 0.4) !important; /* Chenar micro-fin de control ce trasează perimetrul tastei */
+
+  padding: 4px 10px !important; /* Umplutură compactă originală strânsă în jurul blocului de litere */
+  letter-spacing: 1px; /* Spațiere fină stabilă între caractere pentru claritate structurală */
+  text-decoration: none; /* Elimină sublinierea nativă inestetică injectată automat de browsere */
+  text-transform: uppercase; /* Protocol militar obligatoriu: forțează utilizarea literelor mari capitalizate */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important; /* Curbă cinematică fluidă de accelerare la atingere */
+  white-space: nowrap; /* SCUT DE DISPUNERE: Interzice cu desăvârșire textului să se fragmenteze pe rânduri */
+  opacity: 0.85; /* Opacitate de repaus ce protejează monitorul de uzura emisiilor de lumină */
+
+  /* --- INJECTAREA LASERULUI POLIGONAL (Tăierea octogonală la 45 de grade) ---
+      Această formulă matematică procentuală în 8 puncte taie cu precizie colțurile exterioare, 
+      imitând perfect ecranele tactile hardware de pe instrumentele navelor spațiale. */
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
+}
+
+/* --- 2. EFECT HOVER ELECTRIC PESTE PORTALUL POLIGONAL VIOLET (Validare Proximity) --- */
+.sidebar-nav .week-label a:hover,
+.sidebar-nav .sector-link:hover {
+  background: var(
+    --nebula-purple
+  ) !important; /* Portalul absoarbe energie și se aprinde intens pe violet solid cosmic */
+  color: white !important; /* Textul devine alb curat pentru un contrast militar maxim pe placa aprinsă */
+  opacity: 1; /* Trecere la luminozitate totală nominală pe parcursul selectării */
+  box-shadow: 0 0 12px var(--nebula-purple) !important; /* Generează o aureolă luminoasă difuză de neon violet în jur */
+  transform: scale(
+    1.05
+  ); /* MICRO-EXPANSIUNE CINEMATICĂ: Tasta se mărește ușor la confirmarea prin atingere */
+}
+
+/* ==========================================================================
+    MODULE 13: THE HOLO-GEODESIC ENGINE (COSMIC FLICKER CALIBRATION)
+      
+    REZUMAT: Acest modul consolidează nucleul armilar tridimensional central 
+    din cockpit-ul navei. El deschide o matrice profundă de cameră virtuală (1400px), 
+    activează rețeaua de coordonate spațiale preserve-3d pentru cele 20 de fețe 
+    geodezice ale icosaedrului și configurează inelele eliptice ale astrolabului. 
+    Modulul controlează descărcări fosforice alternative și gradienți radiali pentru 
+    a genera pulsații de neon locale la trecerea cursorului echipajului.
+
+    Acest modul guvernează motorul geometric tridimensional de pe nava 
+    mamă. El deschide o lentilă de perspectivă virtuală cubică în browser pentru 
+    a randa Icosaedrul poliedric tridimensional (Sfera Plasmatică), inelele sale 
+    laser concentrice punctate (Astrolabul) și fețele sale triunghiulare în rotație 
+    asincronă permanentă, transformând ecranul Hero într-un radar tactil volumetric.
+    
+    NOTĂ DE BORD DIDACTICĂ (ARCHITECTURAL SCATTER WARNING):
+    Deși acest reactor de plasmă se află fizic în secțiunea superioară Hero a paginii HTML, 
+    el a fost retras strategic în Modulul 13 conform principiilor moderne de Component-Driven Design. 
+    Amplasarea lui timpurie ar fi generat un șoc cognitiv violent, forțând studenții să interacționeze 
+    cu matrici tridimensionale de adâncime (axa Z, rotateX/Y și translateZ de 210px bazat pe rația de aur) 
+    înainte de a stăpâni machetele și grilele bidimensionale tradiționale. 
+    Izolarea lui aici transformă acest sector într-un veritabil „Laborator de Înaltă Rezoluție”, 
+    protejând curba de învățare și lăsând restul fișierului suplu și perfect scannabil.
+   ========================================================================== */
+
+/* --- 1. LENTILA CUBIC-VIRTUALĂ MASTER (Reactorul Armilar) --- */
+.armillary-reactor-core {
+  position: relative; /* Coordonate rădăcină pentru elementele interioare poziționate absolut */
+  display: flex !important; /* Activează Flexbox pentru stivuirea pe verticală a blocurilor de date */
+  flex-direction: column !important; /* Aranjează benzile paralele de telemetrie direct una sub cealaltă */
+  align-items: center !important; /* Centrează geometric sfera centrală și etichetele pe axa orizontală */
+  justify-content: center !important; /* Centrează întregul modul tehnic pe verticală în secțiunea hero */
+  margin-top: 140px !important; /* Împinge reactorul în jos pentru a preveni suprapunerea cu navbar-ul fix */
+  margin-bottom: 140px !important; /* Pernă simetrică de aer ce izolează layout-ul de grila de categorii */
+  width: 100% !important; /* Se extinde pe toată lățimea utilă fără a genera scrollbar orizontal */
+  height: 540px !important; /* Înălțime fixă, rigidă, ce definește amprenta verticală a reactorului */
+  background: transparent !important; /* Păstrează vizibilă textura de monitor CRT globală din spatele său */
+  box-sizing: border-box; /* Include padding-ul în dimensiuni pentru a proteja liniile de graniță */
+
+  /* MOTORUL DE DEPLOYMENT AL MATRICEI TRIDIMENSIONALE */
+  transform-style: preserve-3d !important; /* COMANDĂ CRUCIALĂ: Deblochează axa Z reală în interiorul browserului */
+  perspective: 1400px !important; /* Distanța camerei virtuale; oferă adâncime cubică și impact cinematic */
+
+  /* RESETARE SCUT DEATERIZARE ANCORE HUD */
+  scroll-margin-top: 90px !important; /* Compensează navbar-ul fix, lăsând un spațiu la saltul din logo */
+}
+
+/* --- 2. MIEZUL ROTATIV AL GRILEI SPAȚIALE (Icosaedrul Volumetric) --- */
+.quantum-plasma-sphere {
+  position: absolute !important; /* Plutește independent în centrul geometric absolut al reactorului */
+  width: 460px !important; /* Diametru masiv calibrat pentru a cuprinde etichetele tehnice */
+  height: 460px !important; /* Potrivește fix dimensiunile pentru a bloca parametrii unui cerc perfect */
+  z-index: 1; /* Nivel de bază în spatele benzilor de text translucide ale HUD-ului */
+  transform-style: preserve-3d !important; /* Forțează cele 20 de fețe triunghiulare să se rotească tridimensional */
+
+  /* CUPLAREA PROPULSIEI CENTRALE: Rotație continuă la viteză nominală pe axa verticală Y */
+  animation: spin-geodesic-core 25s infinite linear !important;
+}
+
+/* Structura de sticlă lucioasă ce mapează cele 20 de poligoane triunghiulare */
+.quantum-plasma-sphere .face {
+  position: absolute !important; /* Grupează concentric toate fețele în jurul nodului geometric zero */
+  top: 50% !important;
+  left: 50% !important; /* Ancorează punctul de pornire pentru buclele de deplasare 3D */
+  width: 220px !important; /* Dimensiuni calibrate pentru panourile vectoriale individuale */
+  height: 190px !important;
+  margin-left: -110px !important; /* Decalaj negativ pentru a centra perfect piesa pe coordonatele de origine */
+  margin-top: -95px !important;
+  backdrop-filter: blur(
+    2px
+  ); /* Filtru optic cinematic fin în interiorul fiecărui geam de sticlă */
+  transform-origin: center center !important; /* Setează centrul geometric ca punct de rotație al feței */
+  backface-visibility: visible !important; /* PROTOCOL CRUCIAL: Permite fețelor din spate să rămână vizibile prin sticlă */
+
+  /* MASCĂ DE TĂIETURĂ TRIUNGHIULARĂ RIGIDĂ */
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%) !important;
+
+  /* STRATIFICARE GRADIENT SPECTRAL */
+  background: linear-gradient(
+    135deg,
+    rgba(167, 243, 208, 0.05) 0%,
+    rgba(255, 0, 127, 0.03) 50%,
+    rgba(255, 255, 255, 0.12) 100
+  ) !important;
+  border: 1px solid rgba(167, 243, 208, 0.3) !important; /* Fir laser inițial verde-mentă de joasă tensiune */
+}
+
+/* --- 3. MATRICEA DE COORDONATE VECTORIALE/VECTOR SPACE MAP (Raza Orbitală Absolută R = 210px) ---*/
+/* Exegeza matematică a celor 20 de fețe ale Icosaedrului. */
+
+/* --- PUNTEA SUPERIOARĂ "TOP" (Calota Nordică: Înclinație X = 52.62° / Rotație Y în pași de 72°) --- */
+.face-t1 {
+  transform: rotateY(0deg) rotateX(52.62deg) translateZ(210px);
+}
+.face-t2 {
+  transform: rotateY(72deg) rotateX(52.62deg) translateZ(210px);
+  border-color: var(--nebula-pink) !important;
+} /* Alertez cromatic fața 2 pe roz */
+.face-t3 {
+  transform: rotateY(144deg) rotateX(52.62deg) translateZ(210px);
+}
+.face-t4 {
+  transform: rotateY(216deg) rotateX(52.62deg) translateZ(210px);
+  border-color: var(--nebula-pink) !important;
+} /* Alertez cromatic fața 4 pe roz */
+.face-t5 {
+  transform: rotateY(288deg) rotateX(52.62deg) translateZ(210px);
+}
+
+/* --- PUNTEA ECUATORIALĂ "UPPER" (Coroana de Sus: Înclinație X = 10.81° / Decalaj orizontal de 36°) --- */
+.face-u1 {
+  transform: rotateY(36deg) rotateX(10.81deg) translateZ(210px);
+}
+.face-u2 {
+  transform: rotateY(108deg) rotateX(10.81deg) translateZ(210px);
+  border-color: var(--nebula-pink) !important;
+}
+.face-u3 {
+  transform: rotateY(180deg) rotateX(10.81deg) translateZ(210px);
+}
+.face-u4 {
+  transform: rotateY(252deg) rotateX(10.81deg) translateZ(210px);
+  border-color: var(--nebula-pink) !important;
+}
+.face-u5 {
+  transform: rotateY(324deg) rotateX(10.81deg) translateZ(210px);
+}
+
+/* --- PUNTEA ECUATORIALĂ "LOWER" (Coroana de Jos: Triunghiuri răsturnate la 180° / Înclinație X = 10.81°) --- */
+.face-l1 {
+  transform: rotateY(0deg) rotateX(180deg) rotateX(10.81deg) translateZ(210px);
+}
+.face-l2 {
+  transform: rotateY(72deg) rotateX(180deg) rotateX(10.81deg) translateZ(210px);
+  border-color: var(--nebula-pink) !important;
+}
+.face-l3 {
+  transform: rotateY(144deg) rotateX(180deg) rotateX(10.81deg) translateZ(210px);
+}
+.face-l4 {
+  transform: rotateY(216deg) rotateX(180deg) rotateX(10.81deg) translateZ(210px);
+  border-color: var(--nebula-pink) !important;
+}
+.face-l5 {
+  transform: rotateY(288deg) rotateX(180deg) rotateX(10.81deg) translateZ(210px);
+}
+
+/* --- PUNTEA INFERIOARĂ "BOTTOM" (Calota Sudică: Răsturnare totală la 180° / Înclinație X = 52.62°) --- */
+.face-b1 {
+  transform: rotateY(36deg) rotateX(180deg) rotateX(52.62deg) translateZ(210px);
+}
+.face-b2 {
+  transform: rotateY(108deg) rotateX(180deg) rotateX(52.62deg) translateZ(210px);
+  border-color: var(--nebula-pink) !important;
+}
+.face-b3 {
+  transform: rotateY(180deg) rotateX(180deg) rotateX(52.62deg) translateZ(210px);
+}
+.face-b4 {
+  transform: rotateY(252deg) rotateX(180deg) rotateX(52.62deg) translateZ(210px);
+  border-color: var(--nebula-pink) !important;
+}
+.face-b5 {
+  transform: rotateY(324deg) rotateX(180deg) rotateX(52.62deg) translateZ(210px);
+}
+
+/* --- 4. MATRICEA DE SUPRASARCINĂ KINETICĂ (Hărțile de Fuziune Energetică) --- */
+.armillary-reactor-core:hover .quantum-plasma-sphere {
+  animation-duration: 6s !important; /* Accelerează ciclul de rotație la 6 secunde, simulând un salt de energie */
+}
+
+.armillary-reactor-core:hover .face {
+  border-width: 1.5px !important; /* Îngroașă liniile laser ale fețelor la interacțiunea cu operatorul */
+  border-style: solid !important;
+  /* SCURTCIRCUIT FLICKER: Declanșează arcuri de fulgere fosforice la o frecvență ridicată, alternantă */
+  animation: lightning-glow-fusion 0.12s infinite alternate ease-in-out !important;
+}
+
+/* --- 5. STRATURILE HUD ECUATORIALE (Inelele Concentrice ale Astrolabului) --- */
+.armillary-band-container {
+  position: absolute !important; /* Izolează și suspendă benzile structurale pe orizontala miezului */
+  display: flex !important; /* Ancorează nodurile interne de aliniere perfect pe axa centrală comună */
+  align-items: center !important;
+  justify-content: center !important;
+  width: 90% !important; /* Spațiu elastic de acoperire ce umple curat zona tehnică buffer */
+  max-width: 780px !important; /* Limită rigidă ce protejează layout-ul pe monitoarele ultra-wide */
+  z-index: 5; /* Prioritate de elevare: plutește explicit deasupra fețelor 3D din fundal */
+}
+
+/* Coordonate calibrate de plasament vertical extrase din geometria de bază a navei */
+.macro-wrapper {
+  top: 200px !important;
+  height: 65px !important;
+}
+.micro-wrapper {
+  top: 265px !important;
+  height: 45px !important;
+}
+
+/* Șasiu de tip capsulă din sticlă fumurie care ancorează benzile de text */
+.astrolabe-metal-arc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(
+    4px
+  ); /* Blurează liniile geometrice din fundal ce trec prin carcasa astrolabului */
+  border-radius: 50px !important; /* Geometrie fluidă de capsulă ce creează aspectul de panou tehnic */
+  z-index: -1; /* Alunecă în spatele textului ștanțat pentru a asigura un contrast absolut */
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(10, 11, 30, 0.45) 30%,
+    rgba(10, 11, 30, 0.45) 70%,
+    transparent 100
+  ) !important;
+}
+
+/* SEPARATORI LASER DE MARE PRECIZIE (Înlocuiesc vechile granițe rigide de bloc) */
+.macro-wrapper::after,
+.micro-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 90%;
+  height: 1px;
+  pointer-events: none; /* Doar emisie vizuală de energie: click-urile trec liber prin strat */
+}
+
+/* Linie fină de blitz de înaltă frecvență, localizată pe roz-neon */
+.macro-wrapper::after {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--nebula-pink) 50%,
+    transparent 100
+  ) !important;
+  animation: cosmic-flicker 4s infinite ease-in-out !important; /* Tremur cosmic nativ integrat */
+}
+
+/* Fir laser verde-mentă fosforic, temporizat cu un delay de 2s pentru contrast mecanic */
+.micro-wrapper::after {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--solar-mint) 50%,
+    transparent 100
+  ) !important;
+  animation: cosmic-flicker 4s infinite ease-in-out 2s !important; /* Sincronizare în buclă întreruptă */
+}
+
+/* ==========================================================================
+   MODULE 14: BLUEPRINT OVERLAY // DESIGN SPECIFIC PENTRU INTERFAȚA RECURSIVĂ
+    
+    REZUMAT: Acest modul definitiv final izolează mediul dedicat care guvernează 
+    pagina motorului de cod live recursiv (.blueprint-layout). El structurează 
+    terminale splitate paralele pe mai multe coloane (.terminal-split), rulează 
+    un vizor de inspector convex cu catod întunecat necomprimat, gestionează 
+    învelișuri asimetrice de micro-scalare și blochează o rețea defensivă avansată 
+    anti-stivuire peste panourile de script typewriter asincrone.
+   ========================================================================== */
+
+.blueprint-container {
+  max-width: 1300px; /* Setează plafonul maxim de lățime pentru a opri lăbărțarea pe monitoare foarte mari */
+  margin: 100px auto; /* Pernă verticală masivă de 100px și marjă automată pentru centrare axială */
+  padding: 20px; /* Spațiu interior de siguranță pentru a îndepărta elementele de marginile fizice */
+  font-family: monospace; /* Font rigid mecanic de cod ce uniformizează citirea datelor structurale */
+}
+
+/* Organizarea pe coloane paralele: Documentație vs Cod Sursă */
+.terminal-split {
+  display: flex; /* Activează motorul Flexbox pentru a alinia panourile în paralel pe ecrane mari */
+  gap: 30px; /* Distanță fixă rigidă de izolare de 30px între cele două ecrane de control */
+  margin-top: 40px; /* Pernă de aer superioară sub blocul master de descriere al paginii */
+}
+
+.panel {
+  flex: 1; /* Distribuie spațiul în mod egal, forțând fiecare panou să ocupe exact 50% din linie */
+  background: rgba(
+    10,
+    11,
+    30,
+    0.45
+  ); /* Fundal original translucid din sticlă fumurie închisă (stil cockpit) */
+  border: 1px solid rgba(167, 243, 208, 0.15); /* Chenar micro-fin la 15% opacitate din nuanța verde-mentă fosforic */
+  padding: 25px; /* Umplutură internă generoasă pentru protecția datelor text și a ierarhiei */
+  border-radius: 8px; /* Rotunjire structurală fină a colțurilor capsulei de sticlă Solaris */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); /* Umbră exterioară densă ce oferă efectul tridimensional de levitație */
+}
+
+.panel-title {
+  color: var(
+    --solar-mint
+  ); /* Se aprinde stabil pe spectrul verde-mentă fosforic de scanare active radar */
+  text-transform: uppercase; /* Protocol militar obligatoriu: forțează utilizarea literelor mari capitalizate */
+  letter-spacing: 2px; /* Spațiere tehnică largă industrială între caractere pentru aspect premium */
+  margin-top: 0; /* Șterge marja nativă superioară pentru a bloca alinierea axială perfectă */
+  border-bottom: 1px dashed rgba(167, 243, 208, 0.25); /* Linie punctată fină verde-mentă de demarcație sub text */
+  padding-bottom: 12px; /* Pernă fină de aer sub text înainte de firul punctat de circuit */
+  font-size: 0.9rem; /* Dimensiune radar compactă ideală pentru titlurile operative de panou */
+}
+
+/*
+  Șasiul
+  central
+  al
+  monitorului
+  vechi
+  analogic
+  din
+  dreapta
+  */
+.code-inspector-screen {
+  width: 100% !important; /* Ocupă integral spațiul orizontal interior al panoului gazdă din dreapta */
+  height: 520px !important; /* Înălțime nominală stabilă rigidă ce definește amprenta verticală a monitorului */
+  background: #04050a !important; /* Void black adânc de tub catodic stins pentru un contrast maxim de caractere */
+  border: 1px solid rgba(167, 243, 208, 0.2) !important; /* Margine fină pe verde-mentă fosforic la 20% opacitate */
+  padding: 25px 15px 15px 15px !important; /* Padding superior mărit pentru a nu suprapune textul cu eticheta HUD active */
+  overflow-x: auto !important; /* Activează scroll-ul orizontal pentru liniile foarte lungi de cod CSS preformate */
+  overflow-y: auto !important; /* Activează scroll-ul vertical nativ pentru derularea cronicilor complete de stil */
+  box-sizing: border-box; /* Include umpluturile în dimensiuni pentru a asigura imunitatea layout-ului */
+  position: relative !important; /* Context deschis obligatoriu pentru plasarea etichetei HUD generate de ::before */
+
+  /* EFECTUL CINEMATIC DE MONITOR CRT */
+  box-shadow:
+    inset 0 0 25px rgba(0, 0, 0, 0.95),
+    /* Umbră neagră densă interioară ce generează curbură fizică de sticlă bombată */
+    0 0 15px rgba(167, 243, 208, 0.03) !important; /* Licărire fosforică externă micro-fină de radiație reziduală */
+
+  font-family:
+    "Courier New", monospace !important; /* Font rigid mecanic analogic ce păstrează caracterul tehnic */
+  font-size: 0.8rem !important; /* Dimensiune compactă comprimată ideală pentru fluxurile dense de sintaxă */
+  line-height: 1.6 !important; /* Spațiere verticală aerisită ce separă rândurile consecutive de script curat */
+  color: #a4b3c6 !important; /* Text argintiu-indigo industrial ce protejează ochii de oboseala lecturii */
+  text-shadow: 0 0 2px rgba(164, 179, 198, 0.15) !important; /* Halou micro-fin argintiu în jurul caracterelor active */
+  -webkit-font-smoothing: antialiased; /* Netezire superioară vectorială a fontului pe motoarele bazate de Webkit */
+}
+
+/* ETICHETA DE DIAGNOSTIC CRT (DATA STREAM ACTIVE // NOMINAL)
+   Se generează automat deasupra codului din dreapta sus, imitând interfața logs */
+.code-inspector-screen::before {
+  content: "DATA STREAM ACTIVE // NOMINAL" !important; /* Textul de sistem injectat automat pe ecranul vitrat */
+  position: absolute !important; /* Scoatere din flux pentru a pluti fix în colțul superior drept al monitorului */
+  top: 6px !important; /* Poziționare fină verticală la 6px de marginea superioară rigidă */
+  right: 12px !important; /* Aliniere strânsă pe flancul drept (tribord) la o distanță de 12px */
+  font-family: monospace !important; /* Font rigid fix de cod ce menține caracterul tehnic al indicatorului */
+  font-size: 0.65rem !important; /* Dimensiune liliputană fină, specifică datelor secundare de diagnostic */
+  font-weight: bold !important; /* Îngroașă caracterele pentru o vizualizare optimă de alertă pe ecran */
+  color: var(
+    --solar-mint
+  ) !important; /* Se aprinde stabil pe verdele tău fosforic de înaltă vizibilitate */
+  letter-spacing: 1px !important; /* Spațiere tehnică minimă între caractere pentru aspect compact */
+  text-shadow: 0 0 4px var(--solar-mint) !important; /* Explodează o aureolă fluorescentă verde de neon direct pe etichetă */
+  opacity: 0.75 !important; /* Intensitate luminoasă de 75% pentru a nu distrage atenția de la codul sursă */
+  z-index: 10 !important; /* Prioritate înaltă: plutește explicit deasupra textului care se derulează dedesubt */
+  pointer-events: none; /* PRO-UX: Blochează selectarea sau agățarea accidentală a textului etichetei la drag */
+}
+
+/* Sincronizarea uniformă a barei de scroll cyberpunk */
+.code-inspector-screen::-webkit-scrollbar {
+  width: 6px !important; /* Grosimea barei verticale de derulare limitată tehnic la un fir de 6px */
+  height: 6px !important; /* Înălțimea barei orizontale de derulare limitată tehnic la un fir de 6px */
+}
+.code-inspector-screen::-webkit-scrollbar-track {
+  background: #04050a !important; /* Fundalul șinei pe care glisează scrollbar-ul devine negru profund catodic */
+}
+.code-inspector-screen::-webkit-scrollbar-thumb {
+  background: rgba(
+    167,
+    243,
+    208,
+    0.25
+  ) !important; /* Piesa mobilă se aprinde pe verde-mentă la 25% opacitate */
+  border-radius: 3px !important; /* Rotunjire fină a capsulei mobile pentru finisaj minimalist industrial */
+}
+
+/* --- EXTRACTIE STILURI INLINE DIN HTML TERMINAL MAP --- */
+.blueprint-master-title {
+  color: #ffffff !important; /* Emisie pură de alb necomprimat pentru un impact vizual major */
+  font-family: var(
+    --font-main
+  ) !important; /* Forțează identitatea geometrică rigidă a fontului master */
+  letter-spacing: 2px !important; /* Spațiere tehnică de exact 2px între literele titlului suprem */
+  margin: 10px 0 !important; /* Marje fixe verticale strânse izolând titlul de elementele vecine */
+}
+
+.blueprint-master-description {
+  color: #a4b3c6 !important; /* Nuanță gri-argintie desaturată industrial anti-oboseală vizuală */
+  line-height: 1.6 !important; /* Spațiere stabilă între rânduri pentru o parcurgere cursivă a descrierii */
+  font-size: 0.9rem !important; /* Dimensiune fină, adaptată perfect pentru paragrafele tehnice lungi */
+  text-align: justify; /* Aliniază textul compact stânga-dreapta pentru a menține ordinea în pagină */
+}
+
+.blueprint-demo-text {
+  color: #e2e8f0 !important; /* Alb intens stardust ce maximizează definiția literelor de explicație */
+  font-size: 0.85rem !important; /* Proporție tehnică redusă fină, ideală pentru adnotări de sistem */
+  line-height: 1.6 !important; /* Raport optim între rânduri pentru protecția vizuală a echipajului */
+  margin-bottom: 25px !important; /* Pernă de aer la bază pentru a izola blocul de elementele dinamice inferioare */
+}
+
+/* Containerul de scalare pentru miniatură: elimină decalajele negative inline */
+.recursive-reactor-wrapper {
+  transform: scale(
+    0.55
+  ) !important; /* MICȘORARE RECURSIVĂ: Scalează întregul reactor armilar la 55% din mărime */
+  height: 400px !important; /* Înălțime nominală forțată, compensând matematic spațiul gol lăsat de scalare */
+  display: flex !important; /* Activează Flexbox pe container pentru a centra piesa micșorată */
+  justify-content: center !important; /* Centrează perfect Icosaedrul de 55% pe axa orizontală în panoul stâng */
+  align-items: center !important; /* Centrează geometric reactorul pe axa verticală a incintei sale */
+  margin: -20px 0 !important; /* Elimină decalajele parazite negative orizontale prin marje strânse */
+  /* REPARAȚIA DE AUR DIDACTICĂ: 
+      Forțează browserul să mențină contextul tridimensional deschis și prin scalare! 
+      Fără această linie, Icosaedrul se aplatiza complet într-un singur triunghi amorf. */
+  transform-style: preserve-3d !important;
+}
+
+/* ---  RECURSIVE PORTAL HOVER CHARGES (Scurtcircuit și Validare Mini-Reactor) --- */
+/* Declanșăm exclusiv iluminarea și tremurul arcurilor electrice direct pe fețe */
+.recursive-reactor-wrapper:hover .quantum-plasma-sphere .face {
+  background: rgba(
+    167,
+    243,
+    208,
+    0.2
+  ) !important; /* Panourile de sticlă absorb o injecție de 20% verde fosforic */
+  border-color: var(
+    --solar-mint
+  ) !important; /* Chenarul fețelor trece din alb opac direct în radiație verde-mentă */
+  box-shadow: 0 0 15px rgba(167, 243, 208, 0.4) !important; /* Generează o aureolă fluorescentă intensă de neon verde în jur */
+
+  /* EFECTUL FULGERĂTOR DE SUPRAÎNCĂRCARE DIN FABRICĂ:
+      Sfera își continuă acum rotația sa 3D maiestuoasă și rară din Modulul 07, 
+      iar triunghiurile distincte tremură electric la o viteză de 0.12 secunde, formând o horă perfectă! */
+  animation: reactor-lightning-flicker 0.12s infinite alternate ease-in-out !important;
+}
+
+/* REȚEAUA MACRO SPLIT PAGINA RECURSIVA (Securizare Desktop anti-overflow) --- */
+.terminal-split {
+  display: flex !important; /* Dublează forțat activarea motorului Flexbox pentru ecranele mari */
+  flex-direction: row !important; /* Panouri paralele pe ecrane mari, forțând layout-ul pe linie orizontală */
+  gap: 30px !important; /* Distanță rigidă de siguranță de 30px între cele două blocuri macro */
+  width: 100% !important; /* Se întinde pe toată lățimea utilă fără a genera scrollbar orizontal */
+  box-sizing: border-box !important; /* Include contururile în lățime pentru a asigura imunitatea structurală */
+}
+
+.panel {
+  flex: 1 !important; /* Fiecare panou ocupă exact 50% din spațiul util disponibil pe linie */
+  min-width: 0 !important; /* Scut anti-overflow: interzice codului pre lung să lăbărțeze panoul */
+  box-sizing: border-box !important; /*Include padding-ul în lățime, prevenind forțarea barierelor */
+}
+.panel p {
+  text-align: justify; /* Aliniază textul compact stânga-dreapta pentru aspect ordonat de manual */
+}
+
+/*  RECURSIVE STATUS ISOLATION PROTOCOL (Ajustare chirurgicală exclusiv pentru panourile din pagina recursivă. Blochează spargerea pe Desktop fără a deranja index.html sau html-log.html.)*/
+/* Selector izolat: Se aplică DOAR casetelor .mission-status aflate în interiorul unui .panel */
+.panel .mission-status {
+  display: block !important; /* Trece de la inline-block la block pentru controlul total al lățimii */
+  width: 100% !important; /* Ocupă exact lățimea panoului din stânga, interzicând extinderea la max-content */
+  max-width: 100% !important; /* Scut rigid superior de siguranță fixat la marginea panoului */
+  box-sizing: border-box !important; /* Include padding-ul în calcul, prevenind ieșirea din panel */
+}
+
+/* Forțăm textul din interiorul statusului din pagină recursivă să se plieze elastic */
+.panel .mission-status p {
+  white-space: normal !important; /* ANULEAZĂ NOWRAP-UL: Permite textului să treacă pe rândul doi */
+  line-height: 1.5 !important; /* Oferă o distanță aerisită între rândurile pliate */
+  font-size: 0.75rem !important; /* Ajustare fină de font pentru o încadrare perfectă pe Desktop split */
+}
+
+/*  SCUT ANTI-STIVUIRE RECALIBRAT PENTRU PAGINA RECURSIVĂ (.panel)Sincronizat cu Animațiile de Scriere și Auto-Ascundere Cursor */
+.panel .mission-status p,
+.blueprint-layout .mission-status p {
+  /* DEFENSIVĂ TOTALĂ ORIZONTALĂ */
+  display: inline-block !important; /* Permite calcularea corectă a oblonului de lățime maximă */
+  white-space: nowrap !important; /* INTERZICE ABSOLUT stivuirea literelor sau ruperea rândului pe parcursul scrierii */ /* RESETAREA DE AUR: Anulăm width: 100% care strângea textul în panelul strâmt */
+  width: auto !important; /* Lasă textul să își respire lungimea reală în interiorul gridului */ /* RESTAURAREA ENGINE-ULUI DINAMIC */ /* Îi dăm voie oblonului max-width să pornească de la 0 și să fie cuprins curat deanimația ta originală typing-modular declarată la pagina 26 din PDF. */
+  min-width: 0 !important;
+}
+
+.panel .mission-status,
+.blueprint-layout .mission-status {
+  display: block !important; /* Blochează elementul sub formă de bloc rigid structural */
+  overflow-x: hidden !important; /* Scut defensiv: maschează literele nescrise și blochează overflow-ul în panel */
+  max-width: 100% !important; /* Protejează marginile fizice ale structurii de grid */
+}
+
+/* ==========================================================================
+    MODULE 00.1: PUNTEA DE PROPULSIE KINETICĂ ȘI ANIMAȚIILE CORE
+      
+    REZUMAT: Acest modul centralizează toate motoarele de mișcare asincrone 
+    (@keyframes) utilizate pe interfețele navei amiral. Poziționat logic după 
+    straturile avansate de layout și înaintea interogărilor media adaptive, el 
+    ancorează fluctuațiile catodice CRT, vectorii fluorescenți de pulsare ai 
+    umbrelor de text și operațiunile secvențiale de scriere ale mașinii de scris.
+   ========================================================================== */
+
+/* ==========================================================================
+   GRUPAREA A: EFECTE AMBIENTALE INTERFAȚĂ // HARDWARE CATHODE SCREEN
+    
+    REZUMAT: Această primă grupare kinetică adună micro-tensiunile continue de 
+    fundal care generează atmosfera retro-analogică din cabină. Ea structurează 
+    instabilitatea nativă a tubului catodic de sticlă (crt-flicker), logica de 
+    pulsare neon a textului din logo (pulse) și umbrele sau fluxurile laser de 
+    demarcație ale divizorilor structurali (energy-flicker, cosmic-flicker).
+   ========================================================================== */
+
+/* --- 1. INSTABILITATEA DE TENSIUNE A ECRANULUI CRT --- */
+@keyframes crt-flicker {
+  0% {
+    opacity: 0.98; /* Scade discret opacitatea pentru a imita fazele de emisie slăbită ale lămpii */
+  }
+  50% {
+    opacity: 1; /* Luminozitate maximă nominală a fluxului de electroni imprimat pe monitor */
+  }
+  100% {
+    opacity: 0.99; /* Micro-fluctuație continuă ce simulează comportamentul unui ecran analogic real */
+  }
+}
+
+/* --- 2. PULSAȚIA CROMATICĂ DE INTENSIFICARE A TEXTULUI --- */
+@keyframes pulse {
+  0% {
+    opacity: 1; /* Fixează intensitatea luminoasă inițială la capacitate nominală maximă de 100% */
+    text-shadow: 0 0 5px var(--nebula-pink); /* Aprinde o aureolă laser roz-magenta compactă de 5px în jurul literelor */
+  }
+  50% {
+    opacity: 0.6; /* SCUT ANTI-OBOSEALĂ: Estompează fluid luminozitatea la 60% în momentul de maximă expansiune */
+    text-shadow: 0 0 15px var(--nebula-pink); /* Explodează geometric haloul de neon, difuzând emisia roz până la 15px */
+  }
+  100% {
+    opacity: 1; /* Revine stabil la intensitatea luminoasă nominală inițială de 100% */
+    text-shadow: 0 0 5px var(--nebula-pink); /* Strânge înapoi aura fluorescentă la dimensiunea tehnică de siguranță de 5px */
+  }
+}
+
+/* --- 3. INSTABILITATEA ȘI FLICKER-UL CATODIC DE ÎNALTĂ TENSIUNE --- */
+@keyframes glow-flicker {
+  0% {
+    opacity: 0.25; /* Scădere bruscă a curentului în lămpi, opacitatea scade la un sfert */
+    filter: brightness(0.5) blur(1px); /* Estompare fosforică cinematică și pierdere de focalizare a tubului */
+  }
+  50% {
+    opacity: 0.85; /* Puls brusc de tensiune în rețeaua secundară, aprinzând ecranul */
+    filter: brightness(1.5) blur(0px); /* Claritate instantanee de radar, textul redevine tăios */
+  }
+  100% {
+    opacity: 1; /* Încărcare nominală maximă stabilizată pe ecran */
+    filter: brightness(2.2) blur(0px); /* Strălucire puternică de emisie stelară retro-industrială */
+  }
+}
+/* --- 4. LICĂRIREA DISCRETĂ A FIRELOR LASER DE CONTEXT --- */
+@keyframes energy-flicker {
+  0% {
+    opacity: 0.4; /* Fixează intensitatea luminoasă inițială stinsă la 40% în faza de repaus a divizorului */
+    box-shadow: 0 0 5px var(--nebula-pink); /* Generează o aureolă fină de neon roz-magenta de 5px în jurul firului */
+  }
+  100% {
+    opacity: 1; /* Ridică fluid luminozitatea la intensitate nominală totală de 100% la activare */
+    box-shadow: 0 0 25px var(--nebula-purple); /* Explodează aureola lateral, virând culoarea într-un violet cosmic de 25px */
+  }
+}
+
+/* --- 5. PROTOCOL LICĂRIRE DISCRETĂ --- */
+@keyframes cosmic-flicker {
+  0%,
+  100% {
+    opacity: 0.25; /* Prag de veghe, menținând divizorii subțiri integrați discret în fundalul sticlei */
+    filter: brightness(
+      0.8
+    ); /* Scade intensitatea semnalului cromatic pentru a preveni oboseala ochilor */
+  }
+  45% {
+    opacity: 0.3; /* Micro-variație de curent ce pregătește circuitul pentru descărcarea de impuls */
+    filter: brightness(
+      0.9
+    ); /* Pas intermediar de contrast visual ce prefațează urcarea undei */
+  }
+  50% {
+    opacity: 0.85; /* Descărcare de vârf, aprinzând intens linia de demarcație pe un puls scurt luminos */
+    filter: brightness(
+      1.5
+    ); /* Supraîncărcare controlată, generând un efect stroboscopic de neon licărit */
+  }
+  54% {
+    opacity: 0.4; /* Coborâre rapidă a tensiunii imediat după descărcare pentru stabilizarea firului */
+    filter: brightness(
+      1
+    ); /* Readuce liniile vectoriale la o definiție clară, neutră și calibrată */
+  }
+  85% {
+    opacity: 0.3; /* Fază de descărcare lentă reziduală ce protejează ecranul de uzură și ardere */
+    filter: brightness(
+      0.9
+    ); /* Menține parametrii ambientali estompați până când ciclul se reinițializează */
+  }
+}
+
+/* ==========================================================================
+   GRUPAREA B: MOTOARE ASINCRONE DE SCRIERE // MECHANICAL TEXT INPUT
+    
+    REZUMAT: Acest district centralizează mecanismele de emulare a mașinii de scris 
+    utilizate pe antetele de terminal și jurnalele automate. El unifică buclele 
+    modulare de expansiune a lățimii (typing-modular), normalizează clipirea de 
+    înaltă precizie a bordurii cursorului (blink) și declanșează ștergerea definitivă 
+    a liniei post-scriere (hide-cursor) pentru a stabiliza ecranele.
+   ========================================================================== */
+
+/* --- 6. DESFĂȘURAREA OBLONULUI PENTRU MAȘINA DE SCRIS ASINCRONĂ --- */
+@keyframes typing-modular {
+  from {
+    max-width: 0; /* Stare inițială: scriptul tehnic începe complet retras în vidul orizontal */
+  }
+  to {
+    max-width: 100%; /* Extinde granițele complet pentru a afișa curat lungimea reală a textului */
+  }
+}
+
+/* --- 7. PÂLPÂIREA CURSORULUI MECANIC DE TERMINAL --- */
+@keyframes blink {
+  from,
+  to {
+    border-right-color: transparent; /* Ascunde starea cursorului, făcând linia verticală marginală invizibilă */
+  }
+  50% {
+    border-right-color: inherit; /* Revine la culoarea textului moștenită nativ, aprinzând firul pe ecran */
+  }
+}
+
+/* --- 8. STINGEREA AUTOMATĂ A CURSORULUI DUPĂ INTEGRARE --- */
+@keyframes hide-cursor {
+  to {
+    border-right-color: transparent; /* Șterge definitiv conturul liniei de cursor după terminarea pașilor de scriere */
+  }
+}
+
+/* ==========================================================================
+   GRUPAREA C: RADARELE ȘI SCANĂRILE DE SECTOR // REAL-TIME MONITORING
+    
+    REZUMAT: Acest district ancorează mecanismele de monitorizare dinamică implementate 
+    pe ecranele interactive și indicatorii de urmărire. El guvernează scanarea 
+    verticală continuă a razei de control (laser-scan) și coordonează bucla volumetrică 
+    respiratorie de expansiune pentru martorii de telemetrie (dot-pulse).
+   ========================================================================== */
+
+/* --- 9. RAZA VERTICALĂ CONTINUĂ DE SCANARE RADAR PESTE MONITOR --- */
+@keyframes laser-scan {
+  0% {
+    top: 0%;
+    opacity: 0; /* Raza începe cursa de sus fiind complet invizibilă pentru a opri aparițiile bruște */
+  }
+  5% {
+    opacity: 0.7; /* Aprindere fluidă de 70% intensitate în milisecunda în care părăsește rama superioară */
+  }
+  95% {
+    opacity: 0.7; /* Menține emisia luminoasă stabilă pe tot parcursul măturării ecranului pe verticală */
+  }
+  100% {
+    top: 100%;
+    opacity: 0; /* Stingere lină la zero intensitate chiar în secunda în care atinge podeaua casetei */
+  }
+}
+
+/* --- 10. IMPULSUL RADAR AL MULTI-MARTORULUI DIN SUBSOL --- */
+@keyframes dot-pulse {
+  0% {
+    transform: scale(
+      1
+    ); /* Punctul pornește compact, la dimensiunea sa nominală inițială în subsol */
+    opacity: 1; /* Intensitate luminoasă maximă de 100%, indicând emisia inițială a semnalului active */
+  }
+  100% {
+    transform: scale(
+      2.5
+    ); /* EXPLOZIA UNDEI: Se dilată masiv în exterior până la 250% din volumul inițial */
+    opacity: 0; /* DIZOLVARE ÎN VID: Textura se stinge complet la zero în momentul maximei expansiuni */
+  }
+}
+
+/* ==========================================================================
+   GRUPAREA D: CINEMATICĂ REACTOR 3D // ADVANCED REACTOR KINETICS
+      
+    REZUMAT: Acest district structural specializat izolează cadrele avansate de 
+    mișcare tridimensională orbitală. El conduce rotația spațială infinită pe axele 
+    înclinate X/Y (spin-geodesic-core) și coordonează atât stroboscopul alternant 
+    de avarie la înaltă frecvență (reactor-lightning-flicker), cât și fuziunea 
+    multistratificată roz-mentă cu reflexii de sticlă incandescentă (lightning-glow-fusion) 
+    pentru a alimenta ansamblul Icosaedrului volumetric cu 20 de fețe.
+   ========================================================================== */
+
+/* --- 11. ROTAȚIA INDUSTRIALĂ 3D A SFEREI FAȚETATE --- */
+@keyframes spin-geodesic-core {
+  0% {
+    transform: rotateX(-20deg) rotateY(0deg); /* Îngheață înclinarea tehnică la -20px pe orizontală și începe rotația */
+  }
+  100% {
+    transform: rotateX(-20deg) rotateY(360deg); /* Menține înclinarea axială pe tot parcursul cercului complet de 360° */
+  }
+}
+
+/* --- 12. EFECTUL FULGERĂTOR DE SUPRAÎNCĂRCARE ELECTRICĂ --- */
+@keyframes reactor-lightning-flicker {
+  0%,
+  100% {
+    filter: brightness(1.2) drop-shadow(0 0 8px var(--solar-mint)); /* Tensiune inițială stabilizată pe verde fosforic */
+    opacity: 0.85; /* Luminozitate optimă de veghe ce protejează grila vizuală */
+  }
+  33% {
+    filter: brightness(3.5) drop-shadow(0 0 40px var(--nebula-pink)); /* Puls intens de tensiune pe roz-neon ce supraîncărcă fețele */
+    opacity: 1; /* Descărcare completă instantanee în rețeaua secundară a Icosaedrului */
+  }
+  66% {
+    filter: brightness(0.4) blur(0.5px); /* Stingere parțială cinematică specifică arcurilor electrice analogice */
+    opacity: 0.5; /* Scade intensitatea la jumătate pentru a imita degradarea fizică a lămpii */
+  }
+}
+
+/* --- 13. PROTOCOLUL DE IMPULS ELECTRIC ROZ-MENTĂ GLOSSY --- */
+@keyframes lightning-glow-fusion {
+  0% {
+    background: rgba(
+      167,
+      243,
+      208,
+      0.15
+    ); /* Bază mentă lucioasă inițială injectată sub formă de sticlă */
+    border-color: var(--solar-mint);
+    filter: brightness(1.5) drop-shadow(0 0 10px var(--solar-mint)); /* Licărire fosforică inițială */
+  }
+  50% {
+    background: rgba(
+      255,
+      0,
+      127,
+      0.18
+    ); /* Puls intermediar roz intens în inima fațetelor poliedrice */
+    border-color: var(--nebula-pink);
+    filter: brightness(3.2) drop-shadow(0 0 35px var(--nebula-pink)); /* Erupție lucioasă de înaltă tensiune */
+  }
+  100% {
+    background: rgba(
+      255,
+      255,
+      255,
+      0.22
+    ); /* Reflexia sticlei incandenscente albe ce simulează fuziunea core-ului */
+    border-color: var(--solar-mint);
+    filter: brightness(2) drop-shadow(0 0 15px var(--solar-mint)); /* Stabilizare pe frecvența verde radar */
+  }
+}
+
+/* ==========================================================================
+    MODULE 00.2: MEDIA QUERIES & SPATIAL ISOLATION ENGINES (COSMIC LAYOUTS)
+      
+    REZUMAT: Acest modul ancorează restructurările adaptive de ecran, splitate în 
+    două fluxuri rigide. Protocolul Desktop (min-width: 769px) îngheață aspectul 
+    de jurnal pe două coloane și tunelurile de scroll, în timp ce Protocolul 
+    Mobile (max-width: 768px) comprimă granițele într-o bandă HUD orizontală 
+    ultra-joasă de 40px și activează amortizarea volumetrică a reactorului 3D.
+   ========================================================================== */
+
+/* ==========================================================================
+    00.2.A. PROTOCOLUL DESKTOP: ECRANE MARI (min-width: 769px)
+      
+    REZUMAT: Această secțiune structurală declanșează grila asimetrică pe două 
+    coloane pentru ecranele mari de desktop. Ea blochează sidebar-ul la o lățime 
+    rigidă de 280px, impune bariere stricte de graniță bazate pe 100vh pentru a 
+    izola layout-ul de comportamentele parazite de scroll, instalează șina de 3px 
+    roz pentru scrollbar și asigură un echilibru vizual curat pentru citire.
+    
+    MANIFEST ARHITECTURAL ȘI PEDAGOGIC (IZOLAREA SPAȚIALĂ A MEDIULUI):
+    Întrebare de Audit: Este izolarea stilului de desktop într-un Media Query o 
+    decizie corectă sau o abatere necanonică de la regulile CSS standard?
+      
+    Răspuns de Bord: Este o decizie de inginerie modernă de elită, 100% justificată!
+    Dogma clasică "Mobile-First" se prăbușește când un layout suferă o mutație 
+    genetică completă între dispozitive. Pe desktop, această pagină nu este un site 
+    fluid simplu, ci o aplicație hardware de tip "Split-Screen" (stil dashboard militar 
+    sau editor IDE precum VS Code), unde scroll-ul global este blocat, iar ambele 
+    coloane interioare culisează independent pe bariere rigide de 100vh. 
+    
+    Dacă aceste reguli grele de Grid asimetric (280px 1fr), padding-uri de siguranță 
+    și directive defensive "overflow: hidden !important" ar fi fost lăsate libere, 
+    ele ar fi poluat parazit versiunea de mobil, transformând ecranul telefonului 
+    într-un colaps total de randare. 
+    
+    Închiderea lor în acest sub-modul ridică un Scut de Carantină Totală: ordonăm 
+    browserului mobile să ignore complet aceste matrici pe ecrane mici, protejând 
+    totodată mintea studenților de coliziunile logice în cascadă și eliminând codul 
+    redundant de anulare. Proiectăm o arhitectură curată bazată pe Izolare Contextuală!
+   ========================================================================== */
+
+@media (min-width: 769px) {
+  /* 1. CONTAINERUL PARENT GLOBAL (Organizează ecranul logurilor în două coloane) */
+  .log-layout {
+    display: grid; /* Activează sistemul de Grilă structurală (Grid Layout) pe monitoare mari */
+    grid-template-columns: 280px 1fr; /* Alocă fix 280px pentru Sidebar (stânga) și restul spațiului util (1fr) pentru text */
+    gap: 20px; /* Lasă un spațiu fizic gol de siguranță de 20px între cele două coloane paralele */
+    align-items: start; /* Aliniază ambele containere la „tavanul” superior de sus al grilei macro */
+    height: calc(
+      100vh - 90px
+    ); /* Înghețăm layout-ul modular la înălțimea totală a ecranului minus spațiul consolei HUD */
+    overflow: hidden !important; /* Interzice total apariția barei de scroll generale a browserului pe toată pagina */
+  }
+
+  /* 2. ETICHETA <aside> (Bariera exterioară rigidă a panoului din stânga) */
+  .log-sidebar {
+    position: sticky; /* Permite sidebar-ului să rămână fix vizibil pe ecran în timpul navigării cronicilor */
+    top: 90px; /* Îl fixează la exact 90px distanță față de marginea superioară a ferestrei active */
+    height: calc(
+      100vh - 130px
+    ) !important; /* Forțează înălțimea calculată din ecran minus locul protector din subsol */
+    max-height: calc(
+      100vh - 130px
+    ) !important; /* Barieră mecanică rigidă ce interzice sidebar-ului să se alungească haotic */
+    display: flex; /* Transformă interiorul sidebar-ului într-o cutie flexibilă structurală (Flexbox) */
+    flex-direction: column; /* Așază elementele interne (titlul și navigația) în mod rigid pe verticală, în coloană */
+    background: rgba(
+      13,
+      15,
+      20,
+      0.7
+    ); /* Fundal închis, translucid original format din sticlă fumurie Solaris */
+    backdrop-filter: blur(
+      15px
+    ); /* Efect cinematic adânc de blurring ce estompează elementele din spatele punții */
+    border-bottom: 1px solid rgba(167, 243, 208, 0.1); /* Linie fină fosforică la bază la 10% opacitate de control */
+    overflow: hidden !important; /* BLOCAREA ANTI-COLIZIUNE: Oprim orice scroll general pe caseta exterioară pentru a proteja h4-ul */
+    padding: 25px; /* Pernă interioară generoasă de aer pentru protecția fizică a componentelor */
+    box-sizing: border-box; /* Include padding-ul în calculul înălțimii, blocând erorile sau deformările */
+  }
+
+  /* 3. NAV-UL INTERIOR: Devine turn rigid de control (Pilonul interior de susținere) */
+  .sidebar-nav {
+    display: flex; /* Activează motorul flexibil local pentru alinierea listei de capitole */
+    flex-direction: column; /* Stivuiește rândurile de volume strict pe verticală, unul sub celălalt */
+    height: 100%;
+    max-height: 100%; /* Consumă integral spațiul util pus la dispoziție de aside-ul gazdă */
+    overflow: hidden !important; /* Siguranță dublă: blochează fizic mutarea sau deformarea elementelor superioare */
+  }
+
+  /* 4. TITLUL „MAP” (Butonul superior „HTML/SQL Expedition Map”) */
+  .map-title-link {
+    display: block !important; /* Îl transformă într-un bloc complet extins pe toată lățimea utilă a turnului */
+    flex-shrink: 0 !important; /* Regula de aur: lista de zile de dedesubt nu are voie să îl strivească la scroll */
+    background: rgba(
+      13,
+      15,
+      20,
+      0.95
+    ) !important; /* Sticlă neagră opacă de protecție totală ce maschează butoanele din spate */
+    border: 1px double var(--nebula-pink); /* Chenar dublu roz-magenta original, izolând complet intrarea în pagină */
+    border-radius: 4px; /* Rotunjire fină de 4px a colțurilor capsulei superioare */
+    padding: 12px !important; /* Spațiu interior generos calibrat special pentru o aerisire premium a textului */
+    padding-bottom: 15px;
+    margin-bottom: 15px !important; /* Împinge lista de zile mai jos pe verticală pentru a o lăsa să respire */
+    z-index: 10; /* Strat superior absolut ce plutește peste fluxul de derulare al cronicilor */
+    text-decoration: none; /* Elimină sublinierea nativă inestetică injectată automat de browsere pe ancore */
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.1); /* Aură fină de neon roz-magenta difuzată în jurul capsulei */
+  }
+
+  /* Stilizarea textului interior h4 conform esteticii curate originale */
+  .map-title-link h4 {
+    position: static !important; /* REPARAȚIA SALVATOARE: Anulează poziționarea absolută și aduce textul înapoi în flux normal */
+    margin: 0 !important; /* Șterge marjele parazite implicite ale browserelor terestre de pe titluri */
+    padding: 0 !important;
+    padding-bottom: 5px !important; /* Spațiu fin sub text înainte de linia imaginară a bazei de circuit */
+    color: var(
+      --solar-mint
+    ) !important; /* Aprinde textul stabil pe nuanța verde-mentă fosforică originală de sistem */
+    font-size: 0.8rem !important; /* Dimensiune tehnică fină calibrată, neîncărcată pentru ecranele HUD */
+    text-transform: uppercase !important; /* Protocol militar obligatoriu: forțează utilizarea literelor mari capitalizate */
+    letter-spacing: 3px !important; /* Spațiere tehnică industrială extinsă între caractere pentru aspect aerisit */
+    border-bottom: none !important; /* Ștergem definitiv dunga veche punctată inestetică din versiunile trecute */
+    background: transparent !important; /* ȘTERGE fundalul violet parazit moștenit greșit de la etichetele de anexe */
+    border: none !important; /* Șterge chenarul subțire verde moștenit de sus din stivele de moștenire */
+    text-shadow: 0 0 8px rgba(167, 243, 208, 0.4) !important; /* Strălucire fină fosforică de monitor catodic pornit */
+    text-align: center !important; /* Centrare perfectă a literelor în interiorul etichetei duble roz */
+    transition: all 0.3s ease !important; /* Tranziție fluidă la interacțiunea dinamică cu echipajul */
+  }
+
+  /* EFECT HOVER PE DESKTOP: Comută lin pe roz-magenta la trecerea mouse-ului */
+  .map-title-link:hover h4 {
+    color: var(
+      --nebula-pink
+    ); /* Virare instantanee a culorii literelor pe lungimea de undă roz alertă */
+    border-bottom-color: var(
+      --nebula-pink
+    ); /* Sincronizează perimetrul de bază al elementului */
+    text-shadow: 0 0 10px var(--nebula-pink); /* Intensifică aureola fluorescentă pe nuanța roz-neon */
+  }
+
+  /* 5. TUNELUL DE SCROLL PENTRU CELE 60+ DE ZILE (Singurul loc permis în stânga) */
+  .sidebar-nav ul {
+    overflow-y: auto !important; /* REPARAȚIA SALVATOARE: Activează scroll-ul vertical strict în interiorul listei <ul> */
+    flex-grow: 1; /* Instruiește lista să se extindă elastic și să ocupe tot spațiul rămas liber la bază */
+    margin: 0;
+    padding-left: 0;
+    padding-right: 5px; /* Ecartament fin în dreapta pentru ca textul butoanelor să nu lovească șina de scroll */
+    list-style: none; /* Curăță punctele native inestetice ale listelor nesortate */
+  }
+
+  /* Personalizarea barei subțiri de scroll din interiorul listei (Roz stelar) */
+  .sidebar-nav ul::-webkit-scrollbar {
+    width: 3px; /* O face extrem de fină (3px) pentru a nu încărca vizual monitorul tehnic */
+  }
+  .sidebar-nav ul::-webkit-scrollbar-thumb {
+    background: rgba(
+      255,
+      0,
+      127,
+      0.3
+    ); /* Culoarea roz nebula-pink originală la o opacitate discretă de 30% */
+    border-radius: 2px; /* Rotunjire minimalistă industrială a capsulei mobile de derulare */
+  }
+
+  /* 6. CONȚINUTUL DIN DREAPTA (Zona independentă unde citești articolele) */
+  .log-content {
+    height: 100%; /* Își preia întreaga înălțime utilă a coloanei sale alocate din grid-ul master */
+    overflow-y: auto !important; /* Activează scroll-ul vertical independent doar pentru textul dens al jurnalului */
+    padding: 40px 60px 60px 60px; /* Pernă extinsă masivă de aer pentru a izola blocurile narative de margini */
+    scroll-behavior: smooth; /* Efect cinematic fluid și lin atunci când se execută salturi prin link-uri */
+    box-sizing: border-box; /* Înglobează marginile interne în calculul lățimii pentru a opri overflow-ul */
+    padding-top: 50px !important; /* Padding superior obligatoriu ce împinge conținutul sub nivelul HUD-ului fixed */
+  }
+
+  /* REPARAȚIE COMPENSARE COLOANĂ DREAPTA */
+  .log-content .category-header {
+    padding-top: 20px !important; /* Perna fină de aer simetrică ce echilibrează deschiderea de pagină */
+    margin-top: 0 !important; /* Anulează marjele native parazite pentru a se alinia la tavan cu sidebar-ul */
+  }
+
+  /* 7. AMORTIZARE VIZUALĂ LA ATERIZARE (Alinierea laser a logurilor zilnice) */
+  .log-entry {
+    min-height: calc(
+      100vh - 150px
+    ); /* Forțează fiecare log zilnic să fie o entitate uriașă și izolată vizual pe ecran */
+    margin-bottom: 80px; /* Împinge restul zilelor jos, eliminând reziduurile din ziua anterioară la citire */
+    padding-top: 40px;
+    scroll-margin-top: 100px !important; /* BARIERA ABSOLUTĂ: Oprește scroll-ul cu exact 100px deasupra titlului zilei */
+    border-top: 1px dashed rgba(255, 0, 127, 0.05); /* Delimitare micro-fină punctată la 5% opacitate roz */
+  }
+
+  /* 8. OPTICĂ DE BORD: ASIGURARE ȘI PERSONALIZARE SCROLL INTERN DREAPTA */
+  .log-layout::-webkit-scrollbar {
+    display: none; /* Mascăm scrollbar-ul nativ gros al browserului în layout-ul de loguri, eliberând index-ul */
+  }
+  .log-content::-webkit-scrollbar {
+    width: 4px; /* O linie subțire și tehnologică pură de radar în flancul drept */
+  }
+
+  .log-content::-webkit-scrollbar-track {
+    background: rgba(
+      13,
+      15,
+      20,
+      0.5
+    ); /* Fundal întunecat transparent Solaris, aproape invizibil în carcasă */
+  }
+  .log-content::-webkit-scrollbar-thumb {
+    background: rgba(
+      157,
+      23,
+      248,
+      0.3
+    ); /* O nuanță discretă originală de violet asortată cu porțile de sector /border-radius: 4px;          /* Finisaj capsular minimalist pentru piesa mobilă de scroll */
+  }
+} /* @section: Layout Desktop Layout - Închidere Media Query */
+
+/* ==========================================================================
+    00.2.B. GLOBAL MUTATION PROTOCOL: MOBILE VIEWPORTS (max-width: 768px)
+      
+    REZUMAT: Acest macro-bloc guvernează întreaga mutație genetică de layout 
+    pentru ecranele mici de telefoane și tablete. El prăbușește grilele rigide 
+    de desktop, eliberează scroll-ul documentului global, transformă sidebar-ul 
+    într-o consolă HUD orizontală glisantă prin atingere (touch swipe) și compactează 
+    geometric reactorul 3D poliedric, ecranele splitate recursive și casetele 
+    de status pentru a garanta o experiență mobilă imună la overflow lateral.
+   ========================================================================== */
+
+/* ==========================================================================
+    00.2.B.1. SCUTUL ANTI-OVERFLOW & CONSOLA HUD ORIZONTALĂ (max-width: 768px)
+      
+    REZUMAT: Acest district structural execută mutația genetică a layout-ului 
+    central pentru ecrane mici. El instalează scutul absolut de 100vw pentru a 
+    tăia jocul parazit orizontal al paginii mari, comprimă turnul sidebar într-o 
+    consolă fixă ultra-joasă de 48px poziționată sub navbar și deblochează tunelul 
+    de glisare tactilă orizontală a capitolelor prin ascunderea scrollbar-urilor [0.2].
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  /* [PRO UX SECURITY] - Neutralizarea anomaliei de derivă orizontală)T */
+  .log-layout {
+    width: 100vw !important; /* Forțează layout-ul să aibă exact lățimea ecranului fizic */
+    max-width: 100vw !important; /* Scut anti-întindere absolut */
+    overflow-x: hidden !important; /* REPARAȚIA SALVATOARE: Taie instantaneu pixelii excedentari ai consolei HUD și INTERZICE total paginii mari să mai poată fi glisată sau mișcată la stânga și la dreapta! */
+  }
+
+  /* CONTAINERUL EXTERIOR AL CONSOLEI (Banda holografică perfect aliniată) */
+  .log-sidebar {
+    /* REPARAȚIE TOP FLUID: Scoatem !important. Acum JavaScript are permisiunea totală 
+       să tragă consola HUD în top: 0 când navbarul dispare, sigilând tavanul paginii! */
+    /* position: sticky; */
+
+    position: fixed !important; /* MODIFICAREA A: Trecem elementul pe fixed pentru a bloca definitiv bara pe ecran, independent de restul paginii */
+    top: 60px; /* MODIFICAREA B: O lipim etanș la fix 60px sub navbar, eliminând golul inestetic de la inițializare */
+
+    /* REPARAȚIE ENTRALĂ INDENTARE: Preluăm pachetul tău original de extindere de la pagina 1 
+       pentru a forța bara să anuleze padding-ul părintelui și să se lipească dintr-o margine în alta! */
+    margin-left: -40px !important; /* Trage marginea stângă în exteriorul containerului pentru a anula padding-ul general */
+    margin-right: -40px !important; /* Trage marginea dreaptă în mod simetric în afara barierelor native ale paginii */
+    width: calc(
+      100vw + 80px
+    ) !important; /* Compensează matematic marginile trase în exterior, extinzând bara pe toată lățimea fizică */
+
+    height: 40px !important; /* Profil ultra-jos original compact de bandă tehnică, forțat uniform la 40px */
+    padding: 0 15px !important; /* Pernă fină de aer internă pe laterale pentru protecția vizuală a capsulelor glisate */
+    box-sizing: border-box !important; /* Include padding-ul în calculul lățimii, blocând dilatările parazite de pixeli */
+    z-index: 1005 !important; /* Prioritate de plutire deasupra articolelor; textul cronicilor nu mai poate trece peste ea */
+
+    /* CORECTURA ȘI PĂSTRAREA TEXTURII HOLOGRAFICE SF */
+    background: rgba(
+      10,
+      11,
+      20,
+      0.85
+    ) !important; /* Negru profund stelar original cu o transparență cinematică densă de 85% */
+    backdrop-filter: blur(
+      20px
+    ) !important; /* Intensificăm blurul: textul lung care trece pe sub ea este șters cinematic din fundal */
+
+    /* Linia micro-fină laser roz-magenta înlocuiește definitiv bordura groasă verde din versiunea desktop */
+    border-bottom: 1px solid rgba(255, 0, 127, 0.25) !important;
+
+    /* Umbră duală de propulsie neon care oferă iluzia că ecranul plutește pe un câmp magnetic 
+        REPARAȚIE VIZUALĂ HOLOGRAFICĂ:
+        Mărim umbra duală exterioară roz de jos și adăugăm un INSET roz în tavan (0 4px ...).
+        Această directivă creează o reflexie micro-fină de lumină roz aprinsă chiar în buza 
+        de sus dintre consolă și navbar, transformând bara într-o hologramă perfectă! */
+    box-shadow:
+      0 4px 15px rgba(255, 0, 127, 0.12),
+      /* Umbră exterioară inferioară fină ce oferă profunzime și relief */ inset
+        0 1px 0px rgba(255, 0, 127, 0.25),
+      /* Reflexia laser roz-neon injectată chirurgical în buza superioară */
+        inset 0 -1px 0px rgba(167, 243, 208, 0.1) !important; /* Micro-linia fosforică verde-mentă de jos păstrată intactă */
+
+    /* ALINIERI AXIALE ȘI FLUX DE GLISARE ORIZONTAL */
+    display: flex !important; /* Activează modelul Flexbox pe orizontală pentru alinierea în linie a componentelor */
+    align-items: center !important; /* Centrează perfect capsulele de zi pe axa verticală în interiorul celor 40px */
+    justify-content: flex-start !important; /* Toate elementele pornesc rigid din extrema stângă (portul de inițializare) */
+
+    /* TUNELUL INDEPENDENT DE SWIPE (Ascunde barele parazite în toate browserele mobile) */
+    overflow-x: auto !important; /* Permite glisarea liberă pe orizontală a listei de capitole de la stânga la dreapta */
+    overflow-y: hidden !important; /* Îngheață complet axa Y pentru a bloca orice deviație verticală parazită */
+    -webkit-overflow-scrolling: touch; /* Activează impulsul cinematic nativ prin atingere pe ecranele telefoanelor iOS/Android */
+    scrollbar-width: none !important; /* Ascunde complet bara de scroll nativă pe browserele din ecosistemul Firefox/Gecko */
+    -ms-overflow-style: none !important; /* Purifică și ascunde scrollbar-ul pe browserele din arhitectura legacy Microsoft */
+  }
+
+  /* ASCUNDEREA BAREI DE SCROLL PENTRU CHROME, SAFARI ȘI OPERA */
+  .log-sidebar::-webkit-scrollbar {
+    display: none; /* Dispare complet bara roz/standard pe mobil, lăsând interfața curată */
+  }
+
+  /* ALINIEREA CENTRALĂ A NAVIGAȚIEI (Aliniem titlul și lista pe același rând) */
+  .sidebar-nav {
+    display: flex !important; /* Activează Flexbox pe containerul interior direct pentru aliniere orizontală */
+    align-items: center !important; /* Menține elementele aliniate perfect la mijlocul benzii în mod simetric */
+    height: 100% !important; /* Ocupă întreaga înălțime a consolei master de 40px */
+    width: max-content !important; /* Permite containerului să se lungească liber pe orizontală cât toate butoanele */
+  }
+
+  /* TITLUL DEVENIT ETICHETĂ FIXĂ ÎN STÂNGA (Butonul tău de top curat și mini) */
+  .sidebar-nav h4 {
+    display: flex !important; /* Îl readucem forțat în consolă, anulând ascunderea de desktop a widgetului */
+    position: static !important; /* Resetează poziționarea absolută de pe desktop pentru a nu pluti haotic */
+    font-size: 0.55rem !important; /* Dimensiune liliputană originală: protejează restul link-urilor de strivire */
+    padding: 0 10px !important; /* Umplutură laterală originală calculată pentru spațiul de siguranță */
+    margin: 0; /* Resetează marginile parazite ale browserului */
+    border-right: 1px solid var(--solar-mint); /* Linia originală verticală rigidă verde-mentă de separare */
+    white-space: nowrap; /* Interzice textului să se fragmenteze pe două rânduri sau să se rupă */
+    align-items: center; /* Centrează textul pe verticală în interiorul etichetei compacte */
+    color: var(--solar-mint); /* Text aprins original pe verde fosforic curat */
+    height: 25px; /* Înălțime fixă originală pentru o aliniere perfectă în linie */
+  }
+
+  /* LISTA PROPRIU-ZISĂ DE BUTOANE (Aliniere laser pe orizontală) */
+  .sidebar-nav ul {
+    display: flex !important; /* Forțează lista să devină o linie flexibilă orizontală continuă */
+    align-items: center; /* Aliniază toate elementele listei la mijlocul axei verticale */
+    height: 100%; /* Se întinde pe toată înălțimea nav-ului interior */
+    padding: 0 10px !important; /* Aer original aplicat doar între elemente în mod controlat */
+    margin: 0; /* Resetează marjele native */
+    gap: 10px; /* Distanța fizică originală fixă de 10px între butoane */
+    list-style: none; /* Șterge punctele implicite ale listei HTML */
+    width: auto; /* Formula ta originală: permite listei să respire liber în lățime */
+  }
+
+  /* ETICHETELE DE SĂPTĂMÂNĂ // SECTOR MARKERS (Versiune Orizontală Octogonal Poligonală) */
+  .sidebar-nav .week-label {
+    margin: 0 4px !important; /* Pernă fină de aer în stânga și dreapta pe panglică în timpul swipe-ului */
+    display: flex !important; /* Activează Flexbox pe etichetă pentru alinierea textelor în interior */
+    align-items: center !important; /* Centrează perfect butonul octogonal pe axa verticală a HUD-ului de mobil */
+    height: 100% !important; /* Ocupă toată înălțimea utilă a consolei de mobil de 40px */
+    flex-shrink: 0 !important; /* Scut absolut anti-strivire: restul capsulelor nu au voie să deformeze polygonul */
+  }
+
+  /* REGLAJ MILIMETRIC BUTON INTERIOR SECTOR PE MOBIL */
+  .sidebar-nav .week-label a {
+    /* TOATĂ GEOMETRIA OCTOGONALĂ (`clip-path`) ȘI CULORILE SUNT MOȘTENITE CONFORM ACORDULUI DE SUS! */
+    font-size: 0.6rem !important; /* Dimensiune tehnică liliputană, asortată la fix cu capsulele de zi */
+    padding: 4px 10px !important; /* Umplutură originală compactă adaptată pentru banda de 40px */
+    border-radius: 0 !important; /* REPARAȚIE: Forțăm 0 pentru ca colțurile tăiate mecanic la 45° să fie perfect ascuțite, nu rotunjite! */
+    display: inline-flex !important; /* Menține alinierea pe centrul poligonului pentru o așezare impecabilă */
+  }
+
+  /* EFECT HOVER PE MARCAJUL DE SECTOR VIOLET */
+  .sidebar-nav .week-label a:hover {
+    background: var(
+      --nebula-purple
+    ) !important; /* Fundalul se aprinde complet pe violet solid din variabila de root */
+    color: white !important; /* Textul devine alb curat pentru contrast maxim pe placă */
+    opacity: 1; /* Luminozitate totală nominală pe parcursul interacțiunii */
+  }
+
+  /* BUTOANELE DE ZI INDIVIDUALE (Minimaliste, doar text și bordură fină) */
+  .sidebar-nav li {
+    flex: 0 0 auto; /* Împiedică elementele din listă să se întindă sau să se mărească haotic pe mobil */
+    margin: 0 !important; /* Anulează definitiv marginile de desktop pentru a păstra alinierea strânsă */
+    padding: 0 !important; /* Resetează umpluturile parazite ale browserului terestru */
+  }
+
+  /* BUTOANELE DE ZI MAI COMPACTE (Dimensiunile tale de aur) */
+  .sidebar-nav a {
+    background: transparent; /* Fără fundal solid în starea de repaus a elementelor */
+    border: 1px solid rgba(167, 243, 208, 0.1); /* Chenar micro-fin original 10% verde-mentă fosforic */
+    padding: 4px 8px !important; /* Dimensiune originală ultra-compactă adaptată pentru ecrane strâmte de mobil */
+    font-size: 0.6rem !important; /* Font mic original tehnic de ecran radar pentru o scanabilitate rapidă */
+    color: var(
+      --solar-mint
+    ); /* Culoarea stabilă verde-mentă extrasă direct din rădăcină */
+    opacity: 0.6; /* Aspect desaturat, odihnitor pentru ochi în fază de repaus */
+  }
+
+  /* BUTONUL ZILEI ACTIVE CURENTE APRINS ÎN HUD MOBIL */
+  .sidebar-nav a.active {
+    border-color: var(
+      --nebula-pink
+    ); /* Chenarul comută pe roz-magenta intens de alertă de sistem */
+    color: var(
+      --nebula-pink
+    ); /* Textul luminează complet pe aceeasi lungime de undă roz-magenta */
+    opacity: 1; /* Intensitate luminoasă maximă nominală pe monitorul catodic */
+    text-shadow: 0 0 5px var(--nebula-pink); /* Aura originală fină de neon împrăștiată în jurul cifrelor */
+    box-shadow: 0 0 10px rgba(255, 0, 127, 0.2); /* Strălucire originală fină exterioară roz de plutire magnetică */
+  }
+
+  /* REPARAREA VIZUALĂ A LINK-ULUI DE HARTĂ PE MOBIL (Sincronizare cu stilul Desktop) */
+  .map-title-link {
+    /* REPARAȚIA STRUCTURALĂ UNICĂ: Doar inline-flex are voie să fie aici pe mobil! */
+    display: inline-flex !important; /* Îl obligă să devină un element flexibil compact în linie orizontală */
+    width: auto !important; /* Îi interzice cu sfințenie să ocupe 100% din lățimea ecranului */
+    max-width: max-content !important; /* Se strânge chirurgical exact cât textul din interiorul său */
+    flex-shrink: 0 !important; /* Scut anti-strivire: restul butoanelor din consolă nu pot deforma capsula */
+    align-items: center !important; /* Centrează textul pe verticală în interiorul butonului mobil */
+    justify-content: center !important; /* Centrează textul pe orizontală pentru o aliniere perfectă */
+
+    /* RECONSTRUCȚIE CROMATICĂ MOBIL FIXĂ: */
+    background: rgba(
+      13,
+      15,
+      20,
+      0.95
+    ) !important; /* Fundal opac de sticlă neagră densă originală Solaris */
+    border: 1px double var(--nebula-pink) !important; /* Chenarul original dublu roz-magenta de impact vizual! */
+    box-shadow: 0 0 10px rgba(255, 0, 127, 0.2) !important; /* Aură fină de neon roz împrăștiată în jurul capsulei */
+    padding: 4px 10px !important; /* Umplutură originală compactă, optimizată fin pentru banda HUD de 40px */
+    border-radius: 4px !important; /* Rotunjire fină geometrică pe colțuri */
+    white-space: nowrap !important; /* Interzice textului să se fragmenteze sau să se rupă vertical în consolă */
+    margin: 0 !important; /* Curăță marjele exterioare pentru a rula în linie cu butoanele de zi */
+    text-decoration: none !important; /* Elimină sublinierea nativă inestetică a link-urilor generată de browsere */
+  }
+
+  /* Textul interior h4 din capsula de mobil */
+  .map-title-link h4 {
+    position: static !important; /* Anulează poziționarea absolută de desktop pentru a-l integra în fluxul capsulei mini */
+    margin: 0 !important; /* Șterge marginile parazite ale browserului terestru */
+    padding: 0 !important; /* Resetează umpluturile native */
+    font-size: 0.6rem !important; /* Dimensiune liliputană originală tehnică de ecran mobil */
+    font-weight: bold !important; /* Îngroșat stabil original pentru o autoritate vizuală de control */
+    color: var(
+      --solar-mint
+    ) !important; /* Aprinde textul pe verde-mentă fosforic pentru contrast maxim */
+    text-transform: uppercase !important; /* Protocol militar de litere mari capitalizate obligatoriu */
+    letter-spacing: 1px !important; /* Spațiere tehnică fină originală între caractere */
+    border-bottom: none !important; /* Elimină orice dungă inestetică sau separator moștenit de pe desktop */
+    background: transparent !important; /* Curăță fundalul parazit pentru a păstra transparența sticlei Solar */
+    border: none !important; /* Siguranță maximă: elimină și eventualul chenar moștenit din cascadă */
+    text-shadow: 0 0 5px rgba(167, 243, 208, 0.4) !important; /* Strălucire de ecran pornit, oglindind un radar active */
+    width: auto !important; /* Resetează lățimea forțată de desktop din modulele superioare */
+    white-space: nowrap !important; /* Interzice textului să se mai spargă pe verticală sau să se rupă */
+  }
+
+  /* ==========================================================================
+    00.2.B.2. SEIFUL DE LECTURĂ ȘI AERISIREA TITLURILOR H3 (max-width: 768px)
+      
+    REZUMAT: Acest district izolează și decontaminează ierarhia tipografică a 
+    cronicilor zilnice pe ecrane înguste. El execută reparația salvatoare pentru 
+    titlurile metaforice ultra-lungi, comutând direcția Flexbox din linie în coloană, 
+    centrează axial antetele mari de secțiune pentru o simetrie perfectă și 
+    reconfigurează capsula de mobil a hărții pentru a preveni colapsul textului.
+   ========================================================================== */
+
+  /* REPARAREA ȘI AERISIREA TITLURILOR H3 (Suport pentru titluri metaforice ultra-lungi) */
+  .log-entry h3 {
+    display: flex !important; /* Păstrează sistemul Flexbox din desktop pentru aliniere structurală */
+
+    /* REPARAȚIA SALVATOARE PENTRU MOBILE/SPLIT: Schimbăm direcția din linie în coloană!
+        Asta așază automat titlul metaforic LUNG direct SUB textul roz „Day 09”, 
+       oferindu-i toată lățimea utilă a ecranului pentru a nu se mai sparge sau înghesui pe telefoane! */
+    flex-direction: column !important;
+    align-items: flex-start !important; /* Aliniază ambele blocuri de text (ID-ul de zi și denumirea) la marginea din stânga */
+    gap: 8px !important; /* Lasă un spațiu fin și curat de 8px pe verticală între zi și denumire */
+    flex-wrap: wrap !important; /* Permite textului să curgă liber în funcție de lățimea ecranului fizic */
+    font-size: 1.1rem !important; /* Dimensiune tehnică compactă originală de ecran radar */
+    border-bottom: 1px solid rgba(167, 243, 208, 0.1) !important; /* Linie fină originală de demarcație tehnică */
+    padding-bottom: 10px !important; /* Mărit padding-ul pentru o barieră vizuală aerisită și elegantă */
+    width: 100% !important; /* Ocupă tot ecranul util al casetei jurnal mobile */
+  }
+
+  /* Corecție estetică pentru textul metaforic din dreapta (devenit acum text de dedesubt) */
+  .log-entry h3 .meta-title {
+    font-size: 0.9rem !important; /* Îi mărim o idee dimensiunea originală pentru o lizibilitate perfectă pe mobil */
+    color: var(
+      --solar-mint
+    ) !important; /* Menține aprinderea pe verde-mentă fosforic de sistem din root */
+    letter-spacing: 1px !important; /* Spațiere industrială curată între caractere */
+    width: 100% !important; /* Forțează elementul să își ia independența totală pe rândul lui dedesubt */
+    text-align: left !important; /* Aliniere curată în stânga, direct sub ID-ul roz al zilei curente */
+  }
+
+  /* CENTRAREA SIMETRICĂ A ANTETULUI PE MOBIL */
+  .category-header {
+    padding-top: 140px; /* Împinge fizic antetul în jos cu 140px ca să nu fie acoperit de HUD-ul mobil sau navbar */
+    padding-bottom: 30px; /* Pernă fină de air originală de 30px sub titlul mare de capitol */
+    text-align: center; /* Centrare completă stabilă pe orizontală pentru o simetrie perfectă pe telefon */
+  }
+
+  /* ==========================================================================
+    00.2.B.3. PROTOCOLUL DE ATERIZARE TACTICĂ ȘI SCUTURILE ANTI-REZIDUURI
+      
+    REZUMAT: Acest district guvernează amortizarea vizuală și punctele de oprire 
+    ale cronicilor la saltul din sidebar pe rezoluții mobile. El unifică logica 
+    de oprire la fix 120px sub tavan, injectează perna de aer superioară de 20px 
+    pentru a masca reziduurile grafice și instalează scutul mecanic cu margine 
+    negativă de -30px pe porțile AIRLOCK pentru a anihila golurile parazite.
+   ========================================================================== */
+
+  /*  ABSORBȚIA VIZUALĂ LA CLICK (Aterizare milimetrică sub consolă pe mobil) */
+  .log-content article[id],
+  .log-entry {
+    /* CALIBRARE FIXĂ: Oprim scroll-ul la fix 120px sub tavan.
+       Această valoare lipește marginea superioară a casetei direct de sub linia verde a consolei HUD. */
+    scroll-margin-top: 120px !important;
+
+    /* PERNA DE AER ELEGANTĂ: Împingem textul în jos cu 20px în interiorul casetei.
+        Fundalul închis al articolului va acoperi acum tot spațiul de sub consolă,
+        anulând dungile sau reziduurile transparente din spate! */
+    padding-top: 20px !important;
+
+    /* Păstrăm distanța de siguranță la podea pentru a asigura spațiu de manevră articolelor scurte */
+    margin-bottom: 100px !important;
+  }
+
+  /* Corecție simetrică dedicată pentru Porțile AIRLOCK (Anunțurile de Sector - UNIFICARE ȘI CURĂȚARE CASCADĂ) */
+  .sector-announcement {
+    /* Sincronizare la fix 120px sub tavan la saltul din sidebar pentru o aliniere structurală unificată */
+    scroll-margin-top: 120px !important;
+
+    /* SCUTUL MECANIC ANTI-REZIDUURI (Absorbit din prima regulă din fabrică)
+        Tragem vizual containerul în sus cu 30px prin margine negativă pentru a îngropa 
+        orice reziduu parazit de la butonul sau textul de deasupra. */
+    margin-top: -30px !important;
+
+    /* REGLAJ VIZUAL FINAL (Suprascris și executat de a doua regulă din fabrică) */
+    padding-top: 40px !important; /* Umplutură internă echilibrată pentru ca titlul „THE HULL” să stea aerisit */
+    margin-bottom: 80px !important; /* Lăsăm un margin-bottom stabil și curat, fără exagerări, sub poarta AIRLOCK */
+  }
+
+  /* ==========================================================================
+    00.2.B.4. INGINERIA AVANSATĂ ȘI SCALAREA VOLUMETRICĂ (max-width: 768px)
+      
+    REZUMAT: Acest district final izolează ingineria grea adaptivă a navetei. 
+    El guvernează deparazitarea motorului typewriter prin scuturi anti-wrap, 
+    operează compresia volumetrică a Icosaedrului 3D la dimensiuni strânse de mobil, 
+    scalează elastic tipografia stencil prin unități dinamice "vw" și convertește 
+    monitorul split-screen recursiv într-o stivă verticală rigidă etanșă.
+   ========================================================================== */
+
+  /* --- REZUMAT ZONAL A: TERMINALELE MAȘINII DE SCRIS SINCRONE (.mission-status) ---
+    Acest micro-district de siguranță deparazitează fluxul textelor automate de status. 
+    El instalează scutul absolut anti-wrap ("white-space: nowrap") pentru a proteja 
+    integritatea pașilor exacti ai animației typewriter ("steps") și deschide o 
+    trapă de glisare internă orizontală pe mobil, eliminând complet clipirile distructive. */
+
+  /* --- 12. REPARAȚIE TEXT FLUID STATUS PE MOBIL/SPLIT --- */
+  /* REGLAJ DE LĂȚIME PENTRU STATUSUL PE MOBIL:
+      În loc să rupeți textul pe două rânduri, îi permitem barei de status 
+      sa facă un micro-scroll intern dacă textul e prea lung, protejând pașii animației! */
+  .mission-status {
+    overflow-x: auto !important; /* REPARAȚIA PRIN TRANSMISIE: Dezactivează blocarea orizontală și deschide un tunel local de glisare pe axa X pentru textul lung */
+    scrollbar-width: none !important; /* Scut anti-poluare: șterge complet șina nativă de scrollbar pe browserele mobile din ecosistemul Firefox */
+  }
+
+  /* ELIMINAREA INTERFEȚEI VISUALE WEBKIT PENTRU MONITORUL DE STATUS */
+  .mission-status::-webkit-scrollbar {
+    display: none !important; /* Ordin dictatorial Webkit: anihilează și ascunde piesa mobilă pe Safari și Chrome mobile pentru un HUD curat */
+  }
+
+  /* SCUTUL DE CONFORMARE KINETICĂ PENTRU PARAGRAFELE TIP TYPEWRITER */
+  .mission-status p {
+    font-size: 0.75rem !important; /* Micșorăm discret textul tehnic pe mobil pentru a încăpea perfect în caseta HUD de mobil */
+    white-space: nowrap !important; /* SCUTUL ANTI-WRAP SUPREM: Interzice cu sfințenie textului să se spargă pe două rânduri, salvând pașii steps(35) ai mașinii de scris */
+  }
+
+  /* --- REZUMAT ZONAL B: COMPRESIA GEODEZICĂ A REACTORULUI 3D (.armillary-reactor-core) ---
+    Acest sector guvernează scalarea volumetrică a nucleului poliedric cu 20 de fețe. 
+    El reduce diametrul macroscopic al sferei de la 460px la parametri strânși de 240px, 
+    recalibrează distanțele superioare la 100px și fuzionează capsulele de aliniere 
+    paralelă pe noul ecuator compact (top: 120px/175px), integrând fasciculele laser. */
+
+  /* RESPONSIVE COMPRESSION // MOBILE ALIGNMENT REACTOR (max-width: 768px) */
+  .armillary-reactor-core {
+    margin-top: 100px !important; /* Pernă de aer controlată sub navbar-ul fix pe mobil pentru a bloca suprapunerile */
+    margin-bottom: 80px !important; /* Pernă inferioară redusă pentru ecrane scurte pentru a strânge layout-ul vertical */
+    height: 340px !important; /* Compactare mecanică: reține întregul reactor în interiorul ecranului telefonului */
+    scroll-margin-top: 180px !important; /* Amortizor de oprire fluidă la click pe logo legat direct de script.js */
+  }
+
+  /* COMPRESIE CORE POLIEDRIC ȘI INELE CONCENTRICE (Fuziunea salvatoare a duplicatelor) */
+  /* Rezolvăm coliziunea din VS Code: forțăm o cotă unică simetrică de 260px pe ambele piese, 
+     eliminând riscul ca inelele interioare să se decaleze sau să se turtească sub formă de ou! */
+  .quantum-plasma-sphere,
+  .quantum-plasma-sphere .sphere-ring {
+    width: 260px !important; /* Reducem dimensiunea miezului geodezic pentru a proteja marginile display-ului mobil */
+    height: 260px !important; /* Păstrează raportul de aspect perfect 1:1, salvând adâncimea formatului preserve-3d */
+  }
+
+  /* CAPSULELE DE ALINIERE PARALELĂ (Lărgirea containerului la maximum pe mobil) */
+  .armillary-band-container {
+    width: 95% !important; /* Deschide inelele exterioare pe 95% din lățime pentru a folosi spațiul util */
+  }
+
+  /* Repoziționăm cele două benzi perfect paralele la mijlocul figurii reduse de 260px */
+  .macro-wrapper {
+    top: 120px !important; /* Cota de aur din fabrică: coboară banda macro pe noul centru geometric mobil */
+    height: 45px !important; /* Înălțimea structurală fixă a inelului mare, păstrată neatinsă */
+  }
+
+  .micro-wrapper {
+    top: 175px !important; /* Cota de aur din fabrică: aliniază inelul secundar fin sub ecuatorul reactorului */
+    height: 35px !important; /* Înălțimea structurală fixă a inelului micro, conservată pe mobil */
+  }
+
+  /* Ajustăm pseudo-elementele laser discrete pentru cotele noi de mobil */
+  .macro-wrapper::after,
+  .micro-wrapper::after {
+    left: 10% !important; /* Retrage originea orizontală la 10% pentru a centra perfect firul laser */
+    width: 80% !important; /* Restrânge lungimea laserului la 80% pentru a nu străpunge inelele exterioare */
+  }
+
+  /* --- REZUMAT ZONAL C: MATRICEA DE SCALARE TIPOGRAFICĂ ȘI HERO HUD (max-width: 768px) ---
+    Acest district controlează adaptarea elastică a tipografiei oțelite stenciled și a 
+    antetelor principale din secțiunea Hero. El implementează unitățile dinamice bazate 
+    pe lățimea fizică a viewportului (2.4vw) îmbinate cu plafoane fixe de 0.65rem, 
+    ajustează pernele laterale la 20px pe elementele macro și resetează marjele 
+    pentru a asigura o lizibilitate de înaltă rezoluție, imună la colaps vizual. */
+
+  /* SCALARE TEXT TITLU H1 (Păstrarea identității Space Grotesk) */
+  .stenciled-metal-text {
+    font-size: 1.15rem !important; /* Dimensiune optimă rigidă finală executată pentru lizibilitate pe ecrane înguste */
+    letter-spacing: 1px !important; /* Spațiere strânsă militară de interfață terminal */
+    border-right-width: 2px !important; /* Cursor subțire adaptat ecranului mic de mobil */
+  }
+
+  /* REPARAȚIE DISCRETĂ SUBTITLU (Subordonare optică perfectă pe un singur rând) */
+  .stenciled-metal-text-sub {
+    font-size: 0.65rem !important; /* Plafonul rigid de siguranță original din fabrică ce oprește overflow-ul */
+    letter-spacing: 0.5px !important; /* Spațiere micro-fină adaptată pentru textul monospațiat mobil */
+    border-right-width: 1px !important; /* Firul laser marginal al mașinii de scris compactat */
+  }
+
+  /* --- REZUMAT ZONAL D: ȘASIUL BLUEPRINT SPLIT-SCREEN (max-width: 768px) ---
+    Acest district guvernează conversia ecranului recursiv într-o stivă verticală rigidă. 
+    El elimină duplicatele parazite de înălțime fixă (anulând ecuațiile 100vh), 
+    forțează curgerea organică a panourilor prin "height: auto", deparazitează 
+    mecanica typewriter din interiorul panourilor de cod și fluidizează butoanele de tab. */
+
+  /*  RESPONSIVE PROTOCOL // BLUEPRINT COMPRESSION
+  Calibrarea terminalului recursiv pentru ecrane de telefon (max-width: 768px). */
+  .blueprint-container {
+    margin: 80px auto 40px auto !important; /* Pernă compactă de aer originală sub navbar pentru a lăsa spațiu util */
+    padding: 10px !important; /* Strânge umplutura internă la 10px pentru a maximiza zona de afișare */
+    width: 100% !important; /* Se întinde pe toată lățimea disponibilă în grila de mobil */
+    overflow-x: hidden !important; /* Scut anti-scroll orizontal parazit pe corpul principal, oprind barca orizontală */
+    box-sizing: border-box !important; /* Îngheață padding-ul în lățime pentru a opri dilatările de pixeli */
+  }
+
+  /* RECONSTRUCȚIE SPLIT: Trecem panourile în stivă verticală rigidă */
+  .terminal-split {
+    flex-direction: column !important; /* Forțează cele două panouri de cod (HTML/SQL) să cadă vertical unul sub celălalt */
+    gap: 20px !important; /* Distanță rigidă de izolare de 20px între cele două terminale mobile */
+    width: 100% !important; /* Ocupă integral spațiul orizontal de la o margine la alta a ecranului */
+    box-sizing: border-box !important; /* Asigură imunitatea totală a modelului de casetă */
+  }
+
+  .panel {
+    width: 100% !important; /* Panoul se mulează elastic pe display-ul telefonului în mod automat */
+    padding: 15px !important; /* Padding redus militar pentru a câștiga spațiu util pentru liniile de cod */
+    box-sizing: border-box !important; /* Blochează spargerea marginilor la randare */
+  }
+
+  /* Repoziționăm eticheta cinematică a monitorului CRT pentru rezoluții înguste */
+  .code-inspector-screen::before {
+    font-size: 0.55rem !important; /* Dimensiune liliputană a textului decorativ pentru a nu aglomera antetul */
+    top: 6px !important; /* Îl lipește strâns de buza de sus a carcasei ecranului */
+    right: 10px !important; /* Îl trage la fix 10px de flancul drept pentru o aliniere tehnică fină */
+  }
+
+  /* REPARAȚIE DISCRETĂ PENTRU CASETA MISSION STATUS ON MOBILE */
+  .panel .mission-status {
+    display: block !important; /* Trecem de la inline-block la block pentru a ocupa rândul curat în panou */
+    width: 100% !important; /* Anulează forțarea 'max-content' care lăbărța containerul în dreapta în afara ecranului */
+    max-width: 100% !important; /* Blocaj rigid de tavan ce securizează granițele vizuale */
+    padding: 10px !important; /* Umplutură internă compactă originală de exact 10px */
+    box-sizing: border-box !important; /* Păstrează modelul de casetă intact */
+  }
+
+  /* Forțăm textul din interiorul statusului să facă wrap dacă e prea lung pe mobil */
+  .panel .mission-status p {
+    font-size: 0.7rem !important; /* Scădere fină de font pentru a încadra telemetria pe ecrane medii */
+    white-space: normal !important; /* Permite textului de status să curgă pe două rânduri pe telefoane (Starea de testare inițială) */
+    line-height: 1.4 !important; /* Înălțime de rând aerisită originală pentru o citire comodă */
+    letter-spacing: 1px !important; /* Spațiere tehnică adaptată stilului de terminal industrial */
+  }
+
+  /* INTERVENȚIE RECURSIVĂ DE URGENȚĂ: SCUT DE MOBIL ANTI-STIVUIRE
+     Injectat direct în interiorul query-ului @media (max-width: 768px) */
+  .panel .mission-status p,
+  .blueprint-layout .mission-status p {
+    white-space: nowrap !important; /* REPRIMARE TOTALĂ: Nimicește directiva normal/wrap pe telefoane, salvând pașii steps() ai mașinii de scris! */
+    display: inline-block !important; /* Menține contextul de linie dreaptă continuă pe ecrane split/mobile */
+    width: auto !important; /* Lasă textul să ruleze dincolo de marginile fizice înguste ale telefonului în interiorul overflow-ului */
+    min-width: 0 !important; /* Permite animației typewriter să își facă pașii de la 0 la 100% fluid, fără blocaje */
+  }
+
+  .panel .mission-status,
+  .blueprint-layout .mission-status {
+    display: block !important; /* Forțează afișarea de tip bloc curat pe ambele terminale recursive */
+    overflow-x: hidden !important; /* Scut defensiv: taie literele care se scriu în afara sticlei telefonului, oprind overflow-ul general */
+    max-width: 100% !important; /* Împeidică bara de status să lăbărțeze sau să deformatze layout-ul de mobil */
+  }
+
+  /* FLUIDIZARE BUTOANE TAB HUD */
+  .source-selector-tabs {
+    flex-wrap: wrap !important; /* Permite butoanelor .html și .sql să treacă pe rândul doi dacă ecranul telefonului e de fix 320px */
+    gap: 6px !important; /* Spațiu aerian strâns de exact 6px între pastilele de comutare active */
+    width: 100% !important; /* Se extinde pe tot flancul orizontal interior disponibil în layout */
+  }
+
+  .tab-btn {
+    flex: 1 1 auto !important; /* Butoanele devin elastice, împărțind simetric spațiul orizontal în mod egal */
+    padding: 6px 10px !important; /* Dimensiune originală optimizată pentru interacțiunea tactilă cu degetul */
+    font-size: 0.7rem !important; /* Font comprimat original tehnic ce garantează potrivirea perfectă a cuvintelor */
+    text-align: center !important; /* Centrează geometric textele etichetelor (HTML, SQL, NOTES) în interiorul capsulei */
+  }
+} /* @section: Layout Mobile Layout - Închidere Media Query */

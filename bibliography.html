@@ -1,0 +1,172 @@
+<!-- Declară tipul documentului ca fiind HTML5, instruind browserul cum să randeze pagina -->
+<!doctype html>
+<!-- Deschide documentul HTML și specifică limba engleză ca standard pentru motoarele de căutare -->
+<html lang="en">
+<head>
+  <!-- Setează setul universal de caractere UTF-8 pentru a recunoaște corect diacriticele și glifele SF (ex: ❖) -->
+  <meta charset="UTF-8" />
+  
+  <!-- Asigură compatibilitatea corectă a randării pe versiunile de browsere Microsoft Edge/Internet Explorer -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <!-- Reglează fereastra de vizualizare (viewport), asigurându-se că interfața se adaptează fluid pe Mobile și Desktop -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Titlul paginii: Afișat pe tab-ul browserului, păstrând identitatea de expediție și jurnal stelar -->
+  <title>Digital Odyssey | Mapping the FrontEndScape</title>
+  
+  <!-- Meta descrierea: Rezumat tehnic și narativ citit de motoarele de căutare pentru indexarea site-ului -->
+  <meta
+    name="description"
+    content="A captain's log of a journey through the logical landscape of code. A cosmic exploration of HTML structures, CSS aesthetics, JavaScript interactivity, and SQL data architecture."
+  />
+  
+  <!-- Setează culoarea de fundal a browserului pe mobile în nuanța spațiului adânc, asortată cu tema site-ului -->
+  <meta name="theme-color" content="#0a0b1e" />
+  
+  <!-- Conectează iconița unică a site-ului (favicon) folosind un parametru de versiune (?v=3) pentru a forța împrospătarea ei în cache -->
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg?v=3" />
+  
+  <!-- Conectează fișierul central de stiluri CSS unde sunt stocate modulele tale tehnice și animațiile -->
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Pre-conectează serverul Google Fonts pentru a accelera descărcarea fonturilor personalizate -->
+  <link rel="preconnect" href="https://googleapis.com" />
+  
+  <!-- Permite descărcarea securizată a fonturilor de pe domeniul cross-origin de la Google -->
+  <link rel="preconnect" href="https://gstatic.com" crossorigin />
+  
+  <!-- Încarcă fontul rigid și geometric "Space Grotesk" cu grosimi de la 300 la 700 pentru aspectul retro-futurist -->
+  <link
+    rel="stylesheet"
+    href="https://googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+  />
+</head>
+
+<!-- Clasa archive-body: Aplică stilul și masca mișcătoare CRT globală peste tot ecranul bibliografiei -->
+<body class="module-view">
+
+  <!-- Bara superioară rigidă de navigare (Cockpit HUD) -->
+  <nav class="navbar">
+    <!-- Logo-ul din stânga: Păstrează identitatea de computer de bord / arhivă centrală -->
+    <div class="logo">Digital Odyssey / Archives</div>
+    
+    <!-- Lista de link-uri din navbar (în dreapta) -->
+    <ul class="nav-links">
+      <!-- Link special discret (.return-btn) care resetează modulul și te întoarce la puntea de comandă -->
+      <li><a href="index.html" class="return-btn">← Return to Command Deck</a></li>
+    </ul>
+  </nav>
+
+  <!-- Containerul axial mare: Centrează și protejează layout-ul pe monitoarele mari -->
+  <main class="main-container">
+    
+    <!-- Antetul central: Centrat simetric, introduce scopul acestei pagini de stație de date -->
+    <header class="category-header">
+      <h2>External Knowledge Archives</h2>
+      <p>A categorized index of all signals received from the Web-Sphere.</p>
+    </header>
+
+    <!-- SECȚIUNEA I: HTML & CSS (Ancorată mecanic cu id="html-resources" pentru saltul din footer-ul de HTML) -->
+    <section id="html-resources" class="log-entry">
+      <!-- Titlul intern al modulului de studiu -->
+      <h3>I. Front-End Core (HTML & CSS)</h3>
+      
+      <!-- Tabelul tehnic structurat cu clasa data-grid pentru textura de ecran Solaris SQL -->
+      <table class="data-grid">
+        <thead>
+          <!-- Capul de tabel: Conține etichetele coloanelor de monitorizare -->
+          <tr>
+            <th>Source Name</th>
+            <th>Frequency (URL)</th>
+            <th>Mission Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rândul 1 de date -->
+          <tr>
+            <td>freeCodeCamp</td>
+            <td>
+              <!-- Link extern securizat: target="_blank" deschide în tab nou, rel="noopener" previne atacurile de tip phishing -->
+              <a href="https://freecodecamp.org" target="_blank" rel="noopener">Access Link</a>
+            </td>
+            <!-- Celulă de text indicând progresul curent al misiunii -->
+            <td>In Progress</td>
+          </tr>
+          <!-- Rândul 2 de date -->
+          <tr>
+            <td>MDN Web Docs</td>
+            <td>
+              <a href="https://mozilla.org" target="_blank" rel="noopener">Reference Only</a>
+            </td>
+            <!-- Celulă de text indicând un modul stabil activ -->
+            <td>Active</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- SECȚIUNEA II: DATA LOGIC (Ancorată mecanic cu id="sql-resources" pentru saltul din footer-ul de SQL) -->
+    <section id="sql-resources" class="log-entry">
+      <!-- Titlul intern al modulului de baze de date -->
+      <h3>II. Data Logic (SQL)</h3>
+      
+      <table class="data-grid">
+        <thead>
+          <tr>
+            <th>Source Name</th>
+            <th>Frequency (URL)</th>
+            <th>Mission Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rândul 3 de date -->
+          <tr>
+            <td>GeeksforGeeks SQL</td>
+            <td>
+              <a href="https://geeksforgeeks.org" target="_blank" rel="noopener">Access Link</a>
+            </td>
+            <!-- Celulă de text indicând un modul în așteptare, blocat în repaus grayscale chihlimbar -->
+            <td>Locked (Pending)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- SECȚIUNEA III: JAVASCRIPT (Lăsată gata pregătită ca structură viitoare grayscale chihlimbar) -->
+    <section id="js-resources" class="log-entry future-log">
+      <h3>III. Script Interactivity (JavaScript)</h3>
+      
+      <table class="data-grid">
+        <thead>
+          <tr>
+            <th>Source Name</th>
+            <th>Frequency (URL)</th>
+            <th>Mission Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>JavaScript.info</td>
+            <td>
+              <!-- Link inactiv momentan (#), gata de a fi înlocuit când deblochezi planetul de studiu JS -->
+              <a href="#" class="archive-link">Locked Signal</a>
+            </td>
+            <td>Locked (Pending)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Footer-ul modular unificat: Zonă finală de telemetrie SF și copyright -->
+  <footer class="footer">
+    <p>SYS_ORBIT: CENTRAL_BIBLIOGRAPHY // STATUS: <span class="telemetry-active">ONLINE</span></p>
+    <p>COORDINATES: 46.7712° N, 23.6236° E // SYSTEM_TIME: 2026.05.21</p>
+    <p class="copyright">
+      &copy; 2026 | Digital Odyssey by <span class="vessel-sig">Iulia-Alexandra Cadar</span>
+    </p>
+  </footer>
+
+</body>
+</html>
