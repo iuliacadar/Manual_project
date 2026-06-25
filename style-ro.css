@@ -118,7 +118,11 @@ html {
 
   width: 100% !important; /* Forțează layout-ul rădăcină să ocupe întreaga lățime a ferestrei browserului */
   max-width: 100% !important; /* Scut rigid: blochează extinderea structurală dincolo de marginile display-ului */
+
+  -webkit-text-size-adjust: 100%; /* Oprește iOS de la mărirea parazită a fontului */
+  text-size-adjust: 100%;         /* Oprește Android de la deformarea textului */
 }
+
 
 /* CORPUL CENTRAL AL NAVEI (Puntea de control Body) */
 body {

@@ -118,7 +118,11 @@ html {
 
   width: 100% !important; /* Forces the root canvas to span across 100% of the horizontal screen area */
   max-width: 100% !important; /* Rigid structural boundary preventing structural swelling beyond display limits */
+
+  -webkit-text-size-adjust: 100%; /* Oprește iOS de la mărirea parazită a fontului */
+  text-size-adjust: 100%;         /* Oprește Android de la deformarea textului */
 }
+
 
 /* PRIMARY VESSEL HULL (The global Body deck) */
 body {
