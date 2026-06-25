@@ -5937,6 +5937,20 @@ Structura genetică a codului de mobil se împarte în 4 mari districte tactice 
 * Zona C (Scalarea Typography): `.stenciled-metal-text`, `.stenciled-metal-text-sub`.
 * Zona D (Șasiul Blueprint Split): `.blueprint-container`, `.terminal-split`, `.panel`, `.code-inspector-screen::before`, `.panel .mission-status`, `.panel .mission-status p` (plus variantele cu blueprint-layout și taburile HUD).
 
+
+### 25.06.26
+
+1. ALERTĂ DE SISTEM // JURNAL DE CARANTINĂ ACTIVĂ: ANOMALII NEREZOLVATE
+
+* **TODO 01: Unificarea Buclei de Hover pentru Proximitatea Matricei 3D**
+  - **Simptom:** Comportamentul la hover (trecerea mouse-ului) rămâne asimetric între paginile `index.html` și `recursive-blueprint.html`. Reactorul poliedric principal își schimbă corect marginile, în timp ce elementul 3D din ecranul recursiv split-screen refuză să comute, declanșând în continuare regulile locale de repaus verde-mentă (`--solar-mint`).
+  - **Focus Tehnic:** Investigarea greutății ierarhice în cascadă (CSS Specificity), identificarea suprapunerilor de stiluri reziduale din fișiere sau a regulilor moștenite care blochează tranziția spre vectorul roz-magenta (`--nebula-pink`) pe ecranele reale.
+
+* **TODO 02: Recalibrarea Structurală pentru Viewport-ul de Mobil Real**
+  - **Simptom:** Telefoanele mobile fizice (motoarele iOS WebKit și nucleele Android) prezintă o strivire verticală severă a componentelor, comprimare de layout și coliziuni violente între straturile de text (de exemplu, butonul roz `SAVE SIGNAL` se prăbușește direct peste fluxul de metadate tehnice), în ciuda unei randări absolut imaculate în interiorul simulatorului de desktop (`F12`).
+  - **Focus Tehnic:** Implementarea înălțimilor dinamice de ecran (`min-height: 100dvh;`), activarea resetărilor globale pentru dimensiunea textului (`text-size-adjust: 100%`) și izolarea subsolurilor poziționate absolut în fluxuri liniare normale, pentru a anihila impactul barelor HUD dinamice ale browserelor mobile.
+
+
 ---
 
 ---
