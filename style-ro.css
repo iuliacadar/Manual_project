@@ -2181,29 +2181,48 @@ pre::-webkit-scrollbar-thumb {
   transform: rotateY(324deg) rotateX(180deg) rotateX(52.62deg) translateZ(210px);
 }
 
-  /* --- 4. KINETIC REACTION OVERLOAD MATRIX (GPU Shielded Proximity Maps) --- */
-  .armillary-reactor-core:hover, .quantum-plasma-sphere {
-    /* ANULĂM ACCELERAREA FORȚATĂ: Lăsăm rotația de desktop să ruleze în ritmul ei nativ stabil, 
+/* --- 4. KINETIC REACTION OVERLOAD MATRIX (GPU Shielded Proximity Maps) --- */
+.armillary-reactor-core:hover {
+  /* ANULĂM ACCELERAREA FORȚATĂ: Lăsăm rotația de desktop să ruleze în ritmul ei nativ stabil, 
        eliminând șocul de calcul simultan pe placa video! */
-    animation-duration: 20s !important; 
-  }
+  animation-duration: 20s !important;
+}
 
-  .armillary-reactor-core:hover .face,
-  .quantum-plasma-sphere:hover .face {
-    /* REPARAȚIE GEOMETRICĂ: Pentru că fețele sunt triunghiuri CSS, forțăm aprinderea 
+.quantum-plasma-sphere {
+  /* ANULĂM ACCELERAREA FORȚATĂ: Lăsăm rotația de desktop să ruleze în ritmul ei nativ stabil, 
+       eliminând șocul de calcul simultan pe placa video! */
+  animation-duration: 20s !important;
+}
+
+.armillary-reactor-core:hover .face {
+  /* REPARAȚIE GEOMETRICĂ: Pentru că fețele sunt triunghiuri CSS, forțăm aprinderea 
        atât a culorii generale, cât și a muchiilor superioare/inferioare de construcție! */
-    border-color: var(--nebula-pink) !important;
-    border-bottom-color: var(--nebula-pink) !important;
-    border-top-color: var(--nebula-pink) !important;
-    border-style: solid !important;
-    opacity: 0.95 !important;
+  border-color: var(--nebula-pink) !important;
+  border-bottom-color: var(--nebula-pink) !important;
+  border-top-color: var(--nebula-pink) !important;
+  border-style: solid !important;
+  opacity: 0.95 !important;
 
-    /* Conectăm motorul optimizat de pulsație la intervalul stabil de 1.8s pentru o glisare hipnotică */
-    animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important;
-    will-change: transform, opacity; /* Izolează straturile direct pe procesorul grafic al laptopului */
-  }
+  /* Conectăm motorul optimizat de pulsație la intervalul stabil de 1.8s pentru o glisare hipnotică */
+  animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important;
+  will-change:
+    transform, opacity; /* Izolează straturile direct pe procesorul grafic al laptopului */
+}
 
+.quantum-plasma-sphere:hover .face {
+  /* REPARAȚIE GEOMETRICĂ: Pentru că fețele sunt triunghiuri CSS, forțăm aprinderea 
+       atât a culorii generale, cât și a muchiilor superioare/inferioare de construcție! */
+  border-color: var(--nebula-pink) !important;
+  border-bottom-color: var(--nebula-pink) !important;
+  border-top-color: var(--nebula-pink) !important;
+  border-style: solid !important;
+  opacity: 0.95 !important;
 
+  /* Conectăm motorul optimizat de pulsație la intervalul stabil de 1.8s pentru o glisare hipnotică */
+  animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important;
+  will-change:
+    transform, opacity; /* Izolează straturile direct pe procesorul grafic al laptopului */
+}
 
 /* --- 5. STRATURILE HUD ECUATORIALE (Inelele Concentrice ale Astrolabului) --- */
 .armillary-band-container {
@@ -2735,20 +2754,24 @@ pre::-webkit-scrollbar-thumb {
   0% {
     opacity: 0.3 !important;
     background: rgba(167, 243, 208, 0.05) !important;
-    border-color: rgba(167, 243, 208, 0.2) !important; 
+    border-color: rgba(167, 243, 208, 0.2) !important;
     box-shadow: inset 0 0 5px rgba(167, 243, 208, 0.2) !important; /* Umbră interioară micro-fină sigură pentru GPU */
   }
   100% {
     opacity: 0.85 !important;
-    background: rgba(255, 0, 127, 0.1) !important; /* Fundal sticlos roz-magenta Nebula Pink la 10% opacitate */
+    background: rgba(
+      255,
+      0,
+      127,
+      0.1
+    ) !important; /* Fundal sticlos roz-magenta Nebula Pink la 10% opacitate */
     border-color: var(--nebula-pink) !important;
     /* Înlocuim drop-shadow-ul distructiv cu o umbră interioară combinată cu o aureolă strânsă de 8px */
-    box-shadow: 
+    box-shadow:
       inset 0 0 10px rgba(255, 0, 127, 0.2),
-      0 0 8px rgba(255, 0, 127, 0.2) !important; 
+      0 0 8px rgba(255, 0, 127, 0.2) !important;
   }
 }
-
 
 /* ==========================================================================
     MODULE 00.2: MEDIA QUERIES & SPATIAL ISOLATION ENGINES (COSMIC LAYOUTS)

@@ -2224,13 +2224,33 @@ pre::-webkit-scrollbar-thumb {
 }
 
 /* --- 4. KINETIC REACTION OVERLOAD MATRIX (GPU Shielded Proximity Maps) --- */
-.armillary-reactor-core:hover, .quantum-plasma-sphere {
+.armillary-reactor-core:hover {
   /* WIPES OUT FORCED ACCELERATION: Permits desktop rotation parameters to cruise at their native stable 20s timeline,
        permanently eliminating dual layout calculation overloads within GPU graphic pipelines! */
   animation-duration: 20s !important;
 }
 
-.armillary-reactor-core:hover .face, .quantum-plasma-sphere:hover .face {
+.quantum-plasma-sphere {
+  /* WIPES OUT FORCED ACCELERATION: Permits desktop rotation parameters to cruise at their native stable 20s timeline,
+       permanently eliminating dual layout calculation overloads within GPU graphic pipelines! */
+  animation-duration: 20s !important;
+}
+
+.armillary-reactor-core:hover .face {
+  /* GEOMETRIC REPAIR: Since faces are native CSS triangles, we force ignition across 
+       both general borders and the operational upper/lower building wire constraints! */
+    border-color: var(--nebula-pink) !important;
+    border-bottom-color: var(--nebula-pink) !important;
+    border-top-color: var(--nebula-pink) !important;
+    border-style: solid !important;
+    opacity: 0.95 !important;
+
+    /* Connects the optimized low-priority animation matrix back onto the steady 1.8s runtime */
+    animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important;
+    will-change: transform, opacity; /* Forces client machines to isolate these 3D faces onto a dedicated GPU layer */
+  }
+
+.quantum-plasma-sphere:hover .face {
   /* GEOMETRIC REPAIR: Since faces are native CSS triangles, we force ignition across 
        both general borders and the operational upper/lower building wire constraints! */
     border-color: var(--nebula-pink) !important;
