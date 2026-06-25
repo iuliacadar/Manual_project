@@ -110,19 +110,15 @@ following reasons of cosmic guidance:
 /* ROOT HARDWARE SYSTEM (The structural HTML anchor) */
 html {
   scroll-behavior: smooth; /* Activates smooth, cinematic viewport translation during anchor navigation links */
-
   /* SYSTEM CONTAINER CONTAINMENT FORCE: 
-        Strictly prohibits the root agent from compiling a parasitic horizontal scrollbar, 
-        shielding the interface from text overflows or unaligned mobile layout streams. */
+  Strictly prohibits the root agent from compiling a parasitic horizontal scrollbar, 
+  shielding the interface from text overflows or unaligned mobile layout streams. */
   overflow-x: hidden !important;
-
   width: 100% !important; /* Forces the root canvas to span across 100% of the horizontal screen area */
   max-width: 100% !important; /* Rigid structural boundary preventing structural swelling beyond display limits */
-
-  -webkit-text-size-adjust: 100%; /* Oprește iOS de la mărirea parazită a fontului */
-  text-size-adjust: 100%;         /* Oprește Android de la deformarea textului */
+  -webkit-text-size-adjust: 100% !important; /* Prevents iOS WebKit from enforcing custom font scaling grids */
+  text-size-adjust: 100% !important; /* Bars Android OS systems from distorting typography metrics */
 }
-
 
 /* PRIMARY VESSEL HULL (The global Body deck) */
 body {
@@ -3426,21 +3422,25 @@ pre::-webkit-scrollbar-thumb {
     new compact equator (top: 120px/175px) while embedding horizontal laser lines. */
 
   /* RESPONSIVE COMPRESSION // MOBILE ALIGNMENT REACTOR (max-width: 768px) */
-  .armillary-reactor-core {
-    margin-top: 100px !important; /* Controlled air cushion beneath the fixed navbar on mobile to block overlay conflicts */
-    margin-bottom: 80px !important; /* Reduced bottom margin layer custom tailored to optimize spacing across short viewports */
-    height: 340px !important; /* Mechanical compaction: retains the entire reactor viewport inside the device screen frame */
-    scroll-margin-top: 180px !important; /* Smooth operational landing buffer offset regulating click response actions hooked to script.js */
-  }
+.armillary-reactor-core {
+  margin-top: 100px !important; /* Păstrează perna de aer sub navbarul fix pe mobil */
+  margin-bottom: 40px !important; /* Compactează spațiul de jos pe ecrane scurte */
+  height: 260px !important; /* COMPRESIE MECANICĂ: Reduce înălțimea totală a zonei 3D pentru a opri strivirea verticală */
+  scroll-margin-top: 180px !important;
+  display: flex !important;
+  justify-content: center !important; /* Forțează centrarea absolută a întregului ansamblu 3D pe mijlocul ecranului */
+  align-items: center !important;
+  width: 100% !important; /* Blochează lățimea containerului exact la dimensiunea ecranului telefonului */
+  overflow: hidden !important; /* Scut anti-fuga: taie orice pixel care ar încerca să decoleze pe lateral */
+}
 
-  /* POLYHEDRAL CORE AND CONCENTRIC RINGS COMPRESSION (Symmetrical volumetric scale adjustment) */
-  /* RESOLVING CASCADING CONFLICTS: Fuses definitions into a single steady 260px metric across both nodes.
-     Completely eradicates the vertical risk of thin inner rings or the Icosahedron matrix warping into an oval egg shape! */
-  .quantum-plasma-sphere,
-  .quantum-plasma-sphere .sphere-ring {
-    width: 260px !important; /* Compresses the core diameter to protect horizontal viewport screen boundaries */
-    height: 260px !important; /* Sustains the absolute 1:1 aspect ratio, shielding uncompressed preserve-3d matrices */
-  }
+/* POLYHEDRAL CORE COMPRESSION (Reducerea geometrică a diametrului) */
+.quantum-plasma-sphere,
+.quantum-plasma-sphere .sphere-ring {
+  width: 200px !important;  /* CALIBRARE FINĂ: Coborâm diametrul de la 260px la 200px pentru a intra perfect pe ecranul mobil real */
+  height: 200px !important; /* Menține raportul perfect de 1:1, interzicând deformarea icosaedrului într-un ou */
+}
+
 
   /* PARALLEL ALIGNMENT CAPSULES (Repositioning over the new compact equator node) */
   .armillary-band-container {
