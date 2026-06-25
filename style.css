@@ -2224,46 +2224,32 @@ pre::-webkit-scrollbar-thumb {
 }
 
 /* --- 4. KINETIC REACTION OVERLOAD MATRIX (GPU Shielded Proximity Maps) --- */
-.armillary-reactor-core:hover {
-  /* WIPES OUT FORCED ACCELERATION: Permits desktop rotation parameters to cruise at their native stable 20s timeline,
-       permanently eliminating dual layout calculation overloads within GPU graphic pipelines! */
-  animation-duration: 20s !important;
+/* A. HOVER RECEPTOR PENTRU PAGINA PRINCIPALĂ (index.html) */
+.armillary-reactor-core:hover .quantum-plasma-sphere {
+  animation-duration: 20s !important; /* Îngheață rotația stabilă de repaus */
 }
-
-.quantum-plasma-sphere {
-  /* WIPES OUT FORCED ACCELERATION: Permits desktop rotation parameters to cruise at their native stable 20s timeline,
-       permanently eliminating dual layout calculation overloads within GPU graphic pipelines! */
-  animation-duration: 20s !important;
-}
-
 .armillary-reactor-core:hover .face {
-  /* GEOMETRIC REPAIR: Since faces are native CSS triangles, we force ignition across 
-       both general borders and the operational upper/lower building wire constraints! */
-    border-color: var(--nebula-pink) !important;
-    border-bottom-color: var(--nebula-pink) !important;
-    border-top-color: var(--nebula-pink) !important;
-    border-style: solid !important;
-    opacity: 0.95 !important;
+  border-color: var(--nebula-pink) !important;
+  border-bottom-color: var(--nebula-pink) !important;
+  border-top-color: var(--nebula-pink) !important;
+  opacity: 0.95 !important;
+  animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important; /* Forțează pulsația rapidă pe roz */
+  will-change: transform, opacity;
+}
 
-    /* Connects the optimized low-priority animation matrix back onto the steady 1.8s runtime */
-    animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important;
-    will-change: transform, opacity; /* Forces client machines to isolate these 3D faces onto a dedicated GPU layer */
-  }
-
-.quantum-plasma-sphere:hover .face {
-  /* GEOMETRIC REPAIR: Since faces are native CSS triangles, we force ignition across 
-       both general borders and the operational upper/lower building wire constraints! */
-    border-color: var(--nebula-pink) !important;
-    border-bottom-color: var(--nebula-pink) !important;
-    border-top-color: var(--nebula-pink) !important;
-    border-style: solid !important;
-    opacity: 0.95 !important;
-
-    /* Connects the optimized low-priority animation matrix back onto the steady 1.8s runtime */
-    animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important;
-    will-change: transform, opacity; /* Forces client machines to isolate these 3D faces onto a dedicated GPU layer */
-  }
-
+/* B. HOVER RECEPTOR PENTRU PAGINA RECURSIVĂ (recursive-blueprint.html) 
+     Forțăm ierarhia completă prin containerul său nativ depistat în PDF! */
+.recursive-reactor-wrapper:hover .quantum-plasma-sphere {
+  animation-duration: 20s !important; /* Oprește accelerarea parazită a sferei recursive pe GPU */
+}
+.recursive-reactor-wrapper:hover .face {
+  border-color: var(--nebula-pink) !important;
+  border-bottom-color: var(--nebula-pink) !important;
+  border-top-color: var(--nebula-pink) !important;
+  opacity: 0.95 !important;
+  animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important; /* Zdrobește verdele-neon și forțează fuziunea roz */
+  will-change: transform, opacity;
+}
 
 /* --- 5. EQUATORIAL HUD LAYER ARRAYS (The Centered Elliptical Astrolabe Bands) --- */
 .armillary-band-container {
@@ -2787,23 +2773,28 @@ pre::-webkit-scrollbar-thumb {
 }
 
 /* --- 12. GEOFUSION CORE IGNITION LOOP (Pulsating Plasma Luminance Engine) --- */
-  @keyframes lightning-glow-fusion {
-    0% {
-      opacity: 0.3 !important;
-      background: rgba(167, 243, 208, 0.05) !important;
-      border-color: rgba(167, 243, 208, 0.2) !important; 
-      box-shadow: inset 0 0 5px rgba(167, 243, 208, 0.2) !important; /* Micro-fine interior shadow safe for GPU layers */
-    }
-    100% {
-      opacity: 0.85 !important;
-      background: rgba(255, 0, 127, 0.1) !important; /* Translucent Nebula Pink glass plate at 10% opacity threshold */
-      border-color: var(--nebula-pink) !important;
-      /* Replacing destructive external drop-shadows with a combined tight inset and safe 8px glow radius */
-      box-shadow: 
-        inset 0 0 10px rgba(255, 0, 127, 0.2),
-        0 0 8px rgba(255, 0, 127, 0.2) !important; 
-    }
+@keyframes lightning-glow-fusion {
+  0% {
+    opacity: 0.3 !important;
+    background: rgba(167, 243, 208, 0.05) !important;
+    border-color: rgba(167, 243, 208, 0.2) !important;
+    box-shadow: inset 0 0 5px rgba(167, 243, 208, 0.2) !important; /* Micro-fine interior shadow safe for GPU layers */
   }
+  100% {
+    opacity: 0.85 !important;
+    background: rgba(
+      255,
+      0,
+      127,
+      0.1
+    ) !important; /* Translucent Nebula Pink glass plate at 10% opacity threshold */
+    border-color: var(--nebula-pink) !important;
+    /* Replacing destructive external drop-shadows with a combined tight inset and safe 8px glow radius */
+    box-shadow:
+      inset 0 0 10px rgba(255, 0, 127, 0.2),
+      0 0 8px rgba(255, 0, 127, 0.2) !important;
+  }
+}
 
 /* ==========================================================================
     MODULE 00.2: MEDIA QUERIES & SPATIAL ISOLATION ENGINES (COSMIC LAYOUTS)
