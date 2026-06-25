@@ -26,7 +26,7 @@ Manual_project/
 
 ##  Technical Engineering Achievements
 
-### 🎛️ 1. GPU-Accelerated 3D Polyhedral Reactor Mesh
+###  1. GPU-Accelerated 3D Polyhedral Reactor Mesh
 *   **The Problem**: A legacy baseline animation loop rendering 20 complex overlapping tridimensional vector triangles inside an active CSS spatial matrix at `0.12s` frequency using raw `filter: drop-shadow()` properties caused a massive *Repaint Flood*. This bottleneck completely flooded local GPU memory allocations, causing browser instances to freeze and physical CPU cores to trigger extreme thermal throttling.
 *   **The Engineering Solution**: Re-engineered the animation timelines into a stable holographic pulse rhythm. Wiped out heavy graphic blurring filters, restricting boundary glow layers via strict internal `inset` and external `box-shadow` metrics. Injected the native `-webkit-will-change: transform, opacity;` and `will-change` hints, forcing local client web browsers to permanently isolate the 3D meshes onto their dedicated GPU compositing hardware memory layers, reducing system overhead to near zero and locking in an unshakeable, fluid 60 FPS profile.
 
