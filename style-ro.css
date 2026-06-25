@@ -2188,7 +2188,7 @@ pre::-webkit-scrollbar-thumb {
     animation-duration: 20s !important; 
   }
 
-  .armillary-reactor-core:hover .face {
+  .armillary-reactor-core:hover .face, #quantum-plasma-sphere:hover .face {
     border-color: var(--nebula-pink) !important; /* Schimbare cromatică simplă laser, fără mișcare de pixeli */
     border-style: solid !important;
     
