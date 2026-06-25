@@ -2182,44 +2182,43 @@ pre::-webkit-scrollbar-thumb {
 }
 
 /* --- 4. KINETIC REACTION OVERLOAD MATRIX (GPU Shielded Proximity Maps) --- */
-  /* A. CONTROLUL ROTAȚIEI STABILE (Sincronizare pe ambele punți) */
-  .armillary-reactor-core:hover .quantum-plasma-sphere,
-  .recursive-reactor-wrapper:hover .quantum-plasma-sphere {
-    animation-duration: 20s !important; 
-  }
-
-  /* B. HOVER TOTAL PENTRU INDEX.HTML & RECURSIVE-BLUEPRINT.HTML
-      Targetăm simultan toate clasele de poziționare 3D sub hover-ul ambelor containere 
-      pentru a anihila orice regulă reziduală verde-mentă! */
-  .armillary-reactor-core:hover .face-t1, .armillary-reactor-core:hover .face-t2, .armillary-reactor-core:hover .face-t3, .armillary-reactor-core:hover .face-t4, .armillary-reactor-core:hover .face-t5,
-  .armillary-reactor-core:hover .face-m1, .armillary-reactor-core:hover .face-m2, .armillary-reactor-core:hover .face-m3, .armillary-reactor-core:hover .face-m4, .armillary-reactor-core:hover .face-m5,
-  .armillary-reactor-core:hover .face-m6, .armillary-reactor-core:hover .face-m7, .armillary-reactor-core:hover .face-m8, .armillary-reactor-core:hover .face-m9, .armillary-reactor-core:hover .face-m10,
-  .armillary-reactor-core:hover .face-b1, .armillary-reactor-core:hover .face-b2, .armillary-reactor-core:hover .face-b3, .armillary-reactor-core:hover .face-b4, .armillary-reactor-core:hover .face-b5,
-  .recursive-reactor-wrapper:hover .face-t1, .recursive-reactor-wrapper:hover .face-t2, .recursive-reactor-wrapper:hover .face-t3, .recursive-reactor-wrapper:hover .face-t4, .recursive-reactor-wrapper:hover .face-t5,
-  .recursive-reactor-wrapper:hover .face-m1, .recursive-reactor-wrapper:hover .face-m2, .recursive-reactor-wrapper:hover .face-m3, .recursive-reactor-wrapper:hover .face-m4, .recursive-reactor-wrapper:hover .face-m5,
-  .recursive-reactor-wrapper:hover .face-m6, .recursive-reactor-wrapper:hover .face-m7, .recursive-reactor-wrapper:hover .face-m8, .recursive-reactor-wrapper:hover .face-m9, .recursive-reactor-wrapper:hover .face-m10,
-  .recursive-reactor-wrapper:hover .face-b1, .recursive-reactor-wrapper:hover .face-b2, .recursive-reactor-wrapper:hover .face-b3, .recursive-reactor-wrapper:hover .face-b4, .recursive-reactor-wrapper:hover .face-b5 {
-    
-    /* REPARAȚIE GEOMETRICĂ TRIUNGHI: Schimbăm exclusiv culorile superioare și inferioare ale bordurilor.
-       Lăsăm marginile stânga/dreapta intacte (transparente), salvând forma perfectă a icosaedrului! */
-    border-bottom-color: var(--nebula-pink) !important;
-    border-top-color: var(--nebula-pink) !important;
-    opacity: 0.95 !important;
-    
-    /* Conectăm pulsul optimizat la 1.8 secunde direct pe memoria plăcii video */
-    animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important;
-    will-change: transform, opacity;
-  }
-
-
-/* C. HOVER RECEPTOR PENTRU PAGINA RECURSIVĂ (recursive-blueprint.html) */
-.recursive-reactor-wrapper:hover .quantum-plasma-sphere div {
-  border-bottom-color: var(--nebula-pink) !important;
-  border-top-color: var(--nebula-pink) !important;
-  opacity: 0.95 !important;
-  animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important;
-  will-change: transform, opacity;
+/* --- A. CONTROLUL ROTAȚIEI STABILE (Sincronizare structurală pe ambele punți) ---
+    Acest selector dublu prinde containerele mari de pe ambele pagini (index și recursivă).
+    Blochează durata unei rotații complete la 20 de secunde în timpul interacțiunii, 
+    anulând orice accelerație parazită și eliminând supraîncărcarea simultană pe GPU. */
+.armillary-reactor-core:hover .quantum-plasma-sphere,
+.recursive-reactor-wrapper:hover .quantum-plasma-sphere {
+  animation-duration: 20s !important;
 }
+
+/* --- B. INTERVENȚIE LASER PENTRU RECTIFICAREA REACTORULUI DIN INDEX.HTML ---
+    Țintește clasa generală `.face` a tuturor celor 20 de fațete triunghiulare doar pe index. 
+    Reparația geometrică aplică culoarea roz exclusiv pe sub-proprietățile de top și bottom 
+    ale bordurilor, păstrând flancurile laterale transparente pentru a NU strica forma de icosaedru! */
+.armillary-reactor-core:hover .face {
+  border-color: var(--nebula-pink) !important;        /* Comută culoarea de bază pe lungimea de undă roz-magenta */
+  border-bottom-color: var(--nebula-pink) !important; /* Aprinde baza triunghiurilor orientate în sus, fără reflow */
+  border-top-color: var(--nebula-pink) !important;    /* Aprinde tavanul triunghiurilor răsturnate, menținând unghiurile ascuțite */
+  border-style: solid !important;                     /* Securizează liniile laser continue, interzicând fragmentările grafice */
+  opacity: 0.95 !important;                           /* Ridică intensitatea vizuală la 95% pentru o textură sticloasă premium */
+  animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important; /* Rulează pulsația fluidă non-distructivă la 1.8s */
+  will-change: transform, opacity;                    /* SCUTUL GPU: Izolează fețele 3D pe un strat hardware separat în VRAM */
+}
+
+/* --- C. INTERVENȚIE LASER PENTRU RECTIFICAREA FIGURII DIN RECURSIVE-BLUEPRINT.HTML ---
+    Execută exact aceleași operațiuni cinematice, de culoare și accelerare hardware, 
+    dar legate ombilical de containerul macroscopic `.recursive-reactor-wrapper` din split-screen.
+    Ridicarea specificității prin această clasă unică zdrobește cascada și forțează simetria 1:1. */
+.recursive-reactor-wrapper:hover .face {
+  border-color: var(--nebula-pink) !important;        /* Comută culoarea de bază pe lungimea de undă roz-magenta */
+  border-bottom-color: var(--nebula-pink) !important; /* Aprinde baza triunghiurilor orientate în sus, fără reflow */
+  border-top-color: var(--nebula-pink) !important;    /* Aprinde tavanul triunghiurilor răsturnate, menținând unghiurile ascuțite */
+  border-style: solid !important;                     /* Securizează liniile laser continue, interzicând fragmentările grafice */
+  opacity: 0.95 !important;                           /* Ridică intensitatea vizuală la 95% pentru o textură sticloasă premium */
+  animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important; /* Rulează pulsația fluidă non-distructivă la 1.8s */
+  will-change: transform, opacity;                    /* SCUTUL GPU: Izolează fețele 3D pe un strat hardware separat în VRAM */
+}
+
 
 /* --- 5. STRATURILE HUD ECUATORIALE (Inelele Concentrice ale Astrolabului) --- */
 .armillary-band-container {

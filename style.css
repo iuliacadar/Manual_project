@@ -2223,33 +2223,57 @@ pre::-webkit-scrollbar-thumb {
   transform: rotateY(324deg) rotateX(180deg) rotateX(52.62deg) translateZ(210px);
 }
 
-/* --- 4. KINETIC REACTION OVERLOAD MATRIX (GPU Shielded Proximity Maps) --- */
-/* A. CONTROLUL ROTAȚIEI STABILE (Îngheață accelerația pe ambele pagini) */
+/* ---- 4. HERO SECTION // KINETIC REACTION OVERLOAD MATRIX (GPU Shielded Maps) --- */
+
+/* --- A. STABLE ROTATION CONTROLLER (Structural synchronization across both decks) ---
+    This dual compound selector locks macro containers on both index and recursive viewports.
+    It forces a rigid 20-second threshold for a full 3D rotation cycle during mouse proximity,
+    permanently suppressing layout acceleration spikes and preventing parallel GPU overloads. */
 .armillary-reactor-core:hover .quantum-plasma-sphere,
 .recursive-reactor-wrapper:hover .quantum-plasma-sphere {
   animation-duration: 20s !important;
 }
 
-/* B. INTERVENȚIE LASER PENTRU INDEX.HTML */
+/* --- B. LASER INJECTION PIPELINE FOR THE MAIN COMMAND DECK (index.html) ---
+    Targets the generic global `.face` class spanning all 20 triangular meshes on index.
+    The geometric repair forces the pink shift exclusively onto top and bottom border segments,
+    retaining side margins as transparent to avoid collapsing the sharp icosahedron form factors! */
 .armillary-reactor-core:hover .face {
-  border-color: var(--nebula-pink) !important;
-  border-bottom-color: var(--nebula-pink) !important;
-  border-top-color: var(--nebula-pink) !important;
-  border-style: solid !important;
-  opacity: 0.95 !important;
-  animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important;
-  will-change: transform, opacity;
+  border-color: var(
+    --nebula-pink
+  ) !important; /* Shifts baseline wires to the high-visibility pink alert spectrum */
+  border-bottom-color: var(
+    --nebula-pink
+  ) !important; /* Ignites lower wire segments of upward triangles without reflow steps */
+  border-top-color: var(
+    --nebula-pink
+  ) !important; /* Ignites upper wire segments of inverted triangles to retain sharp vertices */
+  border-style: solid !important; /* Locks framework lines into continuous solid arrays, barring graphical splitting */
+  opacity: 0.95 !important; /* Escalates elements opacity parameters up to a heavy 95% glass plate look */
+  animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important; /* Binds the low-power 1.8s fluid plasma pulse loop */
+  will-change:
+    transform, opacity; /* GPU SHIELD: Detaches 3D geometry onto a dedicated uncompressed hardware layer in VRAM */
 }
 
-/* C. INTERVENȚIE LASER PENTRU RECURSIVE-BLUEPRINT.HTML */
+/* --- C. CASCADING PRIORITY OVERRIDE FOR THE SPLIT-SCREEN ARENA (recursive-blueprint.html) ---
+    Implements identical geometry, color, and hardware acceleration passes across the split-screen mesh.
+    By binding the rule directly to the native `.recursive-reactor-wrapper`, it scales the cascade weight
+    to smash priority overrides and enforce absolute 1:1 symmetrical layout alignment across frames. */
 .recursive-reactor-wrapper:hover .face {
-  border-color: var(--nebula-pink) !important;
-  border-bottom-color: var(--nebula-pink) !important;
-  border-top-color: var(--nebula-pink) !important;
-  border-style: solid !important;
-  opacity: 0.95 !important;
-  animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important;
-  will-change: transform, opacity;
+  border-color: var(
+    --nebula-pink
+  ) !important; /* Shifts baseline wires to the high-visibility pink alert spectrum */
+  border-bottom-color: var(
+    --nebula-pink
+  ) !important; /* Ignites lower wire segments of upward triangles without reflow steps */
+  border-top-color: var(
+    --nebula-pink
+  ) !important; /* Ignites upper wire segments of inverted triangles to retain sharp vertices */
+  border-style: solid !important; /* Locks framework lines into continuous solid arrays, barring graphical splitting */
+  opacity: 0.95 !important; /* Escalates elements opacity parameters up to a heavy 95% glass plate look */
+  animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important; /* Binds the low-power 1.8s fluid plasma pulse loop */
+  will-change:
+    transform, opacity; /* GPU SHIELD: Detaches 3D geometry onto a dedicated uncompressed hardware layer in VRAM */
 }
 
 /* --- 5. EQUATORIAL HUD LAYER ARRAYS (The Centered Elliptical Astrolabe Bands) --- */
