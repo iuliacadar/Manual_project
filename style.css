@@ -2224,30 +2224,27 @@ pre::-webkit-scrollbar-thumb {
 }
 
 /* --- 4. KINETIC REACTION OVERLOAD MATRIX (GPU Shielded Proximity Maps) --- */
-/* A. HOVER RECEPTOR PENTRU PAGINA PRINCIPALĂ (index.html) */
-.armillary-reactor-core:hover .quantum-plasma-sphere {
-  animation-duration: 20s !important; /* Îngheață rotația stabilă de repaus */
+/* A. CONTROLUL ROTAȚIEI STABILE (Îngheață accelerația pe ambele pagini) */
+.armillary-reactor-core:hover .quantum-plasma-sphere,
+.recursive-reactor-wrapper:hover .quantum-plasma-sphere {
+  animation-duration: 20s !important;
 }
-.armillary-reactor-core:hover .face {
-  border-color: var(--nebula-pink) !important;
+
+/* B. HOVER RECEPTOR PENTRU PAGINA PRINCIPALĂ (index.html) */
+.armillary-reactor-core:hover .quantum-plasma-sphere div {
   border-bottom-color: var(--nebula-pink) !important;
   border-top-color: var(--nebula-pink) !important;
   opacity: 0.95 !important;
-  animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important; /* Forțează pulsația rapidă pe roz */
+  animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important;
   will-change: transform, opacity;
 }
 
-/* B. HOVER RECEPTOR PENTRU PAGINA RECURSIVĂ (recursive-blueprint.html) 
-     Forțăm ierarhia completă prin containerul său nativ depistat în PDF! */
-.recursive-reactor-wrapper:hover .quantum-plasma-sphere {
-  animation-duration: 20s !important; /* Oprește accelerarea parazită a sferei recursive pe GPU */
-}
-.recursive-reactor-wrapper:hover .face {
-  border-color: var(--nebula-pink) !important;
+/* C. HOVER RECEPTOR PENTRU PAGINA RECURSIVĂ (recursive-blueprint.html) */
+.recursive-reactor-wrapper:hover .quantum-plasma-sphere div {
   border-bottom-color: var(--nebula-pink) !important;
   border-top-color: var(--nebula-pink) !important;
   opacity: 0.95 !important;
-  animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important; /* Zdrobește verdele-neon și forțează fuziunea roz */
+  animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important;
   will-change: transform, opacity;
 }
 
