@@ -3420,34 +3420,56 @@ pre::-webkit-scrollbar-thumb {
     It compresses the sphere's macroscopic footprint from 460px down to tight 240px bounds, 
     resets top offsets to 100px, and unifies parallel alignment capsules over the 
     new compact equator (top: 120px/175px) while embedding horizontal laser lines. */
+
 .armillary-reactor-core {
-  margin-top: 60px !important;    /* Reduce perna de aer pentru a ridica reactorul mai sus pe ecranele scurte de mobil */
+  margin-top: 40px !important;    /* Ridică ansamblul mai sus pentru a elibera zona de jos */
   margin-bottom: 20px !important; 
-  height: 240px !important;        /* Comprimă spațiul vertical al containerului 3D */
+  height: 220px !important;        /* Comprimă spațiul vertical pentru a opri prăbușirea textului */
   scroll-margin-top: 180px !important;
   display: flex !important;
-  justify-content: center !important; /* Forțează centrarea absolută a axei pe mijlocul ecranului */
-  align-items: center !important;
-  width: 100% !important;          /* Îngheață lățimea la exact 100% din ecranul fizic al telefonului */
+  flex-direction: column !important; /* Aliază elementele pe verticală: textul sub sferă sau invers */
+  justify-content: center !important; 
+  align-items: center !important;  /* Centrează perfect tot nucleul pe mijlocul ecranului mobil */
+  width: 100% !important;          
   position: relative !important;
 }
 
-/* MICRO-SCALARE HARDWARE PE GPU (Strângerea conului de perspectivă 3D) */
+/* RECREEREA NUCLEULUI: Repornirea rotației și scalarea nativă */
 .quantum-plasma-sphere {
-  width: 260px !important;        /* Păstrăm dimensiunea ta nativă de bază pentru a nu deforma inelele */
-  height: 260px !important;       /* Menține raportul perfect de 1:1 */
+  width: 260px !important;        /* Păstrează dimensiunile tale originale */
+  height: 260px !important;       
   
-  /* REPARAȚIE CRITICĂ: Aplicăm o scalare directă de 0.65 (reducere cu 35% a întregii matrici 3D).
-      Această instrucțiune forțează placa video a telefonului real să contracte proiecția spațială, 
-      trăgând Icosaedrul complet în ecran pe lateral și eliberând marginile! */
-  transform: scale(0.65) !important; 
-  transform-origin: center center !important; /* Asigură că micșorarea se face perfect spre interiorul nucleului */
+  /* REPARAȚIE SUPREMĂ DE ROTAȚIE: Ștergem transform: scale! 
+      Folosim proprietatea independentă 'scale' la 0.55 (reducere la aproape jumătate).
+      Icosaedrul va reîncepe să se rotească instantaneu la 60 FPS, complet retras în interiorul ecranului! */
+  scale: 0.55 !important; 
+  transform-origin: center center !important;
 }
 
-/* Sincronizăm și inelele concentrice pentru a asigura o compresie unificată */
+/* Sincronizăm inelele cu noua scară hardware */
 .quantum-plasma-sphere .sphere-ring {
   width: 260px !important;
   height: 260px !important;
+}
+
+/* --- REPARAREA TEXTELOR ȘI REZOLVAREA SUPRAPUNERII (PAGINA 9 DIN PDF) ---
+    Modificăm comportamentul textelor din Hero în interiorul query-ului pentru a permite 
+    ruperea rândurilor, eliminând retezarea brutală din flancuri! */
+.mission-status {
+  overflow-x: visible !important;  /* Dezactivează scroll-ul orizontal pe mobil */
+  width: 100% !important;
+  padding: 0 15px !important;      /* Perne laterale de aer pentru text */
+}
+
+.mission-status p,
+.stenciled-metal-text,
+.stenciled-metal-text-sub {
+  white-space: normal !important;   /* ZDROBEȘTE NOWRAP-UL: Permite textului să treacă pe rândul doi! */
+  word-wrap: break-word !important; /* Sparge cuvintele dacă depășesc ecranul telefonului */
+  text-align: center !important;    /* Centrează textul HUD perfect sub Icosaedru */
+  font-size: 0.85rem !important;    /* Ajustează lizibilitatea pe ecranul mobil real */
+  max-width: 100% !important;
+  display: block !important;
 }
 
 
