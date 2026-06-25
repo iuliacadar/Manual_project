@@ -2182,46 +2182,43 @@ pre::-webkit-scrollbar-thumb {
 }
 
 /* --- 4. KINETIC REACTION OVERLOAD MATRIX (GPU Shielded Proximity Maps) --- */
-.armillary-reactor-core:hover {
-  /* ANULĂM ACCELERAREA FORȚATĂ: Lăsăm rotația de desktop să ruleze în ritmul ei nativ stabil, 
-       eliminând șocul de calcul simultan pe placa video! */
-  animation-duration: 20s !important;
-}
+  /* A. CONTROLUL ROTAȚIEI STABILE (Sincronizare pe ambele punți) */
+  .armillary-reactor-core:hover .quantum-plasma-sphere,
+  .recursive-reactor-wrapper:hover .quantum-plasma-sphere {
+    animation-duration: 20s !important; 
+  }
 
-.quantum-plasma-sphere {
-  /* ANULĂM ACCELERAREA FORȚATĂ: Lăsăm rotația de desktop să ruleze în ritmul ei nativ stabil, 
-       eliminând șocul de calcul simultan pe placa video! */
-  animation-duration: 20s !important;
-}
+  /* B. HOVER TOTAL PENTRU INDEX.HTML & RECURSIVE-BLUEPRINT.HTML
+      Targetăm simultan toate clasele de poziționare 3D sub hover-ul ambelor containere 
+      pentru a anihila orice regulă reziduală verde-mentă! */
+  .armillary-reactor-core:hover .face-t1, .armillary-reactor-core:hover .face-t2, .armillary-reactor-core:hover .face-t3, .armillary-reactor-core:hover .face-t4, .armillary-reactor-core:hover .face-t5,
+  .armillary-reactor-core:hover .face-m1, .armillary-reactor-core:hover .face-m2, .armillary-reactor-core:hover .face-m3, .armillary-reactor-core:hover .face-m4, .armillary-reactor-core:hover .face-m5,
+  .armillary-reactor-core:hover .face-m6, .armillary-reactor-core:hover .face-m7, .armillary-reactor-core:hover .face-m8, .armillary-reactor-core:hover .face-m9, .armillary-reactor-core:hover .face-m10,
+  .armillary-reactor-core:hover .face-b1, .armillary-reactor-core:hover .face-b2, .armillary-reactor-core:hover .face-b3, .armillary-reactor-core:hover .face-b4, .armillary-reactor-core:hover .face-b5,
+  .recursive-reactor-wrapper:hover .face-t1, .recursive-reactor-wrapper:hover .face-t2, .recursive-reactor-wrapper:hover .face-t3, .recursive-reactor-wrapper:hover .face-t4, .recursive-reactor-wrapper:hover .face-t5,
+  .recursive-reactor-wrapper:hover .face-m1, .recursive-reactor-wrapper:hover .face-m2, .recursive-reactor-wrapper:hover .face-m3, .recursive-reactor-wrapper:hover .face-m4, .recursive-reactor-wrapper:hover .face-m5,
+  .recursive-reactor-wrapper:hover .face-m6, .recursive-reactor-wrapper:hover .face-m7, .recursive-reactor-wrapper:hover .face-m8, .recursive-reactor-wrapper:hover .face-m9, .recursive-reactor-wrapper:hover .face-m10,
+  .recursive-reactor-wrapper:hover .face-b1, .recursive-reactor-wrapper:hover .face-b2, .recursive-reactor-wrapper:hover .face-b3, .recursive-reactor-wrapper:hover .face-b4, .recursive-reactor-wrapper:hover .face-b5 {
+    
+    /* REPARAȚIE GEOMETRICĂ TRIUNGHI: Schimbăm exclusiv culorile superioare și inferioare ale bordurilor.
+       Lăsăm marginile stânga/dreapta intacte (transparente), salvând forma perfectă a icosaedrului! */
+    border-bottom-color: var(--nebula-pink) !important;
+    border-top-color: var(--nebula-pink) !important;
+    opacity: 0.95 !important;
+    
+    /* Conectăm pulsul optimizat la 1.8 secunde direct pe memoria plăcii video */
+    animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important;
+    will-change: transform, opacity;
+  }
 
-.armillary-reactor-core:hover .face {
-  /* REPARAȚIE GEOMETRICĂ: Pentru că fețele sunt triunghiuri CSS, forțăm aprinderea 
-       atât a culorii generale, cât și a muchiilor superioare/inferioare de construcție! */
-  border-color: var(--nebula-pink) !important;
+
+/* C. HOVER RECEPTOR PENTRU PAGINA RECURSIVĂ (recursive-blueprint.html) */
+.recursive-reactor-wrapper:hover .quantum-plasma-sphere div {
   border-bottom-color: var(--nebula-pink) !important;
   border-top-color: var(--nebula-pink) !important;
-  border-style: solid !important;
   opacity: 0.95 !important;
-
-  /* Conectăm motorul optimizat de pulsație la intervalul stabil de 1.8s pentru o glisare hipnotică */
   animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important;
-  will-change:
-    transform, opacity; /* Izolează straturile direct pe procesorul grafic al laptopului */
-}
-
-.quantum-plasma-sphere:hover .face {
-  /* REPARAȚIE GEOMETRICĂ: Pentru că fețele sunt triunghiuri CSS, forțăm aprinderea 
-       atât a culorii generale, cât și a muchiilor superioare/inferioare de construcție! */
-  border-color: var(--nebula-pink) !important;
-  border-bottom-color: var(--nebula-pink) !important;
-  border-top-color: var(--nebula-pink) !important;
-  border-style: solid !important;
-  opacity: 0.95 !important;
-
-  /* Conectăm motorul optimizat de pulsație la intervalul stabil de 1.8s pentru o glisare hipnotică */
-  animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important;
-  will-change:
-    transform, opacity; /* Izolează straturile direct pe procesorul grafic al laptopului */
+  will-change: transform, opacity;
 }
 
 /* --- 5. STRATURILE HUD ECUATORIALE (Inelele Concentrice ale Astrolabului) --- */
