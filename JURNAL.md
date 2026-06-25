@@ -5667,7 +5667,7 @@ Dimensiunea Sistemică (Motiv ontologic & Logica cascadei)
 - **Motivul Ontologic**: Întruchipează **Mecanica Bornelor de Navigație și Simetria de Telefon (The Visual Buffer Alignment)**. Pe un ecran mare, titlurile de capitole respiră libere în spațiul 2D. Pe mobil, din cauză că am fixat consola HUD orizontală în tavanul ecranului la un regim imobil `position: fixed !important` cu o înălțime de 40px plus navbarul superior, primele rânduri din pagină riscau să fie îngropate parazit sub sticla fumurie a consolei. Împingerea fizică la 140px salvează interfața, plasând titlul mare de capitol exact în zona centrală perfect vizibilă a ecranului.
 - **Logica Cascadei**: Acest selector operează o corecție de mediu contextuală pură, fără directive `!important`, lăsând caseta fluidă. Centrarea orizontală prin `text-align: center` anulează alinierea asimetrică de pe desktop, forțând elementele copii să cadă pe axa centrală a ecranului mobil, echilibrând vizual greutatea cromatică a textului pe ecrane de tip portret.
 
-24.B.3. **MODULE 00.2 // PROTOCOL 00.2.B.3: PROTOCOLUL DE ATERIZARE TACTICĂ ȘI SCUTURILE ANTI-REZIDUURI**
+  24.B.3. **MODULE 00.2 // PROTOCOL 00.2.B.3: PROTOCOLUL DE ATERIZARE TACTICĂ ȘI SCUTURILE ANTI-REZIDUURI**
 
 **REZUMAT / SUMMARY**: Acest al treilea district de mobil izolează și decontaminează ierarhia de ancorare vizuală (Scroll Locking) și scuturile optice de curățare a ecranului pe rezoluții mobile. Prin unificarea punctelor de oprire la fix `120px` sub tavan și instalarea barierelor defensive cu margini negative, sub-grupul absoarbe cu succes șocurile vizuale provocate de salturile din JavaScript și elimină golurile parazite din spatele consolei HUD.
 
@@ -5685,7 +5685,7 @@ Dimensiunea Sistemică (Motiv ontologic & Logica cascadei)
 - **Motivul Ontologic**: Întruchipează **Etanșeitatea Porților de Sector (The Airlock Leak Submergence)**. Din cauza coliziunilor dintre elementele de desktop pe ecrane mici, între titlurile de sector (ex: „THE HULL”) și elementele de deasupra se nășteau goluri parazite transparente sau deșeuri vizuale din cod. Tragerea porții în sus prin marginea negativă și aerisirea ei la 40px forțează elementul să îngroape acele reziduuri, păstrând aspectul brutalist militar intact și perfect ordonat.
 - **Logica Cascadei**: **Aceasta este rezolvarea de elită a coliziunii de duplicare (The Unified Cascade Override)**. Prin topirea celor două reguli vechi, browserul nu mai trece prin faze intermediare nesigure. Proprietatea `margin-bottom: 80px !important` extrasă din a doua declarare preia controlul absolut: ea suprascrie vechea valoare exagerată de `120px` și oprește stivuirea parazită, stabilizând distanța exactă până la următoarea filă de zi.
 
-24.B.4. **MODULE 00.2 // PROTOCOL 00.2.B.4: ADVANCED REACTOR KINETICS & TELETYPE STACKING**
+  24.B.4. **MODULE 00.2 // PROTOCOL 00.2.B.4: ADVANCED REACTOR KINETICS & TELETYPE STACKING**
 
 **REZUMAT / SUMMARY**: Acest sub-grup unificat centralizează operațiunile adaptive de cea mai înaltă complexitate ale navetei Solaris. El guvernează conversia structurală a componentelor tridimensionale macro, a ecranelor catodice splitate și a sistemelor kinetice asincrone, securizând interfața pe mobil prin scuturi absolute anti-wrap și reconfigurări volumetrice imune la colaps vizual.
 
