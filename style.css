@@ -3420,32 +3420,36 @@ pre::-webkit-scrollbar-thumb {
     It compresses the sphere's macroscopic footprint from 460px down to tight 240px bounds, 
     resets top offsets to 100px, and unifies parallel alignment capsules over the 
     new compact equator (top: 120px/175px) while embedding horizontal laser lines. */
-
-  /* RESPONSIVE COMPRESSION // MOBILE ALIGNMENT REACTOR (max-width: 768px) */
 .armillary-reactor-core {
-  margin-top: 100px !important; /* Păstrează perna de aer sub navbarul fix pe mobil */
-  margin-bottom: 40px !important; /* Compactează spațiul de jos pe ecrane scurte */
-  height: 260px !important; /* COMPRESIE MECANICĂ: Reduce înălțimea totală a zonei 3D pentru a opri strivirea verticală */
+  margin-top: 60px !important;    /* Reduce perna de aer pentru a ridica reactorul mai sus pe ecranele scurte de mobil */
+  margin-bottom: 20px !important; 
+  height: 240px !important;        /* Comprimă spațiul vertical al containerului 3D */
   scroll-margin-top: 180px !important;
   display: flex !important;
-  justify-content: center !important; /* Forțează centrarea absolută a întregului ansamblu 3D pe mijlocul ecranului */
+  justify-content: center !important; /* Forțează centrarea absolută a axei pe mijlocul ecranului */
   align-items: center !important;
-  width: 100% !important; /* Blochează lățimea containerului exact la dimensiunea ecranului telefonului */
-  overflow: hidden !important; /* Scut anti-fuga: taie orice pixel care ar încerca să decoleze pe lateral */
+  width: 100% !important;          /* Îngheață lățimea la exact 100% din ecranul fizic al telefonului */
+  position: relative !important;
 }
 
-/* POLYHEDRAL CORE COMPRESSION (Reducerea geometrică a diametrului) */
-.quantum-plasma-sphere,
+/* MICRO-SCALARE HARDWARE PE GPU (Strângerea conului de perspectivă 3D) */
+.quantum-plasma-sphere {
+  width: 260px !important;        /* Păstrăm dimensiunea ta nativă de bază pentru a nu deforma inelele */
+  height: 260px !important;       /* Menține raportul perfect de 1:1 */
+  
+  /* REPARAȚIE CRITICĂ: Aplicăm o scalare directă de 0.65 (reducere cu 35% a întregii matrici 3D).
+      Această instrucțiune forțează placa video a telefonului real să contracte proiecția spațială, 
+      trăgând Icosaedrul complet în ecran pe lateral și eliberând marginile! */
+  transform: scale(0.65) !important; 
+  transform-origin: center center !important; /* Asigură că micșorarea se face perfect spre interiorul nucleului */
+}
+
+/* Sincronizăm și inelele concentrice pentru a asigura o compresie unificată */
 .quantum-plasma-sphere .sphere-ring {
-  width: 200px !important;  /* CALIBRARE FINĂ: Coborâm diametrul de la 260px la 200px pentru a intra perfect pe ecranul mobil real */
-  height: 200px !important; /* Menține raportul perfect de 1:1, interzicând deformarea icosaedrului într-un ou */
+  width: 260px !important;
+  height: 260px !important;
 }
 
-
-  /* PARALLEL ALIGNMENT CAPSULES (Repositioning over the new compact equator node) */
-  .armillary-band-container {
-    width: 95% !important; /* Expands container boundaries to maximum limits to use horizontal screen real estate efficiently */
-  }
 
   /* Repositions the twin parallel bands exactly at the midpoint of the scaled 260px geometry (Preserving final overrides) */
   .macro-wrapper {
