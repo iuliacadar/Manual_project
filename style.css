@@ -3424,7 +3424,7 @@ pre::-webkit-scrollbar-thumb {
 .armillary-reactor-core {
   margin-top: 40px !important;    /* Ridică ansamblul mai sus pentru a elibera zona de jos */
   margin-bottom: 20px !important; 
-  height: 220px !important;        /* Comprimă spațiul vertical pentru a opri prăbușirea textului */
+  height: 380px !important;        /* Comprimă spațiul vertical pentru a opri prăbușirea textului */
   scroll-margin-top: 180px !important;
   display: flex !important;
   flex-direction: column !important; /* Aliază elementele pe verticală: textul sub sferă sau invers */
@@ -3451,27 +3451,6 @@ pre::-webkit-scrollbar-thumb {
   width: 260px !important;
   height: 260px !important;
 }
-
-/* --- REPARAREA TEXTELOR ȘI REZOLVAREA SUPRAPUNERII (PAGINA 9 DIN PDF) ---
-    Modificăm comportamentul textelor din Hero în interiorul query-ului pentru a permite 
-    ruperea rândurilor, eliminând retezarea brutală din flancuri! */
-.mission-status {
-  overflow-x: visible !important;  /* Dezactivează scroll-ul orizontal pe mobil */
-  width: 100% !important;
-  padding: 0 15px !important;      /* Perne laterale de aer pentru text */
-}
-
-.mission-status p,
-.stenciled-metal-text,
-.stenciled-metal-text-sub {
-  white-space: normal !important;   /* ZDROBEȘTE NOWRAP-UL: Permite textului să treacă pe rândul doi! */
-  word-wrap: break-word !important; /* Sparge cuvintele dacă depășesc ecranul telefonului */
-  text-align: center !important;    /* Centrează textul HUD perfect sub Icosaedru */
-  font-size: 0.85rem !important;    /* Ajustează lizibilitatea pe ecranul mobil real */
-  max-width: 100% !important;
-  display: block !important;
-}
-
 
   /* Repositions the twin parallel bands exactly at the midpoint of the scaled 260px geometry (Preserving final overrides) */
   .macro-wrapper {
@@ -3517,7 +3496,6 @@ pre::-webkit-scrollbar-thumb {
     into a rigid vertical stack. It permanently purges legacy viewport-height constraints 
     (wiping out 100vh collisions), enforces fluid scaling via "height: auto", decontaminates 
     nested teletype engines, and streamlines interactive tab menus for small viewports. */
-  /* ==========================================================================
 
   /* RESPONSIVE PROTOCOL // BLUEPRINT COMPRESSION
      Calibrating the recursive terminal for mobile screens (max-width: 768px). */
