@@ -3017,17 +3017,64 @@ pre::-webkit-scrollbar-thumb {
     de status pentru a garanta o experiență mobilă imună la overflow lateral.
    ========================================================================== */
 
-/* ==========================================================================
-    00.2.B.1. SCUTUL ANTI-OVERFLOW & CONSOLA HUD ORIZONTALĂ (max-width: 768px)
-      
-    REZUMAT: Acest district structural execută mutația genetică a layout-ului 
-    central pentru ecrane mici. El instalează scutul absolut de 100vw pentru a 
-    tăia jocul parazit orizontal al paginii mari, comprimă turnul sidebar într-o 
-    consolă fixă ultra-joasă de 48px poziționată sub navbar și deblochează tunelul 
-    de glisare tactilă orizontală a capitolelor prin ascunderea scrollbar-urilor [0.2].
-   ========================================================================== */
 
-@media screen and (max-width: 769px) {
+
+@media screen and (max-width: 768px) {
+/* =========================================================================
+    00.2.B.1. NAVIGATION COCKPIT & ANTI-OVERFLOW HUD SHIELD (max-width: 768px)
+        
+    REZUMAT: Acest district structural execută mutația genetică a layout-ului 
+    adaptată pentru ecranele mobile. Operează pe două niveluri tactice:
+    1. SISTEMUL DE NAVIGAȚIE COCKPIT: Rescalează și stabilizează structura bării
+        superioare, blocând logo-ul de identitate pe un singur rând și comprimând
+        spațiul dintre link-uri pentru a preveni fragmentarea ecranului.
+    2. SCUTUL ANTI-OVERFLOW ȘI CONSOLA HUD: Desfășoară scutul orizontal absolut de 100vw 
+        pentru a opri permanent derivarea paginii, comprimă structura verticală laterală 
+        într-o consolă fixă de profil redus de 48px fixată sub navbar-ul superior și 
+        deblochează banda tactilă orizontală prin suprimarea completă a baror de defilare.
+   ========================================================================= */
+
+/* --- SUB-DISTRICT 00.2.B.1.A: COCKPIT NAVIGATION DECK --- */
+/* Suprascrie marginile interioare ale containerului principal de navigație pe mobil */
+.navbar {
+  /* Reduce padding-ul lateral de la 40px la 16px pentru a câștiga lățime pe ecrane mici */
+  padding: 0 16px !important; 
+}
+
+/* Controlează animația de respirație a indicatorului vizual din logo-ul cockpit-ului */
+.logo {
+  /* Menține bucla nativă de pulsație activă, fără a deforma structura de bază */
+  animation: pulse 3s infinite; 
+}
+
+/* Modifică legătura structurală de text din interiorul elementului principal de logo */
+.logo a {
+  /* Micșorează fontul de la 1.1rem pentru a preveni colapsul structural pe mobile */
+  font-size: 0.85rem !important;      
+  /* Compactează subtil spațierea literelor pentru un aspect militar ultra-dens */
+  letter-spacing: 1px !important;     
+  /* BLOCARE CRITICĂ: Interzice browserului să rupă logo-ul în mod artificial pe două rânduri */
+  white-space: nowrap !important;     
+}
+
+/* Stabilizează containerul structural care reține link-urile volumelor frontend/database */
+.nav-links {
+  /* Comprimă spațiul dintre link-uri de la 30px la 12px ca să nu iasă din ecran în dreapta */
+  gap: 12px !important;               
+  /* Împinge automat întregul pachet de butoane către extremitatea dreaptă a ecranului */
+  margin-left: auto !important;       
+}
+
+/* Reguli aplicate elementelor individuale de tip text din interiorul meniului */
+.nav-links a {
+  /* Ajustează dimensiunea etichetelor de volum la o scară tactică optimizată pentru mobil */
+  font-size: 0.72rem !important;      
+  /* Restabilește lizibilitatea caracterelor conform tipografiei consolei de pe desktop */
+  letter-spacing: 1px !important;     
+}
+
+
+/* --- SUB-DISTRICT 00.2.B.1.B: SCUT ANTI-OVERFLOW ȘI CONSOLĂ HUD LATERALĂ --- */
   /* [PRO UX SECURITY] - Neutralizarea anomaliei de derivă orizontală)T */
   .log-layout {
     width: 100vw !important; /* Forțează layout-ul să aibă exact lățimea ecranului fizic */
@@ -3240,16 +3287,16 @@ pre::-webkit-scrollbar-thumb {
     white-space: nowrap !important; /* Interzice textului să se mai spargă pe verticală sau să se rupă */
   }
 
-  /* ==========================================================================
-    00.2.B.2. SEIFUL DE LECTURĂ ȘI AERISIREA TITLURILOR H3 (max-width: 768px)
-      
-    REZUMAT: Acest district izolează și decontaminează ierarhia tipografică a 
-    cronicilor zilnice pe ecrane înguste. El execută reparația salvatoare pentru 
-    titlurile metaforice ultra-lungi, comutând direcția Flexbox din linie în coloană, 
-    centrează axial antetele mari de secțiune pentru o simetrie perfectă și 
-    reconfigurează capsula de mobil a hărții pentru a preveni colapsul textului.
-   ========================================================================== */
-
+/* =========================================================================
+    00.2.B.2. GLOBAL TYPOGRAPHY SHIELD & TITLE RESTRUCTURING (max-width: 768px)
+        
+    REZUMAT: Acest district structural izolează, rescalează și decontaminează ierarhia 
+    tipografică pe întreaga punte de aterizare în cazul ecranelor mobile înguste. 
+    Operează pe două niveluri structurale distincte. Execută intervenția de layout pentru fișele cronicarului 
+        de zi prin schimbarea direcției Flexbox de la rând (row) la coloană (column) în cazul 
+      titlurilor ultra-lungi, centrează antetele de macro-categorii pentru simetrie și rescalează butoanele mapă.
+   ========================================================================= */
+/* --- SUB-DISTRICT 00.2.B.2.B: MICRO-TIPOGRAFIA FIȘELOR CRONICARULUI --- */
   /* REPARAREA ȘI AERISIREA TITLURILOR H3 (Suport pentru titluri metaforice ultra-lungi) */
   .log-entry h3 {
     display: flex !important; /* Păstrează sistemul Flexbox din desktop pentru aliniere structurală */
@@ -3342,7 +3389,7 @@ pre::-webkit-scrollbar-thumb {
     integritatea pașilor exacti ai animației typewriter ("steps") și deschide o 
     trapă de glisare internă orizontală pe mobil, eliminând complet clipirile distructive. */
 
-  /* --- 12. REPARAȚIE TEXT FLUID STATUS PE MOBIL/SPLIT --- */
+  /* ---  REPARAȚIE TEXT FLUID STATUS PE MOBIL/SPLIT --- */
   /* REGLAJ DE LĂȚIME PENTRU STATUSUL PE MOBIL:
       În loc să rupeți textul pe două rânduri, îi permitem barei de status 
       sa facă un micro-scroll intern dacă textul e prea lung, protejând pașii animației! */
@@ -3431,26 +3478,46 @@ pre::-webkit-scrollbar-thumb {
     width: 80% !important; /* Restrânge lungimea laserului la 80% pentru a nu străpunge inelele exterioare */
   }
 
-  /* --- REZUMAT ZONAL C: MATRICEA DE SCALARE TIPOGRAFICĂ ȘI HERO HUD (max-width: 768px) ---
-    Acest district controlează adaptarea elastică a tipografiei oțelite stenciled și a 
-    antetelor principale din secțiunea Hero. El implementează unitățile dinamice bazate 
-    pe lățimea fizică a viewportului (2.4vw) îmbinate cu plafoane fixe de 0.65rem, 
-    ajustează pernele laterale la 20px pe elementele macro și resetează marjele 
-    pentru a asigura o lizibilitate de înaltă rezoluție, imună la colaps vizual. */
+  /* --- ZONE SUMMARY C: TYPOGRAPHIC SCALING MATRIX & HERO HUD CONTROLS ---
+Acest district structural centralizează scalarea elastică a tipografiei grele din metal 
+și a structurilor de titlu părinte din secțiunea Hero. Acesta declanșează unități dinamice 
+de lățime a ecranului (2.4vw) fuzionate cu praguri rigide de 0.65rem, comprimă plicurile 
+orizontale până la 20px în layout-urile macro și elimină marginile browserului pentru a asigura 
+o urmărire a textului de înalt contrast, complet imună la scurgerile de decupare a layout-ului. */
 
-  /* SCALARE TEXT TITLU H1 (Păstrarea identității Space Grotesk) */
-  .stenciled-metal-text {
-    font-size: 1.15rem !important; /* Dimensiune optimă rigidă finală executată pentru lizibilitate pe ecrane înguste */
-    letter-spacing: 1px !important; /* Spațiere strânsă militară de interfață terminal */
-    border-right-width: 2px !important; /* Cursor subțire adaptat ecranului mic de mobil */
-  }
+/* RECALIBRAREA CONTAINERULUI MASTER HERO: COBORTAREA CENTRULUI DE GREUTATE */
+.hero {
+  /* Trece de la setările desktop la o aliniere centrată strâns a gridului de layout */
+  justify-content: center !important; 
+  /* Stabilește o demarcație de siguranță de 60px sub bara de navigație fixă superioară */
+  padding-top: 60px !important;       
+  /* Creează o zonă de compresie la bază pentru a trage și bloca textul direct pe ecuatorul icosaedrului */
+  padding-bottom: 20px !important;
+}
 
-  /* REPARAȚIE DISCRETĂ SUBTITLU (Subordonare optică perfectă pe un singur rând) */
-  .stenciled-metal-text-sub {
-    font-size: 0.65rem !important; /* Plafonul rigid de siguranță original din fabrică ce oprește overflow-ul */
-    letter-spacing: 0.5px !important; /* Spațiere micro-fină adaptată pentru textul monospațiat mobil */
-    border-right-width: 1px !important; /* Firul laser marginal al mașinii de scris compactat */
-  }
+/* SCALAREA TITLULUI STENCILED H1 (Menținând structurile native de layout Space Grotesk) */
+.stenciled-metal-text {
+  font-size: 1.12rem !important; /* Dimensiuni optime rigide blocate care asigură profile absolute de lizibilitate pe ecrane înguste */
+  letter-spacing: 1px !important; /* Spațiere tehnică întărită a rândurilor de comunicare, adaptată pentru terminalele de interfață */
+  display: inline-block !important;
+  white-space: nowrap !important; /* Interzice cu strictețe fragmentarea pe mai multe rânduri, forțând fluxul continuu de dactilografiere */
+  border-right-width: 1.5px !important; /* Cursor de urmărire mai subțire, ajustat pentru cadrele compacte ale ecranelor mici */
+  line-height: 1.1 !important; 
+  /* COMPRESIE INVIZIBILĂ: Prăbușește caseta verticală implicită a fontului pentru a mrgini 
+     strict literele mari, coborând tavanul inferior al matricei H1. */
+}
+
+/* CORECTAREA SUBTITLULUI DISCRET (Matrice impecabilă de subordonare optică) */
+.stenciled-metal-text-sub {
+  font-size: 0.65rem !important; /* Prag rigid de siguranță structurală aplicat pentru a preveni ruperile verticale */
+  letter-spacing: 0.5px !important; /* Aranjamente fine de spațiere tehnică a caracterelor telemetrice blocate de-a lungul rândurilor */
+  display: inline-block !important;
+  white-space: nowrap !important;
+  border-right-width: 1px !important; /* Execuție micro-fină a bordurii fontului pentru canalele de teletype mobile */
+  margin-top: -11px !important; 
+  /* LEVIER MECANIC: Desfășoară o tragere negativă rigidă pentru a suprascrie golurile native 
+     de bloc ale browserului, aducând șirul telemetric discret direct sub antetul principal. */
+}
 
   /* --- REZUMAT ZONAL D: ȘASIUL BLUEPRINT SPLIT-SCREEN (max-width: 768px) ---
     Acest district guvernează conversia ecranului recursiv într-o stivă verticală rigidă. 

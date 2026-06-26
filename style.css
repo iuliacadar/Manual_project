@@ -3083,16 +3083,62 @@ pre::-webkit-scrollbar-thumb {
     to secure an interface entirely immune to horizontal overflow leaks.
    ========================================================================== */
 
-/* ==========================================================================
-    00.2.B.1. ANTI-OVERFLOW SHIELD & HORIZONTAL HUD CONSOLE (max-width: 768px)
-      
-    SUMMARY: This structural district executes the genetic layout mutation 
-    tailored for mobile screens. It deploys the absolute 100vw horizontal shield 
-    to permanently halt general page drift, compresses the vertical aside hull 
-    into a fixed 48px low-profile console pinned beneath the top navbar, and 
-    unlocks the horizontal touch-swipe ribbon by completely suppressing scrollbars [0.2].
-   ========================================================================== */
+
 @media screen and (max-width: 768px) {
+/* =========================================================================
+    00.2.B.1. NAVIGATION COCKPIT & ANTI-OVERFLOW HUD SHIELD (max-width: 768px)
+        
+    SUMMARY: This structural district executes the genetic layout mutation 
+    tailored for mobile screens. It operates on two tactical levels:
+    1. COCKPIT NAVIGATION SYSTEM: Rescales and stabilizes the top navbar layout,
+        locking the identity logo onto a linear vector and compressing link spacing
+        to prevent viewport fracture.
+    2. SHIELD & HORIZONTAL HUD CONSOLE: Deploys the absolute 100vw horizontal shield 
+        to permanently halt general page drift, compresses the vertical aside hull 
+        into a fixed 48px low-profile console pinned beneath the top navbar, and 
+        unlocks the horizontal touch-swipe ribbon by completely suppressing scrollbars.
+   ========================================================================= */
+
+/* --- SUB-DISTRICT 00.2.B.1.A: COCKPIT NAVIGATION DECK --- */
+/* Overrides the main navigation container padding for mobile screen optimization */
+.navbar {
+  /* Shrinks side padding from 40px to 16px to maximize horizontal space on narrow screens */
+  padding: 0 16px !important; 
+}
+
+/* Controls the breathing animation of the cockpit logo indicator */
+.logo {
+  /* Keeps the native desktop pulsing loop active without core layout deformation */
+  animation: pulse 3s infinite; 
+}
+
+/* Targets the core structural text link inside the main logo element */
+.logo a {
+  /* Scales text down from 1.1rem to fit smaller mobile viewports safely */
+  font-size: 0.85rem !important;      
+  /* Tightens horizontal text tracking slightly for ultra-compact military styling */
+  letter-spacing: 1px !important;     
+  /* CRITICAL LOCK: Forcibly bans the browser from wrapping the logo into two broken lines */
+  white-space: nowrap !important;     
+}
+
+/* Stabilizes the structural container holding FRONTEND and DATABASE volume links */
+.nav-links {
+  /* Compresses spacing between links from 30px to 12px to prevent right-side clipping */
+  gap: 12px !important;               
+  /* Automatically pushes the entire link cluster to the maximum right port of the screen */
+  margin-left: auto !important;       
+}
+
+/* Rules applied to individual volume text items inside the navigation tray */
+.nav-links a {
+  /* Shrinks volume text labels to a tactical size optimized for mobile grid scaling */
+  font-size: 0.72rem !important;      
+  /* Restores explicit character mapping to match the main desktop console typography */
+  letter-spacing: 1px !important;     
+}
+
+/* --- SUB-DISTRICT 00.2.B.1.B: ANTI-OVERFLOW HUD SHIELD & ASIDE CONSOLE --- */
   /* [PRO UX SECURITY] - NEUTRALIZING HORIZONTAL DRIFT ANOMALY */
   .log-layout {
     width: 100vw !important; /* Forces layout to exactly match the physical screen width */
@@ -3500,25 +3546,46 @@ pre::-webkit-scrollbar-thumb {
   }
 
   /* --- ZONE SUMMARY C: TYPOGRAPHIC SCALING MATRIX & HERO HUD CONTROLS ---
-    This structural district centralizes the elastic scaling of the heavy stenciled metal 
-    typography and parent heading hulls within the Hero section. It triggers dynamic 
-    viewport width units (2.4vw) fused with rigid 0.65rem thresholds, tightens horizontal 
-    packing envelopes down to 20px on macro layouts, and purges browser margins to secure 
-    high-contrast text tracking entirely immune to layout clipping leaks. */
+This structural district centralizes the elastic scaling of the heavy stenciled metal 
+typography and parent heading hulls within the Hero section. It triggers dynamic 
+viewport width units (2.4vw) fused with rigid 0.65rem thresholds, tightens horizontal 
+packing envelopes down to 20px on macro layouts, and purges browser margins to secure 
+high-contrast text tracking entirely immune to layout clipping leaks. */
 
-  /* STENCILED HEADING H1 SCALING (Sustaining native Space Grotesk layout structures) */
-  .stenciled-metal-text {
-    font-size: 1.15rem !important; /* Locked rigid optimal dimensions ensuring absolute narrow viewport legibility profiles */
-    letter-spacing: 1px !important; /* Hardened technical communication row spacing custom tailored for interface terminals */
-    border-right-width: 2px !important; /* Thinner tracking cursor adjusted for compact small display frames */
-  }
+/* MASTER HERO CONTAINER RECALIBRATION: DROPPING VERTICAL CENTER OF GRAVITY */
+.hero {
+  /* Shifts from desktop flex row settings to a tight centered layout grid alignment */
+  justify-content: center !important; 
+  /* Establishes a localized 60px baseline clearance beneath the fixed top navigation bar */
+  padding-top: 60px !important;       
+  /* Creates a bottom compression cushion to pull and lock text directly onto the icosahedron equator */
+  padding-bottom: 20px !important;
+}
 
-  /* DISCRETE SUBTITLE FINE OVERRIDE TRACE (Flawless optical subordination matrix) */
-  .stenciled-metal-text-sub {
-    font-size: 0.65rem !important; /* Rigid structural layout safety ceiling threshold applied to prevent vertical breaks */
-    letter-spacing: 0.5px !important; /* Fine technical telemetry character spacing arrangements locked along rows */
-    border-right-width: 1px !important; /* Micro-fine font border execution for mobile teletype channels */
-  }
+/* STENCILED HEADING H1 SCALING (Sustaining native Space Grotesk layout structures) */
+.stenciled-metal-text {
+  font-size: 17px !important; /* Locked rigid optimal dimensions ensuring absolute narrow viewport legibility profiles */
+  letter-spacing: 0px !important; /* Hardened technical communication row spacing custom tailored for interface terminals */
+  display: inline-block !important;
+  white-space: nowrap !important; /* Rigidly forbids multi-line fragmentation, forcing continuous typewriter flow */
+  border-right-width: 1.5px !important; /* Thinner tracking cursor adjusted for compact small display frames */
+  /* COLLAPSE GAIN: Compresses the phantom vertical typography box to strictly bound 
+     the high-contrast letterheads, lowering the lower ceiling of the H1 matrix. */
+}
+
+
+/* DISCRETE SUBTITLE FINE OVERRIDE TRACE (Flawless optical subordination matrix) */
+.stenciled-metal-text-sub {
+  font-size: 11px !important; /* Rigid structural layout safety ceiling threshold applied to prevent vertical breaks */
+  letter-spacing: 0px !important; /* Fine technical telemetry character spacing arrangements locked along rows */
+  display: inline-block !important;
+  white-space: nowrap !important;
+  border-right-width: 1px !important; /* Micro-fine font border execution for mobile teletype channels */
+  margin-top: -11px !important; 
+  /* MECHANICAL LEVER: Deploys a rigid negative offset pull to override native browser 
+     block gaps, drawing the discrete telemetry string directly under the primary header. */
+}
+
 
   /* --- ZONE SUMMARY D: BLUEPRINT SPLIT-SCREEN CHASSIS & STACKING ---
     This final structural district drives the conversion of the recursive blueprint screen 
