@@ -2863,7 +2863,22 @@ pre::-webkit-scrollbar-thumb {
     redundant override code blocks. We write a clean architecture based on Spatial Isolation!
    ========================================================================== */
 
-@media (min-width: 769px) {
+/* 
+    MEDIA DIRECTION PIPELINE: @media screen and (...)
+    
+    EN: Upgrading from a generic "@media (condition)" layout to an explicit 
+    "@media screen and (condition)" is a strict requirement for W3C engineering standards.
+    
+    WITHOUT THE "SCREEN" FILTER: The responsive rules would deploy unconditionally 
+    across all media types—including physical paper PRINT passes—forcing local print 
+    spoolers to ink heavy space-black backgrounds and active 3D meshes, wasting resources.
+    
+    WITH THE "SCREEN AND" FILTER: We explicitly instruct the browser to inject 
+    3D matrices, neon glows, and responsive overrides EXCLUSIVELY onto digital displays 
+    (monitors, laptops, Xiaomi mobile screens), cleanly decoupling layout performance 
+    and showcasing professional architectural awareness for technical recruiters.
+*/
+@media screen and (min-width: 769px) {
   /* 1. GLOBAL PARENT GRID CONTAINER (Arranges the log screen into two columns) */
   .log-layout {
     display: grid; /* Activates high-precision Grid Layout subsystem properties */
@@ -3077,8 +3092,7 @@ pre::-webkit-scrollbar-thumb {
     into a fixed 48px low-profile console pinned beneath the top navbar, and 
     unlocks the horizontal touch-swipe ribbon by completely suppressing scrollbars [0.2].
    ========================================================================== */
-
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   /* [PRO UX SECURITY] - NEUTRALIZING HORIZONTAL DRIFT ANOMALY */
   .log-layout {
     width: 100vw !important; /* Forces layout to exactly match the physical screen width */
@@ -3422,35 +3436,50 @@ pre::-webkit-scrollbar-thumb {
     new compact equator (top: 120px/175px) while embedding horizontal laser lines. */
 
 .armillary-reactor-core {
-  margin-top: 40px !important;    /* Ridică ansamblul mai sus pentru a elibera zona de jos */
+  /* Allocates a fixed 40px top air gap to clear operational layout real estate above the module */
+  margin-top: 40px !important;    
+  /* Establishes a 20px physical safety margin buffer at the base to prevent trailing asset collisions */
   margin-bottom: 20px !important; 
-  height: 380px !important;        /* Comprimă spațiul vertical pentru a opri prăbușirea textului */
+  /* Freezes total vertical layout depth to exactly 380px to contain all nested components inside */
+  height: 380px !important;        
+  /* Sustains a 180px anchor landing offset to shield the header from dynamic viewport HUD masking */
   scroll-margin-top: 180px !important;
+  /* Boots up the horizontal/vertical Flexbox engine for absolute internal item coordination */
   display: flex !important;
-  flex-direction: column !important; /* Aliază elementele pe verticală: textul sub sferă sau invers */
+  /* Arranges stacked internal layers vertically down the screen centerline grid */
+  flex-direction: column !important; 
+  /* Geometrically balances inner layout containers along the vertical center axis of the 380px block */
   justify-content: center !important; 
-  align-items: center !important;  /* Centrează perfect tot nucleul pe mijlocul ecranului mobil */
+  /* Enforces complete horizontal center alignment across the mobile device canvas bounds */
+  align-items: center !important;  
+  /* Forces the component footprint width to occupy precisely 100% of the horizontal screen area */
   width: 100% !important;          
+  /* Installs a relative coordinate root matrix to act as a rigid parent container for nested layers */
   position: relative !important;
 }
 
-/* RECREEREA NUCLEULUI: Repornirea rotației și scalarea nativă */
+/* POLYHEDRAL CORE COMPRESSION and CONCENTRIC RINGS (The duplicate-saving fusion) */
 .quantum-plasma-sphere {
-  width: 260px !important;        /* Păstrează dimensiunile tale originale */
+  /* Retains your original native 260px width parameter mapped within baseline frameworks */
+  width: 260px !important;        
+  /* Locks structural height bounds to 260px to secure an unwarped 1:1 proportion ratio */
   height: 260px !important;       
   
-  /* REPARAȚIE SUPREMĂ DE ROTAȚIE: Ștergem transform: scale! 
-      Folosim proprietatea independentă 'scale' la 0.55 (reducere la aproape jumătate).
-      Icosaedrul va reîncepe să se rotească instantaneu la 60 FPS, complet retras în interiorul ecranului! */
+  /* Triggers a 55% scale compression directly inside VRAM, allowing 3D transforms to spin unhindered */
   scale: 0.55 !important; 
+  /* Locks the operational scale contraction centerpoint right onto the geometric core midpoint */
   transform-origin: center center !important;
 }
 
-/* Sincronizăm inelele cu noua scară hardware */
+/* Syncing the rings with the new hardware scale */
 .quantum-plasma-sphere .sphere-ring {
+  /* Freezes the concentric ring width boundary at 260px to maintain edge grid alignment */
   width: 260px !important;
+  /* Freezes the concentric ring height boundary at 260px to bar ellipse layout warping anomalies */
   height: 260px !important;
 }
+
+
 
   /* Repositions the twin parallel bands exactly at the midpoint of the scaled 260px geometry (Preserving final overrides) */
   .macro-wrapper {
@@ -3548,7 +3577,7 @@ pre::-webkit-scrollbar-thumb {
   }
 
   /* RECURSIVE EMERGENCY INTERVENTION NODE: MOBILE ANTI-STACKING SHIELD MATRIX
-     Injected directly inside the overarching @media (max-width: 768px) media query block */
+     Injected directly inside the overarching @media screen and (max-width: 768px) media query block */
   .panel .mission-status p,
   .blueprint-layout .mission-status p {
     white-space: nowrap !important; /* TOTAL SUPPRESSION: Vaporizes normal/wrap directives on phone screens, locking typewriter steps curves safely! */

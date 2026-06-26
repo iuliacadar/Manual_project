@@ -2814,7 +2814,22 @@ pre::-webkit-scrollbar-thumb {
     redundant de anulare. Proiectăm o arhitectură curată bazată pe Izolare Contextuală!
    ========================================================================== */
 
-@media (min-width: 769px) {
+/* 
+    DIRECTIVA MEDIA MONITORIZATĂ: @media screen and (...)
+    
+    RO: Trecerea de la "@media (condiție)" simplu la "@media screen and (condiție)" 
+    reprezintă o optimizare ierarhică obligatorie pentru standardele W3C. 
+    
+    FĂRĂ FILTRUL "SCREEN": Regulile de mobil sau desktop s-ar activa pe absolut orice 
+    mediu (inclusiv când utilizatorul încearcă să PRINTEZE pagina pe hârtie), forțând 
+    imprimanta să randeze fundaluri negre masive și animații 3D, golind cartușele de cerneală.
+    
+    CU FILTRUL "SCREEN AND": Îi ordonăm explicit browserului să execute matricile 3D, 
+    umbrele neon și calibrările responsive EXCLUSIV pe ecrane digitale (telefoane Xiaomi, 
+    monitoare, tablete), izolând complet procesul de randare și securizând o structură 
+    semantică curată pentru portofoliu.
+ */
+@media screen and (min-width: 769px) {
   /* 1. CONTAINERUL PARENT GLOBAL (Organizează ecranul logurilor în două coloane) */
   .log-layout {
     display: grid; /* Activează sistemul de Grilă structurală (Grid Layout) pe monitoare mari */
@@ -3012,7 +3027,7 @@ pre::-webkit-scrollbar-thumb {
     de glisare tactilă orizontală a capitolelor prin ascunderea scrollbar-urilor [0.2].
    ========================================================================== */
 
-@media (max-width: 768px) {
+@media screen and (max-width: 769px) {
   /* [PRO UX SECURITY] - Neutralizarea anomaliei de derivă orizontală)T */
   .log-layout {
     width: 100vw !important; /* Forțează layout-ul să aibă exact lățimea ecranului fizic */
@@ -3353,27 +3368,50 @@ pre::-webkit-scrollbar-thumb {
     recalibrează distanțele superioare la 100px și fuzionează capsulele de aliniere 
     paralelă pe noul ecuator compact (top: 120px/175px), integrând fasciculele laser. */
 
-  /* RESPONSIVE COMPRESSION // MOBILE ALIGNMENT REACTOR (max-width: 768px) */
   .armillary-reactor-core {
-    margin-top: 100px !important; /* Pernă de aer controlată sub navbar-ul fix pe mobil pentru a bloca suprapunerile */
-    margin-bottom: 80px !important; /* Pernă inferioară redusă pentru ecrane scurte pentru a strânge layout-ul vertical */
-    height: 340px !important; /* Compactare mecanică: reține întregul reactor în interiorul ecranului telefonului */
-    scroll-margin-top: 180px !important; /* Amortizor de oprire fluidă la click pe logo legat direct de script.js */
-  }
+  /* Fixează o pernă de aer superioară de 40px pentru a debloca zona de deasupra containerului */
+  margin-top: 40px !important;    
+  /* Lasă un spațiu de siguranță de 20px în subsol pentru a nu se lipi de elementul următor */
+  margin-bottom: 20px !important; 
+  /* Îngheață înălțimea totală la 380px pentru a asigura un volum fix pe verticală */
+  height: 380px !important;        
+  /* Menține o zonă de buffer de 180px în timpul navigării prin ancore pentru a evita mascarea HUD-ului */
+  scroll-margin-top: 180px !important;
+  /* Activează motorul Flexbox pentru alinierea controlată a elementelor interioare */
+  display: flex !important;
+  /* Ordonează elementele vertical, înșiruind textul și sferă unul sub celălalt */
+  flex-direction: column !important; 
+  /* Centrează geometric toate componentele pe axa verticală în interiorul celor 380px */
+  justify-content: center !important; 
+  /* Aliniază toate formele perfect pe centrul orizontal al ecranului dispozitivului mobil */
+  align-items: center !important;  
+  /* Forțează lățimea containerului să ocupe exact 100% din ecranul fizic disponibil */
+  width: 100% !important;          
+  /* Deschide un context de coordonate relativ, devenind ancoră rigidă pentru elementele din interior */
+  position: relative !important;
+}
 
-  /* COMPRESIE CORE POLIEDRIC ȘI INELE CONCENTRICE (Fuziunea salvatoare a duplicatelor) */
-  /* Rezolvăm coliziunea din VS Code: forțăm o cotă unică simetrică de 260px pe ambele piese, 
-     eliminând riscul ca inelele interioare să se decaleze sau să se turtească sub formă de ou! */
-  .quantum-plasma-sphere,
-  .quantum-plasma-sphere .sphere-ring {
-    width: 260px !important; /* Reducem dimensiunea miezului geodezic pentru a proteja marginile display-ului mobil */
-    height: 260px !important; /* Păstrează raportul de aspect perfect 1:1, salvând adâncimea formatului preserve-3d */
-  }
+/* RECREEREA NUCLEULUI: Repornirea rotației și scalarea nativă */
+.quantum-plasma-sphere {
+  /* Menține lățimea originală de 260px mapată din codul tău de bază din fabrică */
+  width: 260px !important;        
+  /* Menține înălțimea originală de 260px pentru a securiza un raport perfect de aspect 1:1 */
+  height: 260px !important;       
+  
+  /* Reduce dimensiunea întregii matrici 3D la 55% direct pe placa video, fără a bloca animațiile de transform-rotate */
+  scale: 0.55 !important; 
+  /* Îngheață punctul de origine al micșorării exact pe centrul geometric al nucleului */
+  transform-origin: center center !important;
+}
 
-  /* CAPSULELE DE ALINIERE PARALELĂ (Lărgirea containerului la maximum pe mobil) */
-  .armillary-band-container {
-    width: 95% !important; /* Deschide inelele exterioare pe 95% din lățime pentru a folosi spațiul util */
-  }
+/* Sincronizăm inelele cu noua scară hardware */
+.quantum-plasma-sphere .sphere-ring {
+  /* Blochează lățimea inelului concentric la 260px pentru a asigura coincidența perfectă a marginilor */
+  width: 260px !important;
+  /* Blochează înălțimea inelului concentric la 260px, interzicând apariția deformărilor eliptice */
+  height: 260px !important;
+}
+
 
   /* Repoziționăm cele două benzi perfect paralele la mijlocul figurii reduse de 260px */
   .macro-wrapper {
@@ -3469,7 +3507,7 @@ pre::-webkit-scrollbar-thumb {
   }
 
   /* INTERVENȚIE RECURSIVĂ DE URGENȚĂ: SCUT DE MOBIL ANTI-STIVUIRE
-     Injectat direct în interiorul query-ului @media (max-width: 768px) */
+     Injectat direct în interiorul query-ului @media screen and (max-width: 768px) */
   .panel .mission-status p,
   .blueprint-layout .mission-status p {
     white-space: nowrap !important; /* REPRIMARE TOTALĂ: Nimicește directiva normal/wrap pe telefoane, salvând pașii steps() ai mașinii de scris! */
