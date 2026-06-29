@@ -3353,43 +3353,50 @@ pre::-webkit-scrollbar-thumb {
     white-space: nowrap !important; /* STRICT UX SHIELD: Strictly bars text communication strings from vertical fracturing leaks */
   }
 
-  /* ==========================================================================
+/* ==========================================================================
     00.2.B.2. READING VANS & TITLE RESTRUCTURING SHIELD (max-width: 768px)
-      
+        
     SUMMARY: This structural district isolates and decontaminates the typographic 
-    hierarchy of day chronicler sheets across narrow mobile screens. It triggers 
-    the critical layout intervention for ultra-long metaphorical headings by 
-    shifting the Flexbox direction from row to column, centers macro category 
-    headers for symmetry, and scales the map button capsule to block clipping.
-   ========================================================================== */
+    hierarchy of day chronicler sheets and volume sections across narrow mobile screens. 
+    It triggers the critical layout intervention for ultra-long metaphorical headings by 
+    shifting the Flexbox direction from row to column, dynamically scales macro category 
+    headers to compress bloated scales, centers them for visual symmetry, and handles 
+    the map button capsule scaling to block viewport clipping leaks.
+========================================================================== */
 
   /*RESTRUCTURING AND DECOMPRESSING H3 HEADINGS (Support for ultra-long metaphorical titles) */
-  .log-entry h3 {
-    display: flex !important; /* Retains the desktop Flexbox layout engine for structural alignment */
+  /* COMPACT MATRIX SCALING FOR CHAPTER HEADINGS (H3) */
+.log-entry h3 {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 6px !important; /* Shrunk from 8px to 6px to pull the descriptive text closer */
+  flex-wrap: wrap !important;
+  /* COMPRESSION CRITERIA: Scaled down from 1.1rem to 0.95rem to stop layout crowding */
+  font-size: 0.95rem !important; 
+  /* Tightens horizontal typography grid tracking to maintain a sharp military console profile */
+  letter-spacing: 0.5px !important; 
+  line-height: 1.2 !important;
+  border-bottom: 1px solid rgba(167, 243, 208, 0.1) !important;
+  padding-bottom: 8px !important; /* Reduced padding from 10px to 8px for structural economy */
+  width: 100% !important;
+}
 
-    /* CRUCIAL LAYOUT INTERVENTION FOR MOBILE/SPLIT STATES: Shifts layout flow from row to column!
-        This automatically drops the LONG metaphorical title directly BENEATH the pink "Day 09" string, 
-        allocating 100% usable horizontal width to prevent visual compaction or rows fracturing! */
-    flex-direction: column !important;
-    align-items: flex-start !important; /* Flushes both typography blocks (day ID and naming strings) to the portside margin */
-    gap: 8px !important; /* Establishes a clean 8px vertical air gap buffer separating day from description */
-    flex-wrap: wrap !important; /* Allows alphanumeric text strings to run freely based on local screen limits */
-    font-size: 1.1rem !important; /* Original sharp compact typographic footprint optimized for radar screen interfaces */
-    border-bottom: 1px solid rgba(167, 243, 208, 0.1) !important; /* Micro-fine lower boundary wire tracing technical limits */
-    padding-bottom: 10px !important; /* Expanded vertical padding cushion to secure an airy visual balance barrier */
-    width: 100% !important; /* Consumes 100% internal matrix horizontal capacity of the mobile log capsule */
-  }
+/* COMPACT TELEMETRY PARAGRAPH MATRIX CONTROL (<p>) */
+.log-entry p {
+  /* SCATION MATRIX REDUCTION: Downscaled to 0.76rem for a crisp, dense reading van execution */
+  font-size: 0.76rem !important;
+  /* CRITICAL MOBILE INTERVENTION: Reduces loose desktop tracking down to a compact 0.2px edge */
+  letter-spacing: 0.2px !important;
+  /* LINE BREAK CLOSURE: Drops from loose desktop line-height down to 1.35 to cluster rows together */
+  line-height: 1.35 !important;
+  /* Word and tracking fine alignment rules keeping blocks dense and unified */
+  word-spacing: -0.3px !important;
+  opacity: 0.75 !important; /* Visual subordination index to elevate the neon H3 identifier */
+  margin-top: 10px !important; /* Balanced air buffer to breathe below the heading floor */
+  margin-bottom: 15px !important; /* Structural escape padding separating text from the button capsule */
+}
 
-  /* Esthetic correction for the metaphorical trailing text on the right (mutated into a bottom description string) */
-  .log-entry h3 .meta-title {
-    font-size: 0.9rem !important; /* Incrementally elevates font dimensions to guarantee absolute mobile readability profiles */
-    color: var(
-      --solar-mint
-    ) !important; /* Sustains text illumination wavelengths directly onto active green system phosphors */
-    letter-spacing: 1px !important; /* Sharp standardized technical letter spacing tracking deployed across strings */
-    width: 100% !important; /* Forces the element node to declare absolute independence on its trailing bottom row */
-    text-align: left !important; /* Crisp portside visual alignment directly beneath the primary active day ID */
-  }
 
   /* SYMMETRICAL CATEGORY HEADER CENTERING ON MOBILE VIEWPORTS */
   .category-header {
@@ -3397,6 +3404,23 @@ pre::-webkit-scrollbar-thumb {
     padding-bottom: 30px; /* Fine technical vertical air cushion padding layer beneath the macro heading strings */
     text-align: center; /* Achieves absolute horizontal layout centering to lock in flawless small screen symmetry */
   }
+
+  /* CATEGORY TITLE H2 SCALING (Compacting wide layout typography) */
+.category-header h2 {
+  font-size: 1.55rem !important; /* Compresses font metrics from bloated desktop ratios to avoid viewport crowding */
+  letter-spacing: 1px !important; /* Stabilizes military-grade structural alignment across small display grids */
+  line-height: 1.2 !important; /* Closes character bounding boxes to maintain tightly nested layout rows */
+  margin-bottom: 12px !important; /* Explicit tactical margin gap enforcing safety clearance above paragraph descriptors */
+}
+
+/* DISCRETE CATEGORY SUBTITLE COMPRESSION (Flawless fluid responsive boundary) */
+.category-header p {
+  font-size: 0.78rem !important; /* Downscales technical micro-telemetry string size for handheld scanning comfort */
+  line-height: 1.4 !important; /* Grants breathing capacity to long phrases splitting into dual rows under stress */
+  max-width: 85% !important; /* Constrains line length to lock text blocks into a clean central focal core */
+  margin: 0 auto !important; /* Secures absolute horizontal center compliance inside parent container dimensions */
+  opacity: 0.8 !important; /* Structural optical subordination mapping relative to the primary H2 element */
+}
 
   /* ==========================================================================
     00.2.B.3. CLICK LANDING BUFFER & ANTI-DEBRIS SHIELDING ARRAYS

@@ -120,9 +120,8 @@ html {
   max-width: 100% !important; /* Scut rigid: blochează extinderea structurală dincolo de marginile display-ului */
 
   -webkit-text-size-adjust: 100%; /* Oprește iOS de la mărirea parazită a fontului */
-  text-size-adjust: 100%;         /* Oprește Android de la deformarea textului */
+  text-size-adjust: 100%; /* Oprește Android de la deformarea textului */
 }
-
 
 /* CORPUL CENTRAL AL NAVEI (Puntea de control Body) */
 body {
@@ -2200,13 +2199,20 @@ pre::-webkit-scrollbar-thumb {
     Reparația geometrică aplică culoarea roz exclusiv pe sub-proprietățile de top și bottom 
     ale bordurilor, păstrând flancurile laterale transparente pentru a NU strica forma de icosaedru! */
 .armillary-reactor-core:hover .face {
-  border-color: var(--nebula-pink) !important;        /* Comută culoarea de bază pe lungimea de undă roz-magenta */
-  border-bottom-color: var(--nebula-pink) !important; /* Aprinde baza triunghiurilor orientate în sus, fără reflow */
-  border-top-color: var(--nebula-pink) !important;    /* Aprinde tavanul triunghiurilor răsturnate, menținând unghiurile ascuțite */
-  border-style: solid !important;                     /* Securizează liniile laser continue, interzicând fragmentările grafice */
-  opacity: 0.95 !important;                           /* Ridică intensitatea vizuală la 95% pentru o textură sticloasă premium */
+  border-color: var(
+    --nebula-pink
+  ) !important; /* Comută culoarea de bază pe lungimea de undă roz-magenta */
+  border-bottom-color: var(
+    --nebula-pink
+  ) !important; /* Aprinde baza triunghiurilor orientate în sus, fără reflow */
+  border-top-color: var(
+    --nebula-pink
+  ) !important; /* Aprinde tavanul triunghiurilor răsturnate, menținând unghiurile ascuțite */
+  border-style: solid !important; /* Securizează liniile laser continue, interzicând fragmentările grafice */
+  opacity: 0.95 !important; /* Ridică intensitatea vizuală la 95% pentru o textură sticloasă premium */
   animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important; /* Rulează pulsația fluidă non-distructivă la 1.8s */
-  will-change: transform, opacity;                    /* SCUTUL GPU: Izolează fețele 3D pe un strat hardware separat în VRAM */
+  will-change:
+    transform, opacity; /* SCUTUL GPU: Izolează fețele 3D pe un strat hardware separat în VRAM */
 }
 
 /* --- C. INTERVENȚIE LASER PENTRU RECTIFICAREA FIGURII DIN RECURSIVE-BLUEPRINT.HTML ---
@@ -2214,15 +2220,21 @@ pre::-webkit-scrollbar-thumb {
     dar legate ombilical de containerul macroscopic `.recursive-reactor-wrapper` din split-screen.
     Ridicarea specificității prin această clasă unică zdrobește cascada și forțează simetria 1:1. */
 .recursive-reactor-wrapper:hover .face {
-  border-color: var(--nebula-pink) !important;        /* Comută culoarea de bază pe lungimea de undă roz-magenta */
-  border-bottom-color: var(--nebula-pink) !important; /* Aprinde baza triunghiurilor orientate în sus, fără reflow */
-  border-top-color: var(--nebula-pink) !important;    /* Aprinde tavanul triunghiurilor răsturnate, menținând unghiurile ascuțite */
-  border-style: solid !important;                     /* Securizează liniile laser continue, interzicând fragmentările grafice */
-  opacity: 0.95 !important;                           /* Ridică intensitatea vizuală la 95% pentru o textură sticloasă premium */
+  border-color: var(
+    --nebula-pink
+  ) !important; /* Comută culoarea de bază pe lungimea de undă roz-magenta */
+  border-bottom-color: var(
+    --nebula-pink
+  ) !important; /* Aprinde baza triunghiurilor orientate în sus, fără reflow */
+  border-top-color: var(
+    --nebula-pink
+  ) !important; /* Aprinde tavanul triunghiurilor răsturnate, menținând unghiurile ascuțite */
+  border-style: solid !important; /* Securizează liniile laser continue, interzicând fragmentările grafice */
+  opacity: 0.95 !important; /* Ridică intensitatea vizuală la 95% pentru o textură sticloasă premium */
   animation: lightning-glow-fusion 1.8s infinite alternate ease-in-out !important; /* Rulează pulsația fluidă non-distructivă la 1.8s */
-  will-change: transform, opacity;                    /* SCUTUL GPU: Izolează fețele 3D pe un strat hardware separat în VRAM */
+  will-change:
+    transform, opacity; /* SCUTUL GPU: Izolează fețele 3D pe un strat hardware separat în VRAM */
 }
-
 
 /* --- 5. STRATURILE HUD ECUATORIALE (Inelele Concentrice ale Astrolabului) --- */
 .armillary-band-container {
@@ -3017,10 +3029,8 @@ pre::-webkit-scrollbar-thumb {
     de status pentru a garanta o experiență mobilă imună la overflow lateral.
    ========================================================================== */
 
-
-
 @media screen and (max-width: 768px) {
-/* =========================================================================
+  /* =========================================================================
     00.2.B.1. NAVIGATION COCKPIT & ANTI-OVERFLOW HUD SHIELD (max-width: 768px)
         
     REZUMAT: Acest district structural execută mutația genetică a layout-ului 
@@ -3034,47 +3044,46 @@ pre::-webkit-scrollbar-thumb {
         deblochează banda tactilă orizontală prin suprimarea completă a baror de defilare.
    ========================================================================= */
 
-/* --- SUB-DISTRICT 00.2.B.1.A: COCKPIT NAVIGATION DECK --- */
-/* Suprascrie marginile interioare ale containerului principal de navigație pe mobil */
-.navbar {
-  /* Reduce padding-ul lateral de la 40px la 16px pentru a câștiga lățime pe ecrane mici */
-  padding: 0 16px !important; 
-}
+  /* --- SUB-DISTRICT 00.2.B.1.A: COCKPIT NAVIGATION DECK --- */
+  /* Suprascrie marginile interioare ale containerului principal de navigație pe mobil */
+  .navbar {
+    /* Reduce padding-ul lateral de la 40px la 16px pentru a câștiga lățime pe ecrane mici */
+    padding: 0 16px !important;
+  }
 
-/* Controlează animația de respirație a indicatorului vizual din logo-ul cockpit-ului */
-.logo {
-  /* Menține bucla nativă de pulsație activă, fără a deforma structura de bază */
-  animation: pulse 3s infinite; 
-}
+  /* Controlează animația de respirație a indicatorului vizual din logo-ul cockpit-ului */
+  .logo {
+    /* Menține bucla nativă de pulsație activă, fără a deforma structura de bază */
+    animation: pulse 3s infinite;
+  }
 
-/* Modifică legătura structurală de text din interiorul elementului principal de logo */
-.logo a {
-  /* Micșorează fontul de la 1.1rem pentru a preveni colapsul structural pe mobile */
-  font-size: 0.85rem !important;      
-  /* Compactează subtil spațierea literelor pentru un aspect militar ultra-dens */
-  letter-spacing: 1px !important;     
-  /* BLOCARE CRITICĂ: Interzice browserului să rupă logo-ul în mod artificial pe două rânduri */
-  white-space: nowrap !important;     
-}
+  /* Modifică legătura structurală de text din interiorul elementului principal de logo */
+  .logo a {
+    /* Micșorează fontul de la 1.1rem pentru a preveni colapsul structural pe mobile */
+    font-size: 0.85rem !important;
+    /* Compactează subtil spațierea literelor pentru un aspect militar ultra-dens */
+    letter-spacing: 1px !important;
+    /* BLOCARE CRITICĂ: Interzice browserului să rupă logo-ul în mod artificial pe două rânduri */
+    white-space: nowrap !important;
+  }
 
-/* Stabilizează containerul structural care reține link-urile volumelor frontend/database */
-.nav-links {
-  /* Comprimă spațiul dintre link-uri de la 30px la 12px ca să nu iasă din ecran în dreapta */
-  gap: 12px !important;               
-  /* Împinge automat întregul pachet de butoane către extremitatea dreaptă a ecranului */
-  margin-left: auto !important;       
-}
+  /* Stabilizează containerul structural care reține link-urile volumelor frontend/database */
+  .nav-links {
+    /* Comprimă spațiul dintre link-uri de la 30px la 12px ca să nu iasă din ecran în dreapta */
+    gap: 12px !important;
+    /* Împinge automat întregul pachet de butoane către extremitatea dreaptă a ecranului */
+    margin-left: auto !important;
+  }
 
-/* Reguli aplicate elementelor individuale de tip text din interiorul meniului */
-.nav-links a {
-  /* Ajustează dimensiunea etichetelor de volum la o scară tactică optimizată pentru mobil */
-  font-size: 0.72rem !important;      
-  /* Restabilește lizibilitatea caracterelor conform tipografiei consolei de pe desktop */
-  letter-spacing: 1px !important;     
-}
+  /* Reguli aplicate elementelor individuale de tip text din interiorul meniului */
+  .nav-links a {
+    /* Ajustează dimensiunea etichetelor de volum la o scară tactică optimizată pentru mobil */
+    font-size: 0.72rem !important;
+    /* Restabilește lizibilitatea caracterelor conform tipografiei consolei de pe desktop */
+    letter-spacing: 1px !important;
+  }
 
-
-/* --- SUB-DISTRICT 00.2.B.1.B: SCUT ANTI-OVERFLOW ȘI CONSOLĂ HUD LATERALĂ --- */
+  /* --- SUB-DISTRICT 00.2.B.1.B: SCUT ANTI-OVERFLOW ȘI CONSOLĂ HUD LATERALĂ --- */
   /* [PRO UX SECURITY] - Neutralizarea anomaliei de derivă orizontală)T */
   .log-layout {
     width: 100vw !important; /* Forțează layout-ul să aibă exact lățimea ecranului fizic */
@@ -3287,49 +3296,79 @@ pre::-webkit-scrollbar-thumb {
     white-space: nowrap !important; /* Interzice textului să se mai spargă pe verticală sau să se rupă */
   }
 
-/* =========================================================================
+  /* =========================================================================
     00.2.B.2. GLOBAL TYPOGRAPHY SHIELD & TITLE RESTRUCTURING (max-width: 768px)
         
-    REZUMAT: Acest district structural izolează, rescalează și decontaminează ierarhia 
-    tipografică pe întreaga punte de aterizare în cazul ecranelor mobile înguste. 
-    Operează pe două niveluri structurale distincte. Execută intervenția de layout pentru fișele cronicarului 
-        de zi prin schimbarea direcției Flexbox de la rând (row) la coloană (column) în cazul 
-      titlurilor ultra-lungi, centrează antetele de macro-categorii pentru simetrie și rescalează butoanele mapă.
+    REZUMAT: Acest district structural izolează și decontaminează ierarhia tipografică 
+a fișelor cronicarului de zi și a secțiunilor de volum pe ecranele mobile înguste. 
+Acesta declanșează intervenția critică de layout pentru titlurile metaforice ultra-lungi 
+prin schimbarea direcției Flexbox de la rând (row) la coloană (column), rescalează dinamic 
+antetele macro de categorii pentru a comprima proporțiile lăbărțate, le centrează pentru 
+simetrie vizuală și gestionează scalarea capsulei butonului mapă pentru a bloca scurgerile 
+cauzate de decuparea ecranului.
+
    ========================================================================= */
-/* --- SUB-DISTRICT 00.2.B.2.B: MICRO-TIPOGRAFIA FIȘELOR CRONICARULUI --- */
-  /* REPARAREA ȘI AERISIREA TITLURILOR H3 (Suport pentru titluri metaforice ultra-lungi) */
-  .log-entry h3 {
-    display: flex !important; /* Păstrează sistemul Flexbox din desktop pentru aliniere structurală */
+  
+  /* SCALAREA COMPACTĂ A MATRICEI PENTRU TITLURILE DE CAPITOL (H3) */
+.log-entry h3 {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  /* Redus de la 8px la 6px pentru a trage textul descriptiv mai aproape de identificator */
+  gap: 6px !important; 
+  flex-wrap: wrap !important;
+  /* CRITERIU DE COMPRESIE: Redus de la 1.1rem la 0.95rem pentru a opri aglomerarea layout-ului */
+  font-size: 0.95rem !important; 
+  /* Strânge urmărirea orizontală a gridului tipografic pentru a menține un profil ascuțit de consolă militară */
+  letter-spacing: 0.5px !important; 
+  line-height: 1.2 !important;
+  border-bottom: 1px solid rgba(167, 243, 208, 0.1) !important;
+  /* Padding redus de la 10px la 8px pentru economie structurală și densitate vizuală */
+  padding-bottom: 8px !important; 
+  width: 100% !important;
+}
 
-    /* REPARAȚIA SALVATOARE PENTRU MOBILE/SPLIT: Schimbăm direcția din linie în coloană!
-        Asta așază automat titlul metaforic LUNG direct SUB textul roz „Day 09”, 
-       oferindu-i toată lățimea utilă a ecranului pentru a nu se mai sparge sau înghesui pe telefoane! */
-    flex-direction: column !important;
-    align-items: flex-start !important; /* Aliniază ambele blocuri de text (ID-ul de zi și denumirea) la marginea din stânga */
-    gap: 8px !important; /* Lasă un spațiu fin și curat de 8px pe verticală între zi și denumire */
-    flex-wrap: wrap !important; /* Permite textului să curgă liber în funcție de lățimea ecranului fizic */
-    font-size: 1.1rem !important; /* Dimensiune tehnică compactă originală de ecran radar */
-    border-bottom: 1px solid rgba(167, 243, 208, 0.1) !important; /* Linie fină originală de demarcație tehnică */
-    padding-bottom: 10px !important; /* Mărit padding-ul pentru o barieră vizuală aerisită și elegantă */
-    width: 100% !important; /* Ocupă tot ecranul util al casetei jurnal mobile */
-  }
+/* CONTROLUL MATRICEI PENTRU PARAGRAFELE TELEMETRICE COMPACTE (<p>) */
+.log-entry p {
+  /* REDUCEREA MATRICEI DE SCALARE: Redus la 0.76rem pentru o execuție densă și fină a textului */
+  font-size: 0.76rem !important;
+  /* INTERVENȚIE CRITICĂ PE MOBIL: Reduce spațierea lăbărțată de desktop la o margine compactă de 0.2px */
+  letter-spacing: 0.2px !important;
+  /* ÎNCHIDEREA RÂNDURILOR: Coboară de la line-height-ul aerisit de desktop la 1.35 pentru a grupa rândurile strâns */
+  line-height: 1.35 !important;
+  /* Aliniere fină a cuvintelor și caracterelor, menținând blocurile dense și unificate */
+  word-spacing: -0.3px !important;
+  /* Indice de subordonare vizuală pentru a eleva identificatorul neon H3 de deasupra */
+  opacity: 0.75 !important; 
+  /* Zonă de aerisire calibrată pentru a respira sub nivelul titlului */
+  margin-top: 10px !important; 
+  /* Padding structural inferior care separă textul de capsula butonului de acces */
+  margin-bottom: 15px !important; 
+}
 
-  /* Corecție estetică pentru textul metaforic din dreapta (devenit acum text de dedesubt) */
-  .log-entry h3 .meta-title {
-    font-size: 0.9rem !important; /* Îi mărim o idee dimensiunea originală pentru o lizibilitate perfectă pe mobil */
-    color: var(
-      --solar-mint
-    ) !important; /* Menține aprinderea pe verde-mentă fosforic de sistem din root */
-    letter-spacing: 1px !important; /* Spațiere industrială curată între caractere */
-    width: 100% !important; /* Forțează elementul să își ia independența totală pe rândul lui dedesubt */
-    text-align: left !important; /* Aliniere curată în stânga, direct sub ID-ul roz al zilei curente */
-  }
 
   /* CENTRAREA SIMETRICĂ A ANTETULUI PE MOBIL */
   .category-header {
     padding-top: 140px; /* Împinge fizic antetul în jos cu 140px ca să nu fie acoperit de HUD-ul mobil sau navbar */
     padding-bottom: 30px; /* Pernă fină de air originală de 30px sub titlul mare de capitol */
     text-align: center; /* Centrare completă stabilă pe orizontală pentru o simetrie perfectă pe telefon */
+  }
+
+  /* CORECTIE PROPORȚII: Revizuirea titlului de volum H2 pentru ecranul mic de mobil */
+  .category-header h2 {
+    font-size: 1.55rem !important; /* Dimensiune comprimată de la scara masivă de desktop */
+    letter-spacing: 1px !important; /* Împiedică lăbărțarea exagerată a literelor pe orizontală */
+    line-height: 1.2 !important; /* Menține rândurile strânse și compacte */
+    margin-bottom: 12px !important; /* Spațiu fin de siguranță deasupra subtitlului */
+  }
+
+  /* CORECTIE PROPORȚII: Revizuirea subtitlului pentru a nu mai fi strivit lateral */
+  .category-header p {
+    font-size: 0.78rem !important; /* Scară micro-telemetrică fină, lizibilă și compactă */
+    line-height: 1.4 !important; /* Permite textului lung să respire aerisit pe două rânduri */
+    max-width: 85% !important; /* Îl strânge elegant spre centrul ecranului */
+    margin: 0 auto !important; /* Garantează centrarea perfectă în interiorul blocului */
+    opacity: 0.8 !important; /* Subordonare vizuală curată față de titlul principal */
   }
 
   /* ==========================================================================
@@ -3416,49 +3455,48 @@ pre::-webkit-scrollbar-thumb {
     paralelă pe noul ecuator compact (top: 120px/175px), integrând fasciculele laser. */
 
   .armillary-reactor-core {
-  /* Fixează o pernă de aer superioară de 40px pentru a debloca zona de deasupra containerului */
-  margin-top: 40px !important;    
-  /* Lasă un spațiu de siguranță de 20px în subsol pentru a nu se lipi de elementul următor */
-  margin-bottom: 20px !important; 
-  /* Îngheață înălțimea totală la 380px pentru a asigura un volum fix pe verticală */
-  height: 380px !important;        
-  /* Menține o zonă de buffer de 180px în timpul navigării prin ancore pentru a evita mascarea HUD-ului */
-  scroll-margin-top: 180px !important;
-  /* Activează motorul Flexbox pentru alinierea controlată a elementelor interioare */
-  display: flex !important;
-  /* Ordonează elementele vertical, înșiruind textul și sferă unul sub celălalt */
-  flex-direction: column !important; 
-  /* Centrează geometric toate componentele pe axa verticală în interiorul celor 380px */
-  justify-content: center !important; 
-  /* Aliniază toate formele perfect pe centrul orizontal al ecranului dispozitivului mobil */
-  align-items: center !important;  
-  /* Forțează lățimea containerului să ocupe exact 100% din ecranul fizic disponibil */
-  width: 100% !important;          
-  /* Deschide un context de coordonate relativ, devenind ancoră rigidă pentru elementele din interior */
-  position: relative !important;
-}
+    /* Fixează o pernă de aer superioară de 40px pentru a debloca zona de deasupra containerului */
+    margin-top: 40px !important;
+    /* Lasă un spațiu de siguranță de 20px în subsol pentru a nu se lipi de elementul următor */
+    margin-bottom: 20px !important;
+    /* Îngheață înălțimea totală la 380px pentru a asigura un volum fix pe verticală */
+    height: 380px !important;
+    /* Menține o zonă de buffer de 180px în timpul navigării prin ancore pentru a evita mascarea HUD-ului */
+    scroll-margin-top: 180px !important;
+    /* Activează motorul Flexbox pentru alinierea controlată a elementelor interioare */
+    display: flex !important;
+    /* Ordonează elementele vertical, înșiruind textul și sferă unul sub celălalt */
+    flex-direction: column !important;
+    /* Centrează geometric toate componentele pe axa verticală în interiorul celor 380px */
+    justify-content: center !important;
+    /* Aliniază toate formele perfect pe centrul orizontal al ecranului dispozitivului mobil */
+    align-items: center !important;
+    /* Forțează lățimea containerului să ocupe exact 100% din ecranul fizic disponibil */
+    width: 100% !important;
+    /* Deschide un context de coordonate relativ, devenind ancoră rigidă pentru elementele din interior */
+    position: relative !important;
+  }
 
-/* RECREEREA NUCLEULUI: Repornirea rotației și scalarea nativă */
-.quantum-plasma-sphere {
-  /* Menține lățimea originală de 260px mapată din codul tău de bază din fabrică */
-  width: 260px !important;        
-  /* Menține înălțimea originală de 260px pentru a securiza un raport perfect de aspect 1:1 */
-  height: 260px !important;       
-  
-  /* Reduce dimensiunea întregii matrici 3D la 55% direct pe placa video, fără a bloca animațiile de transform-rotate */
-  scale: 0.55 !important; 
-  /* Îngheață punctul de origine al micșorării exact pe centrul geometric al nucleului */
-  transform-origin: center center !important;
-}
+  /* RECREEREA NUCLEULUI: Repornirea rotației și scalarea nativă */
+  .quantum-plasma-sphere {
+    /* Menține lățimea originală de 260px mapată din codul tău de bază din fabrică */
+    width: 260px !important;
+    /* Menține înălțimea originală de 260px pentru a securiza un raport perfect de aspect 1:1 */
+    height: 260px !important;
 
-/* Sincronizăm inelele cu noua scară hardware */
-.quantum-plasma-sphere .sphere-ring {
-  /* Blochează lățimea inelului concentric la 260px pentru a asigura coincidența perfectă a marginilor */
-  width: 260px !important;
-  /* Blochează înălțimea inelului concentric la 260px, interzicând apariția deformărilor eliptice */
-  height: 260px !important;
-}
+    /* Reduce dimensiunea întregii matrici 3D la 55% direct pe placa video, fără a bloca animațiile de transform-rotate */
+    scale: 0.55 !important;
+    /* Îngheață punctul de origine al micșorării exact pe centrul geometric al nucleului */
+    transform-origin: center center !important;
+  }
 
+  /* Sincronizăm inelele cu noua scară hardware */
+  .quantum-plasma-sphere .sphere-ring {
+    /* Blochează lățimea inelului concentric la 260px pentru a asigura coincidența perfectă a marginilor */
+    width: 260px !important;
+    /* Blochează înălțimea inelului concentric la 260px, interzicând apariția deformărilor eliptice */
+    height: 260px !important;
+  }
 
   /* Repoziționăm cele două benzi perfect paralele la mijlocul figurii reduse de 260px */
   .macro-wrapper {
@@ -3479,45 +3517,45 @@ pre::-webkit-scrollbar-thumb {
   }
 
   /* --- ZONE SUMMARY C: TYPOGRAPHIC SCALING MATRIX & HERO HUD CONTROLS ---
-Acest district structural centralizează scalarea elastică a tipografiei grele din metal 
-și a structurilor de titlu părinte din secțiunea Hero. Acesta declanșează unități dinamice 
-de lățime a ecranului (2.4vw) fuzionate cu praguri rigide de 0.65rem, comprimă plicurile 
-orizontale până la 20px în layout-urile macro și elimină marginile browserului pentru a asigura 
-o urmărire a textului de înalt contrast, complet imună la scurgerile de decupare a layout-ului. */
+      Acest district structural centralizează scalarea elastică a tipografiei grele din metal 
+      și a structurilor de titlu părinte din secțiunea Hero. Acesta declanșează unități dinamice 
+      de lățime a ecranului (2.4vw) fuzionate cu praguri rigide de 0.65rem, comprimă plicurile 
+      orizontale până la 20px în layout-urile macro și elimină marginile browserului pentru a asigura 
+      o urmărire a textului de înalt contrast, complet imună la scurgerile de decupare a layout-ului. */
 
-/* RECALIBRAREA CONTAINERULUI MASTER HERO: COBORTAREA CENTRULUI DE GREUTATE */
-.hero {
-  /* Trece de la setările desktop la o aliniere centrată strâns a gridului de layout */
-  justify-content: center !important; 
-  /* Stabilește o demarcație de siguranță de 60px sub bara de navigație fixă superioară */
-  padding-top: 60px !important;       
-  /* Creează o zonă de compresie la bază pentru a trage și bloca textul direct pe ecuatorul icosaedrului */
-  padding-bottom: 20px !important;
-}
+  /* RECALIBRAREA CONTAINERULUI MASTER HERO: COBORTAREA CENTRULUI DE GREUTATE */
+  .hero {
+    /* Trece de la setările desktop la o aliniere centrată strâns a gridului de layout */
+    justify-content: center !important;
+    /* Stabilește o demarcație de siguranță de 60px sub bara de navigație fixă superioară */
+    padding-top: 60px !important;
+    /* Creează o zonă de compresie la bază pentru a trage și bloca textul direct pe ecuatorul icosaedrului */
+    padding-bottom: 20px !important;
+  }
 
-/* SCALAREA TITLULUI STENCILED H1 (Menținând structurile native de layout Space Grotesk) */
-.stenciled-metal-text {
-  font-size: 1.12rem !important; /* Dimensiuni optime rigide blocate care asigură profile absolute de lizibilitate pe ecrane înguste */
-  letter-spacing: 1px !important; /* Spațiere tehnică întărită a rândurilor de comunicare, adaptată pentru terminalele de interfață */
-  display: inline-block !important;
-  white-space: nowrap !important; /* Interzice cu strictețe fragmentarea pe mai multe rânduri, forțând fluxul continuu de dactilografiere */
-  border-right-width: 1.5px !important; /* Cursor de urmărire mai subțire, ajustat pentru cadrele compacte ale ecranelor mici */
-  line-height: 1.1 !important; 
-  /* COMPRESIE INVIZIBILĂ: Prăbușește caseta verticală implicită a fontului pentru a mrgini 
+  /* SCALAREA TITLULUI STENCILED H1 (Menținând structurile native de layout Space Grotesk) */
+  .stenciled-metal-text {
+    font-size: 1.12rem !important; /* Dimensiuni optime rigide blocate care asigură profile absolute de lizibilitate pe ecrane înguste */
+    letter-spacing: 1px !important; /* Spațiere tehnică întărită a rândurilor de comunicare, adaptată pentru terminalele de interfață */
+    display: inline-block !important;
+    white-space: nowrap !important; /* Interzice cu strictețe fragmentarea pe mai multe rânduri, forțând fluxul continuu de dactilografiere */
+    border-right-width: 1.5px !important; /* Cursor de urmărire mai subțire, ajustat pentru cadrele compacte ale ecranelor mici */
+    line-height: 1.1 !important;
+    /* COMPRESIE INVIZIBILĂ: Prăbușește caseta verticală implicită a fontului pentru a mrgini 
      strict literele mari, coborând tavanul inferior al matricei H1. */
-}
+  }
 
-/* CORECTAREA SUBTITLULUI DISCRET (Matrice impecabilă de subordonare optică) */
-.stenciled-metal-text-sub {
-  font-size: 0.65rem !important; /* Prag rigid de siguranță structurală aplicat pentru a preveni ruperile verticale */
-  letter-spacing: 0.5px !important; /* Aranjamente fine de spațiere tehnică a caracterelor telemetrice blocate de-a lungul rândurilor */
-  display: inline-block !important;
-  white-space: nowrap !important;
-  border-right-width: 1px !important; /* Execuție micro-fină a bordurii fontului pentru canalele de teletype mobile */
-  margin-top: -11px !important; 
-  /* LEVIER MECANIC: Desfășoară o tragere negativă rigidă pentru a suprascrie golurile native 
+  /* CORECTAREA SUBTITLULUI DISCRET (Matrice impecabilă de subordonare optică) */
+  .stenciled-metal-text-sub {
+    font-size: 0.65rem !important; /* Prag rigid de siguranță structurală aplicat pentru a preveni ruperile verticale */
+    letter-spacing: 0.5px !important; /* Aranjamente fine de spațiere tehnică a caracterelor telemetrice blocate de-a lungul rândurilor */
+    display: inline-block !important;
+    white-space: nowrap !important;
+    border-right-width: 1px !important; /* Execuție micro-fină a bordurii fontului pentru canalele de teletype mobile */
+    margin-top: -11px !important;
+    /* LEVIER MECANIC: Desfășoară o tragere negativă rigidă pentru a suprascrie golurile native 
      de bloc ale browserului, aducând șirul telemetric discret direct sub antetul principal. */
-}
+  }
 
   /* --- REZUMAT ZONAL D: ȘASIUL BLUEPRINT SPLIT-SCREEN (max-width: 768px) ---
     Acest district guvernează conversia ecranului recursiv într-o stivă verticală rigidă. 

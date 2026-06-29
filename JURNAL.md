@@ -5940,7 +5940,7 @@ Structura genetică a codului de mobil se împarte în 4 mari districte tactice 
 
 ### 25.06.26
 
-1. ALERTĂ DE SISTEM // JURNAL DE CARANTINĂ ACTIVĂ: ANOMALII NEREZOLVATE
+**ALERTĂ DE SISTEM // JURNAL DE CARANTINĂ ACTIVĂ: ANOMALII NEREZOLVATE**
 
 * **TODO 01: Unificarea Buclei de Hover pentru Proximitatea Matricei 3D**
   - **Simptom:** Comportamentul la hover (trecerea mouse-ului) rămâne asimetric între paginile `index.html` și `recursive-blueprint.html`. Reactorul poliedric principal își schimbă corect marginile, în timp ce elementul 3D din ecranul recursiv split-screen refuză să comute, declanșând în continuare regulile locale de repaus verde-mentă (`--solar-mint`).
@@ -5949,6 +5949,46 @@ Structura genetică a codului de mobil se împarte în 4 mari districte tactice 
 * **TODO 02: Recalibrarea Structurală pentru Viewport-ul de Mobil Real**
   - **Simptom:** Telefoanele mobile fizice (motoarele iOS WebKit și nucleele Android) prezintă o strivire verticală severă a componentelor, comprimare de layout și coliziuni violente între straturile de text (de exemplu, butonul roz `SAVE SIGNAL` se prăbușește direct peste fluxul de metadate tehnice), în ciuda unei randări absolut imaculate în interiorul simulatorului de desktop (`F12`).
   - **Focus Tehnic:** Implementarea înălțimilor dinamice de ecran (`min-height: 100dvh;`), activarea resetărilor globale pentru dimensiunea textului (`text-size-adjust: 100%`) și izolarea subsolurilor poziționate absolut în fluxuri liniare normale, pentru a anihila impactul barelor HUD dinamice ale browserelor mobile.
+
+### 29.06.26
+
+* MISSION LOG: MOBILE HUD RECALIBRATION PROTOCOL
+* RECONFIGURAREA VECTORIALĂ A PUNȚII PRINCIPALE (INDEX.HTML)
+
+Acest document tehnic centralizează mutațiile genetice aplicate stilurilor CSS din query-ul media `@media screen and (max-width: 768px)` pentru a aduce interfața dispozitivelor mobile fizice la paritate vizuală absolută cu simularea de desktop.
+
+
+1. PROTOCOLUL 01: STABILIZAREA BĂRII DE NAVIGAȚIE (COCKPIT NAVBAR)
+**Locație cod:** `00.2.B.1: COCKPIT NAVIGATION DECK`
+
+*   **Problema identificată:** Lipirea marginilor globale de desktop și distanța masivă dintre link-uri consumau spațiul fizic orizontal, forțând logo-ul de identitate să se fragmenteze dezastruos pe două rânduri.
+*   **Intervenție chirurgicală:**
+    *   Reducerea padding-ului lateral al `.navbar` de la `40px` la `16px`.
+    *   Comprimarea distanței (`gap`) dintre link-urile volumelor la `12px`.
+    *   Injectarea proprietății `white-space: nowrap` pe legătura text a `.logo a` pentru a bloca definitiv orice rupere de rând.
+    *   Scalarea tactică a dimensiunilor textului: logo la `0.85rem` și link-uri la `0.72rem`.
+
+2. PROTOCOLUL 02: REPOZIȚIONAREA ȘI CONFIGURAREA MATRIX HERO (H1 & SUBTITLU)
+**Locație cod:** `00.2.B.4: ZONE SUMMARY C`
+
+*   **Problema identificată:** Textul lung dactilografiat depășea fizic lățimea ecranului și era retezat de masca `overflow: hidden`, iar proporțiile globale aruncau titlurile mult deasupra ecuatorului median al icosaedrului.
+*   **Intervenție chirurgicală:**
+    *   Ajustarea textului în HTML pentru o densitate UX optimă (`Mission Log: The Coding Landscape` și `The journey to the {front}end.`).
+    *   Trecerea la dimensiuni fixe în pixeli în Zona C (`17px` pentru H1, `11px` pentru subtitlu) pentru a securiza rularea completă a pașilor animației de teletype pe un singur rând.
+    *   Prăbușirea casetei invizibile a fontului prin `line-height: 1.1` și aplicarea unui levier mecanic negativ de `margin-top: -11px` pe subtitlu pentru a elimina golul inestetic dintre linii.
+    *   Configurarea `.hero` cu `padding-top: 140px` pentru a coborî perfect pachetul de text pe axa mediană a reactorului 3D.
+
+3. PROTOCOLUL 03: COMPACTAREA IERARHIEI TIPOGRAFICE DIN ARTICOLE (H3 & P)
+**Locație cod:** `00.2.B.2: READING VANS & TITLE RESTRUCTURING SHIELD`
+
+*   **Problema identificată:** Titlurile de capitol `h3` ocupau prea mult spațiu vertical, iar textul paragrafelor `<p>` era „lăbărțat”, având o spațiere aerisită de desktop care împrștia rândurile pe ecranul strâmt al telefonului.
+*   **Intervenție chirurgicală:**
+    *   Reducerea dimensiunii `.log-entry h3` de la `1.1rem` la `0.95rem` și a gap-ului intern la `6px` pentru o economie structurală a înălțimii cardului.
+    *   Reducerea fontului paragrafului `.log-entry p` la `0.76rem` și strângerea textului prin `line-height: 1.35`.
+    *   Injectarea unei spațieri fine negative între cuvinte (`word-spacing: -0.3px`) pentru a elimina aspectul lăbărțat și a genera estetica densă de terminal militar high-contrast.
+
+
+**STATUS PROTOCOL: STABILIZAT / OPERAȚIONAL // LIVE INSPECTION READY**
 
 
 ---
