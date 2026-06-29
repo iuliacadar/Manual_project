@@ -5952,13 +5952,12 @@ Structura genetică a codului de mobil se împarte în 4 mari districte tactice 
 
 ### 29.06.26
 
-* MISSION LOG: MOBILE HUD RECALIBRATION PROTOCOL
-* RECONFIGURAREA VECTORIALĂ A PUNȚII PRINCIPALE (INDEX.HTML)
+1. MISSION LOG: MOBILE HUD RECALIBRATION PROTOCOL. RECONFIGURAREA VECTORIALĂ A PUNȚII PRINCIPALE (INDEX.HTML)
 
 Acest document tehnic centralizează mutațiile genetice aplicate stilurilor CSS din query-ul media `@media screen and (max-width: 768px)` pentru a aduce interfața dispozitivelor mobile fizice la paritate vizuală absolută cu simularea de desktop.
 
 
-1. PROTOCOLUL 01: STABILIZAREA BĂRII DE NAVIGAȚIE (COCKPIT NAVBAR)
+1. 1. PROTOCOLUL 01: STABILIZAREA BĂRII DE NAVIGAȚIE (COCKPIT NAVBAR)
 **Locație cod:** `00.2.B.1: COCKPIT NAVIGATION DECK`
 
 *   **Problema identificată:** Lipirea marginilor globale de desktop și distanța masivă dintre link-uri consumau spațiul fizic orizontal, forțând logo-ul de identitate să se fragmenteze dezastruos pe două rânduri.
@@ -5968,7 +5967,7 @@ Acest document tehnic centralizează mutațiile genetice aplicate stilurilor CSS
     *   Injectarea proprietății `white-space: nowrap` pe legătura text a `.logo a` pentru a bloca definitiv orice rupere de rând.
     *   Scalarea tactică a dimensiunilor textului: logo la `0.85rem` și link-uri la `0.72rem`.
 
-2. PROTOCOLUL 02: REPOZIȚIONAREA ȘI CONFIGURAREA MATRIX HERO (H1 & SUBTITLU)
+1. 2. PROTOCOLUL 02: REPOZIȚIONAREA ȘI CONFIGURAREA MATRIX HERO (H1 & SUBTITLU)
 **Locație cod:** `00.2.B.4: ZONE SUMMARY C`
 
 *   **Problema identificată:** Textul lung dactilografiat depășea fizic lățimea ecranului și era retezat de masca `overflow: hidden`, iar proporțiile globale aruncau titlurile mult deasupra ecuatorului median al icosaedrului.
@@ -5978,7 +5977,7 @@ Acest document tehnic centralizează mutațiile genetice aplicate stilurilor CSS
     *   Prăbușirea casetei invizibile a fontului prin `line-height: 1.1` și aplicarea unui levier mecanic negativ de `margin-top: -11px` pe subtitlu pentru a elimina golul inestetic dintre linii.
     *   Configurarea `.hero` cu `padding-top: 140px` pentru a coborî perfect pachetul de text pe axa mediană a reactorului 3D.
 
-3. PROTOCOLUL 03: COMPACTAREA IERARHIEI TIPOGRAFICE DIN ARTICOLE (H3 & P)
+1. 3. PROTOCOLUL 03: COMPACTAREA IERARHIEI TIPOGRAFICE DIN ARTICOLE (H3 & P)
 **Locație cod:** `00.2.B.2: READING VANS & TITLE RESTRUCTURING SHIELD`
 
 *   **Problema identificată:** Titlurile de capitol `h3` ocupau prea mult spațiu vertical, iar textul paragrafelor `<p>` era „lăbărțat”, având o spațiere aerisită de desktop care împrștia rândurile pe ecranul strâmt al telefonului.
@@ -5990,6 +5989,20 @@ Acest document tehnic centralizează mutațiile genetice aplicate stilurilor CSS
 
 **STATUS PROTOCOL: STABILIZAT / OPERAȚIONAL // LIVE INSPECTION READY**
 
+2. MISSION LOG: INDEX TYPOGRAPHY UNIFICATION. RESTRUCTURAREA IERARHIEI IN DISTRICTUL OPERAȚIONAL 00.2.B.2
+
+Această fișă tehnică documentează unificarea arhitecturală a selectorilor de titlu și interacțiune, garantând că `00.2.B.4` rămâne decontaminat și dedicat exclusiv modulelor avansate 3D și paginii recursive.
+
+2. 1. PROTOCOLUL 04: UNIFICAREA IERARHIEI TIPOGRAFICE INFERIOARE
+**Locație cod:** Finalul districtului `00.2.B.2. READING VANS & TITLE RESTRUCTURING SHIELD`
+
+*   **Decizie de Arhitectură (Clean Code):** Toți selectorii tipografici secundari nativi ai paginii principale (`index.html`) au fost grupați la finalul acestui district pentru a menține o singură zonă globală de control pentru fonturile indexului.
+*   **Mutații aplicate:**
+    1.  **Butoane-Capsulă (`.archive-link`):** Comprimare fină a fontului la `0.7rem` și reducere padding vertical la `6px 16px` pentru a asigura un raport tactil perfect pe ecrane de telefon, fără a umfla cardurile.
+    2.  **Antete Medii de Anexă (`.log-entry h4`):** Reducere font-size la `0.82rem` și strângerea înălțimii liniei la `1.2` pentru a opri lăbărțarea textului pe lățimi de 360px.
+    3.  **Micro-Telemetrie Anexe Viitoare (`.sub-future-log h5`):** Scalare la `0.72rem` cu eliminarea marginilor native pentru a asigura alinierea perfectă a cuvintelor cheie din *Amber Vaults* pe un singur rând.
+
+---
 
 ---
 

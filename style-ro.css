@@ -3371,6 +3371,42 @@ cauzate de decuparea ecranului.
     opacity: 0.8 !important; /* Subordonare vizuală curată față de titlul principal */
   }
 
+/* SCALAREA COMPACTĂ A CAPSULELOR ȘI A MATRICII ANEXELOR */
+/* Modificatorul capsulei de buton pentru a preveni umflarea pe verticală */
+.archive-link {
+  /* Comprimă textul butonului la o dimensiune ascuțită, optimizată pentru ecrane mobile */
+  font-size: 0.7rem !important; 
+  /* Reduce spațiul interior pe verticală, păstrând o lățime confortabilă pentru atingerea cu degetul */
+  padding: 6px 16px !important; 
+  /* Strânge urmărirea orizontală pentru a bloca caracterele în siguranță în interiorul bordurii */
+  letter-spacing: 0.5px !important; 
+  /* Forțează modelul de layout să se centreze corect în marginile mici ale cardului */
+  margin: 0 auto !important; 
+  display: inline-block !important;
+}
+
+/* Scalarea antetului de anexă de ierarhie medie din interiorul fișelor cronicarului */
+.log-entry h4, .js-annex h4 {
+  /* Reduce dimensiunea fontului macro pentru a preveni lăbărțarea textului pe ecrane de 360px */
+  font-size: 0.82rem !important; 
+  /* Apropie înălțimile liniilor pentru a economisi rânduri prețioase de layout */
+  line-height: 1.2 !important; 
+  letter-spacing: 0.5px !important;
+  margin-top: 12px !important;
+  margin-bottom: 8px !important;
+}
+
+/* Scalarea titlurilor tactice de micro-telemetrie (ex: antetele pentru Angular, React.js) */
+.sub-future-log h5 {
+  /* Comprimă lățimea fontului la 0.72rem pentru a elimina ruperile de rând ale cuvintelor cheie */
+  font-size: 0.72rem !important; 
+  /* Elimină marginile implicite ale browserului pentru a nu mai împinge paragrafele vecine în jos */
+  margin: 0 0 4px 0 !important; 
+  letter-spacing: 0.5px !important;
+  line-height: 1.1 !important;
+}
+
+
   /* ==========================================================================
     00.2.B.3. PROTOCOLUL DE ATERIZARE TACTICĂ ȘI SCUTURILE ANTI-REZIDUURI
       

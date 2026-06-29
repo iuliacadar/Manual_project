@@ -3083,9 +3083,8 @@ pre::-webkit-scrollbar-thumb {
     to secure an interface entirely immune to horizontal overflow leaks.
    ========================================================================== */
 
-
 @media screen and (max-width: 768px) {
-/* =========================================================================
+  /* =========================================================================
     00.2.B.1. NAVIGATION COCKPIT & ANTI-OVERFLOW HUD SHIELD (max-width: 768px)
         
     SUMMARY: This structural district executes the genetic layout mutation 
@@ -3099,46 +3098,46 @@ pre::-webkit-scrollbar-thumb {
         unlocks the horizontal touch-swipe ribbon by completely suppressing scrollbars.
    ========================================================================= */
 
-/* --- SUB-DISTRICT 00.2.B.1.A: COCKPIT NAVIGATION DECK --- */
-/* Overrides the main navigation container padding for mobile screen optimization */
-.navbar {
-  /* Shrinks side padding from 40px to 16px to maximize horizontal space on narrow screens */
-  padding: 0 16px !important; 
-}
+  /* --- SUB-DISTRICT 00.2.B.1.A: COCKPIT NAVIGATION DECK --- */
+  /* Overrides the main navigation container padding for mobile screen optimization */
+  .navbar {
+    /* Shrinks side padding from 40px to 16px to maximize horizontal space on narrow screens */
+    padding: 0 16px !important;
+  }
 
-/* Controls the breathing animation of the cockpit logo indicator */
-.logo {
-  /* Keeps the native desktop pulsing loop active without core layout deformation */
-  animation: pulse 3s infinite; 
-}
+  /* Controls the breathing animation of the cockpit logo indicator */
+  .logo {
+    /* Keeps the native desktop pulsing loop active without core layout deformation */
+    animation: pulse 3s infinite;
+  }
 
-/* Targets the core structural text link inside the main logo element */
-.logo a {
-  /* Scales text down from 1.1rem to fit smaller mobile viewports safely */
-  font-size: 0.85rem !important;      
-  /* Tightens horizontal text tracking slightly for ultra-compact military styling */
-  letter-spacing: 1px !important;     
-  /* CRITICAL LOCK: Forcibly bans the browser from wrapping the logo into two broken lines */
-  white-space: nowrap !important;     
-}
+  /* Targets the core structural text link inside the main logo element */
+  .logo a {
+    /* Scales text down from 1.1rem to fit smaller mobile viewports safely */
+    font-size: 0.85rem !important;
+    /* Tightens horizontal text tracking slightly for ultra-compact military styling */
+    letter-spacing: 1px !important;
+    /* CRITICAL LOCK: Forcibly bans the browser from wrapping the logo into two broken lines */
+    white-space: nowrap !important;
+  }
 
-/* Stabilizes the structural container holding FRONTEND and DATABASE volume links */
-.nav-links {
-  /* Compresses spacing between links from 30px to 12px to prevent right-side clipping */
-  gap: 12px !important;               
-  /* Automatically pushes the entire link cluster to the maximum right port of the screen */
-  margin-left: auto !important;       
-}
+  /* Stabilizes the structural container holding FRONTEND and DATABASE volume links */
+  .nav-links {
+    /* Compresses spacing between links from 30px to 12px to prevent right-side clipping */
+    gap: 12px !important;
+    /* Automatically pushes the entire link cluster to the maximum right port of the screen */
+    margin-left: auto !important;
+  }
 
-/* Rules applied to individual volume text items inside the navigation tray */
-.nav-links a {
-  /* Shrinks volume text labels to a tactical size optimized for mobile grid scaling */
-  font-size: 0.72rem !important;      
-  /* Restores explicit character mapping to match the main desktop console typography */
-  letter-spacing: 1px !important;     
-}
+  /* Rules applied to individual volume text items inside the navigation tray */
+  .nav-links a {
+    /* Shrinks volume text labels to a tactical size optimized for mobile grid scaling */
+    font-size: 0.72rem !important;
+    /* Restores explicit character mapping to match the main desktop console typography */
+    letter-spacing: 1px !important;
+  }
 
-/* --- SUB-DISTRICT 00.2.B.1.B: ANTI-OVERFLOW HUD SHIELD & ASIDE CONSOLE --- */
+  /* --- SUB-DISTRICT 00.2.B.1.B: ANTI-OVERFLOW HUD SHIELD & ASIDE CONSOLE --- */
   /* [PRO UX SECURITY] - NEUTRALIZING HORIZONTAL DRIFT ANOMALY */
   .log-layout {
     width: 100vw !important; /* Forces layout to exactly match the physical screen width */
@@ -3353,7 +3352,7 @@ pre::-webkit-scrollbar-thumb {
     white-space: nowrap !important; /* STRICT UX SHIELD: Strictly bars text communication strings from vertical fracturing leaks */
   }
 
-/* ==========================================================================
+  /* ==========================================================================
     00.2.B.2. READING VANS & TITLE RESTRUCTURING SHIELD (max-width: 768px)
         
     SUMMARY: This structural district isolates and decontaminates the typographic 
@@ -3366,37 +3365,36 @@ pre::-webkit-scrollbar-thumb {
 
   /*RESTRUCTURING AND DECOMPRESSING H3 HEADINGS (Support for ultra-long metaphorical titles) */
   /* COMPACT MATRIX SCALING FOR CHAPTER HEADINGS (H3) */
-.log-entry h3 {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
-  gap: 6px !important; /* Shrunk from 8px to 6px to pull the descriptive text closer */
-  flex-wrap: wrap !important;
-  /* COMPRESSION CRITERIA: Scaled down from 1.1rem to 0.95rem to stop layout crowding */
-  font-size: 0.95rem !important; 
-  /* Tightens horizontal typography grid tracking to maintain a sharp military console profile */
-  letter-spacing: 0.5px !important; 
-  line-height: 1.2 !important;
-  border-bottom: 1px solid rgba(167, 243, 208, 0.1) !important;
-  padding-bottom: 8px !important; /* Reduced padding from 10px to 8px for structural economy */
-  width: 100% !important;
-}
+  .log-entry h3 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important; /* Shrunk from 8px to 6px to pull the descriptive text closer */
+    flex-wrap: wrap !important;
+    /* COMPRESSION CRITERIA: Scaled down from 1.1rem to 0.95rem to stop layout crowding */
+    font-size: 0.95rem !important;
+    /* Tightens horizontal typography grid tracking to maintain a sharp military console profile */
+    letter-spacing: 0.5px !important;
+    line-height: 1.2 !important;
+    border-bottom: 1px solid rgba(167, 243, 208, 0.1) !important;
+    padding-bottom: 8px !important; /* Reduced padding from 10px to 8px for structural economy */
+    width: 100% !important;
+  }
 
-/* COMPACT TELEMETRY PARAGRAPH MATRIX CONTROL (<p>) */
-.log-entry p {
-  /* SCATION MATRIX REDUCTION: Downscaled to 0.76rem for a crisp, dense reading van execution */
-  font-size: 0.76rem !important;
-  /* CRITICAL MOBILE INTERVENTION: Reduces loose desktop tracking down to a compact 0.2px edge */
-  letter-spacing: 0.2px !important;
-  /* LINE BREAK CLOSURE: Drops from loose desktop line-height down to 1.35 to cluster rows together */
-  line-height: 1.35 !important;
-  /* Word and tracking fine alignment rules keeping blocks dense and unified */
-  word-spacing: -0.3px !important;
-  opacity: 0.75 !important; /* Visual subordination index to elevate the neon H3 identifier */
-  margin-top: 10px !important; /* Balanced air buffer to breathe below the heading floor */
-  margin-bottom: 15px !important; /* Structural escape padding separating text from the button capsule */
-}
-
+  /* COMPACT TELEMETRY PARAGRAPH MATRIX CONTROL (<p>) */
+  .log-entry p {
+    /* SCATION MATRIX REDUCTION: Downscaled to 0.76rem for a crisp, dense reading van execution */
+    font-size: 0.76rem !important;
+    /* CRITICAL MOBILE INTERVENTION: Reduces loose desktop tracking down to a compact 0.2px edge */
+    letter-spacing: 0.2px !important;
+    /* LINE BREAK CLOSURE: Drops from loose desktop line-height down to 1.35 to cluster rows together */
+    line-height: 1.35 !important;
+    /* Word and tracking fine alignment rules keeping blocks dense and unified */
+    word-spacing: -0.3px !important;
+    opacity: 0.75 !important; /* Visual subordination index to elevate the neon H3 identifier */
+    margin-top: 10px !important; /* Balanced air buffer to breathe below the heading floor */
+    margin-bottom: 15px !important; /* Structural escape padding separating text from the button capsule */
+  }
 
   /* SYMMETRICAL CATEGORY HEADER CENTERING ON MOBILE VIEWPORTS */
   .category-header {
@@ -3406,21 +3404,57 @@ pre::-webkit-scrollbar-thumb {
   }
 
   /* CATEGORY TITLE H2 SCALING (Compacting wide layout typography) */
-.category-header h2 {
-  font-size: 1.55rem !important; /* Compresses font metrics from bloated desktop ratios to avoid viewport crowding */
-  letter-spacing: 1px !important; /* Stabilizes military-grade structural alignment across small display grids */
-  line-height: 1.2 !important; /* Closes character bounding boxes to maintain tightly nested layout rows */
-  margin-bottom: 12px !important; /* Explicit tactical margin gap enforcing safety clearance above paragraph descriptors */
-}
+  .category-header h2 {
+    font-size: 1.55rem !important; /* Compresses font metrics from bloated desktop ratios to avoid viewport crowding */
+    letter-spacing: 1px !important; /* Stabilizes military-grade structural alignment across small display grids */
+    line-height: 1.2 !important; /* Closes character bounding boxes to maintain tightly nested layout rows */
+    margin-bottom: 12px !important; /* Explicit tactical margin gap enforcing safety clearance above paragraph descriptors */
+  }
 
-/* DISCRETE CATEGORY SUBTITLE COMPRESSION (Flawless fluid responsive boundary) */
-.category-header p {
-  font-size: 0.78rem !important; /* Downscales technical micro-telemetry string size for handheld scanning comfort */
-  line-height: 1.4 !important; /* Grants breathing capacity to long phrases splitting into dual rows under stress */
-  max-width: 85% !important; /* Constrains line length to lock text blocks into a clean central focal core */
-  margin: 0 auto !important; /* Secures absolute horizontal center compliance inside parent container dimensions */
-  opacity: 0.8 !important; /* Structural optical subordination mapping relative to the primary H2 element */
-}
+  /* DISCRETE CATEGORY SUBTITLE COMPRESSION (Flawless fluid responsive boundary) */
+  .category-header p {
+    font-size: 0.78rem !important; /* Downscales technical micro-telemetry string size for handheld scanning comfort */
+    line-height: 1.4 !important; /* Grants breathing capacity to long phrases splitting into dual rows under stress */
+    max-width: 85% !important; /* Constrains line length to lock text blocks into a clean central focal core */
+    margin: 0 auto !important; /* Secures absolute horizontal center compliance inside parent container dimensions */
+    opacity: 0.8 !important; /* Structural optical subordination mapping relative to the primary H2 element */
+  }
+
+  /*   TACTICAL ADDITIONS: LOWER HIERARCHY TYPOGRAPHY & INTERACTIVE CORES*/
+  /* Button capsule modifier to prevent vertical bloat and secure touch-target ratio */
+  .archive-link {
+    /* Compresses button text to a razor-sharp size optimized for tactical mobile viewports */
+    font-size: 0.7rem !important;
+    /* Shrinks the internal vertical breathing space while keeping comfortable touch-width */
+    padding: 6px 16px !important;
+    /* Tightens horizontal tracking to lock character data safely inside the border grid */
+    letter-spacing: 0.5px !important;
+    /* Forces the layout model to center correctly within small card margins */
+    margin: 0 auto !important;
+    display: inline-block !important;
+  }
+
+  /* Middle hierarchy annex header scaling within the chronicler sheet stack */
+  .log-entry h4,
+  .js-annex h4 {
+    /* Scales down macro font to prevent extreme string trailing on 360px screens */
+    font-size: 0.82rem !important;
+    /* Pulls line heights closer together to save layout rows */
+    line-height: 1.2 !important;
+    letter-spacing: 0.5px !important;
+    margin-top: 12px !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* Scalarea titlurilor tactice de micro-telemetrie (ex: antetele pentru Angular, React.js) */
+  .sub-future-log h5 {
+    /* Comprimă lățimea fontului la 0.72rem pentru a elimina ruperile de rând ale cuvintelor cheie */
+    font-size: 0.72rem !important;
+    /* Elimină marginile implicite ale browserului pentru a nu mai împinge paragrafele vecine în jos */
+    margin: 0 0 4px 0 !important;
+    letter-spacing: 0.5px !important;
+    line-height: 1.1 !important;
+  }
 
   /* ==========================================================================
     00.2.B.3. CLICK LANDING BUFFER & ANTI-DEBRIS SHIELDING ARRAYS
@@ -3505,51 +3539,49 @@ pre::-webkit-scrollbar-thumb {
     resets top offsets to 100px, and unifies parallel alignment capsules over the 
     new compact equator (top: 120px/175px) while embedding horizontal laser lines. */
 
-.armillary-reactor-core {
-  /* Allocates a fixed 40px top air gap to clear operational layout real estate above the module */
-  margin-top: 40px !important;    
-  /* Establishes a 20px physical safety margin buffer at the base to prevent trailing asset collisions */
-  margin-bottom: 20px !important; 
-  /* Freezes total vertical layout depth to exactly 380px to contain all nested components inside */
-  height: 380px !important;        
-  /* Sustains a 180px anchor landing offset to shield the header from dynamic viewport HUD masking */
-  scroll-margin-top: 180px !important;
-  /* Boots up the horizontal/vertical Flexbox engine for absolute internal item coordination */
-  display: flex !important;
-  /* Arranges stacked internal layers vertically down the screen centerline grid */
-  flex-direction: column !important; 
-  /* Geometrically balances inner layout containers along the vertical center axis of the 380px block */
-  justify-content: center !important; 
-  /* Enforces complete horizontal center alignment across the mobile device canvas bounds */
-  align-items: center !important;  
-  /* Forces the component footprint width to occupy precisely 100% of the horizontal screen area */
-  width: 100% !important;          
-  /* Installs a relative coordinate root matrix to act as a rigid parent container for nested layers */
-  position: relative !important;
-}
+  .armillary-reactor-core {
+    /* Allocates a fixed 40px top air gap to clear operational layout real estate above the module */
+    margin-top: 40px !important;
+    /* Establishes a 20px physical safety margin buffer at the base to prevent trailing asset collisions */
+    margin-bottom: 20px !important;
+    /* Freezes total vertical layout depth to exactly 380px to contain all nested components inside */
+    height: 380px !important;
+    /* Sustains a 180px anchor landing offset to shield the header from dynamic viewport HUD masking */
+    scroll-margin-top: 180px !important;
+    /* Boots up the horizontal/vertical Flexbox engine for absolute internal item coordination */
+    display: flex !important;
+    /* Arranges stacked internal layers vertically down the screen centerline grid */
+    flex-direction: column !important;
+    /* Geometrically balances inner layout containers along the vertical center axis of the 380px block */
+    justify-content: center !important;
+    /* Enforces complete horizontal center alignment across the mobile device canvas bounds */
+    align-items: center !important;
+    /* Forces the component footprint width to occupy precisely 100% of the horizontal screen area */
+    width: 100% !important;
+    /* Installs a relative coordinate root matrix to act as a rigid parent container for nested layers */
+    position: relative !important;
+  }
 
-/* POLYHEDRAL CORE COMPRESSION and CONCENTRIC RINGS (The duplicate-saving fusion) */
-.quantum-plasma-sphere {
-  /* Retains your original native 260px width parameter mapped within baseline frameworks */
-  width: 260px !important;        
-  /* Locks structural height bounds to 260px to secure an unwarped 1:1 proportion ratio */
-  height: 260px !important;       
-  
-  /* Triggers a 55% scale compression directly inside VRAM, allowing 3D transforms to spin unhindered */
-  scale: 0.55 !important; 
-  /* Locks the operational scale contraction centerpoint right onto the geometric core midpoint */
-  transform-origin: center center !important;
-}
+  /* POLYHEDRAL CORE COMPRESSION and CONCENTRIC RINGS (The duplicate-saving fusion) */
+  .quantum-plasma-sphere {
+    /* Retains your original native 260px width parameter mapped within baseline frameworks */
+    width: 260px !important;
+    /* Locks structural height bounds to 260px to secure an unwarped 1:1 proportion ratio */
+    height: 260px !important;
 
-/* Syncing the rings with the new hardware scale */
-.quantum-plasma-sphere .sphere-ring {
-  /* Freezes the concentric ring width boundary at 260px to maintain edge grid alignment */
-  width: 260px !important;
-  /* Freezes the concentric ring height boundary at 260px to bar ellipse layout warping anomalies */
-  height: 260px !important;
-}
+    /* Triggers a 55% scale compression directly inside VRAM, allowing 3D transforms to spin unhindered */
+    scale: 0.55 !important;
+    /* Locks the operational scale contraction centerpoint right onto the geometric core midpoint */
+    transform-origin: center center !important;
+  }
 
-
+  /* Syncing the rings with the new hardware scale */
+  .quantum-plasma-sphere .sphere-ring {
+    /* Freezes the concentric ring width boundary at 260px to maintain edge grid alignment */
+    width: 260px !important;
+    /* Freezes the concentric ring height boundary at 260px to bar ellipse layout warping anomalies */
+    height: 260px !important;
+  }
 
   /* Repositions the twin parallel bands exactly at the midpoint of the scaled 260px geometry (Preserving final overrides) */
   .macro-wrapper {
@@ -3576,40 +3608,38 @@ viewport width units (2.4vw) fused with rigid 0.65rem thresholds, tightens horiz
 packing envelopes down to 20px on macro layouts, and purges browser margins to secure 
 high-contrast text tracking entirely immune to layout clipping leaks. */
 
-/* MASTER HERO CONTAINER RECALIBRATION: DROPPING VERTICAL CENTER OF GRAVITY */
-.hero {
-  /* Shifts from desktop flex row settings to a tight centered layout grid alignment */
-  justify-content: center !important; 
-  /* Establishes a localized 60px baseline clearance beneath the fixed top navigation bar */
-  padding-top: 60px !important;       
-  /* Creates a bottom compression cushion to pull and lock text directly onto the icosahedron equator */
-  padding-bottom: 20px !important;
-}
+  /* MASTER HERO CONTAINER RECALIBRATION: DROPPING VERTICAL CENTER OF GRAVITY */
+  .hero {
+    /* Shifts from desktop flex row settings to a tight centered layout grid alignment */
+    justify-content: center !important;
+    /* Establishes a localized 60px baseline clearance beneath the fixed top navigation bar */
+    padding-top: 60px !important;
+    /* Creates a bottom compression cushion to pull and lock text directly onto the icosahedron equator */
+    padding-bottom: 20px !important;
+  }
 
-/* STENCILED HEADING H1 SCALING (Sustaining native Space Grotesk layout structures) */
-.stenciled-metal-text {
-  font-size: 17px !important; /* Locked rigid optimal dimensions ensuring absolute narrow viewport legibility profiles */
-  letter-spacing: 0px !important; /* Hardened technical communication row spacing custom tailored for interface terminals */
-  display: inline-block !important;
-  white-space: nowrap !important; /* Rigidly forbids multi-line fragmentation, forcing continuous typewriter flow */
-  border-right-width: 1.5px !important; /* Thinner tracking cursor adjusted for compact small display frames */
-  /* COLLAPSE GAIN: Compresses the phantom vertical typography box to strictly bound 
+  /* STENCILED HEADING H1 SCALING (Sustaining native Space Grotesk layout structures) */
+  .stenciled-metal-text {
+    font-size: 17px !important; /* Locked rigid optimal dimensions ensuring absolute narrow viewport legibility profiles */
+    letter-spacing: 0px !important; /* Hardened technical communication row spacing custom tailored for interface terminals */
+    display: inline-block !important;
+    white-space: nowrap !important; /* Rigidly forbids multi-line fragmentation, forcing continuous typewriter flow */
+    border-right-width: 1.5px !important; /* Thinner tracking cursor adjusted for compact small display frames */
+    /* COLLAPSE GAIN: Compresses the phantom vertical typography box to strictly bound 
      the high-contrast letterheads, lowering the lower ceiling of the H1 matrix. */
-}
+  }
 
-
-/* DISCRETE SUBTITLE FINE OVERRIDE TRACE (Flawless optical subordination matrix) */
-.stenciled-metal-text-sub {
-  font-size: 11px !important; /* Rigid structural layout safety ceiling threshold applied to prevent vertical breaks */
-  letter-spacing: 0px !important; /* Fine technical telemetry character spacing arrangements locked along rows */
-  display: inline-block !important;
-  white-space: nowrap !important;
-  border-right-width: 1px !important; /* Micro-fine font border execution for mobile teletype channels */
-  margin-top: -11px !important; 
-  /* MECHANICAL LEVER: Deploys a rigid negative offset pull to override native browser 
+  /* DISCRETE SUBTITLE FINE OVERRIDE TRACE (Flawless optical subordination matrix) */
+  .stenciled-metal-text-sub {
+    font-size: 11px !important; /* Rigid structural layout safety ceiling threshold applied to prevent vertical breaks */
+    letter-spacing: 0px !important; /* Fine technical telemetry character spacing arrangements locked along rows */
+    display: inline-block !important;
+    white-space: nowrap !important;
+    border-right-width: 1px !important; /* Micro-fine font border execution for mobile teletype channels */
+    margin-top: -11px !important;
+    /* MECHANICAL LEVER: Deploys a rigid negative offset pull to override native browser 
      block gaps, drawing the discrete telemetry string directly under the primary header. */
-}
-
+  }
 
   /* --- ZONE SUMMARY D: BLUEPRINT SPLIT-SCREEN CHASSIS & STACKING ---
     This final structural district drives the conversion of the recursive blueprint screen 
